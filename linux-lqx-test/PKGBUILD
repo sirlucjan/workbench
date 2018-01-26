@@ -30,7 +30,6 @@ _use_KSM="no"		# "yes":	Enable Kernel SamePage Merging (KSM).
 
 pkgdesc='A desktop oriented kernel and modules with Liquorix patches'
 __basekernel=4.14
-_minor=15
 _lqxpatchname=liquorix-package
 _lqxpatchrel=21
 _lqxpatchver=${_lqxpatchname}-${__basekernel}-${_lqxpatchrel}
@@ -88,6 +87,8 @@ prepare() {
   cd ${srcdir}/linux-${__basekernel}
 
   # Add Liquorix patches
+  abiname="$(cat ${srcdir}/${_lqxpatchver}/linux-liquorix/debian/config/defines | grep 'abiname:' | sed -r 's/abiname:\s*//')"
+  _minor="$(echo "$abiname" | cut -f1 -d .)"
   patch -Np1 -i "${srcdir}/${_lqxpatchver}/linux-liquorix/debian/patches/zen/${__basekernel}.${_minor}-${_patchrel}.patch"
 
     # Trying oldcfg if possible and if selected
