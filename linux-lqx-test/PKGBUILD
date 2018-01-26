@@ -76,8 +76,6 @@ validpgpkeys=(
 _kernelname=${pkgbase#linux}
 
 pkgver() {
-  cd ${srcdir}/${_lqxpatchver}
-  _abiname="$(cat linux-liquorix/debian/config/defines | grep 'abiname:' | sed -r 's/abiname:\s*//')"
   printf ${__basekernel}.${_abiname}
 }
    
