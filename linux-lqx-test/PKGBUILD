@@ -30,12 +30,13 @@ _use_KSM="no"		# "yes":	Enable Kernel SamePage Merging (KSM).
 
 pkgdesc='A desktop oriented kernel and modules with Liquorix patches'
 __basekernel=4.14
-_lqxpatchname=liquorix-package
-_lqxpatchrel=21
-_lqxpatchver=${_lqxpatchname}-${__basekernel}-${_lqxpatchrel}
 pkgver=4.14.15.1
 pkgrel=1
 pkgbase=linux-lqx-test
+# pkgname=('linux-lqx-test' 'linux-lqx-test-headers' 'linux-lqx-test-docs')
+_lqxpatchname=liquorix-package
+_lqxpatchrel=21
+_lqxpatchver=${_lqxpatchname}-${__basekernel}-${_lqxpatchrel}
 arch=('x86_64')
 license=('GPL2')
 url="http://liquorix.net/"
