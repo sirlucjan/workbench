@@ -33,7 +33,6 @@ __basekernel=4.14
 _lqxpatchname=liquorix-package
 _lqxpatchrel=21
 _lqxpatchver=${_lqxpatchname}-${__basekernel}-${_lqxpatchrel}
-_patchrel=1
 pkgver=4.14.15.1
 pkgrel=1
 pkgbase=linux-lqx-test
@@ -77,8 +76,8 @@ _kernelname=${pkgbase#linux}
 
 pkgver() {
   cd ${srcdir}/${_lqxpatchver}
-  abiname="$(cat linux-liquorix/debian/config/defines | grep 'abiname:' | sed -r 's/abiname:\s*//')"
-  printf ${__basekernel}.${abiname}
+  _abiname="$(cat linux-liquorix/debian/config/defines | grep 'abiname:' | sed -r 's/abiname:\s*//')"
+  printf ${__basekernel}.${_abiname}
 }
    
 prepare() {
@@ -87,8 +86,10 @@ prepare() {
   cd ${srcdir}/linux-${__basekernel}
 
   # Add Liquorix patches
-  abiname="$(cat ${srcdir}/${_lqxpatchver}/linux-liquorix/debian/config/defines | grep 'abiname:' | sed -r 's/abiname:\s*//')"
-  _minor="$(echo "$abiname" | cut -f1 -d .)"
+  _abiname="$(cat ${srcdir}/${_lqxpatchver}/linux-liquorix/debian/config/defines | grep 'abiname:' | sed -r 's/abiname:\s*//')"
+  _minor="$(echo "$_abiname" | cut -f1 -d .)"
+  _patchrel="$(echo "$_abiname" | cut -f2 -d .)"
+  msg "Patching sources with ${_lqxpatchname}-${__basekernel}.${_minor}-${_patchrel}.patch"
   patch -Np1 -i "${srcdir}/${_lqxpatchver}/linux-liquorix/debian/patches/zen/${__basekernel}.${_minor}-${_patchrel}.patch"
 
     # Trying oldcfg if possible and if selected
