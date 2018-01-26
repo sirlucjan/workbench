@@ -35,7 +35,7 @@ _lqxpatchname=liquorix-package
 _lqxpatchrel=21
 _lqxpatchver=${_lqxpatchname}-${__basekernel}-${_lqxpatchrel}
 _patchrel=1
-pkgver=${__basekernel}.${_minor}
+pkgver=4.14.15.1
 pkgrel=1
 pkgbase=linux-lqx-test
 arch=('x86_64')
@@ -76,6 +76,12 @@ validpgpkeys=(
 
 _kernelname=${pkgbase#linux}
 
+pkgver() {
+  cd ${srcdir}/${_lqxpatchver}
+  abiname="$(cat linux-liquorix/debian/config/defines | grep 'abiname:' | sed -r 's/abiname:\s*//')"
+  printf ${__basekernel}.${abiname}
+}
+   
 prepare() {
   KARCH=x86
 
