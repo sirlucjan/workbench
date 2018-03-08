@@ -31,7 +31,7 @@ _use_KSM="no"		# "yes":	Enable Kernel SamePage Merging (KSM).
 pkgdesc='A desktop oriented kernel and modules with Liquorix patches'
 __basekernel=4.15
 pkgver=4.15.7.1
-pkgrel=1
+pkgrel=2
 pkgbase=linux-lqx-test
 # pkgname=('linux-lqx-test' 'linux-lqx-test-headers' 'linux-lqx-test-docs')
 _lqxpatchname=liquorix-package
@@ -240,7 +240,7 @@ cd "${srcdir}/linux-${__basekernel}"
 
 _package-headers() {
 pkgdesc="Header files and scripts to build modules for linux-lqx."
-depends=('linux-lqx')
+depends=('linux-lqx-test')
 
 cd "${srcdir}/linux-${__basekernel}"
 
@@ -313,7 +313,7 @@ local _builddir="${pkgdir}/usr/lib/modules/${_kernver}/build"
 
 _package-docs() {
 pkgdesc="Kernel hackers manual - HTML documentation that comes with the linux-lqx kernel"
-depends=('linux-lqx' )
+depends=('linux-lqx-test' )
 
  cd "${srcdir}/linux-${__basekernel}"
 
