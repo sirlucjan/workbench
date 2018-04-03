@@ -63,6 +63,8 @@
 │       │   └── linux.preset
 │       └── uml
 │           └── 70-uml.hook
+├── dots
+│   └── repo-schema
 ├── Files
 ├── linux-lqx-test
 │   ├── 60-linux.hook
@@ -73,4 +75,4 @@
 │   └── PKGBUILD
 └── README.md
 
-37 directories, 36 files
+38 directories, 37 files
