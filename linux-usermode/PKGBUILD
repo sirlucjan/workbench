@@ -1,0 +1,101 @@
+# Maintainer: Piotr Gorski <lucjan.lucjanov@gmail.com>
+# Contributor: Haruue Icymoon <haruue@caoyue.com.cn>
+
+pkgbase=linux-usermode
+pkgname=('linux-usermode' 'linux-usermode-modules')
+_kernelname=-usermodelinux
+_srcname=linux-4.16
+pkgver=4.16
+pkgrel=1
+pkgdesc="User mode Linux kernel and modules"
+arch=('x86_64')
+license=('GPL2')
+url="http://user-mode-linux.sourceforge.net/"
+depends=('coreutils')
+makedepends=('bc' 'inetutils')
+source=(
+  "https://www.kernel.org/pub/linux/kernel/v4.x/${_srcname}.tar.xz"
+  "https://www.kernel.org/pub/linux/kernel/v4.x/${_srcname}.tar.sign"
+  #"https://www.kernel.org/pub/linux/kernel/v4.x/patch-${pkgver}.xz"
+  #"https://www.kernel.org/pub/linux/kernel/v4.x/patch-${pkgver}.sign"
+  'config'
+  '70-uml.hook'
+  '0001-ucontext-fix-incomplete-type-ucontext.patch')
+
+sha256sums=('63f6dc8e3c9f3a0273d5d6f4dca38a2413ca3a5f689329d05b750e4c87bb21b9'
+            'SKIP'
+            '3b0e4c43a728cf1d62dffc08702f4462f5e2aba1415bf932e8cc3f79c76d5c6e'
+            '452b8d4d71e1565ca91b1bebb280693549222ef51c47ba8964e411b2d461699c'
+            '9a7e0a9a2c3d4252cee29b4f5f61da00e98bd247cb5ceb22e31a7f782a45bddf')
+
+validpgpkeys=(
+  'ABAF11C65A2970B130ABE3C479BE3E4300411886'  # Linus Torvalds
+  '647F28654894E3BD457199BE38DBBDC86092693E'  # Greg Kroah-Hartman
+)
+
+prepare() {
+  cd "${srcdir}/${_srcname}"
+
+  # add upstream patch
+  #patch -p1 -i "${srcdir}/patch-${pkgver}"
+
+  # workground for glibc 2.26+
+  # https://patchwork.kernel.org/patch/10059117/
+  patch -Np1 -i ../0001-ucontext-fix-incomplete-type-ucontext.patch
+
+  cat ../config - >.config <<END
+CONFIG_LOCALVERSION="${_kernelname}"
+CONFIG_LOCALVERSION_AUTO=n
+END
+
+  # set extraversion to pkgrel and empty localversion
+  sed -i "/^EXTRAVERSION =/s/=.*/= -${pkgrel}/" Makefile
+
+  # rewrite configuration
+  yes "" | make ARCH=um config >/dev/null
+  
+  # save configuration for later reuse
+  cat .config > "${startdir}/config.last"
+}
+
+build() {
+  cd "${srcdir}/${_srcname}"
+  unset LDFLAGS CFLAGS
+  make ARCH=um vmlinux modules 
+}
+
+_package() {
+  conflicts=('linux-usermode-rc')
+  
+  cd "${srcdir}/${_srcname}"
+  mkdir -p "$pkgdir/usr/bin" "$pkgdir/usr/share/kernel-usermode"
+  install -m 644 System.map ${pkgdir}/usr/share/kernel-usermode/System.map
+  install -m 755 vmlinux ${pkgdir}/usr/bin/
+}
+
+_package-modules() {
+  conflicts=('linux-usermode-rc-modules')
+  
+  cd "${srcdir}/${_srcname}"
+  #  make ARCH=um INSTALL_MOD_PATH="${pkgdir}/usr" modules_install
+  make ARCH=um INSTALL_MOD_PATH="${pkgdir}/usr" _modinst_
+  rm -f $pkgdir/usr/lib/modules/${pkgver}-${pkgrel}${_kernelname}/{source,build}
+  # sed expression for following substitutions
+  local _subst="
+        s|%PKGBASE%|${pkgbase}|g
+        s|%KERNVER%|${pkgver}-${pkgrel}${_kernelname}|g
+  "
+  # install pacman hook
+  sed "${_subst}" ../70-uml.hook |
+        install -Dm644 /dev/stdin "${pkgdir}/usr/share/libalpm/hooks/70-uml.hook"
+}
+
+pkgname=("${pkgbase}" "${pkgbase}-modules")
+for _p in ${pkgname[@]}; do
+  eval "package_${_p}() {
+    $(declare -f "_package${_p#${pkgbase}}")
+    _package${_p#${pkgbase}}
+  }"
+done
+
+# vim:set ts=8 sts=2 sw=2 et:
