@@ -68,6 +68,7 @@
 │       └── uml
 │           └── 70-uml.hook
 ├── dots
+│   ├── gitconfig
 │   └── repo-schema
 ├── Files
 ├── linux-lqx-test
@@ -84,4 +85,4 @@
 │   └── PKGBUILD
 └── README.md
 
-41 directories, 43 files
+41 directories, 44 files
