@@ -77,6 +77,7 @@
 │   │   │   └── linux-uksm-git
 │   │   │       ├── 0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
 │   │   │       ├── 0002-drm-i915-edp-Only-use-the-alternate-fixed-mode-if-it.patch
+│   │   │       ├── 0003-Partially-revert-swiotlb-remove-various-exports.patch
 │   │   │       ├── 60-linux.hook
 │   │   │       ├── 90-linux.hook
 │   │   │       ├── 99-linux.hook
@@ -88,6 +89,7 @@
 │   │       └── linux-uksm-git
 │   │           ├── 0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
 │   │           ├── 0002-drm-i915-edp-Only-use-the-alternate-fixed-mode-if-it.patch
+│   │           ├── 0003-Partially-revert-swiotlb-remove-various-exports.patch
 │   │           ├── 60-linux.hook
 │   │           ├── 90-linux.hook
 │   │           ├── 99-linux.hook
@@ -100,6 +102,7 @@
 │       │   └── linux-uksm
 │       │       ├── 0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
 │       │       ├── 0002-drm-i915-edp-Only-use-the-alternate-fixed-mode-if-it.patch
+│       │       ├── 0003-Partially-revert-swiotlb-remove-various-exports.patch
 │       │       ├── 60-linux.hook
 │       │       ├── 90-linux.hook
 │       │       ├── 99-linux.hook
@@ -111,6 +114,7 @@
 │           └── linux-uksm
 │               ├── 0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
 │               ├── 0002-drm-i915-edp-Only-use-the-alternate-fixed-mode-if-it.patch
+│               ├── 0003-Partially-revert-swiotlb-remove-various-exports.patch
 │               ├── 60-linux.hook
 │               ├── 90-linux.hook
 │               ├── 99-linux.hook
@@ -137,4 +141,4 @@
 │   └── PKGBUILD
 └── README.md
 
-53 directories, 84 files
+53 directories, 88 files
