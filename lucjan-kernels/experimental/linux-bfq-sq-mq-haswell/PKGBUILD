@@ -117,8 +117,8 @@ prepare() {
     cd ${_srcname}
 
     ### Add upstream patch
-        #msg "Add upstream patch"
-        #patch -p1 -i ../patch-${pkgver}
+        msg "Add upstream patch"
+        patch -p1 -i ../patch-${pkgver}
     
     ### Disable USER_NS for non-root users by default
         msg "Disable USER_NS for non-root users by default"
