@@ -73,7 +73,7 @@ _mq_enable=y
 pkgbase=linux-bfq-sq-mq-haswell
 # pkgname=('linux-bfq-sq-mq-haswell-kernel' 'linux-bfq-sq-mq-haswell-headers' 'linux-bfq-sq-mq-haswell-docs')
 _srcname=linux-4.16
-pkgver=4.16
+pkgver=4.16.1
 pkgrel=1
 arch=('x86_64')
 url="https://github.com/Algodev-github/bfq-mq/"
@@ -91,8 +91,8 @@ _gcc_patch="enable_additional_cpu_optimizations_for_gcc_v4.9+_kernel_v4.13+.patc
 
 source=("https://www.kernel.org/pub/linux/kernel/v4.x/${_srcname}.tar.xz"
         "https://www.kernel.org/pub/linux/kernel/v4.x/${_srcname}.tar.sign"
-        #"https://www.kernel.org/pub/linux/kernel/v4.x/patch-${pkgver}.xz"
-        #"https://www.kernel.org/pub/linux/kernel/v4.x/patch-${pkgver}.sign"
+        "https://www.kernel.org/pub/linux/kernel/v4.x/patch-${pkgver}.xz"
+        "https://www.kernel.org/pub/linux/kernel/v4.x/patch-${pkgver}.sign"
         "${_lucjanpath}/${_bfq_sq_mq_patch}"
         "${_lucjanpath}/0100-Check-presence-on-tree-of-every-entity-after-every-a.patch"
         "${_lucjanpath}/bfq-pf/0900-block-bfq-lower-bound-the-estimated-peak-rate-to-1.patch"
@@ -134,7 +134,8 @@ prepare() {
     
     ### Patch source with BFQ-SQ-MQ
         msg "Fix naming schema in BFQ-SQ-MQ patch"
-        sed -i -e "s|PATCHLEVEL = 0|PATCHLEVEL = 16|g" \
+        sed -i -e "s|PATCHLEVEL = 15|PATCHLEVEL = 16|g" \
+            -i -e "s|SUBLEVEL = 0|SUBLEVEL = 1|g" \
             -i -e "s|EXTRAVERSION = -bfq|EXTRAVERSION =|g" \
             -i -e "s|EXTRAVERSION =-mq|EXTRAVERSION =|g" ../${_bfq_sq_mq_patch}
         msg "Patching source with BFQ-SQ-MQ patches"
@@ -453,6 +454,8 @@ for _p in ${pkgname[@]}; do
 done
 
 sha512sums=('ab47849314b177d0eec9dbf261f33972b0d89fb92fb0650130ffa7abc2f36c0fab2d06317dc1683c51a472a9a631573a9b1e7258d6281a2ee189897827f14662'
+            'SKIP'
+            'd82a74b191b39a8608294d96d4aa29725cb6688e9dc60b0282cdd91be0eca2322738f338e9896850b888a6a16e12c55168d391cd2f0308b44cc5ef3e31bb09a1'
             'SKIP'
             '46e316f67165d8df1779a6d7d105c249d0ff768fbbdd59baa9f475bd4007c6851a64b41e0a3319186848670b41bd55c845583c9307b5f02df14e73aed1db3f5d'
             '0f96fa9ad784709973b32eea82075ceb3e9dc2482df6441a4607612806f069254e63508b1b562279622394e4a1fbebef1b87af8401c0b1210d5d0de9954245c8'
