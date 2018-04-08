@@ -5,7 +5,7 @@ pkgbase=linux-usermode
 pkgname=('linux-usermode' 'linux-usermode-modules')
 _kernelname=-usermodelinux
 _srcname=linux-4.16
-pkgver=4.16
+pkgver=4.16.1
 pkgrel=1
 pkgdesc="User mode Linux kernel and modules"
 arch=('x86_64')
@@ -16,13 +16,15 @@ makedepends=('bc' 'inetutils')
 source=(
   "https://www.kernel.org/pub/linux/kernel/v4.x/${_srcname}.tar.xz"
   "https://www.kernel.org/pub/linux/kernel/v4.x/${_srcname}.tar.sign"
-  #"https://www.kernel.org/pub/linux/kernel/v4.x/patch-${pkgver}.xz"
-  #"https://www.kernel.org/pub/linux/kernel/v4.x/patch-${pkgver}.sign"
+  "https://www.kernel.org/pub/linux/kernel/v4.x/patch-${pkgver}.xz"
+  "https://www.kernel.org/pub/linux/kernel/v4.x/patch-${pkgver}.sign"
   'config'
   '70-uml.hook'
   '0001-ucontext-fix-incomplete-type-ucontext.patch')
 
 sha256sums=('63f6dc8e3c9f3a0273d5d6f4dca38a2413ca3a5f689329d05b750e4c87bb21b9'
+            'SKIP'
+            '66931bd802eb8d9f09b1f36bb57f24abab13230469ee855e5aaa2f93be2022e0'
             'SKIP'
             '3b0e4c43a728cf1d62dffc08702f4462f5e2aba1415bf932e8cc3f79c76d5c6e'
             '452b8d4d71e1565ca91b1bebb280693549222ef51c47ba8964e411b2d461699c'
@@ -37,7 +39,7 @@ prepare() {
   cd "${srcdir}/${_srcname}"
 
   # add upstream patch
-  #patch -p1 -i "${srcdir}/patch-${pkgver}"
+  patch -p1 -i "${srcdir}/patch-${pkgver}"
 
   # workground for glibc 2.26+
   # https://patchwork.kernel.org/patch/10059117/
