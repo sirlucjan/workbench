@@ -181,6 +181,8 @@
 │           └── PKGBUILD
 ├── psi-plus-plugins-dev-git
 │   └── PKGBUILD
+├── psi-plus-plugins-git
+│   └── PKGBUILD
 └── README.md
 
-57 directories, 126 files
+58 directories, 127 files
