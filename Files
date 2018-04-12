@@ -77,6 +77,7 @@
 │   │   │   ├── 0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
 │   │   │   ├── 0002-drm-i915-edp-Only-use-the-alternate-fixed-mode-if-it.patch
 │   │   │   ├── 0003-Partially-revert-swiotlb-remove-various-exports.patch
+│   │   │   ├── 0004-Fix-vboxguest-on-guests-with-more-than-4G-RAM.patch
 │   │   │   ├── 60-linux.hook
 │   │   │   ├── 90-linux.hook
 │   │   │   ├── 99-linux.hook
@@ -88,6 +89,7 @@
 │   │       ├── 0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
 │   │       ├── 0002-drm-i915-edp-Only-use-the-alternate-fixed-mode-if-it.patch
 │   │       ├── 0003-Partially-revert-swiotlb-remove-various-exports.patch
+│   │       ├── 0004-Fix-vboxguest-on-guests-with-more-than-4G-RAM.patch
 │   │       ├── 60-linux.hook
 │   │       ├── 90-linux.hook
 │   │       ├── 99-linux.hook
@@ -100,6 +102,7 @@
 │       │   ├── 0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
 │       │   ├── 0002-drm-i915-edp-Only-use-the-alternate-fixed-mode-if-it.patch
 │       │   ├── 0003-Partially-revert-swiotlb-remove-various-exports.patch
+│       │   ├── 0004-Fix-vboxguest-on-guests-with-more-than-4G-RAM.patch
 │       │   ├── 60-linux.hook
 │       │   ├── 90-linux.hook
 │       │   ├── 99-linux.hook
@@ -111,6 +114,7 @@
 │           ├── 0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
 │           ├── 0002-drm-i915-edp-Only-use-the-alternate-fixed-mode-if-it.patch
 │           ├── 0003-Partially-revert-swiotlb-remove-various-exports.patch
+│           ├── 0004-Fix-vboxguest-on-guests-with-more-than-4G-RAM.patch
 │           ├── 60-linux.hook
 │           ├── 90-linux.hook
 │           ├── 99-linux.hook
@@ -132,4 +136,4 @@
 │       └── PKGBUILD
 └── README.md
 
-50 directories, 82 files
+50 directories, 86 files
