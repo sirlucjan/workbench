@@ -125,27 +125,6 @@
 │   ├── linux.install
 │   ├── linux.preset
 │   └── PKGBUILD
-├── linux-uml
-│   ├── linux-usermode
-│   │   ├── 0001-ucontext-fix-incomplete-type-ucontext.patch
-│   │   ├── 70-uml.hook
-│   │   ├── config
-│   │   └── PKGBUILD
-│   ├── linux-usermode-git
-│   │   ├── 0001-ucontext-fix-incomplete-type-ucontext.patch
-│   │   ├── 70-uml.hook
-│   │   ├── config
-│   │   └── PKGBUILD
-│   ├── linux-usermode-rc
-│   │   ├── 0001-ucontext-fix-incomplete-type-ucontext.patch
-│   │   ├── 70-uml.hook
-│   │   ├── config
-│   │   └── PKGBUILD
-│   └── linux-usermode-rc-git
-│       ├── 0001-ucontext-fix-incomplete-type-ucontext.patch
-│       ├── 70-uml.hook
-│       ├── config
-│       └── PKGBUILD
 ├── psi-plus-plugins
 │   ├── psi-plus-plugins-dev-git
 │   │   └── PKGBUILD
@@ -153,4 +132,4 @@
 │       └── PKGBUILD
 └── README.md
 
-55 directories, 98 files
+50 directories, 82 files
