@@ -1,44 +1,19 @@
 .
 ├── Devel
 │   ├── Config
-│   │   ├── 4.11
-│   │   │   ├── git
-│   │   │   │   ├── bfq-haswell-git
-│   │   │   │   │   └── config
-│   │   │   │   └── bfq-mq-haswell-git
-│   │   │   │       └── config
-│   │   │   └── src
-│   │   │       ├── bfq-haswell
-│   │   │       │   └── config
-│   │   │       └── bfq-mq-haswell
-│   │   │           └── config
 │   │   ├── 4.14
 │   │   │   ├── git
-│   │   │   │   ├── bfq-sq-mq-haswell-git
-│   │   │   │   │   └── config
-│   │   │   │   ├── rt-bfq-git
-│   │   │   │   │   └── config
-│   │   │   │   └── uksm-git
+│   │   │   │   └── rt-bfq-git
 │   │   │   │       └── config
 │   │   │   └── src
-│   │   │       ├── bfq-sq-mq-haswell
-│   │   │       │   └── config
-│   │   │       ├── rt-bfq
-│   │   │       │   └── config
-│   │   │       └── uksm
+│   │   │       └── rt-bfq
 │   │   │           └── config
 │   │   ├── 4.15
 │   │   │   ├── git
-│   │   │   │   ├── bfq-sq-mq-haswell-git
-│   │   │   │   │   └── config
 │   │   │   │   └── uksm-git
 │   │   │   │       └── config
 │   │   │   └── src
-│   │   │       ├── bfq-sq-mq-haswell
-│   │   │       │   └── config
-│   │   │       ├── uksm
-│   │   │       │   └── config
-│   │   │       └── uml
+│   │   │       └── uksm
 │   │   │           └── config
 │   │   └── 4.16
 │   │       ├── git
@@ -136,4 +111,4 @@
 │       └── PKGBUILD
 └── README.md
 
-50 directories, 86 files
+36 directories, 75 files
