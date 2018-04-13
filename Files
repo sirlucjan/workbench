@@ -8,13 +8,6 @@
 │   │   │   └── src
 │   │   │       └── rt-bfq
 │   │   │           └── config
-│   │   ├── 4.15
-│   │   │   ├── git
-│   │   │   │   └── uksm-git
-│   │   │   │       └── config
-│   │   │   └── src
-│   │   │       └── uksm
-│   │   │           └── config
 │   │   └── 4.16
 │   │       ├── git
 │   │       │   ├── bfq-sq-mq-haswell-git
@@ -64,4 +57,4 @@
 │       └── PKGBUILD
 └── README.md
 
-30 directories, 34 files
+25 directories, 32 files
