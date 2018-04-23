@@ -75,8 +75,8 @@ _1k_HZ_ticks=y
 
 pkgbase=linux-bfq-sq-mq-haswell
 # pkgname=('linux-bfq-sq-mq-haswell-kernel' 'linux-bfq-sq-mq-haswell-headers' 'linux-bfq-sq-mq-haswell-docs')
-_srcname=linux-v4.17-rc1
-pkgver=4.17rc1
+_srcname=linux-v4.17-rc2
+pkgver=4.17rc2
 pkgrel=1
 arch=('x86_64')
 url="https://github.com/Algodev-github/bfq-mq/"
@@ -117,7 +117,7 @@ prepare() {
 
     ### Fix naming schema in EXTRAVERSION
         msg "Fix naming schema in EXTRAVERSION"
-        sed -i -e "s|EXTRAVERSION = -rc1|EXTRAVERSION =|g" ./Makefile
+        sed -i -e "s|EXTRAVERSION = -rc2|EXTRAVERSION =|g" ./Makefile
     
     ### Disable USER_NS for non-root users by default
         msg "Disable USER_NS for non-root users by default"
@@ -455,7 +455,7 @@ for _p in ${pkgname[@]}; do
   }"
 done
 
-sha512sums=('804b44e868cb9a5d661b879e9faa18b76c8a46442e4c406c19ce8681f0b08840989cbfe256e9f7d16527ebc5ee0ae91329610f6ea13498d50af201d9a17ead2a'
+sha512sums=('71ffb59bafed6979071af58f9b8011e6f63aa1eeacdb5a80c2797ecff0fc18ea50b7405dba8adbe4dc6cf5b3f742e71a4fe8b886ad413d409a768838dc582307'
             '5b860dd67312af2327b9c6abc62d08e285cb81b5e64207f879178dac673cfe67249321ab9bf61e07e6fb855b0d7388061e8bbd4cead0e078886b91beb38599c9'
             '0f96fa9ad784709973b32eea82075ceb3e9dc2482df6441a4607612806f069254e63508b1b562279622394e4a1fbebef1b87af8401c0b1210d5d0de9954245c8'
             '079e34ec7bf3ef36438c648116e24c51e00ea8608a1d8b5776164478522d6a96dcab5fe0431e8e9a6282c11a1edd177e1b68fc971a81717b297e199efc101963'
