@@ -76,7 +76,7 @@ _1k_HZ_ticks=y
 pkgbase=linux-bfq-sq-mq-haswell-git
 # pkgname=('linux-bfq-sq-mq-haswell-git-kernel' 'linux-bfq-sq-mq-haswell-git-headers' 'linux-bfq-sq-mq-haswell-git-docs')
 _srcname=linux
-pkgver=4.17.rc2.126.gfe03a7594d86
+pkgver=4.17.rc3.0.g6da6c0db5316
 pkgrel=1
 arch=('x86_64')
 url="https://github.com/Algodev-github/bfq-mq/"
@@ -123,7 +123,7 @@ prepare() {
     
     ### Fix naming schema in EXTRAVERSION
         msg "Fix naming schema in EXTRAVERSION"
-        sed -i -e "s|EXTRAVERSION = -rc2|EXTRAVERSION =|g" ./Makefile
+        sed -i -e "s|EXTRAVERSION = -rc3|EXTRAVERSION =|g" ./Makefile
     
     ### Disable USER_NS for non-root users by default
         msg "Disable USER_NS for non-root users by default"
