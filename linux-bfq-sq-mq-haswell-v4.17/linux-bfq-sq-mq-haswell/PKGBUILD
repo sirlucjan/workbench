@@ -116,8 +116,9 @@ prepare() {
     cd ${_srcname}
 
     ### Fix naming schema in EXTRAVERSION
+        _rc="$(cat Makefile | grep -m1 -e EXTRAVERSION | grep -o "[[:digit:]]*")"
         msg "Fix naming schema in EXTRAVERSION"
-        sed -i -e "s|EXTRAVERSION = -rc3|EXTRAVERSION =|g" ./Makefile
+        sed -i -e "s|EXTRAVERSION = -rc${_rc}|EXTRAVERSION =|g" ./Makefile
     
     ### Disable USER_NS for non-root users by default
         msg "Disable USER_NS for non-root users by default"
