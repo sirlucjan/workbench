@@ -62,10 +62,8 @@ _1k_HZ_ticks=
 
 pkgbase=linux-bfq-mq-git
 #pkgbase=linux-custom       # Build kernel with a different name
-pkgver=4.16.6.0.g22bc2b8a6aa4
-_srcpatch="${pkgver##*\.*\.}"
-_gitver="linux-${pkgver%%\.${_srcpatch}}"
 _srcname=linux-stable-rc
+pkgver=4.16.6.0.g22bc2b8a6aa4
 pkgrel=1
 arch=('x86_64')
 url="https://github.com/Algodev-github/bfq-mq/"
@@ -123,7 +121,7 @@ validpgpkeys=(
              )
 
 _kernelname=${pkgbase#linux}
-: ${_kernelname:=-bfq-mq} 
+: ${_kernelname:=-bfq-mq-git} 
 
 pkgver() {
     cd "${_srcname}"
