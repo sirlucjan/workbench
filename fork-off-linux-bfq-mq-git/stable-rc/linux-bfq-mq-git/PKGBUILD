@@ -113,10 +113,6 @@ sha256sums=('SKIP'
             'd0940f68d0138169eba5e0c0add048d7df255bb2b13c3ad5920dc991573f3ff0'
             'bead9915334759fa4c5f7ebebbf85b658d3423ba978ad4c6ee7d8271fa95b90a'
             '68dd6a1ebf9fc53cdf8bf18fb6231d3730ee99a429a9153b5730e4f5c10a1359')
-validpgpkeys=(
-              'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
-              '647F28654894E3BD457199BE38DBBDC86092693E' # Greg Kroah-Hartman
-             )
 
 _kernelname=${pkgbase#linux}
 : ${_kernelname:=-bfq-mq-git} 
