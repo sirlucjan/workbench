@@ -75,8 +75,9 @@ _1k_HZ_ticks=y
 
 pkgbase=linux-bfq-sq-mq-haswell
 # pkgname=('linux-bfq-sq-mq-haswell-kernel' 'linux-bfq-sq-mq-haswell-headers' 'linux-bfq-sq-mq-haswell-docs')
-_srcname=linux-v4.17-rc3
-pkgver=4.17rc3
+_rcver=rc3
+_srcname=linux-v4.17-${_rcver}
+pkgver=4.17${_rcver}
 pkgrel=1
 arch=('x86_64')
 url="https://github.com/Algodev-github/bfq-mq/"
