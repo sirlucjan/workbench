@@ -1,16 +1,11 @@
 .
 ├── Devel
 │   ├── Config
-│   │   ├── 4.14
-│   │   │   ├── git
-│   │   │   │   └── rt-bfq-git
-│   │   │   │       └── config
-│   │   │   └── src
-│   │   │       └── rt-bfq
-│   │   │           └── config
 │   │   └── 4.16
 │   │       ├── git
 │   │       │   ├── bfq-sq-mq-haswell-git
+│   │       │   │   └── config
+│   │       │   ├── rt-bfq-git
 │   │       │   │   └── config
 │   │       │   ├── uksm-git
 │   │       │   │   └── config
@@ -18,6 +13,8 @@
 │   │       │       └── config
 │   │       └── src
 │   │           ├── bfq-sq-mq-haswell
+│   │           │   └── config
+│   │           ├── rt-bfq
 │   │           │   └── config
 │   │           ├── uksm
 │   │           │   └── config
@@ -106,4 +103,4 @@
 │       └── PKGBUILD
 └── README.md
 
-33 directories, 73 files
+30 directories, 73 files
