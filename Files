@@ -89,20 +89,21 @@
 │   │   ├── linux.preset
 │   │   └── PKGBUILD
 │   └── README.md
-├── linux-lqx
-│   ├── 60-linux.hook
-│   ├── 90-linux.hook
-│   ├── 99-linux.hook
-│   ├── linux.install
-│   ├── linux.preset
-│   └── PKGBUILD
-├── linux-lqx-git
-│   ├── 60-linux.hook
-│   ├── 90-linux.hook
-│   ├── 99-linux.hook
-│   ├── linux.install
-│   ├── linux.preset
-│   └── PKGBUILD
+├── linux-lqx-rebranded
+│   ├── linux-lqx
+│   │   ├── 60-linux.hook
+│   │   ├── 90-linux.hook
+│   │   ├── 99-linux.hook
+│   │   ├── linux.install
+│   │   ├── linux.preset
+│   │   └── PKGBUILD
+│   └── linux-lqx-git
+│       ├── 60-linux.hook
+│       ├── 90-linux.hook
+│       ├── 99-linux.hook
+│       ├── linux.install
+│       ├── linux.preset
+│       └── PKGBUILD
 ├── psi-plus-plugins
 │   ├── psi-plus-plugins-dev-git
 │   │   └── PKGBUILD
@@ -110,4 +111,4 @@
 │       └── PKGBUILD
 └── README.md
 
-31 directories, 79 files
+32 directories, 79 files
