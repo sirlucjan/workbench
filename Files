@@ -96,6 +96,13 @@
 │   ├── linux.install
 │   ├── linux.preset
 │   └── PKGBUILD
+├── linux-lqx-git
+│   ├── 60-linux.hook
+│   ├── 90-linux.hook
+│   ├── 99-linux.hook
+│   ├── linux.install
+│   ├── linux.preset
+│   └── PKGBUILD
 ├── psi-plus-plugins
 │   ├── psi-plus-plugins-dev-git
 │   │   └── PKGBUILD
@@ -103,4 +110,4 @@
 │       └── PKGBUILD
 └── README.md
 
-30 directories, 73 files
+31 directories, 79 files
