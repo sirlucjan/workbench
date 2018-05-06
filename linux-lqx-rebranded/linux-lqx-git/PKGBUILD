@@ -242,8 +242,8 @@ cd "${srcdir}/linux-${__basekernel}"
 
 
 _package-headers() {
-pkgdesc="Header files and scripts to build modules for linux-lqx."
-depends=('linux-lqx')
+pkgdesc="Header files and scripts to build modules for linux-lqx-git."
+depends=('linux-lqx-git')
 
 cd "${srcdir}/linux-${__basekernel}"
 
@@ -312,8 +312,8 @@ cd "${srcdir}/linux-${__basekernel}"
 }
 
 _package-docs() {
-pkgdesc="Kernel hackers manual - HTML documentation that comes with the linux-lqx kernel"
-depends=('linux-lqx' )
+pkgdesc="Kernel hackers manual - HTML documentation that comes with the linux-lqx-git kernel"
+depends=('linux-lqx-git' )
 
  cd "${srcdir}/linux-${__basekernel}"
 
