@@ -76,7 +76,7 @@ _1k_HZ_ticks=y
 pkgbase=linux-bfq-sq-mq-haswell
 # pkgname=('linux-bfq-sq-mq-haswell-kernel' 'linux-bfq-sq-mq-haswell-headers' 'linux-bfq-sq-mq-haswell-docs')
 _major=4.17
-_rcver=rc3
+_rcver=rc4
 _srcname=linux-v${_major}-${_rcver}
 pkgver=${_major}${_rcver}
 pkgrel=1
@@ -135,7 +135,8 @@ prepare() {
         msg "Fix naming schema in BFQ-SQ-MQ patch"
         sed -i -e "s|PATCHLEVEL = 16|PATCHLEVEL = ${_ver}|g" \
             -i -e "s|EXTRAVERSION = -bfq|EXTRAVERSION =|g" \
-            -i -e "s|EXTRAVERSION =-mq|EXTRAVERSION =|g"  ../${_bfq_sq_mq_patch}
+            -i -e "s|EXTRAVERSION =-mq|EXTRAVERSION =|g"  \
+            -i -e "s|NAME = Fearless Coyote|NAME = Merciless Moray|g" ../${_bfq_sq_mq_patch}
         msg "Patching source with BFQ-SQ-MQ patches"
         patch -Np1 -i ../${_bfq_sq_mq_patch}
         
@@ -459,7 +460,7 @@ for _p in ${pkgname[@]}; do
   }"
 done
 
-sha512sums=('6dd76362a3e78e8e0e711866502c5da40b88e572538203c022fa45e5af17f8ea61f22ca8f790b90d39c99f77c1e53983971999c115874252faa14414d7157e10'
+sha512sums=('18948bcf3b7b612e8fd5d0f01151cc3827440c874429644e0bf62c06a2fe960c918e1d94d405da50580ea8c4e84e0cba061ace3db6ac0319820ad6f4d32e8a22'
             '5b860dd67312af2327b9c6abc62d08e285cb81b5e64207f879178dac673cfe67249321ab9bf61e07e6fb855b0d7388061e8bbd4cead0e078886b91beb38599c9'
             '0f96fa9ad784709973b32eea82075ceb3e9dc2482df6441a4607612806f069254e63508b1b562279622394e4a1fbebef1b87af8401c0b1210d5d0de9954245c8'
             '079e34ec7bf3ef36438c648116e24c51e00ea8608a1d8b5776164478522d6a96dcab5fe0431e8e9a6282c11a1edd177e1b68fc971a81717b297e199efc101963'
