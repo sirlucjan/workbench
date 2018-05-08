@@ -62,6 +62,7 @@ _1k_HZ_ticks=
 
 pkgbase=linux-bfq-mq-git
 #pkgbase=linux-custom       # Build kernel with a different name
+_major=4.16
 _srcname=linux-stable-rc
 pkgver=4.16.7.53.g113b01a62036
 pkgrel=1
@@ -71,17 +72,17 @@ license=('GPL2')
 makedepends=('xmlto' 'kmod' 'inetutils' 'bc' 'libelf' 'git')
 options=('!strip')
 _bfqpath="https://gitlab.com/tom81094/custom-patches/raw/master/bfq-mq"
-_lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/4.16"
-#_lucjanpath="https://raw.githubusercontent.com/sirlucjan/kernel-patches/master/4.16"
+_lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major}"
+#_lucjanpath="https://raw.githubusercontent.com/sirlucjan/kernel-patches/master/${_major}"
 _gcc_name="kernel_gcc_patch"
 _gcc_rel='20180507'
 _gcc_path="https://github.com/graysky2/kernel_gcc_patch/archive"
 _gcc_patch="enable_additional_cpu_optimizations_for_gcc_v8.1+_kernel_v4.13+.patch"
 _bfq_mq_ver='20180412'
-_bfq_mq_patch="4.16-bfq-sq-mq-git-${_bfq_mq_ver}.patch"
+_bfq_mq_patch="${_major}-bfq-sq-mq-git-${_bfq_mq_ver}.patch"
 
 source=(# mainline kernel
-        "git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable-rc.git#branch=linux-4.16.y"
+        "git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable-rc.git#branch=linux-${_major}.y"
         # gcc cpu optimizatons from graysky and ck; forked by sir_lucjan
         "${_gcc_name}-${_gcc_rel}.tar.gz::${_gcc_path}/${_gcc_rel}.tar.gz"
         # bfq-mq patch
