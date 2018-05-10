@@ -105,7 +105,7 @@ source=(# mainline kernel
         '0003-Partially-revert-swiotlb-remove-various-exports.patch')
 
 sha256sums=('SKIP'
-            '0d22651dbe27eeadd269706fc80c8a6caf22ceac81cbecc37d70e8e8fb00fef0'
+            '226e30068ea0fecdb22f337391385701996bfbdba37cdcf0f1dbf55f1080542d'
             '3518ed9db96d7fc94ed69988c51f58356ccb639e3590cda5946086ee8739bd97'
             '159f6ba3e47c9f8de0cf0feda34edbfde3b756807e30615139f8304905e60316'
             'eb3cb1a9e487c54346b798b57f5b505f8a85fd1bc839d8f00b2925e6a7d74531'
