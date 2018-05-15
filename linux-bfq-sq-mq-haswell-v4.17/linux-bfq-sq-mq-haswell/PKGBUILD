@@ -79,7 +79,7 @@ _major=4.17
 _rcver=rc5
 _srcname=linux-v${_major}-${_rcver}
 pkgver=${_major}${_rcver}
-pkgrel=2
+pkgrel=3
 arch=('x86_64')
 url="https://github.com/Algodev-github/bfq-mq/"
 license=('GPL2')
@@ -96,6 +96,7 @@ _gcc_patch="enable_additional_cpu_optimizations_for_gcc_v8.1+_kernel_v4.13+.patc
 source=("https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/snapshot/$_srcname.tar.gz"
         "${_lucjanpath}/${_bfq_sq_mq_patch}"
         "${_lucjanpath}/0005-objtool-add-gcc8-support.patch"
+        "${_lucjanpath}/0006-include-linux-add-gcc8-support.patch"
         "${_lucjanpath}/0100-Check-presence-on-tree-of-every-entity-after-every-a.patch"
         "${_gcc_path}"
          # the main kernel config files
@@ -133,6 +134,7 @@ prepare() {
     ### Fix gcc8 bogus warnings
         msg "Fix gcc8 bogus warnings"
         patch -Np1 -i ../0005-objtool-add-gcc8-support.patch
+        patch -Np1 -i ../0006-include-linux-add-gcc8-support.patch
     
     ### Patch source with BFQ-SQ-MQ
         _ver="$(cat Makefile | grep -m1 -e PATCHLEVEL | grep -o "[[:digit:]]*")"
@@ -467,6 +469,7 @@ done
 sha512sums=('fac70754f06df44b903fdc68454f3ac6b0b17957f639e73cc56892ff28ed47934db8a414d82211a15c2834c8ecd5f336fbff289d59d8c911cdceee642a91ccb4'
             '5b860dd67312af2327b9c6abc62d08e285cb81b5e64207f879178dac673cfe67249321ab9bf61e07e6fb855b0d7388061e8bbd4cead0e078886b91beb38599c9'
             'a10a546ecced915ee38075cc6c57eaebb0f8fa58e6af6669d7429ef4880b55bd5782e11dfbda75ce4f805fa5b2399421b4eade8bbbf6766e5aac24a542f1b7a7'
+            'c7353343ee077780f7a705056c825c200644e05607690fcb94bdd58fe801f69396f878d74aa529ebe16705e92c500e7867298f4665dada189f1f77c315683a15'
             '0f96fa9ad784709973b32eea82075ceb3e9dc2482df6441a4607612806f069254e63508b1b562279622394e4a1fbebef1b87af8401c0b1210d5d0de9954245c8'
             'SKIP'
             '22783ff540cdfeebecdf8f6514894bcc56f96ac1b8b067e1a9280c24d020770c44b62fbf4f1ff29e2969518d759ad4c93b7714af03d680e66122c5fca197595c'
