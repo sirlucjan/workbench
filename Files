@@ -38,7 +38,8 @@
 │   ├── fancontrol-4.14
 │   ├── fancontrol-4.16
 │   ├── gitconfig
-│   └── repo-schema
+│   ├── repo-schema
+│   └── syslinux.cfg
 ├── Files
 ├── fork-off-linux-bfq-mq-git
 │   ├── Files
@@ -115,4 +116,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-33 directories, 82 files
+33 directories, 83 files
