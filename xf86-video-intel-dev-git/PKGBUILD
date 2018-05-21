@@ -36,12 +36,8 @@ pkgver() {
   git describe --long | sed 's/-/./g'
 }
 
-prepare() {
-  mkdir build
-}
-
 build() {
-
+  
   # Since pacman 5.0.2-2, hardened flags are now enabled in makepkg.conf
   # With them, module fail to load with undefined symbol.
   # See https://bugs.archlinux.org/task/55102 / https://bugs.archlinux.org/task/54845
@@ -49,18 +45,17 @@ build() {
   export CXXFLAGS=${CXXFLAGS/-fno-plt}
   export LDFLAGS=${LDFLAGS/,-z,now}
 
-  cd build
   arch-meson $_pkgname build \
    -Dwith-default-dri=3
    ninja -C build
 }
 
 check() {
+
   meson test -C build
 }
 
 package() {
-  
 
   DESTDIR="$pkgdir" ninja -C build install
 
