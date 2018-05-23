@@ -79,7 +79,7 @@ _major=4.17
 _rcver=rc6
 _srcname=linux-v${_major}-${_rcver}
 pkgver=${_major}${_rcver}
-pkgrel=2
+pkgrel=3
 arch=('x86_64')
 url="https://github.com/Algodev-github/bfq-mq/"
 license=('GPL2')
@@ -96,6 +96,7 @@ _gcc_patch="enable_additional_cpu_optimizations_for_gcc_v8.1+_kernel_v4.13+.patc
 source=("https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/snapshot/$_srcname.tar.gz"
         "${_lucjanpath}/${_bfq_sq_mq_patch}"
         "${_lucjanpath}/0100-Check-presence-on-tree-of-every-entity-after-every-a.patch"
+        "${_lucjanpath}/blk-mq-miscellaneous-v1/0022-blk-mq-avoid-to-starve-tag-allocation-after-allocation-process-migrates.patch"
         "${_lucjanpath}/bfq-pf/0901-block-bfq-postpone-rq-preparation-to-insert-or-merge.patch"
         "${_gcc_path}"
          # the main kernel config files
@@ -129,6 +130,10 @@ prepare() {
     ### Fix https://bugs.archlinux.org/task/56711
         msg "Fix #56711"
         patch -Np1 -i ../0002-drm-i915-edp-Only-use-the-alternate-fixed-mode-if-it.patch
+    
+    ### Add blk fixes
+        msg "Add blk fixes"
+        patch -Np1 -i ../0022-blk-mq-avoid-to-starve-tag-allocation-after-allocation-process-migrates.patch
     
     ### Add block-bfq fixes
         msg "Add block-bfq fixes"
@@ -467,6 +472,7 @@ done
 sha512sums=('d6acfc0d043d3343591e06ab64abc6db56f02c99abc1cec5202262eeb746801f17e992be34b68e255a57f2f27f4839e4012146c790fd83fb5ba4b23f5810dca2'
             'd1dcba01d1e905dbc88346466be21845f0138c1ca635e5cc2b5d3225d6d15fe6a345ff11bf900c663c060d00746f8bcf4470121a501d612551a5168da2876ea4'
             '0f96fa9ad784709973b32eea82075ceb3e9dc2482df6441a4607612806f069254e63508b1b562279622394e4a1fbebef1b87af8401c0b1210d5d0de9954245c8'
+            'c907b83416d15c30d2127dea79105ca4e152be387944470236d1e58b627ff6726ead4f1b4ba68ac42cd43d8b0f3d7b1a7ca31315e033bbca4592e2981eb8c1bd'
             'f8dd74ae67bf8c34d1fee2d4ddea52ffeb83f9fb66de0667a97f897f72ed0d00e916561bfa827c8611adbc7198cf2378c5bc4b6bbb19f91921eaef8a911da3a1'
             'SKIP'
             'e2949c39fb4a5b7972f18284cdbabf0e4d909457ce3ba960107a35425c25dad7769d0a52c2507780bf6fee9d6169fb0ac3e9fb6e5414b74004f575def683cae4'
