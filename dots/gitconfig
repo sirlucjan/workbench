@@ -4,6 +4,18 @@
 	email = lucjan.lucjanov@gmail.com
 	signingkey = BDB26C5A
 
+[url "https://aur.archlinux.org/"]
+    insteadOf = aur:
+
+[url "ssh://aur@aur.archlinux.org/"]
+    insteadOf = aurs:
+
+[url "https://github.com/"]
+    insteadOf = github:
+
+[url "https://gitlab.com/"]
+    insteadOf = gitlab:    
+
 [core]
         editor = vim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
