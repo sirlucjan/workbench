@@ -8,7 +8,7 @@ git clone https://github.com/sirlucjan/workbench
 or
 
 ```
-https://gitlab.com/sirlucjan/workbench
+git clone https://gitlab.com/sirlucjan/workbench
 ```
 
 ### Install
