@@ -78,13 +78,13 @@ pkgbase=linux-bfq-sq-mq-haswell-git
 _major=4.17
 _srcname=linux
 pkgver=4.17.rc7.0.gb04e217704b7
-pkgrel=1
+pkgrel=2
 arch=('x86_64')
 url="https://github.com/Algodev-github/bfq-mq/"
 license=('GPL2')
 options=('!strip')
 makedepends=('kmod' 'inetutils' 'bc' 'libelf' 'git')
-_bfq_sq_mq_ver='20180516'
+_bfq_sq_mq_ver='20180531'
 _bfq_sq_mq_patch="${_major}-bfq-sq-mq-git-${_bfq_sq_mq_ver}.patch"
 #_lucjanpath="https://raw.githubusercontent.com/sirlucjan/kernel-patches/master/${_major}"
 _lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major}"
@@ -475,7 +475,7 @@ for _p in ${pkgname[@]}; do
 done
 
 sha512sums=('SKIP'
-            'd1dcba01d1e905dbc88346466be21845f0138c1ca635e5cc2b5d3225d6d15fe6a345ff11bf900c663c060d00746f8bcf4470121a501d612551a5168da2876ea4'
+            '6dfd420fe1e08c09267c9ea9b06066ba511b8c914e7c74dfb07cf7b380fd347cd0de0f7f1ac8d34d65638995e790ca8465f53980a127ef8d249cfeefcf4702ab'
             '0f96fa9ad784709973b32eea82075ceb3e9dc2482df6441a4607612806f069254e63508b1b562279622394e4a1fbebef1b87af8401c0b1210d5d0de9954245c8'
             '6bf0042cf3fc0549e7bc55aa59c53cf3aaa9e7801aba7a125b405f08d400085170c1802172cbbf5486b621b842f6910b6831ceddda8d545ad1127f22bc9b8a8a'
             'f8dd74ae67bf8c34d1fee2d4ddea52ffeb83f9fb66de0667a97f897f72ed0d00e916561bfa827c8611adbc7198cf2378c5bc4b6bbb19f91921eaef8a911da3a1'
