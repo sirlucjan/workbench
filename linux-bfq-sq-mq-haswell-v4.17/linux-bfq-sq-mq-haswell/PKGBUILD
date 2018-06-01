@@ -79,7 +79,7 @@ _major=4.17
 _rcver=rc7
 _srcname=linux-v${_major}-${_rcver}
 pkgver=${_major}${_rcver}
-pkgrel=3
+pkgrel=4
 arch=('x86_64')
 url="https://github.com/Algodev-github/bfq-mq/"
 license=('GPL2')
@@ -98,6 +98,10 @@ source=("https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/snap
         "${_lucjanpath}/0100-Check-presence-on-tree-of-every-entity-after-every-a.patch"
         "${_lucjanpath}/blk-mq-miscellaneous-v1/0022-blk-mq-avoid-to-starve-tag-allocation-after-allocation-process-migrates.patch"
         "${_lucjanpath}/bfq-pf/0901-block-bfq-postpone-rq-preparation-to-insert-or-merge.patch"
+        "${_lucjanpath}/bfq-paolo/0905-block-bfq-add-description-of-weight-raising-heuristics.patch"
+        "${_lucjanpath}/bfq-paolo/0906-block-bfq-remove-slow-system-class.patch"
+        "${_lucjanpath}/bfq-paolo/0907-block-bfq-increase-weight-raising-duration-for-interactive-apps.patch"
+        "${_lucjanpath}/bfq-paolo/0908-block-bfq-prevent-soft_rt_next_start-from-being-stuck-at-infinity.patch"
         "${_gcc_path}"
          # the main kernel config files
         'config'
@@ -138,6 +142,10 @@ prepare() {
     ### Add block-bfq fixes
         msg "Add block-bfq fixes"
         patch -Np1 -i ../0901-block-bfq-postpone-rq-preparation-to-insert-or-merge.patch
+        patch -Np1 -i ../0905-block-bfq-add-description-of-weight-raising-heuristics.patch
+        patch -Np1 -i ../0906-block-bfq-remove-slow-system-class.patch
+        patch -Np1 -i ../0907-block-bfq-increase-weight-raising-duration-for-interactive-apps.patch
+        patch -Np1 -i ../0908-block-bfq-prevent-soft_rt_next_start-from-being-stuck-at-infinity.patch
     
     ### Patch source with BFQ-SQ-MQ
         _ver="$(cat Makefile | grep -m1 -e PATCHLEVEL | grep -o "[[:digit:]]*")"
@@ -474,6 +482,10 @@ sha512sums=('6ef288fbc8687750422378ae6013598955c7303b144665aaa713bcd9f586c110932
             '0f96fa9ad784709973b32eea82075ceb3e9dc2482df6441a4607612806f069254e63508b1b562279622394e4a1fbebef1b87af8401c0b1210d5d0de9954245c8'
             '6bf0042cf3fc0549e7bc55aa59c53cf3aaa9e7801aba7a125b405f08d400085170c1802172cbbf5486b621b842f6910b6831ceddda8d545ad1127f22bc9b8a8a'
             'f8dd74ae67bf8c34d1fee2d4ddea52ffeb83f9fb66de0667a97f897f72ed0d00e916561bfa827c8611adbc7198cf2378c5bc4b6bbb19f91921eaef8a911da3a1'
+            '8ab1382c7790db3c1df09990450afcca9f6f759716c0551d6c830560401ac009f54124522ec4291124993b52284d34d1240d8665452b624079527e3b329ac7d4'
+            'aeed34811317de5c7dfac2867464c2566e21d2abcf2497ab41a3f08e980cb0aef7cf4e6a23de11b513571fbf7631ef92b38000c1e58b1dfc599b8c10e2a71200'
+            'd048485c09878a32a4ef60642b1c7c5d81d59c63536b323ddfa95f682d18ef5747f8c9706ff40c95e4c5abc760489d14421cfc0f54281a6b7e397ef4151365f8'
+            '595776def46c23ddb3b1b9bcb0ef25daeb0abd01a246156fe4f8842fc5054229a3e5eeaf9fbc610399fb2223e884ec0fb3b13ea1a48223cb1f469982846f610c'
             'SKIP'
             'e2949c39fb4a5b7972f18284cdbabf0e4d909457ce3ba960107a35425c25dad7769d0a52c2507780bf6fee9d6169fb0ac3e9fb6e5414b74004f575def683cae4'
             '7ad5be75ee422dda3b80edd2eb614d8a9181e2c8228cd68b3881e2fb95953bf2dea6cbe7900ce1013c9de89b2802574b7b24869fc5d7a95d3cc3112c4d27063a'
