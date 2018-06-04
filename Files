@@ -131,14 +131,20 @@
 │   ├── LOG#3
 │   └── README.md
 ├── linux-usermode-v4.17
-│   ├── linux-usermode
-│   │   ├── 70-uml.hook
-│   │   ├── config
-│   │   └── PKGBUILD
-│   └── linux-usermode-git
-│       ├── 70-uml.hook
-│       ├── config
-│       └── PKGBUILD
+│   ├── stable
+│   │   ├── linux-usermode
+│   │   │   ├── 70-uml.hook
+│   │   │   ├── config
+│   │   │   └── PKGBUILD
+│   │   └── linux-usermode-git
+│   │       ├── 70-uml.hook
+│   │       ├── config
+│   │       └── PKGBUILD
+│   └── stable-rc
+│       └── linux-usermode-git
+│           ├── 70-uml.hook
+│           ├── config
+│           └── PKGBUILD
 ├── psi-plus-plugins
 │   ├── psi-plus-plugins-dev-git
 │   │   └── PKGBUILD
@@ -149,4 +155,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-41 directories, 108 files
+44 directories, 111 files
