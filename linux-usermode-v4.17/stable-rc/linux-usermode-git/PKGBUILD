@@ -7,13 +7,13 @@ _major=4.17
 _kernelname=-usermodelinux-git
 _srcname=linux-stable-rc
 pkgver=4.17.0.g29dcea88779c
-pkgrel=1
+pkgrel=2
 pkgdesc="User mode Linux kernel and modules"
 arch=('x86_64')
 license=('GPL2')
 url="http://user-mode-linux.sourceforge.net/"
 depends=('coreutils')
-makedepends=('bc' 'inetutils' 'git' 'gcc54')
+makedepends=('bc' 'inetutils' 'git' 'gcc7')
 source=(
   "git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable-rc.git#branch=linux-${_major}.y"
   'config'
@@ -52,7 +52,7 @@ END
 build() {
   cd ${_srcname}
   unset LDFLAGS CFLAGS
-  make ARCH=um CC=gcc-5 vmlinux modules 
+  make ARCH=um CC=gcc-7 vmlinux modules 
 }
 
 _package() {
