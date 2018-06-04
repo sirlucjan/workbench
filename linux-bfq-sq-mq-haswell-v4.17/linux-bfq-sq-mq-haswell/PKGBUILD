@@ -76,10 +76,9 @@ _1k_HZ_ticks=y
 pkgbase=linux-bfq-sq-mq-haswell
 # pkgname=('linux-bfq-sq-mq-haswell-kernel' 'linux-bfq-sq-mq-haswell-headers' 'linux-bfq-sq-mq-haswell-docs')
 _major=4.17
-#_rcver=rc7
-#_srcname=linux-v${_major}-${_rcver}
-_srcname=linux-v${_major}
-#pkgver=${_major}${_rcver}
+_srcname=linux-${_major}
+#_minor=13
+#pkgver=${_major}.${_minor}
 pkgver=${_major}
 pkgrel=1
 arch=('x86_64')
@@ -95,7 +94,10 @@ _gcc_name="kernel_gcc_patch"
 _gcc_path="git://github.com/graysky2/${_gcc_name}"
 _gcc_patch="enable_additional_cpu_optimizations_for_gcc_v8.1+_kernel_v4.13+.patch"
 
-source=("https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/snapshot/$_srcname.tar.gz"
+source=("https://www.kernel.org/pub/linux/kernel/v4.x/${_srcname}.tar.xz"
+        "https://www.kernel.org/pub/linux/kernel/v4.x/${_srcname}.tar.sign"
+        #"https://www.kernel.org/pub/linux/kernel/v4.x/patch-${pkgver}.xz"
+        #"https://www.kernel.org/pub/linux/kernel/v4.x/patch-${pkgver}.sign"
         "${_lucjanpath}/${_bfq_sq_mq_patch}"
         "${_lucjanpath}/0100-Check-presence-on-tree-of-every-entity-after-every-a.patch"
         "${_lucjanpath}/blk-mq-miscellaneous-v1/0022-blk-mq-avoid-to-starve-tag-allocation-after-allocation-process-migrates.patch"
@@ -122,10 +124,9 @@ _kernelname=${pkgbase#linux}
 prepare() {
     cd ${_srcname}
 
-    ### Fix naming schema in EXTRAVERSION
-        _rc="$(cat Makefile | grep -m1 -e EXTRAVERSION | grep -o "[[:digit:]]*")"
-        msg "Fix naming schema in EXTRAVERSION"
-        sed -i -e "s|EXTRAVERSION = -rc${_rc}|EXTRAVERSION =|g" ./Makefile
+    ### Add upstream patch
+        #msg "Add upstream patch"
+        #patch -p1 -i ../patch-${pkgver}
     
     ### Disable USER_NS for non-root users by default
         msg "Disable USER_NS for non-root users by default"
@@ -475,7 +476,8 @@ for _p in ${pkgname[@]}; do
   }"
 done
 
-sha512sums=('2c73b088453e96f8c6e5a50edcb6ca6a8075499b382f586fe00c925dec32ffe3212d34dcfb741f71d7960eb63f0f36acb80c18f6a254f6f54e71b8d477e8037c'
+sha512sums=('4d9de340a26155a89ea8773131c76220cc2057f2b5d031b467b60e8b14c1842518e2d60a863d8c695f0f7640f3f18d43826201984a238dade857b6cef79837db'
+            'SKIP'
             'eac92c83cee6907f155434f8373a0ef2dbff9095d3aa7b8b0bd383d6dda03fe52c8f79cf6933e55e6b668cb762b3babbfc40fe801d2a2440e92d3200ced2b4e0'
             '0f96fa9ad784709973b32eea82075ceb3e9dc2482df6441a4607612806f069254e63508b1b562279622394e4a1fbebef1b87af8401c0b1210d5d0de9954245c8'
             '6bf0042cf3fc0549e7bc55aa59c53cf3aaa9e7801aba7a125b405f08d400085170c1802172cbbf5486b621b842f6910b6831ceddda8d545ad1127f22bc9b8a8a'
