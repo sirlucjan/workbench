@@ -5,9 +5,11 @@ pkgbase=linux-usermode
 pkgname=('linux-usermode' 'linux-usermode-modules')
 _kernelname=-usermodelinux
 _major=4.17
-_rcver=rc7
-_srcname=linux-v${_major}-${_rcver}
-pkgver=${_major}${_rcver}
+#_rcver=rc7
+#_srcname=linux-v${_major}-${_rcver}
+_srcname=linux-v${_major}
+#pkgver=${_major}${_rcver}
+pkgver=${_major}
 pkgrel=1
 pkgdesc="User mode Linux kernel and modules"
 arch=('x86_64')
@@ -20,7 +22,7 @@ source=(
   'config'
   '70-uml.hook')
 
-sha256sums=('cefc5cd3a12244388d248b7f2d396d348c0b616d057feb55eab2b02e23758bc5'
+sha256sums=('dcf6f1719fc12a58a4396e1f39d0d59d625d4c81409cdc2691c4afcab3696837'
             '0bcc2be60fe7e974078d5ff81cba81925f46a982526f38fd5a8081968ed64f02'
             '452b8d4d71e1565ca91b1bebb280693549222ef51c47ba8964e411b2d461699c')
 
