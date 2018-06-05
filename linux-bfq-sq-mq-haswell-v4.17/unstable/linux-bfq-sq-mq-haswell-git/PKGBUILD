@@ -206,7 +206,7 @@ END
         
     ### Set performance governor
         if [ -n "$_per_gov" ]; then
-                msg "Setting performance governor.."
+                msg "Setting performance governor..."
                 sed -i -e s'/^CONFIG_CPU_FREQ_DEFAULT_GOV_SCHEDUTIL=y/# CONFIG_CPU_FREQ_DEFAULT_GOV_SCHEDUTIL is not set/' \
                     -i -e s'/^# CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE is not set/CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE=y/' ./.config
                 msg "Disabling uneeded governors..."
