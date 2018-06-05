@@ -1,0 +1,112 @@
+# Maintainer: Piotr Gorski <lucjan.lucjanov@gmail.com>
+# Contributor: Haruue Icymoon <haruue@caoyue.com.cn>
+
+pkgbase=linux-usermode-rc
+pkgname=('linux-usermode-rc' 'linux-usermode-rc-modules')
+_kernelname=-usermodelinux-rc
+_major=4.17
+_srcname=linux-${_major}
+#_minor=0
+#_minorc=$((_minor+1))
+#_rcver=rc1
+#pkgver=${_major}.${_minorc}
+#_stable=${_major}.${_minor}
+#_stablerc=${pkgver}-${_rcver}
+pkgver=${_major}
+pkgrel=1
+pkgdesc="User mode Linux kernel and modules"
+arch=('x86_64')
+license=('GPL2')
+url="http://user-mode-linux.sourceforge.net/"
+depends=('coreutils')
+makedepends=('bc' 'inetutils' 'gcc7')
+source=(
+  "https://www.kernel.org/pub/linux/kernel/v4.x/${_srcname}.tar.xz"
+  "https://www.kernel.org/pub/linux/kernel/v4.x/${_srcname}.tar.sign"
+  #"https://www.kernel.org/pub/linux/kernel/v4.x/patch-${_stable}.xz"
+  #"https://www.kernel.org/pub/linux/kernel/v4.x/patch-${_stable}.sign"
+  #"https://www.kernel.org/pub/linux/kernel/v4.x/stable-review/patch-${_stablerc}.xz"
+  #"https://www.kernel.org/pub/linux/kernel/v4.x/stable-review/patch-${_stablerc}.sign"
+  'config'
+  '70-uml.hook')
+
+sha256sums=('9faa1dd896eaea961dc6e886697c0b3301277102e5bc976b2758f9a62d3ccd13'
+            'SKIP'
+            '0bcc2be60fe7e974078d5ff81cba81925f46a982526f38fd5a8081968ed64f02'
+            '452b8d4d71e1565ca91b1bebb280693549222ef51c47ba8964e411b2d461699c')
+
+validpgpkeys=(
+  'ABAF11C65A2970B130ABE3C479BE3E4300411886'  # Linus Torvalds
+  '647F28654894E3BD457199BE38DBBDC86092693E'  # Greg Kroah-Hartman
+)
+
+prepare() {
+  cd ${_srcname}
+
+  # add upstream patch
+  #patch -p1 -i ../patch-${_stable}
+  
+  # add stable-review patch
+  #patch -p1 -i ../patch-${_stablerc}
+
+  cat ../config - >.config <<END
+CONFIG_LOCALVERSION="${_kernelname}"
+CONFIG_LOCALVERSION_AUTO=n
+END
+
+  # set extraversion to pkgrel and empty localversion
+  sed -e "/^EXTRAVERSION =/s/=.*/= -${pkgrel}/" \
+      -e "/^EXTRAVERSION =/aLOCALVERSION =" \
+      -i Makefile
+
+  # rewrite configuration
+  yes "" | make ARCH=um config >/dev/null
+  
+  # save configuration for later reuse
+  cat .config > "${startdir}/config.last"
+}
+
+build() {
+  cd ${_srcname}
+  unset LDFLAGS CFLAGS
+  make ARCH=um CC=gcc-7 vmlinux modules 
+}
+
+_package() {
+  conflicts=('linux-usermode' 'linux-usermode-git' 'linux-usermode-rc-git')
+  
+  cd ${_srcname}
+  mkdir -p "$pkgdir/usr/bin" "$pkgdir/usr/share/kernel-usermode"
+  install -m 644 System.map ${pkgdir}/usr/share/kernel-usermode/System.map
+  install -m 755 vmlinux ${pkgdir}/usr/bin/
+}
+
+_package-modules() {
+  conflicts=('linux-usermode-modules' 'linux-usermode-git-modules'
+             'linux-usermode-rc-git-modules')
+  
+  cd ${_srcname}
+  # get kernel version
+  _kernver="$(make ARCH=um kernelrelease)"
+  #  make ARCH=um INSTALL_MOD_PATH="${pkgdir}/usr" modules_install
+  make ARCH=um INSTALL_MOD_PATH="${pkgdir}/usr" _modinst_
+  rm -f $pkgdir/usr/lib/modules/${_kernver}/{source,build}
+  # sed expression for following substitutions
+  local _subst="
+        s|%PKGBASE%|${pkgbase}|g
+        s|%KERNVER%|${_kernver}|g
+  "
+  # install pacman hook
+  sed "${_subst}" ../70-uml.hook |
+        install -Dm644 /dev/stdin "${pkgdir}/usr/share/libalpm/hooks/70-uml.hook"
+}
+
+pkgname=("${pkgbase}" "${pkgbase}-modules")
+for _p in ${pkgname[@]}; do
+  eval "package_${_p}() {
+    $(declare -f "_package${_p#${pkgbase}}")
+    _package${_p#${pkgbase}}
+  }"
+done
+
+# vim:set ts=8 sts=2 sw=2 et:
