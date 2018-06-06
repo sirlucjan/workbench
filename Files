@@ -119,42 +119,6 @@
 │       │   └── PKGBUILD
 │       └── linux-api-headers-rc-git
 │           └── PKGBUILD
-├── linux-bfq-sq-mq-haswell-v4.17
-│   ├── README.md
-│   ├── testing
-│   │   ├── linux-bfq-sq-mq-haswell
-│   │   │   ├── 60-linux.hook
-│   │   │   ├── 90-linux.hook
-│   │   │   ├── 99-linux.hook
-│   │   │   ├── config
-│   │   │   ├── linux.install
-│   │   │   ├── linux.preset
-│   │   │   └── PKGBUILD
-│   │   └── linux-bfq-sq-mq-haswell-git
-│   │       ├── 60-linux.hook
-│   │       ├── 90-linux.hook
-│   │       ├── 99-linux.hook
-│   │       ├── config
-│   │       ├── linux.install
-│   │       ├── linux.preset
-│   │       └── PKGBUILD
-│   └── unstable
-│       ├── linux-bfq-sq-mq-haswell
-│       │   ├── 60-linux.hook
-│       │   ├── 90-linux.hook
-│       │   ├── 99-linux.hook
-│       │   ├── config
-│       │   ├── linux.install
-│       │   ├── linux.preset
-│       │   └── PKGBUILD
-│       └── linux-bfq-sq-mq-haswell-git
-│           ├── 60-linux.hook
-│           ├── 90-linux.hook
-│           ├── 99-linux.hook
-│           ├── config
-│           ├── linux.install
-│           ├── linux.preset
-│           └── PKGBUILD
 ├── linux-lqx-rebranded
 │   ├── linux-lqx
 │   │   ├── 60-linux.hook
@@ -255,4 +219,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-74 directories, 181 files
+67 directories, 152 files
