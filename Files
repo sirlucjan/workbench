@@ -108,17 +108,6 @@
 │           ├── linux.install
 │           ├── linux.preset
 │           └── PKGBUILD
-├── linux-api-headers-v4.17
-│   ├── stable
-│   │   ├── linux-api-headers
-│   │   │   └── PKGBUILD
-│   │   └── linux-api-headers-git
-│   │       └── PKGBUILD
-│   └── stable-rc
-│       ├── linux-api-headers-rc
-│       │   └── PKGBUILD
-│       └── linux-api-headers-rc-git
-│           └── PKGBUILD
 ├── linux-lqx-rebranded
 │   ├── linux-lqx
 │   │   ├── 60-linux.hook
@@ -219,4 +208,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-67 directories, 152 files
+60 directories, 148 files
