@@ -179,25 +179,6 @@
 │           ├── linux.install
 │           ├── linux.preset
 │           └── PKGBUILD
-├── linux-usermode-v4.17
-│   ├── stable
-│   │   ├── linux-usermode
-│   │   │   ├── 70-uml.hook
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
-│   │   └── linux-usermode-git
-│   │       ├── 70-uml.hook
-│   │       ├── config
-│   │       └── PKGBUILD
-│   └── stable-rc
-│       ├── linux-usermode-rc
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
-│       └── linux-usermode-rc-git
-│           ├── 70-uml.hook
-│           ├── config
-│           └── PKGBUILD
 ├── psi-plus-plugins
 │   ├── psi-plus-plugins-dev-git
 │   │   └── PKGBUILD
@@ -208,4 +189,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-60 directories, 148 files
+53 directories, 136 files
