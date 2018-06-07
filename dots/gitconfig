@@ -11,10 +11,10 @@
     insteadOf = aurs:
 
 [url "https://github.com/"]
-    insteadOf = hub:
+    insteadOf = github:
 
 [url "https://gitlab.com/"]
-    insteadOf = lab:    
+    insteadOf = gitlab:    
 
 [core]
         editor = vim
