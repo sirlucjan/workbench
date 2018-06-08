@@ -3,22 +3,18 @@
 │   ├── Config
 │   │   ├── 4.16
 │   │   │   ├── git
-│   │   │   │   ├── bfq-sq-mq-haswell-git
+│   │   │   │   ├── bfq-mq-git
 │   │   │   │   │   └── config
 │   │   │   │   ├── rt-bfq-git
 │   │   │   │   │   └── config
-│   │   │   │   ├── uksm-git
-│   │   │   │   │   └── config
-│   │   │   │   └── uml-git
+│   │   │   │   └── uksm-git
 │   │   │   │       └── config
 │   │   │   └── src
-│   │   │       ├── bfq-sq-mq-haswell
+│   │   │       ├── bfq-mq
 │   │   │       │   └── config
 │   │   │       ├── rt-bfq
 │   │   │       │   └── config
-│   │   │       ├── uksm
-│   │   │       │   └── config
-│   │   │       └── uml
+│   │   │       └── uksm
 │   │   │           └── config
 │   │   └── 4.17
 │   │       ├── git
@@ -166,4 +162,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-50 directories, 116 files
+48 directories, 114 files
