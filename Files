@@ -96,19 +96,6 @@
 │       ├── linux.install
 │       ├── linux.preset
 │       └── PKGBUILD
-├── linux-next
-│   ├── linux-next-git
-│   │   ├── 60-linux.hook
-│   │   ├── 90-linux.hook
-│   │   ├── 99-linux.hook
-│   │   ├── config
-│   │   ├── linux.install
-│   │   ├── linux.preset
-│   │   └── PKGBUILD
-│   ├── LOG#1
-│   ├── LOG#2
-│   ├── LOG#3
-│   └── README.md
 ├── linux-uksm-v4.17
 │   ├── stable
 │   │   ├── linux-uksm
@@ -162,4 +149,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-48 directories, 114 files
+46 directories, 103 files
