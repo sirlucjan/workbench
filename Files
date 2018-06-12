@@ -63,6 +63,7 @@
 │   │   └── linux-bfq-mq-git
 │   │       ├── 0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
 │   │       ├── 0002-Revert-drm-i915-edp-Allow-alternate-fixed-mode-for-e.patch
+│   │       ├── 0003-ACPI-watchdog-Prefer-iTCO_wdt-always-when-WDAT-table.patch
 │   │       ├── 60-linux.hook
 │   │       ├── 90-linux.hook
 │   │       ├── 99-linux.hook
@@ -74,6 +75,7 @@
 │       └── linux-bfq-mq-git
 │           ├── 0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
 │           ├── 0002-Revert-drm-i915-edp-Allow-alternate-fixed-mode-for-e.patch
+│           ├── 0003-ACPI-watchdog-Prefer-iTCO_wdt-always-when-WDAT-table.patch
 │           ├── 60-linux.hook
 │           ├── 90-linux.hook
 │           ├── 99-linux.hook
@@ -153,4 +155,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-46 directories, 107 files
+46 directories, 109 files
