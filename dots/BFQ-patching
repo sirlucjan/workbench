@@ -1,4 +1,11 @@
-### Patch source with BFQ-SQ-MQ
+    ### Fix naming schema in EXTRAVERSION
+        _rc="$(cat Makefile | grep -m1 -e EXTRAVERSION | grep -o "[[:digit:]]*")"
+        msg "Fix naming schema in EXTRAVERSION"
+        sed -i -e "s|EXTRAVERSION = -rc${_rc}|EXTRAVERSION =|g" ./Makefile
+
+
+
+    ### Patch source with BFQ-SQ-MQ
         _ver1="$(cat Makefile | grep -m1 -e PATCHLEVEL | grep -o "[[:digit:]]*")"
         _ver2="$(cat Makefile | grep -m1 -e SUBLEVEL | grep -o "[[:digit:]]*")"
         msg "Fix naming schema in BFQ-SQ-MQ patch"
