@@ -64,7 +64,7 @@ pkgbase=linux-bfq-mq-git
 #pkgbase=linux-custom       # Build kernel with a different name
 _major=4.17
 _srcname=linux-stable-rc
-pkgver=4.17.1.0.gd0c077266ecb
+pkgver=4.17.2.0.g3816828a8cd0
 pkgrel=1
 arch=('x86_64')
 url="https://github.com/Algodev-github/bfq-mq/"
@@ -145,9 +145,11 @@ prepare() {
         patch -Np1 -i ../0003-ACPI-watchdog-Prefer-iTCO_wdt-always-when-WDAT-table.patch
    
    ### Patch source with BFQ-SQ-MQ
-        _ver="$(cat Makefile | grep -m1 -e PATCHLEVEL | grep -o "[[:digit:]]*")"
+        _ver1="$(cat Makefile | grep -m1 -e PATCHLEVEL | grep -o "[[:digit:]]*")"
+        _ver2="$(cat Makefile | grep -m1 -e SUBLEVEL | grep -o "[[:digit:]]*")"
         msg "Fix naming schema in BFQ-SQ-MQ patch"
-        sed -i -e "s|PATCHLEVEL = 16|PATCHLEVEL = ${_ver}|g" \
+        sed -i -e "s|PATCHLEVEL = 16|PATCHLEVEL = ${_ver1}|g" \
+            -i -e "s|SUBLEVEL = 0|SUBLEVEL = ${_ver2}|g" \
             -i -e "s|EXTRAVERSION = -bfq|EXTRAVERSION =|g" \
             -i -e "s|EXTRAVERSION =-mq|EXTRAVERSION =|g"  \
             -i -e "s|NAME = Fearless Coyote|NAME = Merciless Moray|g" ../${_bfq_mq_patch}
