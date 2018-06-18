@@ -113,17 +113,6 @@
 │   │       ├── linux.preset
 │   │       └── PKGBUILD
 │   └── stable-rc
-│       ├── linux-uksm
-│       │   ├── 0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
-│       │   ├── 0002-Revert-drm-i915-edp-Allow-alternate-fixed-mode-for-e.patch
-│       │   ├── 0003-ACPI-watchdog-Prefer-iTCO_wdt-always-when-WDAT-table.patch
-│       │   ├── 60-linux.hook
-│       │   ├── 90-linux.hook
-│       │   ├── 99-linux.hook
-│       │   ├── config
-│       │   ├── linux.install
-│       │   ├── linux.preset
-│       │   └── PKGBUILD
 │       └── linux-uksm-git
 │           ├── 0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
 │           ├── 0002-Revert-drm-i915-edp-Allow-alternate-fixed-mode-for-e.patch
@@ -142,4 +131,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-43 directories, 99 files
+42 directories, 89 files
