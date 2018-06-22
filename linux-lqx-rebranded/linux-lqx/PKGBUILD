@@ -30,7 +30,7 @@ _use_KSM="no"		# "yes":	Enable Kernel SamePage Merging (KSM).
 
 pkgdesc='A desktop oriented kernel and modules with Liquorix patches'
 __basekernel=4.16
-pkgver=4.16.16.2
+pkgver=4.16.16_2
 pkgrel=1
 pkgbase=linux-lqx
 # pkgname=('linux-lqx' 'linux-lqx-headers' 'linux-lqx-docs')
@@ -77,7 +77,7 @@ _kernelname=${pkgbase#linux}
 : ${_kernelname:=-ARCH}
 
 pkgver() {
-  printf ${__basekernel}.${_abiname}
+  printf ${__basekernel}.${_minor}_${_patchrel}
 }
    
 prepare() {

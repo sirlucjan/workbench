@@ -30,7 +30,7 @@ _use_KSM="no"		# "yes":	Enable Kernel SamePage Merging (KSM).
 
 pkgdesc='A desktop oriented kernel and modules with Liquorix patches'
 __basekernel=4.16
-pkgver=4.16.13.1.r730.g9a03353
+pkgver=4.16.16_2.r743.gf66c4b2
 pkgrel=1
 pkgbase=linux-lqx-git
 # pkgname=('linux-lqx-git' 'linux-lqx-git-headers' 'linux-lqx-git-docs')
@@ -76,7 +76,7 @@ _kernelname=${pkgbase#linux}
 
 pkgver() {
   cd ${_lqxpatchname}
-  _ver="${__basekernel}.${_abiname}"
+  _ver="${__basekernel}.${_minor}_${_patchrel}"
   echo "${_ver}.r$(git rev-list --count HEAD).g$(git rev-parse --short HEAD)"
 }
    
