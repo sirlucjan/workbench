@@ -91,11 +91,9 @@
 │       ├── linux.install
 │       ├── linux.preset
 │       └── PKGBUILD
-├── psi-plus-plugins-git
-│   └── PKGBUILD
 ├── README.md
 └── xf86-video-intel-dev-git
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-33 directories, 65 files
+32 directories, 64 files
