@@ -29,8 +29,8 @@ _use_KSM="no"		# "yes":	Enable Kernel SamePage Merging (KSM).
 ###########################################################################################################
 
 pkgdesc='A desktop oriented kernel and modules with Liquorix patches'
-__basekernel=4.16
-pkgver=4.16.16_2.r743.gf66c4b2
+__basekernel=4.17
+pkgver=4.17.3_1.r757.g90b6a6c
 pkgrel=1
 pkgbase=linux-lqx-git
 # pkgname=('linux-lqx-git' 'linux-lqx-git-headers' 'linux-lqx-git-docs')
@@ -59,7 +59,7 @@ source=("https://www.kernel.org/pub/linux/kernel/v4.x/linux-${__basekernel}.tar.
          # standard config files for mkinitcpio ramdisk
         'linux.preset')
 
-sha512sums=('ab47849314b177d0eec9dbf261f33972b0d89fb92fb0650130ffa7abc2f36c0fab2d06317dc1683c51a472a9a631573a9b1e7258d6281a2ee189897827f14662'
+sha512sums=('4d9de340a26155a89ea8773131c76220cc2057f2b5d031b467b60e8b14c1842518e2d60a863d8c695f0f7640f3f18d43826201984a238dade857b6cef79837db'
             'SKIP'
             'SKIP'
             '7ad5be75ee422dda3b80edd2eb614d8a9181e2c8228cd68b3881e2fb95953bf2dea6cbe7900ce1013c9de89b2802574b7b24869fc5d7a95d3cc3112c4d27063a'
