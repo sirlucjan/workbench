@@ -46,6 +46,7 @@
 │   ├── fancontrol-4.14
 │   ├── fancontrol-4.16
 │   ├── gitconfig
+│   ├── patching.sh
 │   ├── repo-schema
 │   └── syslinux.cfg
 ├── Files
@@ -96,4 +97,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-32 directories, 64 files
+32 directories, 65 files
