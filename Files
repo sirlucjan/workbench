@@ -45,7 +45,8 @@
 │   ├── BFQ-patching
 │   ├── fancontrol-4.14
 │   ├── fancontrol-4.16
-│   ├── gitconfig
+│   ├── gitconfig-nano
+│   ├── gitconfig-vim
 │   ├── patching.sh
 │   ├── repo-schema
 │   └── syslinux.cfg
@@ -116,4 +117,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-37 directories, 79 files
+37 directories, 80 files
