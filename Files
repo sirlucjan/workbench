@@ -83,7 +83,6 @@
 ├── linux-juliagoda
 │   ├── stable
 │   │   └── linux-juliagoda-git
-│   │       ├── 0003-mac80211-disable-BHs-preemption-in-ieee80211_tx_cont.patch
 │   │       ├── 60-linux.hook
 │   │       ├── 90-linux.hook
 │   │       ├── 99-linux.hook
@@ -93,7 +92,6 @@
 │   │       └── PKGBUILD
 │   └── stable-rc
 │       └── linux-juliagoda-git
-│           ├── 0003-mac80211-disable-BHs-preemption-in-ieee80211_tx_cont.patch
 │           ├── 60-linux.hook
 │           ├── 90-linux.hook
 │           ├── 99-linux.hook
@@ -121,4 +119,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-37 directories, 84 files
+37 directories, 82 files
