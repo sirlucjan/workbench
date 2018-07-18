@@ -35,9 +35,9 @@
 │       │   ├── linux.install
 │       │   └── linux.preset
 │       ├── linux-lucjan
-│       │   ├── linux-01-depmod.hook
-│       │   ├── linux-02-initcpio.hook
-│       │   ├── linux-03-remove.hook
+│       │   ├── 60-linux-01-depmod.hook
+│       │   ├── 90-linux-02-initcpio.hook
+│       │   ├── 99-linux-03-remove.hook
 │       │   ├── linux.install
 │       │   └── linux.preset
 │       ├── stock
