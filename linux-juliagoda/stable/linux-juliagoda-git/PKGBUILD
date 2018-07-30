@@ -145,30 +145,11 @@ END
 	fi    
         
     ### Set GCC flags
-        if [ -n "$_gcc_haswell" ]; then
-                msg "Setting GCC flags for Intel Haswell CPU..."
+        if [ -n "$_gcc_mk10" ]; then
+                msg "Setting GCC flags for AMD K10-family CPU..."
                 sed -i -e s'/^CONFIG_GENERIC_CPU=y/# CONFIG_GENERIC_CPU is not set/' \
-                    -i -e s'/^# CONFIG_MHASWELL is not set/CONFIG_MHASWELL=y/' ./.config
+                    -i -e s'/^# CONFIG_MK10 is not set/CONFIG_MK10=y/' ./.config
         fi  
-        
-    ### Enable fancontrol
-        if [ -n "$_dell_fancontrol" ]; then
-                msg "Enabling I8K for Dell..."
-                sed -i -e s'/^CONFIG_I8K=m/CONFIG_I8K=y/' \
-                    -i -e s'/^CONFIG_SENSORS_DELL_SMM=m/CONFIG_SENSORS_DELL_SMM=y/' ./.config    
-        fi    
-        
-    ### Set performance governor
-        if [ -n "$_per_gov" ]; then
-                msg "Setting performance governor..."
-                sed -i -e s'/^CONFIG_CPU_FREQ_DEFAULT_GOV_SCHEDUTIL=y/# CONFIG_CPU_FREQ_DEFAULT_GOV_SCHEDUTIL is not set/' \
-                    -i -e s'/^# CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE is not set/CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE=y/' ./.config
-                msg "Disabling uneeded governors..."
-                sed -i -e s'/^CONFIG_CPU_FREQ_GOV_ONDEMAND=m/# CONFIG_CPU_FREQ_GOV_ONDEMAND is not set/' \
-                    -i -e s'/^CONFIG_CPU_FREQ_GOV_CONSERVATIVE=m/# CONFIG_CPU_FREQ_GOV_CONSERVATIVE is not set/' \
-                    -i -e s'/^CONFIG_CPU_FREQ_GOV_USERSPACE=m/# CONFIG_CPU_FREQ_GOV_USERSPACE is not set/' \
-                    -i -e s'/^CONFIG_CPU_FREQ_GOV_SCHEDUTIL=y/# CONFIG_CPU_FREQ_GOV_SCHEDUTIL is not set/' ./.config
-        fi 
         
     ### Disable Deadline I/O scheduler
 	if [ -n "$_deadline_disable" ]; then
@@ -196,7 +177,7 @@ END
 		sed -i -e s'/^# CONFIG_SCSI_MQ_DEFAULT is not set/CONFIG_SCSI_MQ_DEFAULT=y/' \
 		    -i -e s'/^# CONFIG_DM_MQ_DEFAULT is not set/CONFIG_DM_MQ_DEFAULT=y/' ./.config
         fi
-    
+        
     ### Optionally set tickrate to 1000 
 	if [ -n "$_1k_HZ_ticks" ]; then
 		msg "Setting tick rate to 1k..."
