@@ -109,7 +109,7 @@ prepare() {
     cd "${_srcname}"
     
     ### Patch source with linux-lucjan
-        msg "Patching source with linux-lucjan"
+        msg2 "Patching source with linux-lucjan"
         patch -Np1 -i ../${_lucjanpatch}
     
     ### Setting version
