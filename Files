@@ -82,9 +82,7 @@
 │   ├── stable
 │   │   └── linux-bfq-mq-git
 │   │       ├── 0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
-│   │       ├── 0002-Revert-drm-i915-edp-Allow-alternate-fixed-mode-for-e.patch
-│   │       ├── 0003-ACPI-watchdog-Prefer-iTCO_wdt-always-when-WDAT-table.patch
-│   │       ├── 0004-mac80211-disable-BHs-preemption-in-ieee80211_tx_cont.patch
+│   │       ├── 0002-Increase-timeout-in-lspcon_wait_mode.patch
 │   │       ├── 60-linux.hook
 │   │       ├── 90-linux.hook
 │   │       ├── 99-linux.hook
@@ -95,9 +93,7 @@
 │   └── stable-rc
 │       └── linux-bfq-mq-git
 │           ├── 0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
-│           ├── 0002-Revert-drm-i915-edp-Allow-alternate-fixed-mode-for-e.patch
-│           ├── 0003-ACPI-watchdog-Prefer-iTCO_wdt-always-when-WDAT-table.patch
-│           ├── 0004-mac80211-disable-BHs-preemption-in-ieee80211_tx_cont.patch
+│           ├── 0002-Increase-timeout-in-lspcon_wait_mode.patch
 │           ├── 60-linux.hook
 │           ├── 90-linux.hook
 │           ├── 99-linux.hook
@@ -144,4 +140,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-49 directories, 95 files
+49 directories, 91 files
