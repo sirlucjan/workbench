@@ -103,7 +103,6 @@
 │           └── PKGBUILD
 ├── linux-lqx-rebranded
 │   ├── linux-lqx
-│   │   ├── 0002-Increase-timeout-in-lspcon_wait_mode.patch
 │   │   ├── 60-linux.hook
 │   │   ├── 90-linux.hook
 │   │   ├── 99-linux.hook
@@ -111,7 +110,6 @@
 │   │   ├── linux.preset
 │   │   └── PKGBUILD
 │   └── linux-lqx-git
-│       ├── 0002-Increase-timeout-in-lspcon_wait_mode.patch
 │       ├── 60-linux.hook
 │       ├── 90-linux.hook
 │       ├── 99-linux.hook
@@ -123,4 +121,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-38 directories, 85 files
+38 directories, 83 files
