@@ -1,18 +1,13 @@
 .
 ├── Devel
 │   ├── Config
-│   │   ├── 4.16
-│   │   │   ├── git
-│   │   │   │   └── rt-bfq-git
-│   │   │   │       └── config
-│   │   │   └── src
-│   │   │       └── rt-bfq
-│   │   │           └── config
 │   │   └── 4.18
 │   │       ├── git
 │   │       │   ├── bfq-mq-git
 │   │       │   │   └── config
 │   │       │   ├── lucjan-git
+│   │       │   │   └── config
+│   │       │   ├── rt-bfq-git
 │   │       │   │   └── config
 │   │       │   ├── uksm-git
 │   │       │   │   └── config
@@ -22,6 +17,8 @@
 │   │           ├── bfq-mq
 │   │           │   └── config
 │   │           ├── lucjan
+│   │           │   └── config
+│   │           ├── rt-bfq
 │   │           │   └── config
 │   │           ├── uksm
 │   │           │   └── config
@@ -121,4 +118,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-38 directories, 83 files
+35 directories, 83 files
