@@ -68,18 +68,28 @@ _pkgbase=linux-lucjan
 # pkgname=('linux-juliagoda-git-kernel' 'linux-juliagoda-git-headers' 'linux-juliagoda-git-docs')
 _major=4.18
 _srcname=linux
-pkgver=4.18.5.0.g96158f3a9e70.ll15
+pkgver=4.18.6.0.g3a2c23838bc5.ll15
 pkgrel=1
 arch=('x86_64')
 url="https://gitlab.com/sirlucjan/lucjan-kernels/wikis/README"
 license=('GPL2')
 options=('!strip')
 makedepends=('kmod' 'inetutils' 'bc' 'libelf' 'git' 'python-sphinx' 'graphviz')
-#_lucjanpath="https://raw.githubusercontent.com/sirlucjan/${_pkgbase}/master/actual"
+
+### linux-lucjan stable
+# _lucjanpath="https://raw.githubusercontent.com/sirlucjan/${_pkgbase}/master/actual"
 _lucjanpath="https://gitlab.com/sirlucjan/${_pkgbase}/raw/master/actual"
 _lucjanname='lucjan'
 _lucjanrev='ll15'
 _lucjanpatch="${_major}-${_lucjanname}-${_lucjanrev}.patch"
+
+### linux-lucjan rc
+# _lucjanpath="https://raw.githubusercontent.com/sirlucjan/${_pkgbase}/master/testing"
+# _lucjanpath="https://gitlab.com/sirlucjan/${_pkgbase}/raw/master/testing"
+# _lucjanname='lucjan'
+# _lucjanrev='ll16'
+# _lucjanrc='rc1'
+# _lucjanpatch="${_major}-${_lucjanname}-${_lucjanrev}-${_lucjanrc}.patch"
 
 source=("git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git#branch=linux-${_major}.y"
         "${_lucjanpath}/${_lucjanpatch}"
