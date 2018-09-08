@@ -54,11 +54,11 @@ _muqss_disable=
 pkgbase=linux-lqx
 # pkgname=('linux-lqx' 'linux-lqx-headers' 'linux-lqx-docs')
 _major=4.18
-pkgver=4.18.5_4
+pkgver=4.18.6_1
 _srcname=linux-${_major}
 pkgrel=1
 _lqxpatchname=liquorix-package
-_lqxpatchrel=4
+_lqxpatchrel=5
 _lqxpatchver=${_lqxpatchname}-${_major}-${_lqxpatchrel}
 arch=('x86_64')
 url="http://liquorix.net/"
@@ -380,7 +380,7 @@ done
 
 sha512sums=('950eb85ac743b291afe9f21cd174d823e25f11883ee62cecfbfff8fe8c5672aae707654b1b8f29a133b1f2e3529e63b9f7fba4c45d6dacccc8000b3a9a9ae038'
             'SKIP'
-            'bf715ae644fb829868ef4c941d311327219e638ebdf70a04dc78cb5bad524a4e551867bf764975ff9f48fcabc0a7c0d8254b1fb8b5328900d124caf98d18757a'
+            '187aedd4d7b77848b37ba2ec095a28d079d52e11bfa85b380652f62dd80b0810a547969e843c9c330b74a7b5723ab38560dc6d220bfc2dd6f8a57e29e46f5016'
             '7ad5be75ee422dda3b80edd2eb614d8a9181e2c8228cd68b3881e2fb95953bf2dea6cbe7900ce1013c9de89b2802574b7b24869fc5d7a95d3cc3112c4d27063a'
             '4a8b324aee4cccf3a512ad04ce1a272d14e5b05c8de90feb82075f55ea3845948d817e1b0c6f298f5816834ddd3e5ce0a0e2619866289f3c1ab8fd2f35f04f44'
             '6346b66f54652256571ef65da8e46db49a95ac5978ecd57a507c6b2a28aee70bb3ff87045ac493f54257c9965da1046a28b72cb5abb0087204d257f14b91fd74'
