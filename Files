@@ -128,31 +128,8 @@
 │       ├── linux.preset
 │       └── PKGBUILD
 ├── README.md
-├── v4.19-trunk
-│   ├── api-headers
-│   │   ├── linux-api-headers-git
-│   │   │   └── PKGBUILD
-│   │   └── linux-api-headers-rc-git
-│   │       └── PKGBUILD
-│   └── usermode
-│       ├── linux-usermode
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
-│       ├── linux-usermode-git
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
-│       ├── linux-usermode-rc
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
-│       └── linux-usermode-rc-git
-│           ├── 70-uml.hook
-│           ├── config
-│           └── PKGBUILD
 └── xf86-video-intel-dev-git
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-56 directories, 99 files
+47 directories, 85 files
