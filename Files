@@ -45,7 +45,6 @@
 │       └── uml
 │           └── 70-uml.hook
 ├── dots
-│   ├── BFQ-patching
 │   ├── fancontrol-4.14
 │   ├── fancontrol-4.16
 │   ├── gitconfig-nano
@@ -109,4 +108,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-34 directories, 75 files
+34 directories, 74 files
