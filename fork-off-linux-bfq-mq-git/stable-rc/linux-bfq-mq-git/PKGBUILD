@@ -24,7 +24,9 @@ _NUMAdisable=y
 # that you currently have probed in your system VASTLY reducing the number of
 # modules built and the build time to do it.
 #
-# WARNING - ALL modules must be probed BEFORE you begin making the pkg!
+# WARNING - ALL modules must be probed or loaded via a config file BEFORE you
+# begin making the pkg unless you're running modprobed-db (AUR) and building
+# this with makepkg as the user who is keeping the database.
 #
 # To keep track of which modules are needed for your specific system/hardware,
 # give module_db script a try: https://aur.archlinux.org/packages/modprobed-db
@@ -61,7 +63,7 @@ pkgbase=linux-bfq-mq-git
 #pkgbase=linux-custom       # Build kernel with a different name
 _major=4.19
 _srcname=linux-stable-rc
-pkgver=4.19.3.r43.g2b8db8734888
+pkgver=4.19.4.r0.g98a661ea85a8
 pkgrel=1
 arch=('x86_64')
 url="https://github.com/Algodev-github/bfq-mq/"
@@ -231,20 +233,16 @@ prepare() {
             -i -e s'/^CONFIG_DM_MQ_DEFAULT=y/# CONFIG_DM_MQ_DEFAULT is not set/' ./.config
         fi
 
-
-
     ### Optionally load needed modules for the make localmodconfig
         # See https://aur.archlinux.org/packages/modprobed-db
         if [ -n "$_localmodcfg" ]; then
-        msg "If you have modprobed-db installed, running it in recall mode now"
-            if [ -e /usr/bin/modprobed-db ]; then
-            [[ -x /usr/bin/sudo ]] || {
-            echo "Cannot call modprobe with sudo. Install sudo and configure it to work with this user."
-            exit 1; }
-            sudo /usr/bin/modprobed-db recall
-        fi
-            msg "Running Steven Rostedt's make localmodconfig now"
+            if [ -f $HOME/.config/modprobed.db ]; then
+            msg2 "Found a modprobed-db database for Steven Rostedt's make localmodconfig"
+            make LSMOD=$HOME/.config/modprobed.db localmodconfig
+        else
+            msg2 "Running Steven Rostedt's make localmodconfig now"
             make localmodconfig
+            fi
         fi
 
     # save configuration for later reuse
