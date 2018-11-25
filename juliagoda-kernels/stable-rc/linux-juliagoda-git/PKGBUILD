@@ -313,7 +313,7 @@ _package-kernel() {
   sed "$subst" ../90-linux-02-initcpio.hook | install -Dm644 /dev/stdin \
     "$pkgdir/usr/share/libalpm/hooks/90-${pkgbase}-02-initcpio.hook"
   sed "$subst" ../99-linux-03-remove.hook | install -Dm644 /dev/stdin \
-    "$pkgdir/usr/share/libalpm/hooks/99-${pkgbase}-03-remove.hook"  
+    "$pkgdir/usr/share/libalpm/hooks/99-${pkgbase}-03-remove.hook"
 
   msg2 "Fixing permissions..."
   chmod -Rc u=rwX,go=rX "$pkgdir"
