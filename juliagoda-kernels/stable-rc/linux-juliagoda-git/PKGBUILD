@@ -105,27 +105,27 @@ source=("git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable-rc.gi
         '99-linux-03-remove.hook'
          # standard config files for mkinitcpio ramdisk
         'linux.preset')
-        
+
 _kernelname=${pkgbase#linux}
 : ${_kernelname:=-juliagoda-git}
-        
+
 pkgver() {
     cd "${_srcname}"
-        
+
     _ver="$(git describe --long --tags | sed -E 's/^v//;s/([^-]*-g)/r\1/;s/-/./g;s/\.rc/rc/')"
     echo ${_ver}.${_lucjanrev}
-} 
+}
 
 prepare() {
     cd "${_srcname}"
-    
+
     ### Setting version
         msg2 "Setting version..."
         sed -e "/^EXTRAVERSION =/s/=.*/=/" -i Makefile
         scripts/setlocalversion --save-scmversion
         echo "-$pkgrel" > localversion.10-pkgrel
         echo "$_kernelname" > localversion.20-pkgname
-    
+
     ### Patching sources
         local src
         for src in "${source[@]}"; do
@@ -135,16 +135,16 @@ prepare() {
           msg2 "Applying patch $src..."
           patch -Np1 < "../$src"
         done
-    
-    ### Setting config   
+
+    ### Setting config
         msg2 "Setting config..."
         cp ../config .config
         make olddefconfig
-        
-    ### Prepared version   
+
+    ### Prepared version
         make -s kernelrelease > ../version
         msg2 "Prepared %s version %s" "$pkgbase" "$(<../version)"
-        
+
     ### Optionally use running kernel's config
 	# code originally by nous; http://aur.archlinux.org/packages.php?ID=40191
 	if [ -n "$_use_current" ]; then
@@ -158,15 +158,15 @@ prepare() {
 			warning "Aborting!"
 			exit
 		fi
-	fi    
-        
+	fi
+
     ### Set GCC flags
         if [ -n "$_gcc_mk10" ]; then
                 msg2 "Setting GCC flags for AMD K10-family CPU..."
                 sed -i -e s'/^CONFIG_GENERIC_CPU=y/# CONFIG_GENERIC_CPU is not set/' \
                     -i -e s'/^# CONFIG_MK10 is not set/CONFIG_MK10=y/' ./.config
-        fi  
-        
+        fi
+
     ### Disable Deadline I/O scheduler
 	if [ -n "$_deadline_disable" ]; then
 		msg2 "Disabling Deadline I/O scheduler..."
@@ -193,8 +193,8 @@ prepare() {
 		sed -i -e s'/^CONFIG_SCSI_MQ_DEFAULT=y/# CONFIG_SCSI_MQ_DEFAULT is not set/' \
 		    -i -e s'/^CONFIG_DM_MQ_DEFAULT=y/# CONFIG_DM_MQ_DEFAULT is not set/' ./.config
         fi
-        
-    ### Optionally set tickrate to 1000 
+
+    ### Optionally set tickrate to 1000
 	if [ -n "$_1k_HZ_ticks" ]; then
 		msg2 "Setting tick rate to 1k..."
 		sed -i -e 's/^CONFIG_HZ_300=y/# CONFIG_HZ_300 is not set/' \
@@ -397,7 +397,7 @@ _package-headers() {
   msg2 "Adding symlink..."
   mkdir -p "$pkgdir/usr/src"
   ln -sr "$builddir" "$pkgdir/usr/src/$pkgbase-$pkgver"
-  
+
   msg2 "Fixing permissions..."
   chmod -Rc u=rwX,go=rX "$pkgdir"
 }
@@ -406,7 +406,7 @@ _package-docs() {
   pkgdesc="Kernel hackers manual - HTML documentation that comes with the ${pkgbase/linux/Linux} kernel. K10-family optimized."
   depends=('linux-juliagoda-git-kernel')
   groups=('linux-juliagoda-git')
-  
+
   local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
 
   cd $_srcname
