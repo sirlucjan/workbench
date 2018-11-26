@@ -54,7 +54,6 @@
 │   └── syslinux.cfg
 ├── Files
 ├── fork-off-linux-bfq-mq-git
-│   ├── Files
 │   ├── README.md
 │   ├── stable
 │   │   └── linux-bfq-mq-git
@@ -108,4 +107,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-34 directories, 74 files
+34 directories, 73 files
