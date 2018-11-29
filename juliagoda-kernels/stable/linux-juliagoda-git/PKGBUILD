@@ -102,7 +102,6 @@ _lucjanpatch="${_major}-${_lucjanname}-${_lucjanrev}-${_lucjanrc}.patch"
 
 fi
 
-
 source=("git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git#branch=linux-${_major}.y"
         "${_lucjanpath}/${_lucjanpatch}"{,.sig}
          # the main kernel config files
