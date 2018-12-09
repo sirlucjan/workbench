@@ -56,12 +56,12 @@ _htmldocs_enable=
 ### Do not edit below this line unless you know what you're doing
 
 # pkgname=('linux-lqx-git' 'linux-lqx-git-headers' 'linux-lqx-git-docs')
-_major=4.18
+_major=4.19
 _srcname=linux-${_major}
 _lqxpatchname=liquorix-package
 pkgbase=linux-lqx-git
-pkgver=4.18.20_3.r918.g7a8e3e9
-pkgrel=2
+pkgver=4.19.8_1.r926.g67e72e0
+pkgrel=1
 arch=('x86_64')
 url="http://liquorix.net/"
 license=('GPL2')
@@ -394,7 +394,7 @@ for _p in "${pkgname[@]}"; do
   }"
 done
 
-sha512sums=('950eb85ac743b291afe9f21cd174d823e25f11883ee62cecfbfff8fe8c5672aae707654b1b8f29a133b1f2e3529e63b9f7fba4c45d6dacccc8000b3a9a9ae038'
+sha512sums=('ab67cc746b375a8b135e8b23e35e1d6787930d19b3c26b2679787d62951cbdbc3bb66f8ededeb9b890e5008b2459397f9018f1a6772fdef67780b06a4cb9f6f4'
             'SKIP'
             'SKIP'
             '7ad5be75ee422dda3b80edd2eb614d8a9181e2c8228cd68b3881e2fb95953bf2dea6cbe7900ce1013c9de89b2802574b7b24869fc5d7a95d3cc3112c4d27063a'
