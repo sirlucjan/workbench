@@ -121,7 +121,16 @@
 │   │       ├── linux.install
 │   │       ├── linux.preset
 │   │       └── PKGBUILD
-│   └── stable-rc
+│   ├── stable-rc
+│   │   └── linux-juliagoda-git
+│   │       ├── 60-linux-01-depmod.hook
+│   │       ├── 90-linux-02-initcpio.hook
+│   │       ├── 99-linux-03-remove.hook
+│   │       ├── config
+│   │       ├── linux.install
+│   │       ├── linux.preset
+│   │       └── PKGBUILD
+│   └── trunk
 │       └── linux-juliagoda-git
 │           ├── 60-linux-01-depmod.hook
 │           ├── 90-linux-02-initcpio.hook
@@ -143,4 +152,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-56 directories, 87 files
+58 directories, 94 files
