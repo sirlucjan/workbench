@@ -3,33 +3,17 @@
 │   ├── Config
 │   │   ├── 4.19
 │   │   │   ├── git
-│   │   │   │   ├── bfq-mq-git
-│   │   │   │   │   └── config
-│   │   │   │   ├── rt-bfq-git
-│   │   │   │   │   └── config
-│   │   │   │   └── uksm-git
+│   │   │   │   └── rt-bfq-git
 │   │   │   │       └── config
 │   │   │   └── src
-│   │   │       ├── bfq-mq
-│   │   │       │   └── config
-│   │   │       ├── rt-bfq
-│   │   │       │   └── config
-│   │   │       └── uksm
+│   │   │       └── rt-bfq
 │   │   │           └── config
 │   │   ├── 4.19-pending
 │   │   │   ├── git
-│   │   │   │   ├── bfq-mq-git
-│   │   │   │   │   └── config
-│   │   │   │   ├── rt-bfq-git
-│   │   │   │   │   └── config
-│   │   │   │   └── uksm-git
+│   │   │   │   └── rt-bfq-git
 │   │   │   │       └── config
 │   │   │   └── src
-│   │   │       ├── bfq-mq
-│   │   │       │   └── config
-│   │   │       ├── rt-bfq
-│   │   │       │   └── config
-│   │   │       └── uksm
+│   │   │       └── rt-bfq
 │   │   │           └── config
 │   │   └── 4.20
 │   │       ├── git
@@ -135,4 +119,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-52 directories, 83 files
+44 directories, 75 files
