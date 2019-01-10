@@ -8,13 +8,6 @@
 │   │   │   └── src
 │   │   │       └── rt-bfq
 │   │   │           └── config
-│   │   ├── 4.19-pending
-│   │   │   ├── git
-│   │   │   │   └── rt-bfq-git
-│   │   │   │       └── config
-│   │   │   └── src
-│   │   │       └── rt-bfq
-│   │   │           └── config
 │   │   └── 4.20
 │   │       ├── git
 │   │       │   ├── bfq-mq-git
@@ -119,4 +112,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-44 directories, 75 files
+39 directories, 73 files
