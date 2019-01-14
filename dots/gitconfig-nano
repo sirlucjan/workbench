@@ -4,6 +4,12 @@
 	email = lucjan.lucjanov@gmail.com
 	signingkey = BDB26C5A
 
+[credential "https://github.com"]
+        username = sirlucjan
+	
+[credential "https://gitlab.com"]
+        username = sirlucjan
+	
 [url "https://aur.archlinux.org/"]
     insteadOf = aur:
 
