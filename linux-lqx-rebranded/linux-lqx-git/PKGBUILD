@@ -27,9 +27,8 @@ _makegconfig=
 _NUMAdisable=y
 
 # Compile ONLY probed modules
-# As of mainline 2.6.32, running with this option will only build the modules
-# that you currently have probed in your system VASTLY reducing the number of
-# modules built and the build time to do it.
+# Build in only the modules that you currently have probed in your system VASTLY
+# reducing the number of modules built and the build time.
 #
 # WARNING - ALL modules must be probed BEFORE you begin making the pkg!
 #
@@ -60,7 +59,7 @@ _major=4.19
 _srcname=linux-${_major}
 _lqxpatchname=liquorix-package
 pkgbase=linux-lqx-git
-pkgver=4.19.8_1.r926.g67e72e0
+pkgver=4.19.15_1.r956.gbd66529
 pkgrel=1
 arch=('x86_64')
 url="http://liquorix.net/"
