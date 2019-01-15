@@ -56,6 +56,7 @@
 │   ├── fancontrol-4.16
 │   ├── gitconfig-nano
 │   ├── gitconfig-vim
+│   ├── gitignore
 │   ├── patching.sh
 │   ├── repo-schema
 │   └── syslinux.cfg
@@ -112,4 +113,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-39 directories, 73 files
+39 directories, 74 files
