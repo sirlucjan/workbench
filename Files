@@ -57,6 +57,7 @@
 │   ├── gitconfig-nano
 │   ├── gitconfig-vim
 │   ├── gitignore
+│   ├── git-patching.sh
 │   ├── patching.sh
 │   ├── repo-schema
 │   └── syslinux.cfg
@@ -113,4 +114,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-39 directories, 74 files
+39 directories, 75 files
