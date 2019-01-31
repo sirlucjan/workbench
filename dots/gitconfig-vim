@@ -129,6 +129,11 @@
 	#############
 	g = grep -p
 	#############
+	i = init
+	ib = init --bare
+	ibq = init --bare --quiet
+	iq = init --quiet
+	#############
 	l = log --oneline
 	ld = log --oneline --decorate
 	lgd = log --oneline --graph --decorate
