@@ -40,9 +40,6 @@
 [difftool]	
 	prompt = false
 
-[github]
-        user = sirlucjan
-
 [gitflow "prefix"]	
 	feature = feature-
 	release = release-
