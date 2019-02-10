@@ -4,7 +4,7 @@
 
 - sync with linux-bfq-mq
 
-###### linux-bfq/linux-bfq-git incorporates:
+###### linux-bfq-mq/linux-bfq-mq-git incorporates:
 
 * [BFQ-SQ and BFQ-MQ Scheduler](https://github.com/Algodev-github/bfq-mq) - bfq-sq and bfq-mq from Algodev-github
 
