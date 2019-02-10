@@ -31,11 +31,10 @@ makepkg -srci
 
 ```
 
-# Enable bfq-mq
 
-For now, you can use `sudo tee /sys/block/sda/queue/scheduler <<< bfq-mq` to enable "bfq-mq".
+~~For now, you can use `sudo tee /sys/block/sda/queue/scheduler <<< bfq-mq` to enable "bfq-mq".~~
 
-You can also add this to file `60-schedulers.rules`:
+~~You can also add this to file `60-schedulers.rules`:~~
 
 ```
 # Non-rotational disks
@@ -44,4 +43,6 @@ ACTION=="add|change", KERNEL=="sd[a-z]", ATTR{queue/rotational}=="0", ATTR{queue
 ACTION=="add|change", KERNEL=="sd[a-z]", ATTR{queue/rotational}=="1", ATTR{queue/scheduler}="bfq-mq"
 ```
 
-and run a command `sudo udevadm control --reload && sudo udevadm trigger`
+~~and run a command `sudo udevadm control --reload && sudo udevadm trigger`~~
+
+For now, bfq-mq is enabled by default! [(since elevator-set-default-scheduler-to-bfq-mq-for-blk-mq.patch)](https://github.com/sirlucjan/bfq-mq-lucjan/commit/64c139894fb8f521c75e8f28acb2d59163e6c393)
