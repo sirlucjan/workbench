@@ -6,7 +6,7 @@
 
 ###### linux-bfq-mq-lucjan-git incorporates:
 
-* [BFQ-SQ and BFQ-MQ Scheduler](https://github.com/Algodev-github/bfq-mq) - bfq-sq and bfq-mq from Algodev-github
+* [BFQ-SQ and BFQ-MQ Scheduler](https://github.com/sirlucjan/bfq-mq-lucjan) - bfq-sq and bfq-mq from Algodev-github, forked by sirlucjan
 
 ***
 # Download:
