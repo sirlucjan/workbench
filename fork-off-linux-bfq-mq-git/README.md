@@ -24,9 +24,18 @@ git clone https://gitlab.com/sirlucjan/workbench.git
 ```
 # Install:
 
+### Stable
 
 ```
-cd /some_path/workbench/fork-off-linux-bfq-mq-git/package_name
+cd /some_path/workbench/fork-off-linux-bfq-mq-git/stable/package_name
+makepkg -srci
+
+```
+
+### Stable RC
+
+```
+cd /some_path/workbench/fork-off-linux-bfq-mq-git/stable-rc/package_name
 makepkg -srci
 
 ```
