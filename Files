@@ -83,6 +83,7 @@
 │           ├── linux.preset
 │           └── PKGBUILD
 ├── juliagoda-kernels
+│   ├── README.md
 │   ├── stable
 │   │   └── linux-juliagoda-git
 │   │       ├── 60-linux-01-depmod.hook
@@ -114,4 +115,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-39 directories, 75 files
+39 directories, 76 files
