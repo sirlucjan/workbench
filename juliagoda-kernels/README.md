@@ -50,7 +50,7 @@ makepkg -srci
 ### Stable RC
 
 ```
-cd /some_path/workbench/linux-juliagoda/stable/package_name
+cd /some_path/workbench/linux-juliagoda/stable-rc/package_name
 makepkg -srci
 
 ```
