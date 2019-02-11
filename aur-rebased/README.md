@@ -2,8 +2,6 @@
 
 - switch sources
 
-- sync with linux-bfq-mq
-
 ###### linux-bfq-mq-lucjan-git incorporates:
 
 * [BFQ-SQ and BFQ-MQ Scheduler](https://github.com/sirlucjan/bfq-mq-lucjan) - bfq-sq and bfq-mq from Algodev-github, forked by sirlucjan
