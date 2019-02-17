@@ -61,7 +61,7 @@ pkgbase=linux-bfq-mq-git
 #pkgbase=linux-custom       # Build kernel with a different name
 _major=4.20
 _srcname=linux-stable-rc
-pkgver=4.20.6.r81.gcc6e62e7b38a
+pkgver=4.20.10.r0.g7f600870eca5
 pkgrel=1
 arch=('x86_64')
 url="https://github.com/Algodev-github/bfq-mq/"
@@ -114,7 +114,7 @@ _kernelname=${pkgbase#linux}
 pkgver() {
     cd "${_srcname}"
 
-        git describe --long --tags | sed -E 's/^v//;s/([^-]*-g)/r\1/;s/-/./g;s/\.rc/rc/'
+        git describe --long --tags | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 prepare() {
