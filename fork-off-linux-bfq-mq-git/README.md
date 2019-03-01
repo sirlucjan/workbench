@@ -1,8 +1,6 @@
 ## Fork off linux-bfq-mq-git
 
-- switch sources
-
-- sync with linux-bfq-mq
+- linux-bfq-mq-git (sync with linux-bfq-mq)
 
 ###### linux-bfq-mq/linux-bfq-mq-git incorporates:
 
