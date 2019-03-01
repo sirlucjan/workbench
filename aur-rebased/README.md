@@ -1,6 +1,6 @@
 ## Fork off linux-bfq-mq-git
 
-- switch sources
+- linux-bfq-mq-lucjan-git
 
 ###### linux-bfq-mq-lucjan-git incorporates:
 
