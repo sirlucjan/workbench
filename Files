@@ -43,10 +43,14 @@
 │   │   │           └── config
 │   │   └── 5.0
 │   │       ├── git
-│   │       │   └── lucjan-git
+│   │       │   ├── lucjan-git
+│   │       │   │   └── config
+│   │       │   └── uksm-git
 │   │       │       └── config
 │   │       └── src
-│   │           └── lucjan
+│   │           ├── lucjan
+│   │           │   └── config
+│   │           └── uksm
 │   │               └── config
 │   └── Kernel
 │       ├── linux-aur
@@ -134,4 +138,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-46 directories, 88 files
+48 directories, 90 files
