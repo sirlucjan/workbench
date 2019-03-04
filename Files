@@ -47,7 +47,7 @@
 │   │       │   │   └── config
 │   │       │   ├── uksm-git
 │   │       │   │   └── config
-│   │       │   └── uml
+│   │       │   └── uml-git
 │   │       │       └── config
 │   │       └── src
 │   │           ├── lucjan
