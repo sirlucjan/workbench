@@ -68,7 +68,7 @@ pkgbase=linux-juliagoda-git
 _pkgbase=linux-lucjan
 # pkgname=('linux-juliagoda-git-kernel' 'linux-juliagoda-git-headers' 'linux-juliagoda-git-docs')
 _major=5.0
-_srcname=linux-stable-rc
+_srcname=linux
 pkgver=5.0.r0.g1c163f4c7b3f.ll1
 pkgrel=4
 arch=('x86_64')
@@ -105,7 +105,7 @@ elif [ "$_linux_lucjan" = "trunk" ]; then
 
 fi
 
-source=("git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable-rc.git#branch=linux-${_major}.y"
+source=("git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git#branch=linux-${_major}.y"
         "${_lucjanpath}/${_lucjanpatch}"{,.sig}
          # the main kernel config files
         'config'
