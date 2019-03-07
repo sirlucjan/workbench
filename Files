@@ -23,19 +23,12 @@
 │   │   │       └── PKGBUILD
 │   │   └── stable-rc
 │   │       └── linux-uksm-git
-│   │           ├── 0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
-│   │           ├── 0001-uksm-5.0-adopt-new-MMU-notifiers-API.patch
-│   │           ├── 0001-uksm-5.0-initial-submission.patch
-│   │           ├── 0002-exec-Fix-mem-leak-in-kernel_read_file.patch
 │   │           ├── 60-linux.hook
 │   │           ├── 90-linux.hook
 │   │           ├── 99-linux.hook
 │   │           ├── config
-│   │           ├── config.last
-│   │           ├── enable_additional_cpu_optimizations_for_gcc_v8.1+_kernel_v4.13+.patch
 │   │           ├── linux.install
 │   │           ├── linux.preset
-│   │           ├── linux-uksm-git-5.0.r17.g4b26bbfb55b6-1.src.tar.gz
 │   │           └── PKGBUILD
 │   └── uml
 │       └── linux-usermode-git
@@ -194,4 +187,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-63 directories, 131 files
+63 directories, 124 files
