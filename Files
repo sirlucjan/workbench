@@ -168,14 +168,15 @@
 │           └── PKGBUILD
 ├── juliagoda-kernels
 │   ├── experimental
-│   │   └── linux-juliagoda-git
-│   │       ├── 60-linux-01-depmod.hook
-│   │       ├── 90-linux-02-initcpio.hook
-│   │       ├── 99-linux-03-remove.hook
-│   │       ├── config
-│   │       ├── linux.install
-│   │       ├── linux.preset
-│   │       └── PKGBUILD
+│   │   ├── linux-juliagoda-git
+│   │   │   ├── 60-linux-01-depmod.hook
+│   │   │   ├── 90-linux-02-initcpio.hook
+│   │   │   ├── 99-linux-03-remove.hook
+│   │   │   ├── config
+│   │   │   ├── linux.install
+│   │   │   ├── linux.preset
+│   │   │   └── PKGBUILD
+│   │   └── README.md
 │   ├── README.md
 │   ├── stable
 │   │   └── linux-juliagoda-git
@@ -218,4 +219,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-70 directories, 148 files
+70 directories, 149 files
