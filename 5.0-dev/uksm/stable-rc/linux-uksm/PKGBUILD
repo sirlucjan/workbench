@@ -48,17 +48,23 @@ _1k_HZ_ticks=
 
 ### Do not edit below this line unless you know what you're doing
 
-pkgbase=linux-uksm-git
-# pkgname=('linux-uksm-git' 'linux-uksm-git-headers' 'linux-uksm-git-docs')
+pkgbase=linux-uksm
+# pkgname=('linux-uksm' 'linux-uksm-headers' 'linux-uksm-docs')
 _major=5.0
-_srcname=linux-stable-rc
-pkgver=5.0.r47.gbe3f50196584
-pkgrel=1
+_minor=0
+_minorc=$((_minor+1))
+_rcver=rc1
+pkgver=${_major}.${_minorc}
+#_stable=${_major}.${_minor}
+_stable=${_major}
+_stablerc=${pkgver}-${_rcver}
+_srcname=linux-${_stable}
+pkgrel=0
 arch=('x86_64')
 url="https://github.com/dolohow/uksm"
 license=('GPL2')
 options=('!strip')
-makedepends=('git' 'kmod' 'inetutils' 'bc' 'libelf' 'python-sphinx' 'graphviz')
+makedepends=('kmod' 'inetutils' 'bc' 'libelf' 'python-sphinx' 'graphviz')
 #_lucjanpath="https://raw.githubusercontent.com/sirlucjan/kernel-patches/master/${_major}"
 _lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major}"
 #_uksm_path="https://raw.githubusercontent.com/dolohow/uksm/master/v4.x"
@@ -67,7 +73,10 @@ _lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major}"
 _gcc_path="https://raw.githubusercontent.com/graysky2/kernel_gcc_patch/master"
 _gcc_patch="enable_additional_cpu_optimizations_for_gcc_v8.1+_kernel_v4.13+.patch"
 
-source=("git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable-rc.git#branch=linux-${_major}.y"
+source=("https://www.kernel.org/pub/linux/kernel/v5.x/linux-${_stable}.tar.xz"
+        "https://www.kernel.org/pub/linux/kernel/v5.x/linux-${_stable}.tar.sign"
+        "https://www.kernel.org/pub/linux/kernel/v5.x/stable-review/patch-${_stablerc}.xz"
+        "https://www.kernel.org/pub/linux/kernel/v5.x/stable-review/patch-${_stablerc}.sign"
         "${_gcc_path}/${_gcc_patch}"
         "${_lucjanpath}/pf-uksm/0001-uksm-5.0-initial-submission.patch"
         "${_lucjanpath}/pf-uksm-fixes/0001-uksm-5.0-adopt-new-MMU-notifiers-API.patch"
@@ -84,16 +93,14 @@ source=("git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable-rc.gi
         'linux.preset')
 
 _kernelname=${pkgbase#linux}
-: ${_kernelname:=-uksm-git}
-
-pkgver() {
-  cd "${_srcname}"
-
-  git describe --long --tags | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
-}
+: ${_kernelname:=-uksm}
 
 prepare() {
     cd ${_srcname}
+
+    ### Add patch from stable-review
+        msg2 "Add patch from stable-review"
+        patch -p1 -i ../patch-${_stablerc}
 
     ### Setting version
         msg2 "Setting version..."
@@ -383,7 +390,10 @@ for _p in "${pkgname[@]}"; do
   }"
 done
 
-sha512sums=('SKIP'
+sha512sums=('3fbab70c7b03b1a10e9fa14d1e2e1f550faba4f5792b7699ca006951da74ab86e7d7f19c6a67849ab99343186e7d6f2752cd910d76222213b93c1eab90abf1b0'
+            'SKIP'
+            '7233a6fa6e10929c6df7658f4096102fcf7e026efdc5949c56092503fad8fc2ea5c2692465c6b12748994574b96bfac9a1739731f0d3cfcb09259ccfbe861b62'
+            'SKIP'
             'e62aa377a0acc4f63f394e27a0fb7316583ff1a6a6afdfcc97593ddffd7d2bc224cfd70b552cb3fb9513cf6b8db4c2fd913d21ec2380db8cd642e37d4d67370c'
             'd33b4fc80bcd619be903e4ac1910d4b341514fb23d2bb266ea42905d797ef4577b25e1b1ed06bb5a69548305f2404b0d6dde0bca27c8ae05380e47524726b6a9'
             'b72e9d6c03cba0d61cfd65a2db3e45f2dafb8ae1889b1e210b467b8e7f4aa5416a51283a03ca3f8ac0a861f0866776cacb0cf514bc7d6e896d8f4d87a1aeb57e'
@@ -393,3 +403,7 @@ sha512sums=('SKIP'
             '2718b58dbbb15063bacb2bde6489e5b3c59afac4c0e0435b97fe720d42c711b6bcba926f67a8687878bd51373c9cf3adb1915a11666d79ccb220bf36e0788ab7'
             '8742e2eed421e2f29850e18616f435536c12036ff793f5682a3a8c980cf5dbfc88d17fd9539c87de15d9e4663dc3190f964f18a4722940465437927b6052abbf'
             '2dc6b0ba8f7dbf19d2446c5c5f1823587de89f4e28e9595937dd51a87755099656f2acec50e3e2546ea633ad1bfd1c722e0c2b91eef1d609103d8abdc0a7cbaf')
+
+validpgpkeys=(
+              '647F28654894E3BD457199BE38DBBDC86092693E' # Greg Kroah-Hartman
+             )
