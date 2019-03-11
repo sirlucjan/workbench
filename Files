@@ -1,10 +1,5 @@
 .
 ├── 5.0-dev
-│   ├── api-headers
-│   │   ├── linux-api-headers-git
-│   │   │   └── PKGBUILD
-│   │   └── linux-api-headers-rc-git
-│   │       └── PKGBUILD
 │   └── uksm
 │       ├── stable
 │       │   ├── linux-uksm
@@ -203,4 +198,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-65 directories, 138 files
+62 directories, 136 files
