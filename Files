@@ -1,24 +1,4 @@
 .
-├── 5.0-dev
-│   └── uksm
-│       ├── stable
-│       │   └── linux-uksm-git
-│       │       ├── 60-linux.hook
-│       │       ├── 90-linux.hook
-│       │       ├── 99-linux.hook
-│       │       ├── config
-│       │       ├── linux.install
-│       │       ├── linux.preset
-│       │       └── PKGBUILD
-│       └── stable-rc
-│           └── linux-uksm-git
-│               ├── 60-linux.hook
-│               ├── 90-linux.hook
-│               ├── 99-linux.hook
-│               ├── config
-│               ├── linux.install
-│               ├── linux.preset
-│               └── PKGBUILD
 ├── aur-rebased
 │   ├── linux-bfq-mq-lucjan-git
 │   │   ├── 60-linux.hook
@@ -182,4 +162,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-60 directories, 122 files
+54 directories, 108 files
