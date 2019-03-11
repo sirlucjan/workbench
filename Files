@@ -22,16 +22,12 @@
 │   │   │   ├── git
 │   │   │   │   ├── bfq-mq-git
 │   │   │   │   │   └── config
-│   │   │   │   ├── rt-bfq-git
-│   │   │   │   │   └── config
-│   │   │   │   └── uml-git
+│   │   │   │   └── rt-bfq-git
 │   │   │   │       └── config
 │   │   │   └── src
 │   │   │       ├── bfq-mq
 │   │   │       │   └── config
-│   │   │       ├── rt-bfq
-│   │   │       │   └── config
-│   │   │       └── uml
+│   │   │       └── rt-bfq
 │   │   │           └── config
 │   │   └── 5.0
 │   │       ├── git
@@ -134,4 +130,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-46 directories, 88 files
+44 directories, 86 files
