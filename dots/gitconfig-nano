@@ -215,6 +215,10 @@
 	rpo = remote prune origin
 	rpu = remote prune upstream
 	#############
+	rev = revert
+	revs = revert -S
+	revss = revert -S -s
+	#############
 	rmf = rm -f
 	rmrf = rm -r -f
 	#############
