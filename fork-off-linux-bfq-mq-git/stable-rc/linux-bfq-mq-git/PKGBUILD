@@ -228,9 +228,8 @@ prepare() {
 
      ### Disable MQ scheduling
 	if [ -n "$_mq_disable" ]; then
-        msg2 "Disabling MQ scheduling..."
-        sed -i -e s'/^CONFIG_SCSI_MQ_DEFAULT=y/# CONFIG_SCSI_MQ_DEFAULT is not set/' \
-            -i -e s'/^CONFIG_DM_MQ_DEFAULT=y/# CONFIG_DM_MQ_DEFAULT is not set/' ./.config
+		msg2 "Disabling MQ scheduling..."
+		sed -i -e s'/^CONFIG_SCSI_MQ_DEFAULT=y/# CONFIG_SCSI_MQ_DEFAULT is not set/' ./.config
         fi
 
     ### Optionally load needed modules for the make localmodconfig
