@@ -60,7 +60,7 @@ _mq_enable=
 
 pkgbase=linux-bfq-mq-lucjan-git
 _srcname=bfq-mq-lucjan
-pkgver=4.20.0.g11ac03ac9915
+pkgver=4.20.0.g3a16c93255ea
 pkgrel=1
 arch=('x86_64')
 url="http://www.kernel.org/"
@@ -215,11 +215,10 @@ prepare() {
         sed -i -e s'/CONFIG_MQ_IOSCHED_KYBER=y/# CONFIG_MQ_IOSCHED_KYBER is not set/' ./.config
         fi
 
-    ### Enable MQ scheduling
-        if [ -n "$_mq_enable" ]; then
-        msg "Enable MQ scheduling..."
-        sed -i -e s'/^# CONFIG_SCSI_MQ_DEFAULT is not set/CONFIG_SCSI_MQ_DEFAULT=y/' \
-            -i -e s'/^# CONFIG_DM_MQ_DEFAULT is not set/CONFIG_DM_MQ_DEFAULT=y/' ./.config
+    ### Disable MQ scheduling
+	if [ -n "$_mq_disable" ]; then
+		msg2 "Disabling MQ scheduling..."
+		sed -i -e s'/^CONFIG_SCSI_MQ_DEFAULT=y/# CONFIG_SCSI_MQ_DEFAULT is not set/' ./.config
         fi
 
 
