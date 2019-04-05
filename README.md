@@ -2,7 +2,7 @@
 
 #### Kernels
 
-[aur-rebased](https://gihuab.com/sirlucjan/workbench/tree/master/aur-rebased) / [aur-rebased](https://gitlab.com/sirlucjan/workbench/tree/master/aur-rebased) - linux-bfq-mq-lucjan
+[aur-rebased](https://github.com/sirlucjan/workbench/tree/master/aur-rebased) / [aur-rebased](https://gitlab.com/sirlucjan/workbench/tree/master/aur-rebased) - linux-bfq-mq-lucjan
 
 [fork-off-linux-bfq-mq-git](https://github.com/sirlucjan/workbench/tree/master/fork-off-linux-bfq-mq-git) / [fork-off-linux-bfq-mq-git](https://gitlab.com/sirlucjan/workbench/tree/master/fork-off-linux-bfq-mq-git) - linux-bfq-mq-git (stable and stable-rc)
 
