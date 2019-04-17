@@ -68,8 +68,8 @@ _pkgbase=linux-lucjan
 # pkgname=('linux-juliagoda-git-kernel' 'linux-juliagoda-git-headers' 'linux-juliagoda-git-docs')
 _major=5.0
 _srcname=linux
-pkgver=5.0.7.r0.g8b298d3a0bd5.ll25
-pkgrel=3
+pkgver=5.0.8.r0.g0b9132ee7429.ll26
+pkgrel=1
 arch=('x86_64')
 url="https://gitlab.com/sirlucjan/lucjan-kernels/wikis/README"
 license=('GPL2')
@@ -81,7 +81,7 @@ if [ "$_linux_lucjan" = "actual" ]; then
 # _lucjanpath="https://raw.githubusercontent.com/sirlucjan/${_pkgbase}/master/actual"
  _lucjanpath="https://gitlab.com/sirlucjan/${_pkgbase}/raw/master/actual"
  _lucjanname='lucjan'
- _lucjanrev='ll25'
+ _lucjanrev='ll26'
  _lucjanpatch="${_major}-${_lucjanname}-${_lucjanrev}.patch"
 
 elif [ "$_linux_lucjan" = "testing" ]; then
@@ -89,8 +89,8 @@ elif [ "$_linux_lucjan" = "testing" ]; then
 # _lucjanpath="https://raw.githubusercontent.com/sirlucjan/${_pkgbase}/master/testing"
  _lucjanpath="https://gitlab.com/sirlucjan/${_pkgbase}/raw/master/testing"
  _lucjanname='lucjan'
- _lucjanrev='ll21'
- _lucjanrc='rc2'
+ _lucjanrev='ll26'
+ _lucjanrc='rc1'
  _lucjanpatch="${_major}-${_lucjanname}-${_lucjanrev}-${_lucjanrc}.patch"
 
 fi
@@ -422,7 +422,7 @@ for _p in "${pkgname[@]}"; do
 done
 
 sha512sums=('SKIP'
-            'a1c3a8a73772aeda54285c3aca2b0f65c0d5cd1fef96cc0bb770e74cd6eba5395dcf1af2ce99db7b30c515cd099af5631a717dec29603980faf06585d294df56'
+            'f58b7ee3df11a85b135357285bfcb5da8e75d272f0cf2416b5cefeeef4139424fcd09858e3c4baa274a9d855cea22a7ec753028b99ba7b0ae2e37ecea24a6557'
             'SKIP'
             '34b7c4c1ab3e2bc1b11b1a87afafd9d45cdeaf41fd7f1b77bf0e090ff51267c6229e41f8190a44aa0746aea67f6b909b64dac859841c8ebbd87d7b3c595e13c2'
             '7ad5be75ee422dda3b80edd2eb614d8a9181e2c8228cd68b3881e2fb95953bf2dea6cbe7900ce1013c9de89b2802574b7b24869fc5d7a95d3cc3112c4d27063a'
