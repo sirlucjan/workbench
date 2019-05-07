@@ -135,6 +135,23 @@
 │   ├── api-headers
 │   │   └── linux-api-headers-git
 │   │       └── PKGBUILD
+│   ├── uksm
+│   │   ├── linux-uksm
+│   │   │   ├── 60-linux.hook
+│   │   │   ├── 90-linux.hook
+│   │   │   ├── 99-linux.hook
+│   │   │   ├── config
+│   │   │   ├── linux.install
+│   │   │   ├── linux.preset
+│   │   │   └── PKGBUILD
+│   │   └── linux-uksm-git
+│   │       ├── 60-linux.hook
+│   │       ├── 90-linux.hook
+│   │       ├── 99-linux.hook
+│   │       ├── config
+│   │       ├── linux.install
+│   │       ├── linux.preset
+│   │       └── PKGBUILD
 │   └── uml
 │       ├── linux-usermode
 │       │   ├── 70-uml.hook
@@ -158,4 +175,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-59 directories, 99 files
+62 directories, 113 files
