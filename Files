@@ -147,22 +147,32 @@
 │   │   └── linux-api-headers-rc-git
 │   │       └── PKGBUILD
 │   ├── uksm
-│   │   ├── linux-uksm
-│   │   │   ├── 60-linux.hook
-│   │   │   ├── 90-linux.hook
-│   │   │   ├── 99-linux.hook
-│   │   │   ├── config
-│   │   │   ├── linux.install
-│   │   │   ├── linux.preset
-│   │   │   └── PKGBUILD
-│   │   └── linux-uksm-git
-│   │       ├── 60-linux.hook
-│   │       ├── 90-linux.hook
-│   │       ├── 99-linux.hook
-│   │       ├── config
-│   │       ├── linux.install
-│   │       ├── linux.preset
-│   │       └── PKGBUILD
+│   │   ├── stable
+│   │   │   ├── linux-uksm
+│   │   │   │   ├── 60-linux.hook
+│   │   │   │   ├── 90-linux.hook
+│   │   │   │   ├── 99-linux.hook
+│   │   │   │   ├── config
+│   │   │   │   ├── linux.install
+│   │   │   │   ├── linux.preset
+│   │   │   │   └── PKGBUILD
+│   │   │   └── linux-uksm-git
+│   │   │       ├── 60-linux.hook
+│   │   │       ├── 90-linux.hook
+│   │   │       ├── 99-linux.hook
+│   │   │       ├── config
+│   │   │       ├── linux.install
+│   │   │       ├── linux.preset
+│   │   │       └── PKGBUILD
+│   │   └── stable-rc
+│   │       └── linux-uksm-git
+│   │           ├── 60-linux.hook
+│   │           ├── 90-linux.hook
+│   │           ├── 99-linux.hook
+│   │           ├── config
+│   │           ├── linux.install
+│   │           ├── linux.preset
+│   │           └── PKGBUILD
 │   └── uml
 │       ├── linux-usermode
 │       │   ├── 70-uml.hook
@@ -190,4 +200,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-66 directories, 124 files
+69 directories, 131 files
