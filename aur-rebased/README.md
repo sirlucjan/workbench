@@ -1,10 +1,14 @@
-## Fork off linux-bfq-mq-git
+## Fork off linux-bfq-mq-git and linux-zen-git
 
 - linux-bfq-mq-lucjan-git
 
 ###### linux-bfq-mq-lucjan-git incorporates:
 
 * [BFQ-SQ and BFQ-MQ Scheduler](https://github.com/sirlucjan/bfq-mq-lucjan) - bfq-sq and bfq-mq from Algodev-github, forked by sirlucjan
+
+###### linux-zen-git incorporates:
+
+* [zen-kernel](https://github.com/zen-kernel/zen-kernel) - specific patchset authored by ZEN Kernel Team
 
 ***
 # Download:
