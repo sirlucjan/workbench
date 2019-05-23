@@ -52,7 +52,7 @@ pkgbase=linux-uksm-git
 # pkgname=('linux-uksm-git' 'linux-uksm-git-headers' 'linux-uksm-git-docs')
 _major=5.1
 _srcname=linux-stable-rc
-pkgver=5.1.3.r126.ga8112defa801
+pkgver=5.1.4.r0.ge0e8106a6cf1
 pkgrel=1
 arch=('x86_64')
 url="https://github.com/dolohow/uksm"
@@ -268,7 +268,7 @@ _package() {
 
 _package-headers() {
     pkgdesc="Header files and scripts for building modules for ${pkgbase/linux/Linux} kernel"
-    depends=('linux-uksm')
+    depends=('linux-uksm-git')
 
   local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
 
@@ -351,7 +351,7 @@ _package-headers() {
 
 _package-docs() {
     pkgdesc="Kernel hackers manual - HTML documentation that comes with the ${pkgbase/linux/Linux} kernel"
-    depends=('linux-uksm')
+    depends=('linux-uksm-git')
 
   local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
 
