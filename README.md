@@ -4,7 +4,7 @@
 
 ###### aur-rebased
 
-[aur-rebased](https://github.com/sirlucjan/workbench/tree/master/aur-rebased) / [aur-rebased](https://gitlab.com/sirlucjan/workbench/tree/master/aur-rebased) - linux-bfq-mq-lucjan-git
+[aur-rebased](https://github.com/sirlucjan/workbench/tree/master/aur-rebased) / [aur-rebased](https://gitlab.com/sirlucjan/workbench/tree/master/aur-rebased) - linux-bfq-mq-lucjan-git and linux-zen-git
 
 ###### linux-bfq-mq-lucjan-git incorporates:
 
