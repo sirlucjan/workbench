@@ -169,14 +169,6 @@
 │       │       ├── linux.preset
 │       │       └── PKGBUILD
 │       └── stable-rc
-│           ├── linux-uksm
-│           │   ├── 60-linux.hook
-│           │   ├── 90-linux.hook
-│           │   ├── 99-linux.hook
-│           │   ├── config
-│           │   ├── linux.install
-│           │   ├── linux.preset
-│           │   └── PKGBUILD
 │           └── linux-uksm-git
 │               ├── 60-linux.hook
 │               ├── 90-linux.hook
@@ -199,4 +191,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-65 directories, 134 files
+64 directories, 127 files
