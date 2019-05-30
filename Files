@@ -157,26 +157,6 @@
 │           ├── linux.install
 │           ├── linux.preset
 │           └── PKGBUILD
-├── linux-5.1
-│   └── uksm
-│       ├── stable
-│       │   └── linux-uksm-git
-│       │       ├── 60-linux.hook
-│       │       ├── 90-linux.hook
-│       │       ├── 99-linux.hook
-│       │       ├── config
-│       │       ├── linux.install
-│       │       ├── linux.preset
-│       │       └── PKGBUILD
-│       └── stable-rc
-│           └── linux-uksm-git
-│               ├── 60-linux.hook
-│               ├── 90-linux.hook
-│               ├── 99-linux.hook
-│               ├── config
-│               ├── linux.install
-│               ├── linux.preset
-│               └── PKGBUILD
 ├── linux-lqx-rebranded
 │   ├── linux-lqx-git
 │   │   ├── 60-linux.hook
@@ -191,4 +171,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-64 directories, 127 files
+58 directories, 113 files
