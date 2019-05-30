@@ -158,11 +158,6 @@
 │           ├── linux.preset
 │           └── PKGBUILD
 ├── linux-5.1
-│   ├── api-headers
-│   │   ├── linux-api-headers-git
-│   │   │   └── PKGBUILD
-│   │   └── linux-api-headers-rc-git
-│   │       └── PKGBUILD
 │   └── uksm
 │       ├── stable
 │       │   ├── linux-uksm
@@ -212,4 +207,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-69 directories, 143 files
+66 directories, 141 files
