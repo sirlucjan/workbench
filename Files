@@ -160,14 +160,6 @@
 ├── linux-5.1
 │   └── uksm
 │       ├── stable
-│       │   ├── linux-uksm
-│       │   │   ├── 60-linux.hook
-│       │   │   ├── 90-linux.hook
-│       │   │   ├── 99-linux.hook
-│       │   │   ├── config
-│       │   │   ├── linux.install
-│       │   │   ├── linux.preset
-│       │   │   └── PKGBUILD
 │       │   └── linux-uksm-git
 │       │       ├── 60-linux.hook
 │       │       ├── 90-linux.hook
@@ -207,4 +199,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-66 directories, 141 files
+65 directories, 134 files
