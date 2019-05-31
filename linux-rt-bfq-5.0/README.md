@@ -6,7 +6,7 @@
 
 ###### linux-rt-bfq/linux-rt-bfq-git incorporates:
 
-* [LL-patches](https://github.com/sirlucjan/kernel-patches/tree/master/5.1/ll-patches) / [LL-patches](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.1/ll-patches) - specific patches authored by Piotr Gorski
+* [LL-patches](https://github.com/sirlucjan/kernel-patches/tree/master/5.0/ll-patches) / [LL-patches](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.0/ll-patches) - specific patches authored by Piotr Gorski
 
 ***
 # Download:
