@@ -49,9 +49,6 @@ _use_current=
 ### Disable MUQSS
 _muqss_disable=
 
-### Enable htmldocs (increases compile time)
-_htmldocs_enable=
-
 ### Do not edit below this line unless you know what you're doing
 
 # pkgname=('linux-lqx-git' 'linux-lqx-git-headers' 'linux-lqx-git-docs')
