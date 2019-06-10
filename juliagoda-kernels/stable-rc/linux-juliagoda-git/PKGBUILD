@@ -70,7 +70,7 @@ _pkgbase=linux-lucjan
 # pkgname=('linux-juliagoda-git-kernel' 'linux-juliagoda-git-headers' 'linux-juliagoda-git-docs')
 _major=5.1
 _srcname=linux-stable-rc
-pkgver=5.1.8.r71.g5b3d375b3838.ll5
+pkgver=5.1.8.r71.g5b3d375b3838.ll6
 pkgrel=1
 arch=('x86_64')
 url="https://gitlab.com/sirlucjan/lucjan-kernels/wikis/README"
@@ -83,7 +83,7 @@ if [ "$_linux_lucjan" = "actual" ]; then
 # _lucjanpath="https://raw.githubusercontent.com/sirlucjan/${_pkgbase}/master/actual"
  _lucjanpath="https://gitlab.com/sirlucjan/${_pkgbase}/raw/master/actual"
  _lucjanname='lucjan'
- _lucjanrev='ll5'
+ _lucjanrev='ll6'
  _lucjanpatch="${_major}-${_lucjanname}-${_lucjanrev}.patch"
 
 elif [ "$_linux_lucjan" = "pending" ]; then
@@ -441,7 +441,7 @@ for _p in "${pkgname[@]}"; do
 done
 
 sha512sums=('SKIP'
-            '580d44165a8362860e1c7062830bec1c81e14815cbff5ca20808eaf2cf6ab91d6bd8ce6fce0c37f10453cba3f7931dac7253febb33c1efeb40e44289a322973a'
+            'c2e030e37f3c4e1543470e5422a4d7565a994cce7a4200cda04b079f3743f32d024dc06590d53436d5017b276bceb2aaf857e290b4adec9c05737fdc18bd3c17'
             'SKIP'
             '78586292ae83ddaf4c33ec16b1fda68872b6db7ee244507a6970a254add78b71fbf6912b9e8b9115429bbe2206076e3ecc4b37d97f01c02f5cdd16cb74d44220'
             '7ad5be75ee422dda3b80edd2eb614d8a9181e2c8228cd68b3881e2fb95953bf2dea6cbe7900ce1013c9de89b2802574b7b24869fc5d7a95d3cc3112c4d27063a'
