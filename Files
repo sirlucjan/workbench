@@ -57,13 +57,9 @@
 │   │   │           └── config
 │   │   └── 5.1-devel
 │   │       ├── git
-│   │       │   ├── lucjan-git
-│   │       │   │   └── config
 │   │       │   └── uksm-git
 │   │       │       └── config
 │   │       └── src
-│   │           ├── lucjan
-│   │           │   └── config
 │   │           └── uksm
 │   │               └── config
 │   └── Kernel
@@ -170,4 +166,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-58 directories, 112 files
+56 directories, 110 files
