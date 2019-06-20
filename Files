@@ -79,26 +79,6 @@
 │   ├── repo-schema
 │   └── syslinux.cfg
 ├── Files
-├── fork-off-linux-bfq-mq-git
-│   ├── README.md
-│   ├── stable
-│   │   └── linux-bfq-mq-git
-│   │       ├── 60-linux.hook
-│   │       ├── 90-linux.hook
-│   │       ├── 99-linux.hook
-│   │       ├── config
-│   │       ├── linux.install
-│   │       ├── linux.preset
-│   │       └── PKGBUILD
-│   └── stable-rc
-│       └── linux-bfq-mq-git
-│           ├── 60-linux.hook
-│           ├── 90-linux.hook
-│           ├── 99-linux.hook
-│           ├── config
-│           ├── linux.install
-│           ├── linux.preset
-│           └── PKGBUILD
 ├── juliagoda-kernels
 │   ├── README.md
 │   ├── stable
@@ -151,4 +131,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-50 directories, 101 files
+45 directories, 86 files
