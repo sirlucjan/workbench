@@ -1,13 +1,5 @@
 .
 ├── aur-rebased
-│   ├── linux-bfq-mq-lucjan-git
-│   │   ├── 60-linux.hook
-│   │   ├── 90-linux.hook
-│   │   ├── 99-linux.hook
-│   │   ├── config
-│   │   ├── linux.install
-│   │   ├── linux.preset
-│   │   └── PKGBUILD
 │   ├── linux-zen-git
 │   │   ├── 60-linux.hook
 │   │   ├── 90-linux.hook
@@ -159,4 +151,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-51 directories, 108 files
+50 directories, 101 files
