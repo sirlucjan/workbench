@@ -4,19 +4,11 @@
 
 ###### aur-rebased
 
-[aur-rebased](https://github.com/sirlucjan/workbench/tree/master/aur-rebased) / [aur-rebased](https://gitlab.com/sirlucjan/workbench/tree/master/aur-rebased) - linux-bfq-mq-lucjan-git and linux-zen-git
+[aur-rebased](https://github.com/sirlucjan/workbench/tree/master/aur-rebased) / [aur-rebased](https://gitlab.com/sirlucjan/workbench/tree/master/aur-rebased) - linux-zen-git
 
-###### linux-bfq-mq-lucjan-git incorporates:
+###### linux-zen-git incorporates:
 
-* [BFQ-SQ and BFQ-MQ Scheduler](https://github.com/sirlucjan/bfq-mq-lucjan) - bfq-sq and bfq-mq from Algodev-github, forked by sirlucjan
-
-###### fork-off-linux-bfq-mq-git
-
-[fork-off-linux-bfq-mq-git](https://github.com/sirlucjan/workbench/tree/master/fork-off-linux-bfq-mq-git) / [fork-off-linux-bfq-mq-git](https://gitlab.com/sirlucjan/workbench/tree/master/fork-off-linux-bfq-mq-git) - linux-bfq-mq-git (stable and stable-rc)
-
-###### linux-bfq-mq/linux-bfq-mq-git incorporates:
-
-* [BFQ-SQ and BFQ-MQ Scheduler](https://github.com/Algodev-github/bfq-mq) - bfq-sq and bfq-mq from Algodev-github
+* [zen-kernel](https://github.com/zen-kernel/zen-kernel) - specific patchset authored by ZEN Kernel Team
 
 ###### juliagoda-kernels
 
