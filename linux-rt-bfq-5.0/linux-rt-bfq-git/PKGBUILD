@@ -53,7 +53,7 @@ pkgbase=linux-rt-bfq-git
 _major=5.0
 _srcname=linux-rt-devel
 pkgver=5.0.21.rt12.r0.g0d0e62016e97
-pkgrel=1
+pkgrel=2
 arch=('x86_64')
 url="https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/"
 license=('GPL2')
@@ -69,6 +69,7 @@ source=("git://git.kernel.org/pub/scm/linux/kernel/git/rt/linux-rt-devel.git/#br
         "${_lucjanpath}/ll-patches/${_bfq_patch}"
         "${_gcc_path}/${_gcc_patch}"
         "${_lucjanpath}/arch-patches/0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch"
+        "${_lucjanpath}/zen-patches/0004-ZEN-Add-CONFIG-for-unprivileged_userns_clone.patch"
          # the main kernel config files
         'config'
          # pacman hook for depmod
@@ -369,7 +370,8 @@ sha512sums=('SKIP'
             '59a6d7487dfc86df0731dcf4d9c413d13d1099aa2f7391b21094993c0d08af8e3a5182f34d264c81b0b914cbc1c9ea1608d3094aba978738fd4db5404f1d8ca7'
             'e62aa377a0acc4f63f394e27a0fb7316583ff1a6a6afdfcc97593ddffd7d2bc224cfd70b552cb3fb9513cf6b8db4c2fd913d21ec2380db8cd642e37d4d67370c'
             '1e8a1deb7a0100627b928b588a9419b58aa42ac1b33d974b83c24dcd4e5f59ace694959e30df2692a96de329d8bab61cd42bb59578f7814845391203416d7364'
-            '0ee2ba5d57ce7583bc46eeeb2b9cdd81c4b7e0821e58c7421b69c557abec6e6055dafcb42dff2564e90283972c672386dc5d5f5c8ccff70c6fe9a37973785183'
+            '28618fd42eb1dc84d8c73316b6e602014c416c27f8abec1f37dffbf7f976845303267a43def8f5d863fff4611fc4f634048e6cf62d771ce4a2d2aa632becf462'
+            '0ccff6a771e11aa956af32347a341641866246607480268306c73113cb213a15b969bc43946b85380788ea6a0b29498ef93589f7b37e1a0123aa35041acae94d'
             '7ad5be75ee422dda3b80edd2eb614d8a9181e2c8228cd68b3881e2fb95953bf2dea6cbe7900ce1013c9de89b2802574b7b24869fc5d7a95d3cc3112c4d27063a'
             '2718b58dbbb15063bacb2bde6489e5b3c59afac4c0e0435b97fe720d42c711b6bcba926f67a8687878bd51373c9cf3adb1915a11666d79ccb220bf36e0788ab7'
             '8742e2eed421e2f29850e18616f435536c12036ff793f5682a3a8c980cf5dbfc88d17fd9539c87de15d9e4663dc3190f964f18a4722940465437927b6052abbf'
