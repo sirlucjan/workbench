@@ -52,12 +52,12 @@ pkgbase=linux-rt-bfq
 # pkgname=('linux-rt-bfq' 'linux-rt-bfq-headers' 'linux-rt-bfq-docs')
 _major=5.0
 _minor=21
-_rtver=12
+_rtver=13
 _rtpatchver=rt${_rtver}
 pkgver=${_major}.${_minor}.${_rtpatchver}
 _pkgver=${_major}.${_minor}
 _srcname=linux-${_pkgver}
-pkgrel=2
+pkgrel=1
 arch=('x86_64')
 url="https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/"
 license=('GPL2')
@@ -372,7 +372,7 @@ done
 
 sha512sums=('a5cf26d82552ccbdacbaf24ad1dccd2513d236b9e96e229d86e2536ab65353a18c037d2238004994d47a7b4a53beabd420cab9ad3e755133150636e820593c9d'
             'SKIP'
-            'c8856a2d300636e27470c7c7a053391ddb9f994f373f15c1b59cba4cb0f4102b86dc20834eae17f8ef75bd171d620d23b5e88ad46db1f2813ff583d505b89113'
+            '908acce19549359112faad748583f17c0a47855091082f01c6b2e5a4924d16ad5636da8aa1fd0ee7bce8d71bd841e538a977912a7a7ab8c4513ce1555c2b23a1'
             'SKIP'
             '59a6d7487dfc86df0731dcf4d9c413d13d1099aa2f7391b21094993c0d08af8e3a5182f34d264c81b0b914cbc1c9ea1608d3094aba978738fd4db5404f1d8ca7'
             'e62aa377a0acc4f63f394e27a0fb7316583ff1a6a6afdfcc97593ddffd7d2bc224cfd70b552cb3fb9513cf6b8db4c2fd913d21ec2380db8cd642e37d4d67370c'
