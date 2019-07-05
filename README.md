@@ -34,9 +34,9 @@
 
 ######  linux-lqx-rebranded
 
-[linux-lqx-rebranded](https://github.com/sirlucjan/workbench/tree/master/linux-lqx-rebranded) / [linux-lqx-rebranded](https://gitlab.com/sirlucjan/workbench/tree/master/linux-lqx-rebranded) - linux-lqx-git
+[linux-lqx-rebranded](https://github.com/sirlucjan/workbench/tree/master/linux-lqx-rebranded) / [linux-lqx-rebranded](https://gitlab.com/sirlucjan/workbench/tree/master/linux-lqx-rebranded) - linux-lqx-git/linux-lqx-tag/linux-lqx-tag-git
 
-###### linux-lqx-git incorporates:
+###### linux-lqx-git/linux-lqx-tag/linux-lqx-tag-git incorporates:
 
 * [liquorix patchset](https://github.com/damentz/liquorix-package) - authored by Steven Barrett
 
