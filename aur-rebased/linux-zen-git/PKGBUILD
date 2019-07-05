@@ -52,7 +52,7 @@ pkgbase=linux-zen-git
 # pkgname=('linux-zen-git' 'linux-zen-git-headers' 'linux-zen-git-docs')
 _major=5.1
 _srcname=zen-kernel
-pkgver=5.1.14.r828234.gc6d819d8c1d0
+pkgver=5.1.16.r828420.g471b29f7db94
 pkgrel=1
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -89,7 +89,6 @@ prepare() {
 
     ### Setting version
         msg2 "Setting version..."
-        sed -e "/^EXTRAVERSION =/s/=.*/=/" -i Makefile
         scripts/setlocalversion --save-scmversion
         echo "-$pkgrel" > localversion.10-pkgrel
         echo "$_kernelname" > localversion.20-pkgname
