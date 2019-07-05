@@ -79,19 +79,18 @@ source=("https://cdn.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.xz"
         'linux.preset')
 
 _kernelname=${pkgbase#linux}
-: ${_kernelname:=-lqx-tag-git}
+: ${_kernelname:=-lqx-tag}
 
 
 prepare() {
     cd ${_srcname}
     
-     ### Applying lqx patch
-        msg2 "Applying lqx patch"
+     ### Applying liquorix patchset
+        msg2 "Applying liquorix patchset"
         patch -p1 -i ../v${_pkgver}.patch
     
     ### Setting version
         msg2 "Setting version..."
-        sed -e "/^EXTRAVERSION =/s/=.*/=/" -i Makefile
         scripts/setlocalversion --save-scmversion
         echo "-$pkgrel" > localversion.10-pkgrel
         echo "$_kernelname" > localversion.20-pkgname
