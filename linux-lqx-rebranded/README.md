@@ -1,8 +1,10 @@
 # Kernels and modules:
 
 - linux-lqx-git
+- linux-lqx-tag
+- linux-lqx-tag-git
 
-###### linux-lqx-git incorporates:
+###### linux-lqx-git/linux-lqx-tag/linux-lqx-tag-git incorporates:
 
 * [liquorix patchset](https://github.com/damentz/liquorix-package) - authored by Steven Barrett
 
