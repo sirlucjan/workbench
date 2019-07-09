@@ -25,20 +25,27 @@
 │   │   │   └── src
 │   │   │       └── rt-bfq
 │   │   │           └── config
-│   │   └── 5.1
+│   │   ├── 5.1
+│   │   │   ├── git
+│   │   │   │   ├── lucjan-git
+│   │   │   │   │   └── config
+│   │   │   │   ├── uksm-git
+│   │   │   │   │   └── config
+│   │   │   │   └── uml-git
+│   │   │   │       └── config
+│   │   │   └── src
+│   │   │       ├── lucjan
+│   │   │       │   └── config
+│   │   │       ├── uksm
+│   │   │       │   └── config
+│   │   │       └── uml
+│   │   │           └── config
+│   │   └── 5.2
 │   │       ├── git
-│   │       │   ├── lucjan-git
-│   │       │   │   └── config
-│   │       │   ├── uksm-git
-│   │       │   │   └── config
-│   │       │   └── uml-git
+│   │       │   └── lucjan-git
 │   │       │       └── config
 │   │       └── src
-│   │           ├── lucjan
-│   │           │   └── config
-│   │           ├── uksm
-│   │           │   └── config
-│   │           └── uml
+│   │           └── lucjan
 │   │               └── config
 │   └── Kernel
 │       ├── linux-aur
@@ -140,4 +147,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-42 directories, 98 files
+47 directories, 100 files
