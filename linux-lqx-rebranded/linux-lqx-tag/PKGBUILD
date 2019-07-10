@@ -52,8 +52,8 @@ pkgbase=linux-lqx-tag
 # pkgname=('linux-lqx-tag' 'linux-lqx-tag-headers' 'linux-lxq-tag-docs')
 _major=5.1
 _srcname=linux-${_major}
-pkgver=5.1.16lqx4
-_pkgver=5.1.16-lqx4
+pkgver=5.1.17lqx1
+_pkgver=5.1.17-lqx1
 pkgrel=1
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -366,7 +366,7 @@ done
 
 sha512sums=('ae96f347badc95f1f3acf506c52b6cc23c0bd09ce8f4ce6705d4b4058b62593059bba1bc603c8d8b00a2f19131e7e56c31ac62b45883a346fa61d655e178f236'
             'SKIP'
-            '98611c65259b59ce6f220554f76cf7941ffad4aca94e9e94417d78098fab9bed6c841c5d0cf927dd1026692ff107d9a69dcb7e24cebef846b40d28f00099d104'
+            'b937e5cdd9561d9ef5e17bcc1e1f2ab5183c8152ce895d9209bffe3b8bc812005def755eac7e8412219b7267db5761db90943d1591ce55ba0425fffd1910a76d'
             'SKIP'
             '1841964d6354ab896ef936d44e61176a4bcd9e2b58210a0aadf5153f2339695ac4688abc77ac427963ba65a0477d8530ef4d15a5b5599cc4f2b43f3a5c482bce'
             '7ad5be75ee422dda3b80edd2eb614d8a9181e2c8228cd68b3881e2fb95953bf2dea6cbe7900ce1013c9de89b2802574b7b24869fc5d7a95d3cc3112c4d27063a'
