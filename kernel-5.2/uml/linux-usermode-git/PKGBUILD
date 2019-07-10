@@ -15,8 +15,7 @@ url="http://user-mode-linux.sourceforge.net/"
 depends=('coreutils')
 makedepends=('bc' 'inetutils' 'git')
 source=(
-  "git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git#branch=master"
-  #"git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git#branch=linux-${_major}.y"
+  "git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git#branch=linux-${_major}.y"
   'config'
   '70-uml.hook')
 
