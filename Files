@@ -103,24 +103,6 @@
 │           ├── linux.install
 │           ├── linux.preset
 │           └── PKGBUILD
-├── kernel-5.2
-│   └── uml
-│       ├── linux-usermode
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
-│       ├── linux-usermode-git
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
-│       ├── linux-usermode-rc
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
-│       └── linux-usermode-rc-git
-│           ├── 70-uml.hook
-│           ├── config
-│           └── PKGBUILD
 ├── linux-lqx-rebranded
 │   ├── linux-lqx-git
 │   │   ├── 60-linux.hook
@@ -169,4 +151,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-55 directories, 114 files
+49 directories, 102 files
