@@ -84,15 +84,6 @@
 │   └── syslinux.cfg
 ├── Files
 ├── juliagoda-kernels
-│   ├── experimental
-│   │   └── linux-juliagoda-git
-│   │       ├── 60-linux-01-depmod.hook
-│   │       ├── 90-linux-02-initcpio.hook
-│   │       ├── 99-linux-03-remove.hook
-│   │       ├── config
-│   │       ├── linux.install
-│   │       ├── linux.preset
-│   │       └── PKGBUILD
 │   ├── README.md
 │   ├── stable
 │   │   └── linux-juliagoda-git
@@ -192,4 +183,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-62 directories, 130 files
+60 directories, 123 files
