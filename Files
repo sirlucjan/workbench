@@ -104,11 +104,6 @@
 │           ├── linux.preset
 │           └── PKGBUILD
 ├── kernel-5.2
-│   ├── api-headers
-│   │   ├── linux-api-headers-git
-│   │   │   └── PKGBUILD
-│   │   └── linux-api-headers-rc-git
-│   │       └── PKGBUILD
 │   └── uml
 │       ├── linux-usermode
 │       │   ├── 70-uml.hook
@@ -174,4 +169,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-58 directories, 116 files
+55 directories, 114 files
