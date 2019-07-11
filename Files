@@ -27,14 +27,10 @@
 │   │   │           └── config
 │   │   ├── 5.1
 │   │   │   ├── git
-│   │   │   │   ├── uksm-git
-│   │   │   │   │   └── config
-│   │   │   │   └── uml-git
+│   │   │   │   └── uksm-git
 │   │   │   │       └── config
 │   │   │   └── src
-│   │   │       ├── uksm
-│   │   │       │   └── config
-│   │   │       └── uml
+│   │   │       └── uksm
 │   │   │           └── config
 │   │   └── 5.2
 │   │       ├── git
@@ -147,4 +143,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-47 directories, 100 files
+45 directories, 98 files
