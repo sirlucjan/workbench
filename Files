@@ -34,11 +34,15 @@
 │   │   │           └── config
 │   │   └── 5.2
 │   │       ├── git
+│   │       │   ├── aufs-git
+│   │       │   │   └── config
 │   │       │   ├── lucjan-git
 │   │       │   │   └── config
 │   │       │   └── uml-git
 │   │       │       └── config
 │   │       └── src
+│   │           ├── aufs
+│   │           │   └── config
 │   │           ├── lucjan
 │   │           │   └── config
 │   │           └── uml
@@ -143,4 +147,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-45 directories, 98 files
+47 directories, 100 files
