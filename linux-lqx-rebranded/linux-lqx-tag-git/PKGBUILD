@@ -52,7 +52,7 @@ pkgbase=linux-lqx-tag-git
 # pkgname=('linux-lqx-tag-git' 'linux-lqx-tag-git-headers' 'linux-lxq-tag-git-docs')
 _major=5.1
 _srcname=zen-kernel
-pkgver=5.1.7.lqx1.r0.g801957ba8754
+pkgver=5.1.18.lqx1.r0.g11d5acd20011
 pkgrel=1
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -62,7 +62,7 @@ makedepends=('git' 'kmod' 'inetutils' 'bc' 'libelf')
 #_lucjanpath="https://raw.githubusercontent.com/sirlucjan/kernel-patches/master/${_major}"
 _lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major}"
 
-source=("git://github.com/zen-kernel/zen-kernel#tag=v5.1.7-lqx1"
+source=("git://github.com/zen-kernel/zen-kernel#tag=v5.1.18-lqx1"
          # the main kernel config files
         'config'
          # pacman hook for depmod
