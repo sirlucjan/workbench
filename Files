@@ -121,24 +121,6 @@
 │   │   ├── linux.preset
 │   │   └── PKGBUILD
 │   └── README.md
-├── linux-rt-bfq-5.0
-│   ├── linux-rt-bfq
-│   │   ├── 60-linux.hook
-│   │   ├── 90-linux.hook
-│   │   ├── 99-linux.hook
-│   │   ├── config
-│   │   ├── linux.install
-│   │   ├── linux.preset
-│   │   └── PKGBUILD
-│   ├── linux-rt-bfq-git
-│   │   ├── 60-linux.hook
-│   │   ├── 90-linux.hook
-│   │   ├── 99-linux.hook
-│   │   ├── config
-│   │   ├── linux.install
-│   │   ├── linux.preset
-│   │   └── PKGBUILD
-│   └── README.md
 ├── linux-rt-bfq-5.2
 │   ├── linux-rt-bfq
 │   │   ├── 60-linux.hook
@@ -161,4 +143,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-47 directories, 114 files
+44 directories, 99 files
