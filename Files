@@ -11,13 +11,6 @@
 │   └── README.md
 ├── Devel
 │   ├── Config
-│   │   ├── 4.19
-│   │   │   ├── git
-│   │   │   │   └── rt-bfq-git
-│   │   │   │       └── config
-│   │   │   └── src
-│   │   │       └── rt-bfq
-│   │   │           └── config
 │   │   ├── 5.1
 │   │   │   ├── git
 │   │   │   │   └── uksm-git
@@ -126,4 +119,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-41 directories, 85 files
+36 directories, 83 files
