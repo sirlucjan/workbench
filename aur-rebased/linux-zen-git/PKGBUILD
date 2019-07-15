@@ -52,13 +52,14 @@ pkgbase=linux-zen-git
 # pkgname=('linux-zen-git' 'linux-zen-git-headers' 'linux-zen-git-docs')
 _major=5.2
 _srcname=zen-kernel
-pkgver=5.1.16.r828420.g471b29f7db94
+pkgver=5.2.1.r841985.g268d0556cfaf
 pkgrel=1
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
 license=('GPL2')
 options=('!strip')
-makedepends=('git' 'kmod' 'inetutils' 'bc' 'libelf')
+makedepends=('kmod' 'inetutils' 'bc' 'libelf' 'git' 'python-sphinx' 'python-sphinx_rtd_theme'
+             'graphviz' 'imagemagick')
 #_lucjanpath="https://raw.githubusercontent.com/sirlucjan/kernel-patches/master/${_major}"
 _lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major}"
 
@@ -188,7 +189,7 @@ prepare() {
 build() {
   cd ${_srcname}
 
-  make bzImage modules
+  make bzImage modules htmldocs
 }
 
 _package() {
@@ -345,6 +346,18 @@ _package-docs() {
   mkdir -p "$builddir"
   cp -t "$builddir" -a Documentation
 
+  msg2 "Removing doctrees..."
+  rm -r "$builddir/Documentation/output/.doctrees"
+
+  msg2 "Moving HTML docs..."
+  local src dst
+  while read -rd '' src; do
+    dst="$builddir/Documentation/${src#$builddir/Documentation/output/}"
+    mkdir -p "${dst%/*}"
+    mv "$src" "$dst"
+    rmdir -p --ignore-fail-on-non-empty "${src%/*}"
+  done < <(find "$builddir/Documentation/output" -type f -print0)
+  
   msg2 "Adding symlink..."
   mkdir -p "$pkgdir/usr/share/doc"
   ln -sr "$builddir/Documentation" "$pkgdir/usr/share/doc/$pkgbase"
