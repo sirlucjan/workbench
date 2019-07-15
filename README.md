@@ -42,13 +42,6 @@
 
 * [liquorix patchset](https://github.com/damentz/liquorix-package) - authored by Steven Barrett
 
-###### linux-rt-bfq-5.0
-
-[linux-rt-bfq-5.0](https://github.com/sirlucjan/workbench/tree/master/linux-rt-bfq-5.0) / [linux-rt-bfq-5.0](https://gitlab.com/sirlucjan/workbench/tree/master/linux-rt-bfq-5.0) - linux-rt-bfq-5.0
-
-###### linux-rt-bfq-5.0 incorporates:
-
-* [LL-patches](https://github.com/sirlucjan/kernel-patches/tree/master/5.0/ll-patches) / [LL-patches](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.0/ll-patches) - specific patches authored by Piotr Gorski
 
 #### DOTS
 
