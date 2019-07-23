@@ -52,7 +52,7 @@ pkgbase=linux-zen-git
 # pkgname=('linux-zen-git' 'linux-zen-git-headers' 'linux-zen-git-docs')
 _major=5.2
 _srcname=zen-kernel
-pkgver=5.2.1.r841985.g268d0556cfaf
+pkgver=5.2.2.r842030.gedd7ed8d7d89
 pkgrel=1
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -376,7 +376,7 @@ for _p in "${pkgname[@]}"; do
 done
 
 sha512sums=('SKIP'
-            '11883940e69db56fbcdc4f0b30b2998d3dffaff66c2408d76e698e4e921fbc465e7bfa1a55e6853fc08cd9f523006ddffa85e668e24111c349324bf708af4164'
+            '450b009050eed63f355dc93ce2525707b9898e154948228aac68ceaa5ddfd04e1eb1b787a0b8e448e024eeedada4ce90b9e166a3ccedca25ab0a43b1e3f4076f'
             '7ad5be75ee422dda3b80edd2eb614d8a9181e2c8228cd68b3881e2fb95953bf2dea6cbe7900ce1013c9de89b2802574b7b24869fc5d7a95d3cc3112c4d27063a'
             '2718b58dbbb15063bacb2bde6489e5b3c59afac4c0e0435b97fe720d42c711b6bcba926f67a8687878bd51373c9cf3adb1915a11666d79ccb220bf36e0788ab7'
             '8742e2eed421e2f29850e18616f435536c12036ff793f5682a3a8c980cf5dbfc88d17fd9539c87de15d9e4663dc3190f964f18a4722940465437927b6052abbf'
