@@ -56,14 +56,14 @@ _major=5.2
 _srcname=linux-${_major}
 _lqxpatchname=liquorix-package
 pkgbase=linux-lqx-git
-pkgver=5.2.3_1.r1191.g8078fa1
+pkgver=5.2.3_1.r1192.gbd9ef20
 pkgrel=1
 arch=('x86_64')
 url="http://liquorix.net/"
 license=('GPL2')
 options=('!strip')
 makedepends=('kmod' 'inetutils' 'bc' 'libelf' 'git' 'python-sphinx' 'python-sphinx_rtd_theme'
-             'graphviz' 'imagemagick')
+             'graphviz' 'imagemagick' 'cpio')
 
 source=("https://cdn.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.xz"
         "https://cdn.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.sign"
