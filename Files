@@ -11,13 +11,6 @@
 │   └── README.md
 ├── Devel
 │   ├── Config
-│   │   ├── 5.1
-│   │   │   ├── git
-│   │   │   │   └── uksm-git
-│   │   │   │       └── config
-│   │   │   └── src
-│   │   │       └── uksm
-│   │   │           └── config
 │   │   └── 5.2
 │   │       ├── git
 │   │       │   ├── aufs-git
@@ -123,4 +116,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-38 directories, 85 files
+33 directories, 83 files
