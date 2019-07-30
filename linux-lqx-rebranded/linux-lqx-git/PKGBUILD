@@ -78,7 +78,7 @@ source=("https://cdn.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.xz"
         'linux.preset')
 
 _kernelname=${pkgbase#linux}
-: ${_kernelname:=-lqx}
+: ${_kernelname:=-lqx-git}
 
 pkgver() {
   cd ${_lqxpatchname}
