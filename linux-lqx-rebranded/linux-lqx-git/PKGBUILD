@@ -56,7 +56,7 @@ _major=5.2
 _srcname=linux-${_major}
 _lqxpatchname=liquorix-package
 pkgbase=linux-lqx-git
-pkgver=5.2.3_1.r1192.gbd9ef20
+pkgver=5.2.4.lqx2.r1198.g4eff6d6
 pkgrel=1
 arch=('x86_64')
 url="http://liquorix.net/"
@@ -82,7 +82,7 @@ _kernelname=${pkgbase#linux}
 
 pkgver() {
   cd ${_lqxpatchname}
-  _ver="${_major}.${_minor}_${_patchrel}"
+  _ver="${_major}.${_minor}.lqx${_patchrel}"
   echo "${_ver}.r$(git rev-list --count HEAD).g$(git rev-parse --short HEAD)"
 }
 
