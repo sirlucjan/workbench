@@ -55,16 +55,20 @@
 │       └── uml
 │           └── 70-uml.hook
 ├── dots
-│   ├── fancontrol-4.14
-│   ├── fancontrol-4.16
-│   ├── gitconfig-nano
-│   ├── gitconfig-vim
-│   ├── gitignore
-│   ├── git-patching.sh
-│   ├── patcher.sh
-│   ├── patching.sh
-│   ├── repo-schema
-│   └── syslinux.cfg
+│   ├── boot
+│   │   └── syslinux.cfg
+│   ├── fancontrol
+│   │   ├── fancontrol-4.14
+│   │   └── fancontrol-4.16
+│   ├── git
+│   │   ├── gitconfig-nano
+│   │   ├── gitconfig-vim
+│   │   └── gitignore
+│   └── scripts
+│       ├── git-patching.sh
+│       ├── patcher.sh
+│       ├── patching.sh
+│       └── repo-schema.sh
 ├── Files
 ├── juliagoda-kernels
 │   ├── README.md
@@ -116,4 +120,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-33 directories, 83 files
+37 directories, 83 files
