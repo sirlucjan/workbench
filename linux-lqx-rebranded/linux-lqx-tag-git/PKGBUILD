@@ -51,6 +51,8 @@ _1k_HZ_ticks=
 pkgbase=linux-lqx-tag-git
 # pkgname=('linux-lqx-tag-git' 'linux-lqx-tag-git-headers' 'linux-lxq-tag-git-docs')
 _major=5.2
+_minor=5
+_lqx=lqx1
 _srcname=zen-kernel
 pkgver=5.2.5.lqx1.r0.gb33ddf920614
 pkgrel=1
@@ -63,7 +65,7 @@ makedepends=('kmod' 'inetutils' 'bc' 'libelf' 'python-sphinx' 'python-sphinx_rtd
 #_lucjanpath="https://raw.githubusercontent.com/sirlucjan/kernel-patches/master/${_major}"
 _lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major}"
 
-source=("git://github.com/zen-kernel/zen-kernel#tag=v5.2.5-lqx1"
+source=("git://github.com/zen-kernel/zen-kernel#tag=v${_major}.${_minor}-${_lqx}"
          # the main kernel config files
         'config'
          # pacman hook for depmod
