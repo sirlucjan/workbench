@@ -89,6 +89,7 @@
 	#############
 	c = commit
 	ca = commit -a
+	cac = commit -a -s
 	cm = commit -m
 	camc = commit -s -am
 	cam = commit -am
