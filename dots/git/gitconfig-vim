@@ -218,6 +218,7 @@
 	#############
 	rev = revert
 	revc = revert -s
+	revcn = revert -s --no-commit
 	revs = revert -S
 	revss = revert -S -s
 	revssn = revert -S -s --no-commit
