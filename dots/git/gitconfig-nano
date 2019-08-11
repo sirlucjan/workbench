@@ -91,6 +91,7 @@
 	ca = commit -a
 	cac = commit -a -s
 	cas = commit -a -S
+	cass = commit -a -S -s
 	cm = commit -m
 	cmc = commit -m -s
 	cms = commit -m -S
