@@ -223,13 +223,13 @@
 	rpu = remote prune upstream
 	#############
 	rev = revert
-	revn = revert --no-commit
+	revn = revert -n
 	revc = revert -s
-	revcn = revert -s --no-commit
+	revcn = revert -s -n
 	revs = revert -S
-	revsn = revert -S --no-commit
+	revsn = revert -S -n
 	revss = revert -S -s
-	revssn = revert -S -s --no-commit
+	revssn = revert -S -s -n
 	#############
 	rmf = rm -f
 	rmrf = rm -r -f
