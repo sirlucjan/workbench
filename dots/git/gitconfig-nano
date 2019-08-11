@@ -96,8 +96,8 @@
 	cmc = commit -m -s
 	cms = commit -m -S
 	cmss = commit -m -S -s
-	camc = commit -s -am
 	cam = commit -am
+	camc = commit -s -am
 	cams = commit -S -am
 	camss = commit -S -s -am
 	cem = commit --allow-empty -m
