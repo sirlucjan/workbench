@@ -225,11 +225,8 @@
 	rev = revert
 	revn = revert -n
 	revc = revert -s
-	revcn = revert -s -n
 	revs = revert -S
-	revsn = revert -S -n
 	revss = revert -S -s
-	revssn = revert -S -s -n
 	#############
 	rmf = rm -f
 	rmrf = rm -r -f
