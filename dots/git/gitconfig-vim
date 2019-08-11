@@ -95,6 +95,7 @@
 	cm = commit -m
 	cmc = commit -m -s
 	cms = commit -m -S
+	cmss = commit -m -S -s
 	cam = commit -am
 	camc = commit -s -am
 	cams = commit -S -am
