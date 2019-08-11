@@ -90,6 +90,7 @@
 	c = commit
 	ca = commit -a
 	cac = commit -a -s
+	cas = commit -a -S
 	cm = commit -m
 	camc = commit -s -am
 	cam = commit -am
