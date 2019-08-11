@@ -91,6 +91,7 @@
 	ca = commit -a
 	cm = commit -m
 	cam = commit -am
+	camc = commit -s -am
 	cams = commit -S -am
 	camss = commit -S -s -am
 	cem = commit --allow-empty -m
