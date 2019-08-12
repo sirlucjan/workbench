@@ -93,7 +93,6 @@
 	cas = commit -a -S
 	cass = commit -a -S -s
 	cm = commit -m
-	cmss = commit -m -S -s
 	cam = commit -am
 	camc = commit -s -am
 	cams = commit -S -am
