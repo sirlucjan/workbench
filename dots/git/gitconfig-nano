@@ -226,6 +226,7 @@
 	reve = revert --no-edit
 	revn = revert -n
 	revc = revert -s
+	revce = revert -s --no-edit
 	revs = revert -S
 	revss = revert -S -s
 	#############
