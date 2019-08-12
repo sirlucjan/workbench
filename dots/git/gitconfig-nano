@@ -223,6 +223,7 @@
 	rpu = remote prune upstream
 	#############
 	rev = revert
+	reve = revert --no-edit
 	revn = revert -n
 	revc = revert -s
 	revs = revert -S
