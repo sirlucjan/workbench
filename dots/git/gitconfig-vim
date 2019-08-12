@@ -228,6 +228,7 @@
 	revc = revert -s
 	revce = revert -s --no-edit
 	revs = revert -S
+	revse = revert -S --no-edit
 	revss = revert -S -s
 	#############
 	rmf = rm -f
