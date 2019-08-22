@@ -161,6 +161,7 @@
 	#############
 	ps = push
 	psf = push -f
+	psm = push --mirror
 	psu = push -u
 	pst = push --tags
 	#############
