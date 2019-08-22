@@ -106,6 +106,7 @@
 	ced = commit --allow-empty --amend
 	#############
 	cl = clone
+	clb = clone -b
 	cld = clone --depth 1
 	clg = !sh -c 'git clone git://github.com/$1 $(basename $1)' -
 	clgp = !sh -c 'git clone git@github.com:$(git config --get user.username)/$1 $1' -
