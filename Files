@@ -40,7 +40,9 @@
 │   │           │   └── config
 │   │           ├── bfq-git
 │   │           │   └── config
-│   │           └── lucjan-git
+│   │           ├── lucjan-git
+│   │           │   └── config
+│   │           └── rt-bfq-git
 │   │               └── config
 │   └── Kernel
 │       ├── linux-aur
@@ -128,4 +130,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-42 directories, 86 files
+43 directories, 87 files
