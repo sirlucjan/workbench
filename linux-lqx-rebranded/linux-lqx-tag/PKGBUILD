@@ -48,8 +48,8 @@ _1k_HZ_ticks=
 pkgbase=linux-lqx-tag
 # pkgname=('linux-lqx-tag' 'linux-lqx-tag-headers' 'linux-lxq-tag-docs')
 _major=5.2
-_minor=14
-_lqx=lqx2
+_minor=15
+_lqx=lqx1
 _srcname=linux-${_major}
 pkgver=${_major}.${_minor}.${_lqx}
 _pkgver=${_major}.${_minor}-${_lqx}
@@ -377,7 +377,7 @@ done
 
 sha512sums=('5a28f8a34c4e0470617f5638b7112e6252109b78f23b1eed484a228530970c7ef5c130d6e5a09cf25ea2f6a0329602dcc1ec66ce893182e15b27d99bd228789c'
             'SKIP'
-            'f6c848ef49fc9c935d47ffd17f174485508e36ed4d14d4ad6b95ed98ff5d686eb58ed1647ea1d44c51199dfe23fdcf93db4d59c903c895fe20c14a2409389ead'
+            '94e9f024a31b411adee44caf477e95a6fd639b5355633058bbd758c6319035d5bc039049bb71ab289317e0f88ed586b43ea3157058a7cb488d67060df755a6bf'
             'SKIP'
             '1fe41289e03c295e9d1ff35e68a790e8d323d00bd3621b4a6276fda53562a00cf3c85dd0904b516d15d0af54cb36294912b30fcff1c8afc5e768cf1ee1f9a746'
             '7ad5be75ee422dda3b80edd2eb614d8a9181e2c8228cd68b3881e2fb95953bf2dea6cbe7900ce1013c9de89b2802574b7b24869fc5d7a95d3cc3112c4d27063a'
