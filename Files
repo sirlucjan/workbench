@@ -138,7 +138,16 @@
 │   │   └── linux-api-headers-rc-git
 │   │       └── PKGBUILD
 │   ├── aufs
-│   │   └── stable
+│   │   ├── stable
+│   │   │   └── linux-aufs
+│   │   │       ├── 60-linux.hook
+│   │   │       ├── 90-linux.hook
+│   │   │       ├── 99-linux.hook
+│   │   │       ├── config
+│   │   │       ├── linux.install
+│   │   │       ├── linux.preset
+│   │   │       └── PKGBUILD
+│   │   └── stable-rc
 │   │       └── linux-aufs
 │   │           ├── 60-linux.hook
 │   │           ├── 90-linux.hook
@@ -204,4 +213,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-69 directories, 135 files
+71 directories, 142 files
