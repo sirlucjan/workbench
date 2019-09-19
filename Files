@@ -13,8 +13,6 @@
 │   ├── Config
 │   │   ├── 5.2
 │   │   │   ├── git
-│   │   │   │   ├── bfq-git
-│   │   │   │   │   └── config
 │   │   │   │   ├── lucjan-git
 │   │   │   │   │   └── config
 │   │   │   │   ├── rt-bfq-git
@@ -22,8 +20,6 @@
 │   │   │   │   └── uml-git
 │   │   │   │       └── config
 │   │   │   └── src
-│   │   │       ├── bfq
-│   │   │       │   └── config
 │   │   │       ├── lucjan
 │   │   │       │   └── config
 │   │   │       ├── rt-bfq
@@ -139,4 +135,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-48 directories, 91 files
+46 directories, 89 files
