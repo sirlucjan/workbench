@@ -114,41 +114,6 @@
 │           ├── linux.preset
 │           └── PKGBUILD
 ├── linux-5.3.y
-│   ├── aufs
-│   │   ├── stable
-│   │   │   ├── linux-aufs
-│   │   │   │   ├── 60-linux.hook
-│   │   │   │   ├── 90-linux.hook
-│   │   │   │   ├── 99-linux.hook
-│   │   │   │   ├── config
-│   │   │   │   ├── linux.install
-│   │   │   │   ├── linux.preset
-│   │   │   │   └── PKGBUILD
-│   │   │   └── linux-aufs-git
-│   │   │       ├── 60-linux.hook
-│   │   │       ├── 90-linux.hook
-│   │   │       ├── 99-linux.hook
-│   │   │       ├── config
-│   │   │       ├── linux.install
-│   │   │       ├── linux.preset
-│   │   │       └── PKGBUILD
-│   │   └── stable-rc
-│   │       ├── linux-aufs
-│   │       │   ├── 60-linux.hook
-│   │       │   ├── 90-linux.hook
-│   │       │   ├── 99-linux.hook
-│   │       │   ├── config
-│   │       │   ├── linux.install
-│   │       │   ├── linux.preset
-│   │       │   └── PKGBUILD
-│   │       └── linux-aufs-git
-│   │           ├── 60-linux.hook
-│   │           ├── 90-linux.hook
-│   │           ├── 99-linux.hook
-│   │           ├── config
-│   │           ├── linux.install
-│   │           ├── linux.preset
-│   │           └── PKGBUILD
 │   └── bfq
 │       ├── stable
 │       │   ├── linux-bfq
@@ -214,4 +179,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-65 directories, 149 files
+58 directories, 121 files
