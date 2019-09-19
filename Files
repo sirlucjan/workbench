@@ -132,11 +132,6 @@
 │           ├── linux.preset
 │           └── PKGBUILD
 ├── linux-5.3.y
-│   ├── api-headers
-│   │   ├── linux-api-headers-git
-│   │   │   └── PKGBUILD
-│   │   └── linux-api-headers-rc-git
-│   │       └── PKGBUILD
 │   ├── aufs
 │   │   ├── stable
 │   │   │   ├── linux-aufs
@@ -172,58 +167,41 @@
 │   │           ├── linux.install
 │   │           ├── linux.preset
 │   │           └── PKGBUILD
-│   ├── bfq
-│   │   ├── stable
-│   │   │   ├── linux-bfq
-│   │   │   │   ├── 60-linux.hook
-│   │   │   │   ├── 90-linux.hook
-│   │   │   │   ├── 99-linux.hook
-│   │   │   │   ├── config
-│   │   │   │   ├── linux.install
-│   │   │   │   ├── linux.preset
-│   │   │   │   └── PKGBUILD
-│   │   │   └── linux-bfq-git
-│   │   │       ├── 60-linux.hook
-│   │   │       ├── 90-linux.hook
-│   │   │       ├── 99-linux.hook
-│   │   │       ├── config
-│   │   │       ├── linux.install
-│   │   │       ├── linux.preset
-│   │   │       └── PKGBUILD
-│   │   └── stable-rc
-│   │       ├── linux-bfq
-│   │       │   ├── 60-linux.hook
-│   │       │   ├── 90-linux.hook
-│   │       │   ├── 99-linux.hook
-│   │       │   ├── config
-│   │       │   ├── linux.install
-│   │       │   ├── linux.preset
-│   │       │   └── PKGBUILD
-│   │       └── linux-bfq-git
-│   │           ├── 60-linux.hook
-│   │           ├── 90-linux.hook
-│   │           ├── 99-linux.hook
-│   │           ├── config
-│   │           ├── linux.install
-│   │           ├── linux.preset
-│   │           └── PKGBUILD
-│   └── uml
-│       ├── linux-usermode
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
-│       ├── linux-usermode-git
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
-│       ├── linux-usermode-rc
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
-│       └── linux-usermode-rc-git
-│           ├── 70-uml.hook
-│           ├── config
-│           └── PKGBUILD
+│   └── bfq
+│       ├── stable
+│       │   ├── linux-bfq
+│       │   │   ├── 60-linux.hook
+│       │   │   ├── 90-linux.hook
+│       │   │   ├── 99-linux.hook
+│       │   │   ├── config
+│       │   │   ├── linux.install
+│       │   │   ├── linux.preset
+│       │   │   └── PKGBUILD
+│       │   └── linux-bfq-git
+│       │       ├── 60-linux.hook
+│       │       ├── 90-linux.hook
+│       │       ├── 99-linux.hook
+│       │       ├── config
+│       │       ├── linux.install
+│       │       ├── linux.preset
+│       │       └── PKGBUILD
+│       └── stable-rc
+│           ├── linux-bfq
+│           │   ├── 60-linux.hook
+│           │   ├── 90-linux.hook
+│           │   ├── 99-linux.hook
+│           │   ├── config
+│           │   ├── linux.install
+│           │   ├── linux.preset
+│           │   └── PKGBUILD
+│           └── linux-bfq-git
+│               ├── 60-linux.hook
+│               ├── 90-linux.hook
+│               ├── 99-linux.hook
+│               ├── config
+│               ├── linux.install
+│               ├── linux.preset
+│               └── PKGBUILD
 ├── linux-lqx-rebranded
 │   ├── linux-lqx-git
 │   │   ├── 60-linux.hook
@@ -254,4 +232,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-77 directories, 177 files
+69 directories, 163 files
