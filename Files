@@ -113,42 +113,6 @@
 │           ├── linux.install
 │           ├── linux.preset
 │           └── PKGBUILD
-├── linux-5.3.y
-│   └── bfq
-│       ├── stable
-│       │   ├── linux-bfq
-│       │   │   ├── 60-linux.hook
-│       │   │   ├── 90-linux.hook
-│       │   │   ├── 99-linux.hook
-│       │   │   ├── config
-│       │   │   ├── linux.install
-│       │   │   ├── linux.preset
-│       │   │   └── PKGBUILD
-│       │   └── linux-bfq-git
-│       │       ├── 60-linux.hook
-│       │       ├── 90-linux.hook
-│       │       ├── 99-linux.hook
-│       │       ├── config
-│       │       ├── linux.install
-│       │       ├── linux.preset
-│       │       └── PKGBUILD
-│       └── stable-rc
-│           ├── linux-bfq
-│           │   ├── 60-linux.hook
-│           │   ├── 90-linux.hook
-│           │   ├── 99-linux.hook
-│           │   ├── config
-│           │   ├── linux.install
-│           │   ├── linux.preset
-│           │   └── PKGBUILD
-│           └── linux-bfq-git
-│               ├── 60-linux.hook
-│               ├── 90-linux.hook
-│               ├── 99-linux.hook
-│               ├── config
-│               ├── linux.install
-│               ├── linux.preset
-│               └── PKGBUILD
 ├── linux-lqx-rebranded
 │   ├── linux-lqx-git
 │   │   ├── 60-linux.hook
@@ -179,4 +143,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-58 directories, 121 files
+50 directories, 93 files
