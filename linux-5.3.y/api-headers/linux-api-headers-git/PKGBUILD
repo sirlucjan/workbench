@@ -14,8 +14,7 @@ url="http://www.gnu.org/software/libc"
 license=('GPL2')
 provides=('linux-api-headers=$pkgver')
 conflicts=('linux-api-headers')
-source=("git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git")
-#source=("git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git#branch=linux-${_major}.y")
+source=("git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git#branch=linux-${_major}.y")
 md5sums=('SKIP')
 
 pkgver() {
