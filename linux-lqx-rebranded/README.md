@@ -4,6 +4,8 @@
 - linux-lqx-tag
 - linux-lqx-tag-git
 
+[![Packaging status](https://repology.org/badge/vertical-allrepos/linux-lqx.svg)](https://repology.org/project/linux-lqx/versions)
+
 ###### linux-lqx-git/linux-lqx-tag/linux-lqx-tag-git incorporates:
 
 * [liquorix patchset](https://github.com/damentz/liquorix-package) - authored by Steven Barrett
