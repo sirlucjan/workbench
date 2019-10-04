@@ -49,7 +49,7 @@ pkgbase=linux-zen-git
 # pkgname=('linux-zen-git' 'linux-zen-git-headers' 'linux-zen-git-docs')
 _major=5.3
 _srcname=zen-kernel
-pkgver=5.3.0.r857704.g2215efc2d187
+pkgver=5.3.2.r857763.g111737ba9389
 pkgrel=1
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -190,8 +190,9 @@ build() {
 
 _package() {
     pkgdesc="The ${pkgbase/linux/Linux} kernel and modules"
-    depends=('coreutils' 'linux-firmware' 'mkinitcpio>=0.7')
-    optdepends=('crda: to set the correct wireless channels of your country' 'modprobed-db: Keeps track of EVERY kernel module that has ever been probed - useful for those of us who make localmodconfig')
+    depends=('coreutils' 'kmod' 'initramfs')
+    optdepends=('crda: to set the correct wireless channels of your country'
+              'linux-firmware: firmware images needed for some devices')
     backup=("etc/mkinitcpio.d/$pkgbase.preset")
     install=linux.install
 
@@ -206,6 +207,9 @@ _package() {
   install -Dm644 "$(make -s image_name)" "$modulesdir/vmlinuz"
   install -Dm644 "$modulesdir/vmlinuz" "$pkgdir/boot/vmlinuz-$pkgbase"
 
+  # Used by mkinitcpio to name the kernel
+  echo "$pkgbase" | install -Dm644 /dev/stdin "$modulesdir/pkgbase"
+  
   msg2 "Installing modules..."
   make INSTALL_MOD_PATH="$pkgdir/usr" modules_install
 
@@ -372,7 +376,7 @@ for _p in "${pkgname[@]}"; do
 done
 
 sha512sums=('SKIP'
-            '0fef7082586a8ec58576bcbd1c7a1c24329d4dacb550734ecd12177e7dc683e33230126b3bbf4918537447e75c7236e528a8fc478416aef0020f616132ccf755'
+            'd4f94e205b8cc5c45caf11805588ee2c324a4afb1221d0d84f34a94b29bde2863b294d1b5ffd9f807cb99a620b1f2eb89b9237e628c480187c80c27081179449'
             '7ad5be75ee422dda3b80edd2eb614d8a9181e2c8228cd68b3881e2fb95953bf2dea6cbe7900ce1013c9de89b2802574b7b24869fc5d7a95d3cc3112c4d27063a'
             '2718b58dbbb15063bacb2bde6489e5b3c59afac4c0e0435b97fe720d42c711b6bcba926f67a8687878bd51373c9cf3adb1915a11666d79ccb220bf36e0788ab7'
             '8742e2eed421e2f29850e18616f435536c12036ff793f5682a3a8c980cf5dbfc88d17fd9539c87de15d9e4663dc3190f964f18a4722940465437927b6052abbf'
