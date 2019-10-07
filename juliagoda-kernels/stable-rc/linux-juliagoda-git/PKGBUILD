@@ -56,7 +56,7 @@ _1k_HZ_ticks=y
 # ATTENTION - one of two predefined values should be selected!
 # 'stable' - stable releases (recommended)
 # 'unstable' - rc releases (active only temporarily)
-_bfq_rev='unstable'
+_bfq_rev='stable'
 
 ### Download linux-lucjan patchset
 # ATTENTION - one of four predefined values should be selected!
@@ -64,7 +64,7 @@ _bfq_rev='unstable'
 # 'pending' - resync stable releases (active only temporarily)
 # 'testing' - rc releases (active only temporarily)
 # 'trunk' - pre-rc releases (active only temporarily)
-_linux_lucjan='pending'
+_linux_lucjan='actual'
 
 ### Do not edit below this line unless you know what you're doing
 
@@ -73,7 +73,7 @@ _pkgbase=linux-lucjan
 # pkgname=('linux-juliagoda-git-kernel' 'linux-juliagoda-git-headers' 'linux-juliagoda-git-docs')
 _major=5.3
 _srcname=linux-stable-rc
-pkgver=5.3.4.r162.gde3c43ffab53.ll16
+pkgver=5.3.4.r167.ga2703e78c28a.ll16
 pkgrel=2
 arch=('x86_64')
 url="https://gitlab.com/sirlucjan/lucjan-kernels/wikis/README"
