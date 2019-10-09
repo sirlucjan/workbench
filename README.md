@@ -36,6 +36,12 @@
 
 * [LL-branding](https://github.com/sirlucjan/kernel-patches/tree/master/5.3/ll-branding) / [LL-branding](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.3/ll-branding) - specific patches authored by Piotr Gorski
 
+###### Some patches for BFQ conflict with patches for BFQ-dev.
+
+###### To use juliagoda-kernels smoothly apply bfq-reverts before linux-lucjan patch. Otherwise the kernel will not compile.
+
+* [bfq-reverts](https://github.com/sirlucjan/kernel-patches/tree/master/5.3/bfq-reverts) / [bfq-reverts](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.3/bfq-reverts) - specific patches authored by Piotr Gorski
+
 ######  linux-lqx-rebranded
 
 [linux-lqx-rebranded](https://github.com/sirlucjan/workbench/tree/master/linux-lqx-rebranded) / [linux-lqx-rebranded](https://gitlab.com/sirlucjan/workbench/tree/master/linux-lqx-rebranded) - linux-lqx-git/linux-lqx-tag/linux-lqx-tag-git
