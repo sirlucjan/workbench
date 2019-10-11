@@ -124,7 +124,6 @@ prepare() {
 			exit
 		fi
 	fi
-
 	
     ### Optionally set tickrate to 1000
 	if [ -n "$_1k_HZ_ticks" ]; then
