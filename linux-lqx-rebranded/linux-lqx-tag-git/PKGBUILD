@@ -108,8 +108,8 @@ prepare() {
         make olddefconfig
 
     ### Prepared version
-        make -s kernelrelease > ../version
-        msg2 "Prepared %s version %s" "$pkgbase" "$(<../version)"
+        make -s kernelrelease > version
+        msg2 "Prepared %s version %s" "$pkgbase" "$(<version)"
 
     ### Optionally use running kernel's config
 	# code originally by nous; http://aur.archlinux.org/packages.php?ID=40191
