@@ -46,19 +46,6 @@
 │   │           └── uml
 │   │               └── config
 │   └── Kernel
-│       ├── hooks-5.2
-│       │   ├── dbus-git
-│       │   │   └── dbus-reload.hook
-│       │   └── systemd-git
-│       │       ├── 20-systemd-sysusers.hook
-│       │       ├── 30-systemd-binfmt.hook
-│       │       ├── 30-systemd-catalog.hook
-│       │       ├── 30-systemd-daemon-reload.hook
-│       │       ├── 30-systemd-hwdb.hook
-│       │       ├── 30-systemd-sysctl.hook
-│       │       ├── 30-systemd-tmpfiles.hook
-│       │       ├── 30-systemd-udev-reload.hook
-│       │       └── 30-systemd-update.hook
 │       ├── linux-aur
 │       │   ├── 60-linux.hook
 │       │   ├── 90-linux.hook
@@ -144,4 +131,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-47 directories, 97 files
+44 directories, 87 files
