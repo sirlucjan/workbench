@@ -49,8 +49,8 @@ pkgbase=linux-zen-git
 # pkgname=('linux-zen-git' 'linux-zen-git-headers' 'linux-zen-git-docs')
 _major=5.3
 _srcname=zen-kernel
-pkgver=5.3.7.r858542.gd18f4ff9f5cd
-pkgrel=1
+pkgver=5.3.7.r858562.g5bb92ae820ba
+pkgrel=2
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
 license=('GPL2')
@@ -74,6 +74,10 @@ source=("git://github.com/zen-kernel/zen-kernel#branch=${_major}/master"
 
 _kernelname=${pkgbase#linux}
 : ${_kernelname:=-zen-git}
+
+export KBUILD_BUILD_HOST=archlinux
+export KBUILD_BUILD_USER=$pkgbase
+export KBUILD_BUILD_TIMESTAMP="@${SOURCE_DATE_EPOCH:-$(date +%s)}"
 
 pkgver() {
   cd $_srcname
