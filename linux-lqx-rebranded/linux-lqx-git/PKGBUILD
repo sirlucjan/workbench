@@ -53,8 +53,8 @@ _major=5.2
 _srcname=linux-${_major}
 _lqxpatchname=liquorix-package
 pkgbase=linux-lqx-git
-pkgver=5.2.20_1.r1279.gf9e2226
-pkgrel=1
+pkgver=5.2.21_2.r1285.g1578243
+pkgrel=2
 arch=('x86_64')
 url="http://liquorix.net/"
 license=('GPL2')
@@ -76,6 +76,10 @@ source=("https://cdn.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.xz"
 
 _kernelname=${pkgbase#linux}
 : ${_kernelname:=-lqx-git}
+
+export KBUILD_BUILD_HOST=archlinux
+export KBUILD_BUILD_USER=$pkgbase
+export KBUILD_BUILD_TIMESTAMP="@${SOURCE_DATE_EPOCH:-$(date +%s)}"
 
 pkgver() {
   cd $_lqxpatchname
