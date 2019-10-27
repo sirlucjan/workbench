@@ -47,12 +47,12 @@ _1k_HZ_ticks=
 
 pkgbase=linux-lqx-tag-git
 # pkgname=('linux-lqx-tag-git' 'linux-lqx-tag-git-headers' 'linux-lxq-tag-git-docs')
-_major=5.2
-_minor=21
-_lqx=lqx2
+_major=5.3
+_minor=7
+_lqx=lqx1
 _srcname=zen-kernel
-pkgver=5.2.21.lqx2.r0.g458e5d1d3d6c
-pkgrel=2
+pkgver=5.3.7.lqx1.r0.ge012bac69eed
+pkgrel=1
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
 license=('GPL2')
@@ -265,9 +265,6 @@ _package-headers() {
   # add xfs and shmem for aufs building
   mkdir -p "$builddir"/{fs/xfs,mm}
 
-  # this is gone in v5.3
-  mkdir "$builddir/.tmp_versions"
-
   msg2 "Installing headers..."
   cp -t "$builddir" -a include
   cp -t "$builddir/arch/x86" -a arch/x86/include
@@ -367,7 +364,7 @@ for _p in "${pkgname[@]}"; do
 done
 
 sha512sums=('SKIP'
-            '1fe41289e03c295e9d1ff35e68a790e8d323d00bd3621b4a6276fda53562a00cf3c85dd0904b516d15d0af54cb36294912b30fcff1c8afc5e768cf1ee1f9a746'
+            'd9d3c0e3b4c68a628e48e1a0a9c47e06749e390f06e6f1e440755b743f5e32b70cb79c0cdf590be7619fa3c0875558d96464c5d8268bdc1ae5e5fc7442d1217b'
             '6b57a66b870b2f525e2dedd8f224b89474fd4ec6ea18484b0a67a1a2b9a4fc95d025cac181504406ea42a35d6c1b184c0d4e38c92815022935fc55746c69c7c1'
             '2718b58dbbb15063bacb2bde6489e5b3c59afac4c0e0435b97fe720d42c711b6bcba926f67a8687878bd51373c9cf3adb1915a11666d79ccb220bf36e0788ab7'
             '8742e2eed421e2f29850e18616f435536c12036ff793f5682a3a8c980cf5dbfc88d17fd9539c87de15d9e4663dc3190f964f18a4722940465437927b6052abbf'
