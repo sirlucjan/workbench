@@ -46,11 +46,6 @@
 │   │           └── uml
 │   │               └── config
 │   └── Kernel
-│       ├── stock
-│       │   ├── 60-linux.hook
-│       │   ├── 90-linux.hook
-│       │   ├── linux.install
-│       │   └── linux.preset
 │       └── uml
 │           └── 70-uml.hook
 ├── dots
@@ -119,4 +114,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-42 directories, 77 files
+41 directories, 73 files
