@@ -46,12 +46,6 @@
 │   │           └── uml
 │   │               └── config
 │   └── Kernel
-│       ├── linux-lucjan
-│       │   ├── 60-linux-01-depmod.hook
-│       │   ├── 90-linux-02-initcpio.hook
-│       │   ├── 99-linux-03-remove.hook
-│       │   ├── linux.install
-│       │   └── linux.preset
 │       ├── stock
 │       │   ├── 60-linux.hook
 │       │   ├── 90-linux.hook
@@ -125,4 +119,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-43 directories, 82 files
+42 directories, 77 files
