@@ -121,14 +121,21 @@
 │   │       └── linux-uksm-git
 │   │           ├── config
 │   │           └── PKGBUILD
-│   └── kernelrc
-│       ├── linux-aufs
+│   ├── kernelrc
+│   │   ├── linux-aufs
+│   │   │   ├── config
+│   │   │   └── PKGBUILD
+│   │   ├── linux-bfq
+│   │   │   ├── config
+│   │   │   └── PKGBUILD
+│   │   └── linux-uksm
+│   │       ├── config
+│   │       └── PKGBUILD
+│   └── kernels-rt
+│       ├── linux-rt-bfq
 │       │   ├── config
 │       │   └── PKGBUILD
-│       ├── linux-bfq
-│       │   ├── config
-│       │   └── PKGBUILD
-│       └── linux-uksm
+│       └── linux-rt-bfq-git
 │           ├── config
 │           └── PKGBUILD
 ├── linux-lqx-rebranded
@@ -161,4 +168,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-61 directories, 100 files
+64 directories, 104 files
