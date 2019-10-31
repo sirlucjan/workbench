@@ -100,27 +100,37 @@
 │   │   └── linux-uksm
 │   │       ├── config
 │   │       └── PKGBUILD
-│   └── kernel-git
-│       ├── stable
-│       │   ├── linux-aufs-git
-│       │   │   ├── config
-│       │   │   └── PKGBUILD
-│       │   ├── linux-bfq-git
-│       │   │   ├── config
-│       │   │   └── PKGBUILD
-│       │   └── linux-uksm-git
-│       │       ├── config
-│       │       └── PKGBUILD
-│       └── stable-rc
-│           ├── linux-aufs-git
-│           │   ├── config
-│           │   └── PKGBUILD
-│           ├── linux-bfq-git
-│           │   ├── config
-│           │   └── PKGBUILD
-│           └── linux-uksm-git
-│               ├── config
-│               └── PKGBUILD
+│   ├── kernel-git
+│   │   ├── stable
+│   │   │   ├── linux-aufs-git
+│   │   │   │   ├── config
+│   │   │   │   └── PKGBUILD
+│   │   │   ├── linux-bfq-git
+│   │   │   │   ├── config
+│   │   │   │   └── PKGBUILD
+│   │   │   └── linux-uksm-git
+│   │   │       ├── config
+│   │   │       └── PKGBUILD
+│   │   └── stable-rc
+│   │       ├── linux-aufs-git
+│   │       │   ├── config
+│   │       │   └── PKGBUILD
+│   │       ├── linux-bfq-git
+│   │       │   ├── config
+│   │       │   └── PKGBUILD
+│   │       └── linux-uksm-git
+│   │           ├── config
+│   │           └── PKGBUILD
+│   └── kernelrc
+│       ├── linux-aufs
+│       │   ├── config
+│       │   └── PKGBUILD
+│       ├── linux-bfq
+│       │   ├── config
+│       │   └── PKGBUILD
+│       └── linux-uksm
+│           ├── config
+│           └── PKGBUILD
 ├── linux-lqx-rebranded
 │   ├── linux-lqx-git
 │   │   ├── 60-linux.hook
@@ -151,4 +161,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-57 directories, 94 files
+61 directories, 100 files
