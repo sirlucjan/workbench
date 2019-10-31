@@ -84,6 +84,22 @@
 │           ├── linux.install
 │           ├── linux.preset
 │           └── PKGBUILD
+├── kmod-mkinitcpio
+│   └── aur
+│       ├── linux-aufs
+│       │   ├── config
+│       │   └── PKGBUILD
+│       ├── linux-bfq
+│       │   ├── config
+│       │   └── PKGBUILD
+│       ├── linux-lqx
+│       │   └── PKGBUILD
+│       ├── linux-next-git
+│       │   ├── config
+│       │   └── PKGBUILD
+│       └── linux-uksm
+│           ├── config
+│           └── PKGBUILD
 ├── linux-lqx-rebranded
 │   ├── linux-lqx-git
 │   │   ├── 60-linux.hook
@@ -114,4 +130,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-41 directories, 73 files
+48 directories, 82 files
