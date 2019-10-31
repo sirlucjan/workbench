@@ -139,7 +139,14 @@
 │   │       ├── config
 │   │       └── PKGBUILD
 │   └── lucjan-kernels
-│       └── lucjan-kernels-testing
+│       ├── lucjan-kernels-testing
+│       │   ├── linux-lucjan
+│       │   │   ├── config
+│       │   │   └── PKGBUILD
+│       │   └── linux-lucjan-git
+│       │       ├── config
+│       │       └── PKGBUILD
+│       └── lucjan-kernels-unstable
 │           ├── linux-lucjan
 │           │   ├── config
 │           │   └── PKGBUILD
@@ -176,4 +183,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-68 directories, 108 files
+71 directories, 112 files
