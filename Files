@@ -154,10 +154,15 @@
 │   │           ├── config
 │   │           └── PKGBUILD
 │   └── workbench
-│       └── aur-rebased
-│           └── linux-zen-git
-│               ├── config
-│               └── PKGBUILD
+│       ├── aur-rebased
+│       │   └── linux-zen-git
+│       │       ├── config
+│       │       └── PKGBUILD
+│       └── juliagoda-kernels
+│           └── stable
+│               └── linux-juliagoda-git
+│                   ├── config
+│                   └── PKGBUILD
 ├── linux-lqx-rebranded
 │   ├── linux-lqx-git
 │   │   ├── 60-linux.hook
@@ -188,4 +193,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-74 directories, 114 files
+77 directories, 116 files
