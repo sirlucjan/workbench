@@ -106,7 +106,7 @@ elif [ "$_bfq_rev" = "unstable" ]; then
  _bfqrevpatch="${_major}-${_bfqrevname}-${_bfqrevver}-${_bfqrevrc}.patch"
 
 fi
-             
+
 ### linux-lucjan
 # If you do not use the kernel development version (stable-rc)
 # only the actual branch will be used. Pending and testing branches 
@@ -325,7 +325,7 @@ _package-kernel() {
 
   # remove build and source links
   rm "$modulesdir"/{source,build}
-  
+
   msg2 "Fixing permissions..."
   chmod -Rc u=rwX,go=rX "$pkgdir"
 }
