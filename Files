@@ -84,12 +84,7 @@
 │   ├── linux-lqx-git
 │   │   └── PKGBUILD
 │   ├── linux-lqx-tag
-│   │   ├── 60-linux.hook
-│   │   ├── 90-linux.hook
-│   │   ├── 99-linux.hook
 │   │   ├── config
-│   │   ├── linux.install
-│   │   ├── linux.preset
 │   │   └── PKGBUILD
 │   ├── linux-lqx-tag-git
 │   │   ├── 60-linux.hook
@@ -105,4 +100,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-47 directories, 58 files
+47 directories, 53 files
