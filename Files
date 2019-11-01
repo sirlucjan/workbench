@@ -85,21 +85,6 @@
 │           ├── linux.preset
 │           └── PKGBUILD
 ├── kmod-mkinitcpio-git
-│   ├── aur
-│   │   ├── linux-aufs
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
-│   │   ├── linux-bfq
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
-│   │   ├── linux-lqx
-│   │   │   └── PKGBUILD
-│   │   ├── linux-next-git
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
-│   │   └── linux-uksm
-│   │       ├── config
-│   │       └── PKGBUILD
 │   ├── kernel-git
 │   │   ├── stable
 │   │   │   ├── linux-aufs-git
@@ -206,4 +191,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-83 directories, 123 files
+77 directories, 114 files
