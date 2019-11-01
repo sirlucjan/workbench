@@ -1,12 +1,7 @@
 .
 ├── aur-rebased
 │   ├── linux-zen-git
-│   │   ├── 60-linux.hook
-│   │   ├── 90-linux.hook
-│   │   ├── 99-linux.hook
 │   │   ├── config
-│   │   ├── linux.install
-│   │   ├── linux.preset
 │   │   └── PKGBUILD
 │   └── README.md
 ├── Devel
@@ -138,4 +133,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-54 directories, 84 files
+54 directories, 79 files
