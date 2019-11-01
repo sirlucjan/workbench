@@ -85,16 +85,6 @@
 │           ├── linux.preset
 │           └── PKGBUILD
 ├── kmod-mkinitcpio-git
-│   ├── kernelrc
-│   │   ├── linux-aufs
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
-│   │   ├── linux-bfq
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
-│   │   └── linux-uksm
-│   │       ├── config
-│   │       └── PKGBUILD
 │   ├── kernels-rt
 │   │   ├── linux-rt-bfq
 │   │   │   ├── config
@@ -170,4 +160,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-68 directories, 102 files
+64 directories, 96 files
