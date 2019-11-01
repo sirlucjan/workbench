@@ -71,15 +71,6 @@
 │           └── PKGBUILD
 ├── kmod-mkinitcpio-git
 │   └── workbench
-│       ├── juliagoda-kernels
-│       │   ├── stable
-│       │   │   └── linux-juliagoda-git
-│       │   │       ├── config
-│       │   │       └── PKGBUILD
-│       │   └── stable-rc
-│       │       └── linux-juliagoda-git
-│       │           ├── config
-│       │           └── PKGBUILD
 │       └── linux-lqx-rebranded
 │           ├── linux-lqx-git
 │           │   └── PKGBUILD
@@ -119,4 +110,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-52 directories, 67 files
+47 directories, 63 files
