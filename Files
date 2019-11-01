@@ -85,21 +85,6 @@
 │           ├── linux.preset
 │           └── PKGBUILD
 ├── kmod-mkinitcpio-git
-│   ├── lucjan-kernels
-│   │   ├── lucjan-kernels-testing
-│   │   │   ├── linux-lucjan
-│   │   │   │   ├── config
-│   │   │   │   └── PKGBUILD
-│   │   │   └── linux-lucjan-git
-│   │   │       ├── config
-│   │   │       └── PKGBUILD
-│   │   └── lucjan-kernels-unstable
-│   │       ├── linux-lucjan
-│   │       │   ├── config
-│   │       │   └── PKGBUILD
-│   │       └── linux-lucjan-git
-│   │           ├── config
-│   │           └── PKGBUILD
 │   └── workbench
 │       ├── aur-rebased
 │       │   └── linux-zen-git
@@ -153,4 +138,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-61 directories, 92 files
+54 directories, 84 files
