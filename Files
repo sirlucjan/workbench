@@ -67,12 +67,7 @@
 │   │       └── PKGBUILD
 │   └── stable-rc
 │       └── linux-juliagoda-git
-│           ├── 60-linux-01-depmod.hook
-│           ├── 90-linux-02-initcpio.hook
-│           ├── 99-linux-03-remove.hook
 │           ├── config
-│           ├── linux.install
-│           ├── linux.preset
 │           └── PKGBUILD
 ├── kmod-mkinitcpio-git
 │   └── workbench
@@ -124,4 +119,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-52 directories, 72 files
+52 directories, 67 files
