@@ -49,7 +49,7 @@ _minor=8
 _lqx=lqx2
 _srcname=zen-kernel
 pkgver=5.3.8.lqx2.r0.g070c86bcae5f
-pkgrel=1
+pkgrel=2
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
 license=('GPL2')
@@ -65,7 +65,7 @@ source=("git://github.com/zen-kernel/zen-kernel#tag=v${_major}.${_minor}-${_lqx}
 
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
-export KBUILD_BUILD_TIMESTAMP="@${SOURCE_DATE_EPOCH:-$(date +%s)}"
+export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
 
 pkgver() {
   cd $_srcname
