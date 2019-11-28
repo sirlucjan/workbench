@@ -108,11 +108,6 @@
 │   │   └── PKGBUILD
 │   └── README.md
 ├── linux-v5.4
-│   ├── api-headers
-│   │   ├── linux-api-headers-git
-│   │   │   └── PKGBUILD
-│   │   └── linux-api-headers-rc-git
-│   │       └── PKGBUILD
 │   └── uml
 │       ├── linux-usermode
 │       │   ├── 70-uml.hook
@@ -135,4 +130,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-65 directories, 70 files
+62 directories, 68 files
