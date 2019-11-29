@@ -58,7 +58,7 @@ options=('!strip')
 makedepends=('kmod' 'bc' 'libelf' 'python-sphinx' 'python-sphinx_rtd_theme'
              'graphviz' 'imagemagick')
 
-source=("git://github.com/zen-kernel/zen-kernel#tag=v${_major}.${_minor}-${_lqx}"
+source=("git://github.com/${_srcname}/${_srcname}#tag=v${_major}.${_minor}-${_lqx}"
          # the main kernel config files
         'config')
 
