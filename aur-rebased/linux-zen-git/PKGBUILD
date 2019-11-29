@@ -55,8 +55,6 @@ license=('GPL2')
 options=('!strip')
 makedepends=('kmod' 'bc' 'libelf' 'git' 'python-sphinx' 'python-sphinx_rtd_theme'
              'graphviz' 'imagemagick')
-#_lucjanpath="https://raw.githubusercontent.com/sirlucjan/kernel-patches/master/${_major}"
-_lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major}"
 
 source=("git://github.com/${_srcname}/${_srcname}#branch=${_major}/master"
          # the main kernel config files
