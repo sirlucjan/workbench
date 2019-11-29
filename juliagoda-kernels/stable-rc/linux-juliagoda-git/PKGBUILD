@@ -412,7 +412,7 @@ _package-headers() {
 }
 
 _package-docs() {
-  pkgdesc="Kernel hacker's manual for the $pkgdesc kernel. K10-family optimized."
+  pkgdesc="Documentation for the $pkgdesc kernel. K10-family optimized."
   depends=('linux-juliagoda-git-kernel')
   groups=('linux-juliagoda-git')
 
