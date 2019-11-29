@@ -49,13 +49,13 @@ _minor=1
 _lqx=lqx1
 _srcname=zen-kernel
 pkgver=5.4.1.lqx1.r0.g873faeb4dd0b
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux LQX'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
 license=('GPL2')
 options=('!strip')
-makedepends=('kmod' 'bc' 'libelf' 'python-sphinx' 'python-sphinx_rtd_theme'
+makedepends=('kmod' 'bc' 'libelf' 'git' 'python-sphinx' 'python-sphinx_rtd_theme'
              'graphviz' 'imagemagick')
 
 source=("git://github.com/${_srcname}/${_srcname}#tag=v${_major}.${_minor}-${_lqx}"
