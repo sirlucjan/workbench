@@ -114,7 +114,7 @@ prepare() {
 			exit
 		fi
 	fi
-	
+
     ### Optionally disable NUMA for 64-bit kernels only
         # (x86 kernels do not support NUMA)
         if [ -n "$_NUMAdisable" ]; then
