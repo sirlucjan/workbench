@@ -17,16 +17,12 @@
 │   │   │   ├── git
 │   │   │   │   ├── aufs-git
 │   │   │   │   │   └── config
-│   │   │   │   ├── rt-bfq-git
-│   │   │   │   │   └── config
-│   │   │   │   └── uksm-git
+│   │   │   │   └── rt-bfq-git
 │   │   │   │       └── config
 │   │   │   └── src
 │   │   │       ├── aufs
 │   │   │       │   └── config
-│   │   │       ├── rt-bfq
-│   │   │       │   └── config
-│   │   │       └── uksm
+│   │   │       └── rt-bfq
 │   │   │           └── config
 │   │   └── 5.4
 │   │       ├── git
@@ -100,4 +96,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-50 directories, 50 files
+48 directories, 48 files
