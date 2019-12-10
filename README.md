@@ -8,7 +8,7 @@
 
 ###### linux-zen-git incorporates:
 
-* [zen-kernel](https://github.com/zen-kernel/zen-kernel) - specific patchset authored by ZEN Kernel Team
+* [zen-kernel](https://github.com/zen-kernel/zen-kernel/commits/5.4/master) - specific patchset authored by ZEN Kernel Team
 
 ###### juliagoda-kernels
 
