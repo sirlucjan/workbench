@@ -49,7 +49,7 @@ _minor=1
 _lqx=lqx1
 _srcname=zen-kernel
 pkgver=5.4.1.lqx1.r0.g873faeb4dd0b
-pkgrel=2
+pkgrel=3
 pkgdesc='Linux LQX'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -309,4 +309,4 @@ for _p in "${pkgname[@]}"; do
 done
 
 sha512sums=('SKIP'
-            '8664f56aab660eef55713cf728220d353d6cab1fdeede286b84ef75adea27fdd80fc05005c9961bdd02aa0896a0769e825747fd1c8a2cde905d1084ac929c10e')
+            '5f9279dcfd1cb26d79b23bc840c8e8e45ce230c89a87e513c35ad04362e1381da37c2f35ce324b601e74069a58983d6e08aacfaf9b2530b71bc340cfad684e2c')
