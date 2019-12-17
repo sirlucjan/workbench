@@ -99,12 +99,13 @@
 │   ├── linux-lqx-tag
 │   │   ├── config
 │   │   └── PKGBUILD
-│   └── linux-lqx-tag-git
-│       ├── config
-│       └── PKGBUILD
+│   ├── linux-lqx-tag-git
+│   │   ├── config
+│   │   └── PKGBUILD
+│   └── README.md
 ├── README.md
 └── xf86-video-intel-dev-git
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-53 directories, 54 files
+53 directories, 55 files
