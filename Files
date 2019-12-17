@@ -92,11 +92,13 @@
 │   │   └── PKGBUILD
 │   └── README.md
 ├── linux-lqx-rebranded-5.4
-│   └── linux-lqx
+│   ├── linux-lqx
+│   │   └── PKGBUILD
+│   └── linux-lqx-git
 │       └── PKGBUILD
 ├── README.md
 └── xf86-video-intel-dev-git
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-50 directories, 49 files
+51 directories, 50 files
