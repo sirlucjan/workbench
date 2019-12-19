@@ -42,19 +42,9 @@
 
 * ~~[bfq-reverts](https://github.com/sirlucjan/kernel-patches/tree/master/5.4/bfq-reverts) / [bfq-reverts](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.4/bfq-reverts) - specific patches authored by Piotr Gorski~~
 
-######  linux-lqx-rebranded-5.3
-
-[linux-lqx-rebranded-5.3](https://github.com/sirlucjan/workbench/tree/master/linux-lqx-rebranded-5.3) / [linux-lqx-rebranded-5.3](https://gitlab.com/sirlucjan/workbench/tree/master/linux-lqx-rebranded-5.3) - linux-lqx-git/linux-lqx-tag/linux-lqx-tag-git
-
-###### linux-lqx-git/linux-lqx-tag/linux-lqx-tag-git incorporates:
-
-* [liquorix patchset](https://github.com/damentz/liquorix-package/tree/5.3) - authored by Steven Barrett
-
-[![latest packaged version(s)](https://repology.org/badge/latest-versions/linux-lqx.svg)](https://repology.org/project/linux-lqx/versions)
-
 ######  linux-lqx-rebranded
 
-[linux-lqx-rebranded-5.4](https://github.com/sirlucjan/workbench/tree/master/linux-lqx-rebranded-5.4) / [linux-lqx-rebranded-5.4](https://gitlab.com/sirlucjan/workbench/tree/master/linux-lqx-rebranded-5.4) - linux-lqx-git/linux-lqx-tag/linux-lqx-tag-git
+[linux-lqx-rebranded](https://github.com/sirlucjan/workbench/tree/master/linux-lqx-rebranded) / [linux-lqx-rebranded](https://gitlab.com/sirlucjan/workbench/tree/master/linux-lqx-rebranded) - linux-lqx-git/linux-lqx-tag/linux-lqx-tag-git
 
 ###### linux-lqx-git/linux-lqx-tag/linux-lqx-tag-git incorporates:
 
