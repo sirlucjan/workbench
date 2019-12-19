@@ -70,17 +70,7 @@
 │       └── linux-juliagoda-git
 │           ├── config
 │           └── PKGBUILD
-├── linux-lqx-rebranded-5.3
-│   ├── linux-lqx-git
-│   │   └── PKGBUILD
-│   ├── linux-lqx-tag
-│   │   ├── config
-│   │   └── PKGBUILD
-│   ├── linux-lqx-tag-git
-│   │   ├── config
-│   │   └── PKGBUILD
-│   └── README.md
-├── linux-lqx-rebranded-5.4
+├── linux-lqx-rebranded
 │   ├── linux-lqx
 │   │   └── PKGBUILD
 │   ├── linux-lqx-git
@@ -97,4 +87,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-46 directories, 51 files
+42 directories, 45 files
