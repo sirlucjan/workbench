@@ -67,7 +67,7 @@ _bfq_rev='stable'
 # 'pending' - resync stable releases (active only temporarily)
 # 'testing' - rc releases (active only temporarily)
 # 'trunk' - pre-rc releases (active only temporarily)
-_linux_lucjan='testing'
+_linux_lucjan='actual'
 
 ### Do not edit below this line unless you know what you're doing
 
@@ -76,8 +76,8 @@ _pkgbase=linux-lucjan
 # pkgname=('linux-juliagoda-git-kernel' 'linux-juliagoda-git-headers' 'linux-juliagoda-docs-headers')
 _major=5.4
 _srcname=linux-stable-rc
-pkgver=5.4.6.r435.g95a819b5c0c0.ll30
-pkgrel=0
+pkgver=5.4.6.r434.g6d21990a6f6c.ll30
+pkgrel=0.1
 pkgdesc='Linux LL'
 arch=('x86_64')
 url="https://gitlab.com/sirlucjan/lucjan-kernels/wikis/README"
