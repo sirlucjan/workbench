@@ -86,7 +86,6 @@ prepare() {
 
     ### Setting version
         msg2 "Setting version..."
-        sed -e "/^EXTRAVERSION =/s/=.*/=/" -i Makefile
         scripts/setlocalversion --save-scmversion
         echo "-$pkgrel" > localversion.10-pkgrel
         echo "${pkgbase#linux}" > localversion.20-pkgname
