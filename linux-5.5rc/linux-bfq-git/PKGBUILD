@@ -50,7 +50,7 @@ pkgbase=linux-bfq-git
 _major=5.5
 _major_rc=5.5-rc
 _srcname=linux
-pkgver=5.5.rc4.r79.g7ca4ad5ba886
+pkgver=5.5.rc5.r0.gc79f46a28239
 pkgrel=1
 pkgdesc='Linux BFQ-dev'
 arch=('x86_64')
@@ -90,7 +90,6 @@ prepare() {
 
     ### Setting version
         msg2 "Setting version..."
-        sed -e "/^EXTRAVERSION =/s/=.*/=/" -i Makefile
         scripts/setlocalversion --save-scmversion
         echo "-$pkgrel" > localversion.10-pkgrel
         echo "${pkgbase#linux}" > localversion.20-pkgname
