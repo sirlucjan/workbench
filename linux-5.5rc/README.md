@@ -17,6 +17,8 @@
 
 * [LL-patches](https://github.com/sirlucjan/kernel-patches/tree/master/5.5-rc/ll-patches) / [LL-patches](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.5-rc/ll-patches) - specific patches authored by Piotr Gorski
 
+* [bfq-dev-rc](https://github.com/sirlucjan/kernel-patches/tree/master/5.5-rc/bfq-dev-lucjan-sep) / [bfq-dev-rc](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.5-rc/bfq-dev-lucjan-sep) - specific patches authored by Piotr Gorski
+
 [![latest packaged version(s)](https://repology.org/badge/latest-versions/linux-bfq.svg)](https://repology.org/project/linux-bfq/versions)
 
 ###### Some patches for BFQ conflict with patches for BFQ-dev.
