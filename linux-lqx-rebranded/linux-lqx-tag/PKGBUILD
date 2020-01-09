@@ -45,8 +45,8 @@ _use_current=
 pkgbase=linux-lqx-tag
 # pkgname=('linux-lqx-tag' 'linux-lqx-tag-headers' 'linux-lxq-tag-docs')
 _major=5.4
-_minor=8
-_lqx=lqx2
+_minor=10
+_lqx=lqx1
 _srcname=linux-${_major}
 pkgver=${_major}.${_minor}.${_lqx}
 _pkgver=${_major}.${_minor}-${_lqx}
@@ -312,7 +312,7 @@ done
 
 sha512sums=('9f60f77e8ab972b9438ac648bed17551c8491d6585a5e85f694b2eaa4c623fbc61eb18419b2656b6795eac5deec0edaa04547fc6723fbda52256bd7f3486898f'
             'SKIP'
-            '3c5663eb096d4f7533399121eea18dd046cb0ee4251c0099bc87a40b67c0092f5b8bee087948bfa4ce083a47902a04b6f8b2edaee2472310b41cd76137aa9263'
+            '8a198e5942f572087fe40e6acb89a832f338dac40f10acdf40218d47ad277520ba82eb62039e8869d01bd7e51bbc7961de7defedbe38cac4213538b6663afe3a'
             'SKIP'
             '3a7f2d8cd0eeaf52297ebc7757387e9c4cec293046684d0e3effb4091915cdf474291fc8962a09387ca888f5b9dfd5510a1f994cbbeb58f10699ed09304d8af7')
 
