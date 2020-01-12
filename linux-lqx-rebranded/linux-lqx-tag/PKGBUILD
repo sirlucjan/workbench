@@ -43,7 +43,7 @@ _use_current=
 ### Do not edit below this line unless you know what you're doing
 
 pkgbase=linux-lqx-tag
-# pkgname=('linux-lqx-tag' 'linux-lqx-tag-headers' 'linux-lxq-tag-docs')
+# pkgname=('linux-lqx-tag' 'linux-lqx-tag-headers' 'linux-lqx-tag-docs')
 _major=5.4
 _minor=11
 _lqx=lqx1
@@ -202,7 +202,7 @@ _package() {
 
 _package-headers() {
     pkgdesc="Headers and scripts for building modules for the $pkgdesc kernel"
-    depends=('linux-zen-git')
+    depends=('linux-lqx-tag')
 
   cd $_srcname
   local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
@@ -281,7 +281,7 @@ _package-headers() {
 
 _package-docs() {
     pkgdesc="Documentation for the $pkgdesc kernel"
-    depends=('linux-zen-git')
+    depends=('linux-lqx-tag')
 
   cd $_srcname
   local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
