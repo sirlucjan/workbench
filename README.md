@@ -77,6 +77,14 @@
 
 [![latest packaged version(s)](https://repology.org/badge/latest-versions/linux-lqx.svg)](https://repology.org/project/linux-lqx/versions)
 
+###### linux-zen-rebranded
+
+[linux-zen-rebranded](https://github.com/sirlucjan/workbench/tree/master/linux-zen-rebranded) / [linux-zen-rebranded](https://gitlab.com/sirlucjan/workbench/tree/master/linux-zen-rebranded) - linux-zen-tag
+
+###### linux-zen-tag incorporates:
+
+* [zen-kernel](https://github.com/zen-kernel/zen-kernel/tree/5.4/master) - specific patchset authored by ZEN Kernel Team
+
 #### DOTS
 
 gitconfig based on [pksunkara](https://gist.github.com/pksunkara/988716)
