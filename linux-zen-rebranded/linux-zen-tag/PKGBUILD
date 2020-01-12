@@ -202,7 +202,7 @@ _package() {
 
 _package-headers() {
     pkgdesc="Headers and scripts for building modules for the $pkgdesc kernel"
-    depends=('linux-zen-git')
+    depends=('linux-zen-tag')
 
   cd $_srcname
   local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
@@ -281,7 +281,7 @@ _package-headers() {
 
 _package-docs() {
     pkgdesc="Documentation for the $pkgdesc kernel"
-    depends=('linux-zen-git')
+    depends=('linux-zen-tag')
 
   cd $_srcname
   local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
