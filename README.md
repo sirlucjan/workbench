@@ -46,6 +46,10 @@
 
 [linux-5.5rc](https://github.com/sirlucjan/workbench/tree/master/linux-5.5rc) / [linux-5.5rc](https://gitlab.com/sirlucjan/workbench/tree/master/linux-5.5rc) - linux-bfq/linux-bfq-git
 
+###### linux-aufs/linux-aufs-git incorporates:
+
+* [AUFS](https://github.com/sfjro/aufs5-standalone/tree/aufs5.3) / [AUFS](http://aufs.sourceforge.net) - advanced multi-layered unification filesystem
+
 ###### linux-bfq/linux-bfq-git incorporates:
 
 * [bfq improvements](https://groups.google.com/forum/#!forum/bfq-iosched) - latest fixes authored by Paolo Valente and BFQ Team
