@@ -45,12 +45,12 @@ _use_current=
 pkgbase=linux-zen-tag
 # pkgname=('linux-zen-tag' 'linux-zen-tag-headers' 'linux-zen-tag-docs')
 _major=5.4
-_minor=13
+_minor=14
 _zen=zen1
 _srcname=linux-${_major}
 pkgver=${_major}.${_minor}.${_zen}
 _pkgver=${_major}.${_minor}-${_zen}
-pkgrel=2
+pkgrel=1
 pkgdesc='Linux ZEN'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -312,9 +312,9 @@ done
 
 sha512sums=('9f60f77e8ab972b9438ac648bed17551c8491d6585a5e85f694b2eaa4c623fbc61eb18419b2656b6795eac5deec0edaa04547fc6723fbda52256bd7f3486898f'
             'SKIP'
-            '5a701a189e14aa8db732cf3ce061a960f06ce4873d8e028ff5b11b24377fb883ad41a1243e5c5fbf7a94387e3def869fb25d3193d7d023000e89fb8d4c356041'
+            'd35a2fc9c4f794e0661c764ee5611cb6fa22154d30a4ccd190fb54f4ca9e6e19f05d969fe77dca5eea85dd2874d3b87b9bced0e1e0d8b86c1157a1c560bdbe6b'
             'SKIP'
-            '1b299e780ce1ac196a7ecc2139da4f09359a0e0b1a200fb3a2b863299b49513d85d7495e252bc3992807b1d2ce51d324125e647005dc576dd4299a2b7aa2de84')
+            'f4ebb6474ac8ee60dfda5ad96cf7a840beaa3367124a0d6a7c4d47827a9aedf0c96094a007ca025b30eb43b6b3a31f710d0e389a6b06be7835e8dfeec21f3e02')
 
 validpgpkeys=(
               'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
