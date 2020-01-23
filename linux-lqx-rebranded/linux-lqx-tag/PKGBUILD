@@ -46,7 +46,7 @@ pkgbase=linux-lqx-tag
 # pkgname=('linux-lqx-tag' 'linux-lqx-tag-headers' 'linux-lqx-tag-docs')
 _major=5.4
 _minor=13
-_lqx=lqx3
+_lqx=lqx4
 _srcname=linux-${_major}
 pkgver=${_major}.${_minor}.${_lqx}
 _pkgver=${_major}.${_minor}-${_lqx}
@@ -312,9 +312,9 @@ done
 
 sha512sums=('9f60f77e8ab972b9438ac648bed17551c8491d6585a5e85f694b2eaa4c623fbc61eb18419b2656b6795eac5deec0edaa04547fc6723fbda52256bd7f3486898f'
             'SKIP'
-            'dae280c3dd875b02b4f198557c8f3dfd00fc54b58858ab72457dcf2608c03a09cf5dc8dbb63071254d5a3532cef9af3796a9e72afac5112ef6006ddb26e337e8'
+            '3a80c6759e14a722764d11839d182126955d8f943963e0a37fe1914cf6ce799a9798fceaec2457b59670df5958dc14845a54b0ccfd02fcf394e05a9715045b51'
             'SKIP'
-            '6e77ab97aa73c10639b75f3961f245196854616db8c25c0dca21411cd992533e053525c2ba02dc5f72a48b4291477c9bc0dcbb50586168f46b0200dbbbae6660')
+            '31e6a3971376ba609234c990c1f3626dbb53263b2026d071be77ca74c00d6693a4c5b8e28c82297f921a1795f1bdd7295f4d21fdbb98ffecf65387574dccaa20')
 
 validpgpkeys=(
               'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
