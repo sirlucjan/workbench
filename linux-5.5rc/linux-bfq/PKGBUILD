@@ -48,12 +48,10 @@ _1k_HZ_ticks=
 pkgbase=linux-bfq
 # pkgname=('linux-bfq' 'linux-bfq-headers' 'linux-bfq-docs')
 _major=5.5
-_major_rc=5.5-rc
-_minor=rc7
-_tag=v5.5-${_minor}
-pkgver=${_major}${_minor}
+_tag=v${_major}
+pkgver=${_major}
 _srcname=linux
-pkgrel=2
+pkgrel=1
 pkgdesc='Linux BFQ-dev'
 arch=('x86_64')
 url="https://github.com/sirlucjan/bfq-mq-lucjan"
@@ -61,11 +59,11 @@ license=('GPL2')
 options=('!strip')
 makedepends=('kmod' 'bc' 'libelf' 'python-sphinx' 'python-sphinx_rtd_theme'
              'graphviz' 'imagemagick')
-#_lucjanpath="https://raw.githubusercontent.com/sirlucjan/kernel-patches/master/${_major_rc}"
-_lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major_rc}"
+#_lucjanpath="https://raw.githubusercontent.com/sirlucjan/kernel-patches/master/${_major}"
+_lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major}"
 _bfq_path="bfq-dev-lucjan"
 _bfq_ver="v11"
-_bfq_rel="r2K191230"
+_bfq_rel="r2K200127"
 _bfq_patch="${_major}-${_bfq_path}-${_bfq_ver}-${_bfq_rel}.patch"
 _gcc_path="https://raw.githubusercontent.com/graysky2/kernel_gcc_patch/master"
 _gcc_patch="enable_additional_cpu_optimizations_for_gcc_v9.1+_kernel_v5.5+.patch"
@@ -326,9 +324,9 @@ for _p in "${pkgname[@]}"; do
 done
 
 sha512sums=('SKIP'
-            'ca34440c9b62dcaaf99b66e64928b5b74bc7a878628bb847073a864f2682afad079e6c4d641c040c15b9f0a43972778ae701317f1d59fcf28d90d984cafad059'
+            '3505be72755ca1bece7aefe7d024827f951ae69125caf8a9b98882e5ed5fdef7762fdaee4e051ff3e9757181d61c3c4f323ca44ba14cdc635cefb5eb12d423a9'
             '52b14ef834769d2b4567e756a4485995acd2e3f5b989cbb53f9b113b42ff67b736bbcb284b95fe15c9efb846fd12320a26a131e4ce9af50b521114d274b472f1'
-            'e7453711a5483f3f9801302d8cd374403c6205570a7c28167180d27681fe019578f06ed39124b37a01e4898d684170663cb914f3f40780f458007d7f16f4f2d4'
+            '1ed27e54b864536fba7262830b4e01a6aec76b45391ee533728f678f0c3b73829a2f3770a5c72022de672babbd4acafdea42fa73892195cb783e736fa2c89c43'
             'f321ed3099941d6a59bb48c3574fad62c6c0b0bb98b3c503b9ee503733dc4982ecc87307963ac7cc3b0214a70f0ba7d472304b2a1318fa4b099a3478fa44b7f5')
 
 validpgpkeys=(
