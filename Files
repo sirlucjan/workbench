@@ -41,7 +41,9 @@
 │   │           │   └── config
 │   │           ├── lucjan
 │   │           │   └── config
-│   │           └── rt-bfq
+│   │           ├── rt-bfq
+│   │           │   └── config
+│   │           └── uksm
 │   │               └── config
 │   └── Kernel
 │       └── uml
@@ -107,4 +109,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-49 directories, 58 files
+50 directories, 59 files
