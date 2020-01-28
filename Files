@@ -91,17 +91,21 @@
 │           ├── config
 │           └── PKGBUILD
 ├── linux-5.5
-│   └── stable
-│       ├── linux-aufs
-│       │   ├── config
-│       │   └── PKGBUILD
-│       ├── linux-aufs-git
-│       │   ├── config
-│       │   └── PKGBUILD
-│       ├── linux-bfq
-│       │   ├── config
-│       │   └── PKGBUILD
-│       └── linux-bfq-git
+│   ├── stable
+│   │   ├── linux-aufs
+│   │   │   ├── config
+│   │   │   └── PKGBUILD
+│   │   ├── linux-aufs-git
+│   │   │   ├── config
+│   │   │   └── PKGBUILD
+│   │   ├── linux-bfq
+│   │   │   ├── config
+│   │   │   └── PKGBUILD
+│   │   └── linux-bfq-git
+│   │       ├── config
+│   │       └── PKGBUILD
+│   └── stable-rc
+│       └── linux-aufs
 │           ├── config
 │           └── PKGBUILD
 ├── linux-5.5rc
@@ -138,4 +142,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-64 directories, 74 files
+66 directories, 76 files
