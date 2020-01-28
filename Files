@@ -91,6 +91,7 @@
 │           ├── config
 │           └── PKGBUILD
 ├── linux-5.5
+│   ├── README.md
 │   ├── stable
 │   │   ├── linux-aufs
 │   │   │   ├── config
@@ -117,8 +118,6 @@
 │       └── linux-bfq-git
 │           ├── config
 │           └── PKGBUILD
-├── linux-5.5rc
-│   └── README.md
 ├── linux-lqx-rebranded
 │   ├── linux-lqx-git
 │   │   └── PKGBUILD
@@ -139,4 +138,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-65 directories, 74 files
+64 directories, 74 files

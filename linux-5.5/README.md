@@ -12,7 +12,7 @@
 
 ###### linux-aufs/linux-aufs-git incorporates:
 
-* [AUFS](https://github.com/sfjro/aufs5-standalone/tree/aufs5.3) / [AUFS](http://aufs.sourceforge.net) - advanced multi-layered unification filesystem
+* [AUFS](https://github.com/sfjro/aufs5-standalone/tree/aufs5.x-rcN) / [AUFS](http://aufs.sourceforge.net) - advanced multi-layered unification filesystem
 
 ###### linux-bfq/linux-bfq-git incorporates:
 
@@ -22,7 +22,7 @@
 
 * [bfq-lucjan-dev](https://github.com/sirlucjan/bfq-mq-lucjan/tree/dev-bfq-on-5.4-lucjan) - latest fixes authored by Paolo Valente and BFQ Team and forked by Piotr Gorski
 
-* [LL-patches](https://github.com/sirlucjan/kernel-patches/tree/master/5.5-rc/ll-patches) / [LL-patches](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.5-rc/ll-patches) - specific patches authored by Piotr Gorski
+* [LL-patches](https://github.com/sirlucjan/kernel-patches/tree/master/5.5/ll-patches) / [LL-patches](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.5/ll-patches) - specific patches authored by Piotr Gorski
 
 * [bfq-dev-rc](https://github.com/sirlucjan/kernel-patches/tree/master/5.5-rc/bfq-dev-lucjan-sep) / [bfq-dev-rc](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.5-rc/bfq-dev-lucjan-sep) - specific patches authored by Paolo Valente and Piotr Gorski
 
