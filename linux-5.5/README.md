@@ -24,7 +24,7 @@
 
 * [LL-patches](https://github.com/sirlucjan/kernel-patches/tree/master/5.5/ll-patches) / [LL-patches](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.5/ll-patches) - specific patches authored by Piotr Gorski
 
-* [bfq-dev-rc](https://github.com/sirlucjan/kernel-patches/tree/master/5.5-rc/bfq-dev-lucjan-sep) / [bfq-dev-rc](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.5-rc/bfq-dev-lucjan-sep) - specific patches authored by Paolo Valente and Piotr Gorski
+* [bfq-dev-rc](https://github.com/sirlucjan/kernel-patches/tree/master/5.5/bfq-dev-lucjan-sep) / [bfq-dev-rc](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.5/bfq-dev-lucjan-sep) - specific patches authored by Paolo Valente and Piotr Gorski
 
 [![latest packaged version(s)](https://repology.org/badge/latest-versions/linux-bfq.svg)](https://repology.org/project/linux-bfq/versions)
 
