@@ -91,11 +91,6 @@
 │           ├── config
 │           └── PKGBUILD
 ├── linux-5.5
-│   ├── api-headers
-│   │   ├── linux-api-headers-git
-│   │   │   └── PKGBUILD
-│   │   └── linux-api-headers-rc-git
-│   │       └── PKGBUILD
 │   ├── README.md
 │   ├── stable
 │   │   ├── linux-aufs
@@ -160,4 +155,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-72 directories, 88 files
+69 directories, 86 files
