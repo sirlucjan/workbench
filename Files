@@ -105,34 +105,17 @@
 │   │   └── linux-bfq-git
 │   │       ├── config
 │   │       └── PKGBUILD
-│   ├── stable-rc
-│   │   ├── linux-aufs
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
-│   │   ├── linux-aufs-git
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
-│   │   ├── linux-bfq
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
-│   │   └── linux-bfq-git
-│   │       ├── config
-│   │       └── PKGBUILD
-│   └── uml
-│       ├── linux-usermode
-│       │   ├── 70-uml.hook
+│   └── stable-rc
+│       ├── linux-aufs
 │       │   ├── config
 │       │   └── PKGBUILD
-│       ├── linux-usermode-git
-│       │   ├── 70-uml.hook
+│       ├── linux-aufs-git
 │       │   ├── config
 │       │   └── PKGBUILD
-│       ├── linux-usermode-rc
-│       │   ├── 70-uml.hook
+│       ├── linux-bfq
 │       │   ├── config
 │       │   └── PKGBUILD
-│       └── linux-usermode-rc-git
-│           ├── 70-uml.hook
+│       └── linux-bfq-git
 │           ├── config
 │           └── PKGBUILD
 ├── linux-lqx-rebranded
@@ -155,4 +138,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-69 directories, 86 files
+64 directories, 74 files
