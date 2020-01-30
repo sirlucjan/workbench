@@ -48,14 +48,13 @@ _1k_HZ_ticks=
 pkgbase=linux-bfq
 # pkgname=('linux-bfq' 'linux-bfq-headers' 'linux-bfq-docs')
 _major=5.5
-#_minor=0
-#_minorc=$((_minor+1))
-#_rcver=rc1
-#pkgver=${_major}.${_minorc}
-#_stable=${_major}.${_minor}
-#_stablerc=${pkgver}-${_rcver}
-pkgver=${_major}
+_minor=0
+_minorc=$((_minor+1))
+_rcver=rc1
+pkgver=${_major}.${_minorc}
 _stable=${_major}
+#_stable=${_major}.${_minor}
+_stablerc=${pkgver}-${_rcver}
 _srcname=linux-${_stable}
 pkgrel=1
 pkgdesc='Linux BFQ-dev'
@@ -76,8 +75,8 @@ _gcc_patch="enable_additional_cpu_optimizations_for_gcc_v9.1+_kernel_v5.5+.patch
 
 source=("https://www.kernel.org/pub/linux/kernel/v5.x/linux-${_stable}.tar.xz"
         "https://www.kernel.org/pub/linux/kernel/v5.x/linux-${_stable}.tar.sign"
-        #"https://www.kernel.org/pub/linux/kernel/v5.x/stable-review/patch-${_stablerc}.xz"
-        #"https://www.kernel.org/pub/linux/kernel/v5.x/stable-review/patch-${_stablerc}.sign"
+        "https://www.kernel.org/pub/linux/kernel/v5.x/stable-review/patch-${_stablerc}.xz"
+        "https://www.kernel.org/pub/linux/kernel/v5.x/stable-review/patch-${_stablerc}.sign"
         # https://lkml.org/lkml/2019/8/23/712
         # "patch-${_stablerc}.diff::https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable-rc.git/patch/?id=linux-${_major}.y&id2=v${_major}.${_minor}"
         "${_lucjanpath}/${_bfq_path}/${_bfq_patch}"
@@ -96,7 +95,7 @@ prepare() {
 
     ### Add patch from stable-review
         echo "Applying patch from stable-review..."
-        # patch -p1 -i ../patch-${_stablerc}
+        patch -p1 -i ../patch-${_stablerc}
         # patch -p1 -i ../patch-${_stablerc}.diff
 
     ### Setting version
@@ -342,6 +341,8 @@ for _p in "${pkgname[@]}"; do
 done
 
 sha512sums=('fa74fdabb5e63384a39e54da05b86a9ae9ea16179524b041fbbdffc7177e80b53600ae98d76be127ba216148f9dc55fe07ab20637e22c6d6030cb4aa09eb2f86'
+            'SKIP'
+            '0956d1ccb7495f3d859af48e27adba1b38387b474aaad7e847f6270165ae27eacf8ef76776056664259df5dbf6ea41688370988895cd3fda906522ecc3ee66a1'
             'SKIP'
             '3505be72755ca1bece7aefe7d024827f951ae69125caf8a9b98882e5ed5fdef7762fdaee4e051ff3e9757181d61c3c4f323ca44ba14cdc635cefb5eb12d423a9'
             '52b14ef834769d2b4567e756a4485995acd2e3f5b989cbb53f9b113b42ff67b736bbcb284b95fe15c9efb846fd12320a26a131e4ce9af50b521114d274b472f1'
