@@ -46,7 +46,7 @@
 
 ######  linux-5.5rc
 
-[linux-5.5](https://github.com/sirlucjan/workbench/tree/master/linux-5.5) / [linux-5.5rc](https://gitlab.com/sirlucjan/workbench/tree/master/linux-5.5) - linux-bfq/linux-bfq-git
+[linux-5.5](https://github.com/sirlucjan/workbench/tree/master/linux-5.5) / [linux-5.5](https://gitlab.com/sirlucjan/workbench/tree/master/linux-5.5) - linux-bfq/linux-bfq-git
 
 ###### linux-aufs/linux-aufs-git incorporates:
 
