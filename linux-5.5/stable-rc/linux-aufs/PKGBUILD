@@ -56,7 +56,7 @@ _stable=${_major}
 #_stable=${_major}.${_minor}
 _stablerc=${pkgver}-${_rcver}
 _srcname=linux-${_stable}
-pkgrel=2
+pkgrel=3
 pkgdesc='Linux AUFS'
 arch=('x86_64')
 url="https://github.com/sfjro/aufs5-standalone"
@@ -80,8 +80,9 @@ source=("https://www.kernel.org/pub/linux/kernel/v5.x/linux-${_stable}.tar.xz"
         # "patch-${_stablerc}.diff::https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable-rc.git/patch/?id=linux-${_major}.y&id2=v${_major}.${_minor}"
         "${_lucjanpath}/${_aufs_path}/${_aufs_patch}"
         "${_gcc_path}/${_gcc_patch}"
-        "${_lucjanpath}/arch-patches-v2-sep/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
-        "${_lucjanpath}/arch-patches-v2-sep/0002-iwlwifi-pcie-restore-support-for-Killer-Qu-C0-NICs.patch"
+        "${_lucjanpath}/arch-patches-v3-sep/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
+        "${_lucjanpath}/arch-patches-v3-sep/0002-iwlwifi-pcie-restore-support-for-Killer-Qu-C0-NICs.patch"
+        "${_lucjanpath}/arch-patches-v3-sep/0003-Btrfs-send-fix-emission-of-invalid-clone-operations-.patch"
          # the main kernel config files
         'config')
 
@@ -345,8 +346,9 @@ sha512sums=('fa74fdabb5e63384a39e54da05b86a9ae9ea16179524b041fbbdffc7177e80b5360
             'SKIP'
             '1fb068a7099807a935d7353bb1621e0c04bf03c79a6ba5aae094510e9a8569ef1a71971664b162783bfb85f36946a423c239a6a51b6e7e6dde7b9e5150730c54'
             '52b14ef834769d2b4567e756a4485995acd2e3f5b989cbb53f9b113b42ff67b736bbcb284b95fe15c9efb846fd12320a26a131e4ce9af50b521114d274b472f1'
-            'e98f65f9e21fe67895861e0c2d0dda38262a56e18ae059b51082f4ad175baf8397bef447ef35aafcce973f9b24a43560c43274a681873db5a802c0ed6e33f2eb'
-            '720666770eb45d01ef9851d9400fc5e2e7d99dac15e5e51870a8bfd329293b6711447366022c33aed7e04f7f1d8abbdf54130f9fd474af27f480432c9874e658'
+            '940b9ceb5f53f05e0e516882215b9929126284c1c1fbf72dce17e23b630342fc9459b6f510d272e7a1336fa7ec5d9059e3bcb5a42c091c43065beca8d538f9c9'
+            '79315ac7002e3a955910b289b572f4cd2285e4218ef9564cd4333f8c6d029f5d79c9c9ee9b745e33b88c01d52e122b399c3142911d1781b55616703442fb99fd'
+            '98d8b4dfe41831c6bc82698e8ded74a91d54b5bdb4dcad56efb39eddeb3e3ce8975f00d414f574dce1706cf83d8bccf77791264272e05f725c44e783ecbe4ea2'
             'e4b4ad4ac0892b6f799f438f60b68a7a4f1d0f2908bc8211e0797eb33a10e2fccf9955a0b25e2501d8ac9f433f49d26c795aac4c7eb3b0c3260380fb48a8e885')
 
 validpgpkeys=(
