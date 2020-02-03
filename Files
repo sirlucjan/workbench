@@ -94,9 +94,6 @@
 │   ├── README.md
 │   ├── stable
 │   └── stable-rc
-│       ├── linux-aufs-git
-│       │   ├── config
-│       │   └── PKGBUILD
 │       └── linux-bfq-git
 │           ├── config
 │           └── PKGBUILD
@@ -120,4 +117,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-58 directories, 62 files
+57 directories, 60 files
