@@ -10,16 +10,12 @@
 │   │   │   ├── git
 │   │   │   │   ├── rt-bfq-git
 │   │   │   │   │   └── config
-│   │   │   │   ├── uksm-git
-│   │   │   │   │   └── config
-│   │   │   │   └── uml-git
+│   │   │   │   └── uksm-git
 │   │   │   │       └── config
 │   │   │   └── src
 │   │   │       ├── rt-bfq
 │   │   │       │   └── config
-│   │   │       ├── uksm
-│   │   │       │   └── config
-│   │   │       └── uml
+│   │   │       └── uksm
 │   │   │           └── config
 │   │   └── 5.5
 │   │       ├── git
@@ -98,4 +94,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-47 directories, 51 files
+45 directories, 49 files
