@@ -12,7 +12,7 @@
 
 ###### linux-aufs/linux-aufs-git incorporates:
 
-* [AUFS](https://github.com/sfjro/aufs5-standalone/tree/aufs5.x-rcN) / [AUFS](http://aufs.sourceforge.net) - advanced multi-layered unification filesystem
+* [AUFS](https://github.com/sfjro/aufs5-standalone/tree/aufs5.5) / [AUFS](http://aufs.sourceforge.net) - advanced multi-layered unification filesystem
 
 ###### linux-bfq/linux-bfq-git incorporates:
 
