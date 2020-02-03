@@ -90,13 +90,6 @@
 │       └── linux-juliagoda-git
 │           ├── config
 │           └── PKGBUILD
-├── linux-5.5
-│   ├── README.md
-│   ├── stable
-│   └── stable-rc
-│       └── linux-bfq-git
-│           ├── config
-│           └── PKGBUILD
 ├── linux-lqx-rebranded
 │   ├── linux-lqx-git
 │   │   └── PKGBUILD
@@ -117,4 +110,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-57 directories, 60 files
+53 directories, 57 files
