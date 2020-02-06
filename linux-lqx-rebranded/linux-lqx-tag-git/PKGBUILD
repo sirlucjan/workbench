@@ -49,7 +49,7 @@ _minor=1
 _lqx=lqx2
 _srcname=zen-kernel
 pkgver=5.5.1.lqx2.r0.g06b14b79a8cf
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux LQX'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -98,7 +98,7 @@ prepare() {
 
     ### Prepared version
         make -s kernelrelease > version
-        echo "Prepared %s version %s" "$pkgbase" "$(<version)"
+        echo "Prepared $pkgbase version $(<version)"
 
     ### Optionally use running kernel's config
 	# code originally by nous; http://aur.archlinux.org/packages.php?ID=40191
