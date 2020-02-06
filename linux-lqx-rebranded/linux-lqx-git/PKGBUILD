@@ -53,7 +53,7 @@ _major=5.5
 _srcname=linux-${_major}
 _lqxpatchname=liquorix-package
 pkgbase=linux-lqx-git
-pkgver=5.5.1.1.r1424.g7b6ce6d
+pkgver=5.5.1.2.r1428.gfed08bc
 pkgrel=1
 pkgdesc='Linux LQX'
 arch=('x86_64')
@@ -115,7 +115,7 @@ prepare() {
 
     ### Prepared version
         make -s kernelrelease > version
-        echo "Prepared %s version %s" "$pkgbase" "$(<version)"
+        echo "Prepared $pkgbase version $(<version)"
 
     ### Optionally use running kernel's config
 	# code originally by nous; http://aur.archlinux.org/packages.php?ID=40191
