@@ -51,7 +51,7 @@ _major=5.6
 _major_rc=5.6-rc
 _srcname=linux
 pkgver=5.6.rc2.r8.gb1da3acc781c
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux BFQ-dev'
 arch=('x86_64')
 url="https://github.com/sirlucjan/bfq-mq-lucjan"
@@ -61,14 +61,8 @@ makedepends=('kmod' 'bc' 'libelf' 'git' 'python-sphinx' 'python-sphinx_rtd_theme
              'graphviz' 'imagemagick')
 #_lucjanpath="https://raw.githubusercontent.com/sirlucjan/kernel-patches/master/${_major_rc}"
 _lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major_rc}"
-_bfq_rev_path="bfq-reverts-sep"
-_bfq_rev_patch_1="0001-Revert-block-bfq-clarify-the-goal-of-bfq_split_bfqq.patch"
-_bfq_rev_patch_2="0002-Revert-block-bfq-get-a-ref-to-a-group-when-adding-it.patch"
-_bfq_rev_patch_3="0003-Revert-block-bfq-remove-ifdefs-from-around-gets-puts.patch"
-_bfq_rev_patch_4="0004-Revert-block-bfq-extend-incomplete-name-of-field-on_.patch"
-_bfq_rev_patch_5="0005-Revert-block-bfq-get-extra-ref-to-prevent-a-queue-fr.patch"
-_bfq_rev_patch_6="0006-Revert-block-bfq-do-not-insert-oom-queue-into-positi.patch"
-_bfq_rev_patch_7="0007-Revert-block-bfq-do-not-plug-I-O-for-bfq_queues-with.patch"
+_bfq_rev_path="bfq-reverts-all"
+_bfq_rev_patch="0001-bfq-reverts.patch"
 _bfq_path="bfq-dev-lucjan"
 _bfq_ver="v11"
 _bfq_rel="r2K200211"
@@ -77,13 +71,7 @@ _gcc_path="https://raw.githubusercontent.com/graysky2/kernel_gcc_patch/master"
 _gcc_patch="enable_additional_cpu_optimizations_for_gcc_v9.1+_kernel_v5.5+.patch"
 
 source=("git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git"
-        "${_lucjanpath}/${_bfq_rev_path}/${_bfq_rev_patch_1}"
-        "${_lucjanpath}/${_bfq_rev_path}/${_bfq_rev_patch_2}"
-        "${_lucjanpath}/${_bfq_rev_path}/${_bfq_rev_patch_3}"
-        "${_lucjanpath}/${_bfq_rev_path}/${_bfq_rev_patch_4}"
-        "${_lucjanpath}/${_bfq_rev_path}/${_bfq_rev_patch_5}"
-        "${_lucjanpath}/${_bfq_rev_path}/${_bfq_rev_patch_6}"
-        "${_lucjanpath}/${_bfq_rev_path}/${_bfq_rev_patch_7}"
+        "${_lucjanpath}/${_bfq_rev_path}/${_bfq_rev_patch}"
         "${_lucjanpath}/${_bfq_path}/${_bfq_patch}"
         "${_gcc_path}/${_gcc_patch}"
         "${_lucjanpath}/arch-patches/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
@@ -341,13 +329,7 @@ for _p in "${pkgname[@]}"; do
 done
 
 sha512sums=('SKIP'
-            '023bdc35a2acd3176b9d6da41d91570d9620e61873a2c2e26cce5ca543ba5aafdaddf755c24a1d587325d7e4c230bae40c08d5c71e92bade5c0562c349ed1e45'
-            '6c7c7d101f594a7e0114498be79eff55fb235c9330d7645226fdc84a654c7c366c7f8815304dcf86bf5ae66bf7ec157f6156be6fe33e5e8252253bfe85c6d1cf'
-            'c1fb399d893b21bf134d763764f81f52cdac0a4b85bea542bac54c8ee8ae4d999ec9b79738ec34bd1dbeba59cd0639db95d8a1d448c9e19649de5304e8ee545e'
-            '5950fead9b12c185a5b95592a78a9d44f72b444720ffe6131c44a2e70defb5dc0cf4cce5584ef08ce0d1f7f4501c8119e9e1f4cb821b7285e1c782c571610136'
-            '0eb11c1dbddda847ae4a9a38aebdcb173b8bdbf824f3030e460b199c47474fbae5fb4eaca6bcb8aa3de02e98b6ac2396aa511aeb325b602946f20d311e31e9e3'
-            '24f94086a857ad44c44fa29f4ec41e4315dccf8dfe56db6892db925e19016fb575bd348eb20a6536bf77d5a864254e69a6ec242184df7bd417a419adff9e2113'
-            '21481a9cf6bfd3d44936a09538236280b0a96c249443a5af79166e6f7e80bbe9af338099ece24256db2820243dae005787414d243a1cda16e45320f8061f3e3e'
+            '65df4c378396c625ed5ce828943bbac40624ea19f11f15a3c74614592360e572706ce5304b8f65a34e46db83f0f5bce7608f902d82b1015a9887ea8aff10ed81'
             '50eb56f776e6590ce56b737ad1a6340a0d91f09d4e805c6933775e7a2ffddec8448398f8affdeb37f376dd6eb74e1c78eec1235a28226e092a5bf49b6929a981'
             '52b14ef834769d2b4567e756a4485995acd2e3f5b989cbb53f9b113b42ff67b736bbcb284b95fe15c9efb846fd12320a26a131e4ce9af50b521114d274b472f1'
             '2ff3827235189dd2217b1b7dee31925e9a75e053f85b08ea1c544d608d632bc4e5b5fbd90d3e154998662bf89137bc854afa257e10ba2726ee3eea8e8e6a0b4b'
