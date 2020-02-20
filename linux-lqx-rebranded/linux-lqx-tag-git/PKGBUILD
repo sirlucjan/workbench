@@ -45,10 +45,10 @@ _use_current=
 pkgbase=linux-lqx-tag-git
 # pkgname=('linux-lqx-tag-git' 'linux-lqx-tag-git-headers' 'linux-lqx-tag-git-docs')
 _major=5.5
-_minor=4
+_minor=5
 _lqx=lqx1
 _srcname=zen-kernel
-pkgver=5.5.4.lqx1.r0.ge223dc25bf5b
+pkgver=5.5.5.lqx1.r0.g5a2b4991affc
 pkgrel=1
 pkgdesc='Linux LQX'
 arch=('x86_64')
@@ -305,4 +305,4 @@ for _p in "${pkgname[@]}"; do
 done
 
 sha512sums=('SKIP'
-            '3f24fc8ee3f89e4ac90a2266393b149e2887c687acec17c17e63cd930c7e55f3c04a4d8f25ae9e57cab0d8e6a97745ce45be5b5dacb65bc472da6fddbed48204')
+            'e874fbca8e85651111053acceeb530440cf2637959158e9942cb0e73e0ae6eb9dc422e4ca186958fcc753034cda6a4769f94112aeadb3047c8759ad474dfd116')
