@@ -53,7 +53,7 @@ _major=5.5
 _srcname=linux-${_major}
 _lqxpatchname=liquorix-package
 pkgbase=linux-lqx-git
-pkgver=5.5.1.2.r1428.gfed08bc
+pkgver=5.5.5.2.r1454.g40e3a44
 pkgrel=1
 pkgdesc='Linux LQX'
 arch=('x86_64')
@@ -185,7 +185,8 @@ prepare() {
 build() {
   cd $_srcname
 
-  make bzImage modules htmldocs
+  make all
+  make htmldocs
 }
 
 _package() {
