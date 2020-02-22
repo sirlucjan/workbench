@@ -53,7 +53,7 @@ _minor=rc2
 _tag=v${_major}-${_minor}
 pkgver=${_major}${_minor}
 _srcname=linux
-pkgrel=4
+pkgrel=5
 pkgdesc='Linux BFQ-dev'
 arch=('x86_64')
 url="https://github.com/sirlucjan/bfq-mq-lucjan"
@@ -182,7 +182,8 @@ prepare() {
 build() {
   cd $_srcname
 
-  make bzImage modules htmldocs
+  make all
+  make htmldocs
 }
 
 _package() {
