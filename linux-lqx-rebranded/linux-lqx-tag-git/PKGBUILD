@@ -49,7 +49,7 @@ _minor=5
 _lqx=lqx2
 _srcname=zen-kernel
 pkgver=5.5.5.lqx2.r0.g44c3825b9fd1
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux LQX'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -162,7 +162,8 @@ prepare() {
 build() {
   cd $_srcname
 
-  make bzImage modules htmldocs
+  make all
+  make htmldocs
 }
 
 _package() {
