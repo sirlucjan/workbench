@@ -47,7 +47,7 @@ pkgbase=linux-zen-git
 _major=5.5
 _srcname=zen-kernel
 pkgver=5.5.5.r889697.g3f96c8740e11
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux ZEN'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -161,7 +161,8 @@ prepare() {
 build() {
   cd $_srcname
 
-  make bzImage modules htmldocs
+  make all
+  make htmldocs
 }
 
 _package() {
