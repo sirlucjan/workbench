@@ -114,9 +114,9 @@
 	clgp = !sh -c 'git clone git@github.com:$(git config --get user.username)/$1 $1' -
 	clm = clone --mirror
 	#############
-	cp = cherry-pick
-	cpa = cherry-pick --abort
-	cpc = cherry-pick --continue
+	cpi = cherry-pick
+	cpia = cherry-pick --abort
+	cpic = cherry-pick --continue
 	#############
 	d = diff
 	dp = diff --patience
