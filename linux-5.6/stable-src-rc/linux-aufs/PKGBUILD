@@ -48,12 +48,11 @@ _1k_HZ_ticks=
 pkgbase=linux-aufs
 # pkgname=('linux-aufs' 'linux-aufs-headers' 'linux-aufs-docs')
 _major=5.6
-_minor=0
+_minor=1
 _minorc=$((_minor+1))
 _rcver=rc1
 pkgver=${_major}.${_minorc}
-_stable=${_major}
-#_stable=${_major}.${_minor}
+_stable=${_major}.${_minor}
 _stablerc=${pkgver}-${_rcver}
 _srcname=linux-${_stable}
 pkgrel=0
@@ -80,8 +79,7 @@ source=("https://www.kernel.org/pub/linux/kernel/v5.x/linux-${_stable}.tar.xz"
         # "patch-${_stablerc}.diff::https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable-rc.git/patch/?id=linux-${_major}.y&id2=v${_major}.${_minor}"
         "${_lucjanpath}/${_aufs_path}/${_aufs_patch}"
         "${_gcc_path}/${_gcc_patch}"
-        "${_lucjanpath}/arch-patches-v3-sep/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
-        "${_lucjanpath}/arch-patches-v3-sep/0002-mac80211-fix-authentication-with-iwlwifi-mvm.patch"
+        "${_lucjanpath}/arch-patches-v4/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
          # the main kernel config files
         'config')
 
@@ -328,14 +326,13 @@ for _p in "${pkgname[@]}"; do
   }"
 done
 
-sha512sums=('80846fe2b4e4a7ff471d2dde28a8216ae807a3209f959e93d39ea4fc9a189ea28ec3db9d303b3fe15a28c2cb90e7446876678e93e23353c2d6f262e364a06bc9'
+sha512sums=('c87fc62d986b025d8d420d51db4068dd6e98eb720988ffc2b4f2a71e77d634305a69de6c42ef4b4bd46a6d01c67b6de18cf4648d9ee856f29694c337a1e84cfb'
             'SKIP'
-            '96122f3c63465c84b43b1215b002d746b23aa435ed537b8c0bcec51f3c5b4f671107fa49b0e1b0f7c1cac7aad31eaf482ce830537b8ad11a251918fb16bd4927'
+            '1f07b3fcdb8c7523bfd1cc80fcb4a1e97e1a399c5970595269350595673e57071fb2e4412055399518b9d6bc45a0bae274a8a68bcc65c94b9b02cfab9324ba79'
             'SKIP'
             'd9e949db52375b1dda7c75e7c45d50460bbf7d78bb8cb33ae3a71d4cb68b42883d079440e32bbf8ae955e2b938a91390fdb32a692613fd32e781c288289a688f'
             '52b14ef834769d2b4567e756a4485995acd2e3f5b989cbb53f9b113b42ff67b736bbcb284b95fe15c9efb846fd12320a26a131e4ce9af50b521114d274b472f1'
-            '97b75d483081d52f4cd9492fb3f19f4b5599fd65cf83da85e6d433bd9ef104bf8a6fa85316819ebfda0250ba205a8a1f8a525b610e3567ccf413107ea514d0c9'
-            '89e82ed216dd99edb79e937f31685f544502f1e71e064f1c76741fa2cd555f97346dc480b9caae135ebaee480f5027599cf1e0236f62ee1e3278d0d990443458'
+            '080850eb686f4b8162e348eacc54d6407c810e4430f574a0da009ff851f89e7bc442cfd107a4a4edf009de6dbd83f1cd9ce1c75a2140554b34f35ff0a81c8779'
             'f41852a9d83aedd7b1e223aa73ba34beddb0490b9936900433ce0322cf5876e83886f243a8e98205cc9db90e7609f79fdd0f7721c13a1853efbfcab2e49ef5c2')
 
 validpgpkeys=(
