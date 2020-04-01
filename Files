@@ -121,6 +121,10 @@
 │   │   └── linux-uksm-git
 │   │       ├── config
 │   │       └── PKGBUILD
+│   ├── stable-git-rc
+│   │   └── linux-aufs-git
+│   │       ├── config
+│   │       └── PKGBUILD
 │   ├── stable-src
 │   │   ├── linux-aufs
 │   │   │   ├── config
@@ -192,4 +196,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-88 directories, 104 files
+90 directories, 106 files
