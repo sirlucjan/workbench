@@ -44,9 +44,9 @@
 
 * ~~[bfq-reverts](https://github.com/sirlucjan/kernel-patches/tree/master/5.6/bfq-reverts) / [bfq-reverts](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.6/bfq-reverts) - specific patches authored by Piotr Gorski~~
 
-######  linux-5.6rc
+######  linux-5.6
 
-[linux-5.6rc](https://github.com/sirlucjan/workbench/tree/master/linux-5.6rc) / [linux-5.6rc](https://gitlab.com/sirlucjan/workbench/tree/master/linux-5.6rc) - linux-bfq/linux-bfq-git
+[linux-5.6](https://github.com/sirlucjan/workbench/tree/master/linux-5.6) / [linux-5.6](https://gitlab.com/sirlucjan/workbench/tree/master/linux-5.6) - kernel and patches
 
 ###### linux-aufs/linux-aufs-git incorporates:
 
@@ -66,9 +66,15 @@
 
 ###### Some patches for BFQ conflict with patches for BFQ-dev.
 
-###### To use linux-bfq/linux-bfq-git smoothly apply bfq-reverts before bfq-dev patch. Otherwise the kernel will not compile.
+###### To use linux-bfq smoothly apply bfq-reverts before bfq-dev patch. Otherwise the kernel will not compile.
 
-* [bfq-reverts](https://github.com/sirlucjan/kernel-patches/tree/master/5.6/bfq-reverts-all-v2) / [bfq-reverts](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.6/bfq-reverts-all-v2) - specific patches authored by Piotr Gorski
+* ~~[bfq-reverts](https://github.com/sirlucjan/kernel-patches/tree/master/5.6/bfq-reverts-all-v2) / [bfq-reverts](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.6/bfq-reverts-all-v2) - specific patches authored by Piotr Gorski~~
+
+###### linux-uksm/linux-uksm-git incorporates:
+
+* [UKSM (sources)](https://github.com/dolohow/uksm) / [UKSM (info)](https://www.usenix.org/sites/default/files/conference/protected-files/fast18_slides_xia.pdf) - resync from dolohow’s github
+
+[![latest packaged version(s)](https://repology.org/badge/latest-versions/linux-uksm.svg)](https://repology.org/project/linux-uksm/versions)
 
 ######  linux-lqx-rebranded
 
