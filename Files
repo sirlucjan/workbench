@@ -50,6 +50,8 @@
 │   │       │   │   └── config
 │   │       │   ├── rt-bfq-git
 │   │       │   │   └── config
+│   │       │   ├── uksm-git
+│   │       │   │   └── config
 │   │       │   └── uml-git
 │   │       │       └── config
 │   │       └── src
@@ -60,6 +62,8 @@
 │   │           ├── lucjan
 │   │           │   └── config
 │   │           ├── rt-bfq
+│   │           │   └── config
+│   │           ├── uksm
 │   │           │   └── config
 │   │           └── uml
 │   │               └── config
@@ -150,4 +154,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-70 directories, 80 files
+72 directories, 82 files
