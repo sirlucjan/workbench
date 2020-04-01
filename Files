@@ -169,9 +169,6 @@
 │           ├── config
 │           └── PKGBUILD
 ├── linux-5.6rc
-│   ├── linux-aufs-git
-│   │   ├── config
-│   │   └── PKGBUILD
 │   ├── linux-bfq
 │   │   ├── config
 │   │   └── PKGBUILD
@@ -199,4 +196,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-91 directories, 108 files
+90 directories, 106 files
