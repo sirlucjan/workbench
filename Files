@@ -129,19 +129,14 @@
 │   │   └── linux-uksm
 │   │       ├── config
 │   │       └── PKGBUILD
-│   ├── stable-src-rc
-│   │   ├── linux-aufs
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
-│   │   ├── linux-bfq
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
-│   │   └── linux-uksm
-│   │       ├── config
-│   │       └── PKGBUILD
-│   └── uml
-│       └── linux-usermode-rc-git
-│           ├── 70-uml.hook
+│   └── stable-src-rc
+│       ├── linux-aufs
+│       │   ├── config
+│       │   └── PKGBUILD
+│       ├── linux-bfq
+│       │   ├── config
+│       │   └── PKGBUILD
+│       └── linux-uksm
 │           ├── config
 │           └── PKGBUILD
 ├── linux-lqx-rebranded
@@ -164,4 +159,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-77 directories, 87 files
+75 directories, 84 files
