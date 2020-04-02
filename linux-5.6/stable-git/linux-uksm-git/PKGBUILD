@@ -49,7 +49,7 @@ pkgbase=linux-uksm-git
 # pkgname=('linux-uksm-git' 'linux-uksm-git-headers' 'linux-uksm-git-docs')
 _major=5.6
 _srcname=linux
-pkgver=5.6.1.r0.g7b86b8d18e49
+pkgver=5.6.2.r0.g9fbe5c87eaa9
 pkgrel=1
 pkgdesc='Linux UKSM'
 arch=('x86_64')
@@ -70,8 +70,7 @@ _gcc_patch="enable_additional_cpu_optimizations_for_gcc_v9.1+_kernel_v5.5+.patch
 source=("git://git.kernel.org/pub/scm/linux/kernel/git/stable/${_srcname}.git#branch=linux-${_major}.y"
         "${_uksm_path}/${_uksm_patch}"
         "${_gcc_path}/${_gcc_patch}"
-        "${_lucjanpath}/arch-patches-v3-sep/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
-        "${_lucjanpath}/arch-patches-v3-sep/0002-mac80211-fix-authentication-with-iwlwifi-mvm.patch"
+        "${_lucjanpath}/arch-patches-v4/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
          # the main kernel config files
         'config')
 
@@ -322,6 +321,5 @@ done
 sha512sums=('SKIP'
             '9bfee5ca00d9640b8a822581666ebea693e9d6ae334c4a738d31921a3e1161816036565458beea81bb3d3e0770e28926c53ad60b40e33d46276c81065ad01c75'
             '52b14ef834769d2b4567e756a4485995acd2e3f5b989cbb53f9b113b42ff67b736bbcb284b95fe15c9efb846fd12320a26a131e4ce9af50b521114d274b472f1'
-            '97b75d483081d52f4cd9492fb3f19f4b5599fd65cf83da85e6d433bd9ef104bf8a6fa85316819ebfda0250ba205a8a1f8a525b610e3567ccf413107ea514d0c9'
-            '89e82ed216dd99edb79e937f31685f544502f1e71e064f1c76741fa2cd555f97346dc480b9caae135ebaee480f5027599cf1e0236f62ee1e3278d0d990443458'
+            '080850eb686f4b8162e348eacc54d6407c810e4430f574a0da009ff851f89e7bc442cfd107a4a4edf009de6dbd83f1cd9ce1c75a2140554b34f35ff0a81c8779'
             'a85bee74ace32d093bbc7fa1ad9d681ab1fd5fc8db0bec93e802cab2ea8022c3334d9a94aa6f3c6cbb4b6a0f2c70c5484153591391e88736d259c9d028fc4d3a')
