@@ -48,7 +48,7 @@ _1k_HZ_ticks=
 pkgbase=linux-bfq
 # pkgname=('linux-bfq' 'linux-bfq-headers' 'linux-bfq-docs')
 _major=5.6
-_minor=1
+_minor=2
 pkgver=${_major}.${_minor}
 _srcname=linux-${pkgver}
 pkgrel=1
@@ -78,8 +78,7 @@ source=("https://www.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.xz"
         #"${_lucjanpath}/${_bfq_rev_path}/${_bfq_rev_patch}"
         "${_lucjanpath}/${_bfq_path}/${_bfq_patch}"
         "${_gcc_path}/${_gcc_patch}"
-        "${_lucjanpath}/arch-patches-v3-sep/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
-        "${_lucjanpath}/arch-patches-v3-sep/0002-mac80211-fix-authentication-with-iwlwifi-mvm.patch"
+        "${_lucjanpath}/arch-patches-v4/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
          # the main kernel config files
         'config')
 
@@ -321,12 +320,11 @@ for _p in "${pkgname[@]}"; do
   }"
 done
 
-sha512sums=('c87fc62d986b025d8d420d51db4068dd6e98eb720988ffc2b4f2a71e77d634305a69de6c42ef4b4bd46a6d01c67b6de18cf4648d9ee856f29694c337a1e84cfb'
+sha512sums=('174e085eb14c64dedb15ea2186d0103baafce0653fe287b057b650e51cc3e5faa375a9224c046f2b2d3da995e1d79469c04d9ad666c91548790253b2078e2be7'
             'SKIP'
             'bb6892612524d0cd667048d4a3d8352b04fca0e65398dc96964cc29241c7167f5f3e7d8a1a10c8afa7167a374611f2f3dd57dab04ed351cbedc4fcac4103669c'
             '52b14ef834769d2b4567e756a4485995acd2e3f5b989cbb53f9b113b42ff67b736bbcb284b95fe15c9efb846fd12320a26a131e4ce9af50b521114d274b472f1'
-            '97b75d483081d52f4cd9492fb3f19f4b5599fd65cf83da85e6d433bd9ef104bf8a6fa85316819ebfda0250ba205a8a1f8a525b610e3567ccf413107ea514d0c9'
-            '89e82ed216dd99edb79e937f31685f544502f1e71e064f1c76741fa2cd555f97346dc480b9caae135ebaee480f5027599cf1e0236f62ee1e3278d0d990443458'
+            '080850eb686f4b8162e348eacc54d6407c810e4430f574a0da009ff851f89e7bc442cfd107a4a4edf009de6dbd83f1cd9ce1c75a2140554b34f35ff0a81c8779'
             'ec7c4aca639c328724863e483f2d06a45120d21216eaec99c7767ab2c0547c6deb5740ce309ceb62cc6fda111ea82d2181a843113357f904b5d0a5d123acaa75')
 
 validpgpkeys=(
