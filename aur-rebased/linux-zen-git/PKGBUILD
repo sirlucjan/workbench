@@ -44,9 +44,9 @@ _use_current=
 
 pkgbase=linux-zen-git
 # pkgname=('linux-zen-git' 'linux-zen-git-headers' 'linux-zen-git-docs')
-_major=5.5
+_major=5.6
 _srcname=zen-kernel
-pkgver=5.5.13.r890963.g29eee1a75b8f
+pkgver=5.6.1.r902665.g93c70c5e4491
 pkgrel=1
 pkgdesc='Linux ZEN'
 arch=('x86_64')
@@ -171,6 +171,7 @@ _package() {
     optdepends=('crda: to set the correct wireless channels of your country'
                 'linux-firmware: firmware images needed for some devices'
                 'modprobed-db: Keeps track of EVERY kernel module that has ever been probed - useful for those of us who make localmodconfig')
+    provides=(VIRTUALBOX-GUEST-MODULES WIREGUARD-MODULE)
 
   cd $_srcname
   local kernver="$(<version)"
@@ -189,9 +190,6 @@ _package() {
 
   # remove build and source links
   rm "$modulesdir"/{source,build}
-
-  echo "Fixing permissions..."
-  chmod -Rc u=rwX,go=rX "$pkgdir"
 }
 
 _package-headers() {
@@ -268,9 +266,6 @@ _package-headers() {
   echo "Adding symlink..."
   mkdir -p "$pkgdir/usr/src"
   ln -sr "$builddir" "$pkgdir/usr/src/$pkgbase"
-
-  echo "Fixing permissions..."
-  chmod -Rc u=rwX,go=rX "$pkgdir"
 }
 
 _package-docs() {
@@ -291,9 +286,6 @@ _package-docs() {
   echo "Adding symlink..."
   mkdir -p "$pkgdir/usr/share/doc"
   ln -sr "$builddir/Documentation" "$pkgdir/usr/share/doc/$pkgbase"
-
-  echo "Fixing permissions..."
-  chmod -Rc u=rwX,go=rX "$pkgdir"
 }
 
 pkgname=("$pkgbase" "$pkgbase-headers" "$pkgbase-docs")
@@ -305,4 +297,4 @@ for _p in "${pkgname[@]}"; do
 done
 
 sha512sums=('SKIP'
-            '3914b8b0edc65c841552424aa5a381b870ff622a42c971a1c525bca5a56909b6a9414d3bf7389204e0300cf87b12eab1ea8624e1f425cf8967ad2e1ee5b7d005')
+            '6f1df2196542bc7f79a02b159b08e921e484ccec3aa1bfc0a513b24042296d1aed24ebe2ef9234c74a275507580339eb296790b03f9660b135c06699a07e9626')
