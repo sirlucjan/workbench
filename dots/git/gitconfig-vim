@@ -182,6 +182,7 @@
 	#############
 	pl = pull
 	pb = pull --rebase
+	pm = pull --rebase=false
 	#############
 	plo = pull origin
 	pbo = pull --rebase origin
