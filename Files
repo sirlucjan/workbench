@@ -8,8 +8,6 @@
 │   ├── Config
 │   │   ├── 5.5
 │   │   │   ├── git
-│   │   │   │   ├── aufs-git
-│   │   │   │   │   └── config
 │   │   │   │   ├── bfq-git
 │   │   │   │   │   └── config
 │   │   │   │   ├── uksm-git
@@ -17,8 +15,6 @@
 │   │   │   │   └── uml-git
 │   │   │   │       └── config
 │   │   │   └── src
-│   │   │       ├── aufs
-│   │   │       │   └── config
 │   │   │       ├── bfq
 │   │   │       │   └── config
 │   │   │       ├── uksm
@@ -102,4 +98,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-49 directories, 53 files
+47 directories, 51 files
