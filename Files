@@ -6,13 +6,6 @@
 │   └── README.md
 ├── Devel
 │   ├── Config
-│   │   ├── 5.4
-│   │   │   ├── git
-│   │   │   │   └── rt-bfq-git
-│   │   │   │       └── config
-│   │   │   └── src
-│   │   │       └── rt-bfq
-│   │   │           └── config
 │   │   ├── 5.5
 │   │   │   ├── git
 │   │   │   │   ├── aufs-git
@@ -109,4 +102,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-54 directories, 55 files
+49 directories, 53 files
