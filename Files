@@ -91,10 +91,6 @@
 │           └── PKGBUILD
 ├── linux-5.6
 │   ├── README.md
-│   ├── stable-git
-│   │   └── linux-rt-bfq-git
-│   │       ├── config
-│   │       └── PKGBUILD
 │   └── stable-src
 │       └── linux-rt-bfq
 │           ├── config
@@ -119,4 +115,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-59 directories, 60 files
+57 directories, 58 files
