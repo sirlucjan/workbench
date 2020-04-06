@@ -95,10 +95,6 @@
 │   │   └── linux-rt-bfq-git
 │   │       ├── config
 │   │       └── PKGBUILD
-│   ├── stable-git-rc
-│   │   └── linux-uksm-git
-│   │       ├── config
-│   │       └── PKGBUILD
 │   └── stable-src
 │       └── linux-rt-bfq
 │           ├── config
@@ -123,4 +119,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-61 directories, 62 files
+59 directories, 60 files
