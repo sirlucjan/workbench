@@ -114,12 +114,8 @@
 │   │   └── linux-uksm-git
 │   │       ├── config
 │   │       └── PKGBUILD
-│   ├── stable-src
-│   │   └── linux-rt-bfq
-│   │       ├── config
-│   │       └── PKGBUILD
-│   └── stable-src-rc
-│       └── linux-uksm
+│   └── stable-src
+│       └── linux-rt-bfq
 │           ├── config
 │           └── PKGBUILD
 ├── linux-lqx-rebranded
@@ -142,4 +138,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-68 directories, 74 files
+66 directories, 72 files
