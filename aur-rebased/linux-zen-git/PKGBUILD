@@ -46,8 +46,8 @@ pkgbase=linux-zen-git
 # pkgname=('linux-zen-git' 'linux-zen-git-headers' 'linux-zen-git-docs')
 _major=5.6
 _srcname=zen-kernel
-pkgver=5.6.2.r902677.g521d01cfc300
-pkgrel=2
+pkgver=5.6.3.r902711.g3927237f1680
+pkgrel=1
 pkgdesc='Linux ZEN'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -57,6 +57,7 @@ makedepends=('kmod' 'bc' 'libelf' 'git' 'python-sphinx' 'python-sphinx_rtd_theme
              'graphviz' 'imagemagick')
 
 source=("git://github.com/${_srcname}/${_srcname}#branch=${_major}/master"
+        'sphinx-workaround.patch'
          # the main kernel config files
         'config')
 
@@ -297,4 +298,5 @@ for _p in "${pkgname[@]}"; do
 done
 
 sha512sums=('SKIP'
-            '2bdd9d974fcccf3d0a124c8c8f755cfb7f8a0dabeb9e7c57d075512e49f94fcc674dedd5435d9bc542b8d6ec72b6c6ca9ecca34dbcfe434eebb2f8db6f71a3e8')
+            '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
+            '3282556a6d2bdfaa088b95aeec3f5bbd7cb443e4cfe88571cc1c6e4b32378033002ab83236dcc2abf70945276266d45205ac983d85773886387762fcb75efa39')
