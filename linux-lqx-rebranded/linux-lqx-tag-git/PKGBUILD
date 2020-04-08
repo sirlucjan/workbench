@@ -45,10 +45,10 @@ _use_current=
 pkgbase=linux-lqx-tag-git
 # pkgname=('linux-lqx-tag-git' 'linux-lqx-tag-git-headers' 'linux-lqx-tag-git-docs')
 _major=5.5
-_minor=15
+_minor=16
 _lqx=lqx1
 _srcname=zen-kernel
-pkgver=5.5.15.lqx1.r0.g472c6fbdc0a6
+pkgver=5.5.16.lqx1.r0.gd70d8a1550aa
 pkgrel=1
 pkgdesc='Linux LQX'
 arch=('x86_64')
@@ -59,6 +59,7 @@ makedepends=('kmod' 'bc' 'libelf' 'git' 'python-sphinx' 'python-sphinx_rtd_theme
              'graphviz' 'imagemagick')
 
 source=("git://github.com/${_srcname}/${_srcname}#tag=v${_major}.${_minor}-${_lqx}"
+        'sphinx-workaround.patch'
          # the main kernel config files
         'config')
 
@@ -306,4 +307,5 @@ for _p in "${pkgname[@]}"; do
 done
 
 sha512sums=('SKIP'
+            '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
             '4ea6c142254c3cd7496d17453686d50d483f971a00523ee4b1d61b39d84b10ca3338f70bde01a1b01b4e8538d75fe81fb2dc6f791b857c0a77980a01a4ce76e3')
