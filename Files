@@ -67,7 +67,11 @@
 │           ├── PKGBUILD
 │           └── sphinx-workaround.patch
 ├── linux-5.7rc
-│   └── linux-aufs
+│   ├── linux-aufs
+│   │   ├── config
+│   │   ├── PKGBUILD
+│   │   └── sphinx-workaround.patch
+│   └── linux-aufs-git
 │       ├── config
 │       ├── PKGBUILD
 │       └── sphinx-workaround.patch
@@ -95,4 +99,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-40 directories, 55 files
+41 directories, 58 files
