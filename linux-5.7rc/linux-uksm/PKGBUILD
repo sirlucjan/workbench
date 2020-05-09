@@ -53,7 +53,7 @@ _minor=rc4
 _tag=v${_major}-${_minor}
 pkgver=${_major}${_minor}
 _srcname=linux
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux UKSM'
 arch=('x86_64')
 url="https://github.com/dolohow/uksm"
@@ -73,7 +73,8 @@ _gcc_patch="enable_additional_cpu_optimizations_for_gcc_v9.1+_kernel_v5.7+.patch
 source=("git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git#tag=${_tag}"
         "${_lucjanpath}/${_uksm_path}/${_uksm_patch}"
         "${_gcc_path}/${_gcc_patch}"
-        "${_lucjanpath}/arch-patches/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
+        "${_lucjanpath}/arch-patches-v2-sep/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
+        "${_lucjanpath}/arch-patches-v2-sep/0002-gcc-common.h-Update-for-GCC-10.patch"
         'sphinx-workaround.patch'
          # the main kernel config files
         'config')
@@ -318,7 +319,8 @@ done
 sha512sums=('SKIP'
             '8c7489d3ca1a8c90d8c54da4eb5d8ff871ebe3ffb0731b05a4f4c050d03f7733434c31db2f00f71902774b46960b641a8b7aeaa1886a67e9244d94422d95a7e1'
             '805fb57b185c0394dcba668bb38a3ed3763bb87bb390fdf2a5b41cc176cae071652cf9b398ae8ae92178b5b8569434dc39c15cb2013f57bd68d37f292c775a7c'
-            '8eda2e01d9b198d67c789b0a8d685f020a9dc30744bcb3f99f88363bab93a695d06c0a4c7b72ab69dd878eadbaa274773b24780b5d403b1aa384f38ff822811b'
+            'b5481eec08d641d7e6cf81c294db1dd4ba954a7e563b4207208b93417456dfd6ff5ca62d49b355682cd8e5b5b0b33472acfd10007bf39191135944bad8ea35b4'
+            'c94405ba1e2cd660e8eb06b48817fb13a01dba705046fb31a8edfe7041b5fbcf5c2fa9807eadf37f46ef8b1639cbe274e088038d797cff2cd287b2ee460a97c0'
             '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
             '9e356e754041ceddd7f3190e923ed7094b99315cb1b4be28aaabac9ed5729ce4a6b451fa60f9a856a4b235a6cedc7b1f43c2d0d9a47bf58a5def9344710c6a1a')
 
