@@ -50,7 +50,7 @@ pkgbase=linux-bfq-git
 _major=5.7
 _major_rc=5.7-rc
 _srcname=linux
-pkgver=5.7.rc4.r32.g3c40cdb0e93e
+pkgver=5.7.rc4.r314.ge99332e7b4cd
 pkgrel=1
 pkgdesc='Linux BFQ-dev'
 arch=('x86_64')
@@ -77,7 +77,8 @@ source=("git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git"
         "${_lucjanpath}/${_bfq_rev_path}/${_bfq_rev_patch}"
         "${_lucjanpath}/${_bfq_path}/${_bfq_patch}"
         "${_gcc_path}/${_gcc_patch}"
-        "${_lucjanpath}/arch-patches/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
+        "${_lucjanpath}/arch-patches-v5-sep/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
+        "${_lucjanpath}/arch-patches-v5-sep/0002-x86-Fix-early-boot-crash-on-gcc-10-next-try.patch"
         'sphinx-workaround.patch'
          # the main kernel config files
         'config')
@@ -329,6 +330,7 @@ sha512sums=('SKIP'
             'f1f73cfe67a3a03b214af8b8cdc48d4491fd46e7e574f2ecfeaf360e57e158e0fcc1c7bd6b2f9dd86c4c8f7d3044b84dbb67deb0fdaf587b53befbf20128a15a'
             '11f8ced11e3c2f11df891bf7e9ee54a6195d45107e4d0096c872ba3715d1ecbf8e66106973df57ffe593b1925163476999e321e0618f51499a664f4acd7c410e'
             '805fb57b185c0394dcba668bb38a3ed3763bb87bb390fdf2a5b41cc176cae071652cf9b398ae8ae92178b5b8569434dc39c15cb2013f57bd68d37f292c775a7c'
-            '8eda2e01d9b198d67c789b0a8d685f020a9dc30744bcb3f99f88363bab93a695d06c0a4c7b72ab69dd878eadbaa274773b24780b5d403b1aa384f38ff822811b'
+            'a5d17e9cb884591c83e94db3c27b4d6c4de03dcab322cdb0f71e453ca608f378f00bc4776972b7fe4cd3073c0a00e2abe4a6b8e098b050e67cb04386dd495ffb'
+            '1377ac5b8a593c13b823a5fd9fe8e3ab53d959246cc7b5b47a6206292449ccc75aad93ff72dd13160ea4c8f4e697af0f824241b0aff77d21bc7cad08509933f7'
             '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
             '966645c89b4cfa97c7ddcfb26eb6390db4f1f82fe66297ba5abfd03ca913ce109db31115c83ad6a0b17580c103354e9b660bc4dea737259b2843cf152d874caf')
