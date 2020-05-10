@@ -53,7 +53,7 @@ _minor=rc4
 _tag=v${_major}-${_minor}
 pkgver=${_major}${_minor}
 _srcname=linux
-pkgrel=3
+pkgrel=4
 pkgdesc='Linux AUFS'
 arch=('x86_64')
 url="https://github.com/sfjro/aufs5-standalone"
@@ -72,9 +72,10 @@ _gcc_patch="enable_additional_cpu_optimizations_for_gcc_v9.1+_kernel_v5.7+.patch
 source=("git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git#tag=${_tag}"
         "${_lucjanpath}/${_aufs_path}/${_aufs_patch}"
         "${_gcc_path}/${_gcc_patch}"
-        "${_lucjanpath}/arch-patches-v3-sep/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
-        "${_lucjanpath}/arch-patches-v3-sep/0002-kvm-ioapic-Restrict-lazy-EOI-update-to-edge-triggere.patch"
-        "${_lucjanpath}/arch-patches-v3-sep/0003-gcc-common.h-Update-for-GCC-10.patch"
+        "${_lucjanpath}/arch-patches-v4-sep/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
+        "${_lucjanpath}/arch-patches-v4-sep/0002-kvm-ioapic-Restrict-lazy-EOI-update-to-edge-triggere.patch"
+        "${_lucjanpath}/arch-patches-v4-sep/0003-gcc-common.h-Update-for-GCC-10.patch"
+        "${_lucjanpath}/arch-patches-v4-sep/0004-x86-Fix-early-boot-crash-on-gcc-10-next-try.patch"
         'sphinx-workaround.patch'
          # the main kernel config files
         'config')
@@ -319,9 +320,10 @@ done
 sha512sums=('SKIP'
             '9b51311a7cd84d9d72e7e433cb94a1f02675eef41e19869d9a3646861f946b563aaa6dd37a14b4f694650f9d082aae9232b6915e71e70fac86778e66cc57fb0b'
             '805fb57b185c0394dcba668bb38a3ed3763bb87bb390fdf2a5b41cc176cae071652cf9b398ae8ae92178b5b8569434dc39c15cb2013f57bd68d37f292c775a7c'
-            '1088247fa30a480c41219b2448a3eff4c6068adfd442b0141d9b19aa2db3ed79f27813dd81e49d040e2b93ee23ad3a180c1915339a445dc6232ecfa9ca91a741'
-            '8d6d6c5e2d7182af8603433a8f427af456cbea8ac4e82f0c95e4cb63899f0fb171269624d2fc1d74e159a2475f7024820a7e854ff30cd253d815f1ba65f71153'
-            'ae82e59c0c7c7ce5fc56b5b088d13b7c1a03f5081e5891d932b27a2d68ee8120900107a6c2ffe37c264e00dd151def617867cd6ee55b116f7873b53d4a8fa840'
+            'bc26b5f74cefb3cfddff6c8b276784bc040635014921e517c0dd6cee4f8faa4792661b15365eaefa7a7a814d7f25c630eeff62f12883907a7edf64b890fe0ef9'
+            '98533b9c487940b575971dd024897a661239cf1cb4278bbeef019e903ba8ff8a65dccacd10cbb50f2ebdc44925386cb10e900dc80c7a973d0b16504ab089b625'
+            'a131d3530d435c29881036bc2fde3428919827df238f045c6250f2a3dcb14829b89fa6408867549f2d9cc00880014c6d4ee9dc111f78c5dcf6e56d033cb1714d'
+            '78535611cbfe5a2e8bd91d45b3c9cbdb6252baea71fa61b1b2aa091c4042ac5103a9e628a15368ecf26c846184c2bff9563b81a71e4b9ebf8026ee54e81c8fb6'
             '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
             'f7a3112199ed491e1c811b862e835cac8d166b30b904a8508aed59ddc0c7a2cbdadbe8f64f8735725475c6e487fae6f354e0af6dc086368a8e0a4eafba2d3a17')
 
