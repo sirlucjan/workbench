@@ -49,11 +49,11 @@ pkgbase=linux-bfq
 # pkgname=('linux-bfq' 'linux-bfq-headers' 'linux-bfq-docs')
 _major=5.7
 _major_rc=5.7-rc
-_minor=rc4
+_minor=rc5
 _tag=v${_major}-${_minor}
 pkgver=${_major}${_minor}
 _srcname=linux
-pkgrel=6
+pkgrel=1
 pkgdesc='Linux BFQ-dev'
 arch=('x86_64')
 url="https://github.com/sirlucjan/bfq-mq-lucjan"
@@ -79,10 +79,8 @@ source=("git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git#tag=${
         "${_lucjanpath}/${_bfq_rev_path}/${_bfq_rev_patch}"
         "${_lucjanpath}/${_bfq_path}/${_bfq_patch}"
         "${_gcc_path}/${_gcc_patch}"
-        "${_lucjanpath}/arch-patches-v4-sep/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
-        "${_lucjanpath}/arch-patches-v4-sep/0002-kvm-ioapic-Restrict-lazy-EOI-update-to-edge-triggere.patch"
-        "${_lucjanpath}/arch-patches-v4-sep/0003-gcc-common.h-Update-for-GCC-10.patch"
-        "${_lucjanpath}/arch-patches-v4-sep/0004-x86-Fix-early-boot-crash-on-gcc-10-next-try.patch"
+        "${_lucjanpath}/arch-patches-v5-sep/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
+        "${_lucjanpath}/arch-patches-v5-sep/0002-x86-Fix-early-boot-crash-on-gcc-10-next-try.patch"
         'sphinx-workaround.patch'
          # the main kernel config files
         'config')
@@ -328,10 +326,8 @@ sha512sums=('SKIP'
             'f1f73cfe67a3a03b214af8b8cdc48d4491fd46e7e574f2ecfeaf360e57e158e0fcc1c7bd6b2f9dd86c4c8f7d3044b84dbb67deb0fdaf587b53befbf20128a15a'
             '11f8ced11e3c2f11df891bf7e9ee54a6195d45107e4d0096c872ba3715d1ecbf8e66106973df57ffe593b1925163476999e321e0618f51499a664f4acd7c410e'
             '805fb57b185c0394dcba668bb38a3ed3763bb87bb390fdf2a5b41cc176cae071652cf9b398ae8ae92178b5b8569434dc39c15cb2013f57bd68d37f292c775a7c'
-            'bc26b5f74cefb3cfddff6c8b276784bc040635014921e517c0dd6cee4f8faa4792661b15365eaefa7a7a814d7f25c630eeff62f12883907a7edf64b890fe0ef9'
-            '98533b9c487940b575971dd024897a661239cf1cb4278bbeef019e903ba8ff8a65dccacd10cbb50f2ebdc44925386cb10e900dc80c7a973d0b16504ab089b625'
-            'a131d3530d435c29881036bc2fde3428919827df238f045c6250f2a3dcb14829b89fa6408867549f2d9cc00880014c6d4ee9dc111f78c5dcf6e56d033cb1714d'
-            '78535611cbfe5a2e8bd91d45b3c9cbdb6252baea71fa61b1b2aa091c4042ac5103a9e628a15368ecf26c846184c2bff9563b81a71e4b9ebf8026ee54e81c8fb6'
+            'a5d17e9cb884591c83e94db3c27b4d6c4de03dcab322cdb0f71e453ca608f378f00bc4776972b7fe4cd3073c0a00e2abe4a6b8e098b050e67cb04386dd495ffb'
+            '1377ac5b8a593c13b823a5fd9fe8e3ab53d959246cc7b5b47a6206292449ccc75aad93ff72dd13160ea4c8f4e697af0f824241b0aff77d21bc7cad08509933f7'
             '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
             '966645c89b4cfa97c7ddcfb26eb6390db4f1f82fe66297ba5abfd03ca913ce109db31115c83ad6a0b17580c103354e9b660bc4dea737259b2843cf152d874caf')
 
