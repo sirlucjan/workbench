@@ -53,7 +53,7 @@ _minor=rc5
 _tag=v${_major}-${_minor}
 pkgver=${_major}${_minor}
 _srcname=linux
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux AUFS'
 arch=('x86_64')
 url="https://github.com/sfjro/aufs5-standalone"
@@ -67,7 +67,7 @@ _aufs_path="aufs-patches"
 _aufs_ver="20200413"
 _aufs_patch="0001-aufs-${_aufs_ver}.patch"
 _gcc_path="https://raw.githubusercontent.com/sirlucjan/kernel_gcc_patch/master"
-_gcc_patch="enable_additional_cpu_optimizations_for_gcc_v9.1+_kernel_v5.7+.patch"
+_gcc_patch="enable_additional_cpu_optimizations_for_gcc_v10.1+_kernel_v5.7+.patch"
 
 source=("git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git#tag=${_tag}"
         "${_lucjanpath}/${_aufs_path}/${_aufs_patch}"
@@ -317,11 +317,11 @@ done
 
 sha512sums=('SKIP'
             '9b51311a7cd84d9d72e7e433cb94a1f02675eef41e19869d9a3646861f946b563aaa6dd37a14b4f694650f9d082aae9232b6915e71e70fac86778e66cc57fb0b'
-            '805fb57b185c0394dcba668bb38a3ed3763bb87bb390fdf2a5b41cc176cae071652cf9b398ae8ae92178b5b8569434dc39c15cb2013f57bd68d37f292c775a7c'
+            '509cddc74347c29d14a28156b491acd3ee9307eff0b19eddb9d38503871464fb26ee2406490092d9d5b53a88cf1f9788f10b63c67d25fa319f5a0d242875e3e1'
             'a5d17e9cb884591c83e94db3c27b4d6c4de03dcab322cdb0f71e453ca608f378f00bc4776972b7fe4cd3073c0a00e2abe4a6b8e098b050e67cb04386dd495ffb'
             '1377ac5b8a593c13b823a5fd9fe8e3ab53d959246cc7b5b47a6206292449ccc75aad93ff72dd13160ea4c8f4e697af0f824241b0aff77d21bc7cad08509933f7'
             '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
-            'f7a3112199ed491e1c811b862e835cac8d166b30b904a8508aed59ddc0c7a2cbdadbe8f64f8735725475c6e487fae6f354e0af6dc086368a8e0a4eafba2d3a17')
+            'b479b4e9af294bc348420e64a5a46d55f578eb288b230158b28878f811e15e106dab2a485dbe614a08a2ad777d96eb2daed89bafb8ae89842838b1aae7a9d50c')
 
 validpgpkeys=(
               'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
