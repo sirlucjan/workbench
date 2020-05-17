@@ -64,7 +64,7 @@ _lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major_rc}
 _aufs_path="aufs-patches"
 _aufs_ver="20200413"
 _aufs_patch="0001-aufs-${_aufs_ver}.patch"
-_gcc_path="https://raw.githubusercontent.com/sirlucjan/kernel_gcc_patch/master"
+_gcc_path="https://raw.githubusercontent.com/graysky2/kernel_gcc_patch/master"
 _gcc_patch="enable_additional_cpu_optimizations_for_gcc_v10.1+_kernel_v5.7+.patch"
 
 source=("git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git"

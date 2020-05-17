@@ -72,7 +72,7 @@ _bfq_path="bfq-dev-lucjan"
 _bfq_ver="v11"
 _bfq_rel="r2K200514"
 _bfq_patch="${_major}-${_bfq_path}-${_bfq_ver}-${_bfq_rel}.patch"
-_gcc_path="https://raw.githubusercontent.com/sirlucjan/kernel_gcc_patch/master"
+_gcc_path="https://raw.githubusercontent.com/graysky2/kernel_gcc_patch/master"
 _gcc_patch="enable_additional_cpu_optimizations_for_gcc_v10.1+_kernel_v5.7+.patch"
 
 source=("git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git#tag=${_tag}"
