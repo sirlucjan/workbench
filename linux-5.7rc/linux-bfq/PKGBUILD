@@ -49,11 +49,11 @@ pkgbase=linux-bfq
 # pkgname=('linux-bfq' 'linux-bfq-headers' 'linux-bfq-docs')
 _major=5.7
 _major_rc=5.7-rc
-_minor=rc5
+_minor=rc6
 _tag=v${_major}-${_minor}
 pkgver=${_major}${_minor}
 _srcname=linux
-pkgrel=3
+pkgrel=1
 pkgdesc='Linux BFQ-dev'
 arch=('x86_64')
 url="https://github.com/sirlucjan/bfq-mq-lucjan"
@@ -79,8 +79,7 @@ source=("git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git#tag=${
         "${_lucjanpath}/${_bfq_rev_path}/${_bfq_rev_patch}"
         "${_lucjanpath}/${_bfq_path}/${_bfq_patch}"
         "${_gcc_path}/${_gcc_patch}"
-        "${_lucjanpath}/arch-patches-v5-sep/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
-        "${_lucjanpath}/arch-patches-v5-sep/0002-x86-Fix-early-boot-crash-on-gcc-10-next-try.patch"
+        "${_lucjanpath}/arch-patches/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
         'sphinx-workaround.patch'
          # the main kernel config files
         'config')
@@ -326,8 +325,7 @@ sha512sums=('SKIP'
             'f1f73cfe67a3a03b214af8b8cdc48d4491fd46e7e574f2ecfeaf360e57e158e0fcc1c7bd6b2f9dd86c4c8f7d3044b84dbb67deb0fdaf587b53befbf20128a15a'
             'c476184e0994d71e199ba9f191a4c3b64688b58b313e2f40e9bd48126c484232f09321041b7e49bb672becc0b4484991fe4af44e16b35aa2d56f2fe01926050a'
             '509cddc74347c29d14a28156b491acd3ee9307eff0b19eddb9d38503871464fb26ee2406490092d9d5b53a88cf1f9788f10b63c67d25fa319f5a0d242875e3e1'
-            'a5d17e9cb884591c83e94db3c27b4d6c4de03dcab322cdb0f71e453ca608f378f00bc4776972b7fe4cd3073c0a00e2abe4a6b8e098b050e67cb04386dd495ffb'
-            '1377ac5b8a593c13b823a5fd9fe8e3ab53d959246cc7b5b47a6206292449ccc75aad93ff72dd13160ea4c8f4e697af0f824241b0aff77d21bc7cad08509933f7'
+            '8eda2e01d9b198d67c789b0a8d685f020a9dc30744bcb3f99f88363bab93a695d06c0a4c7b72ab69dd878eadbaa274773b24780b5d403b1aa384f38ff822811b'
             '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
             'bd933205806640bb1ce63d9286c8c0d3f8cb0bbcb2008136a4073a6eae7f9ab69f43de4fcc356adbcf645f48f80470cb669194756f804ed818735eaf82ee92bd')
 
