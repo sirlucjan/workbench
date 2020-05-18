@@ -50,7 +50,7 @@ pkgbase=linux-aufs-git
 _major=5.7
 _major_rc=5.7-rc
 _srcname=linux
-pkgver=5.7.rc5.r348.g5a9ffb954a39
+pkgver=5.7.rc6.r0.gb9bbe6ed63b2
 pkgrel=1
 pkgdesc='Linux AUFS'
 arch=('x86_64')
@@ -70,8 +70,7 @@ _gcc_patch="enable_additional_cpu_optimizations_for_gcc_v10.1+_kernel_v5.7+.patc
 source=("git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git"
         "${_lucjanpath}/${_aufs_path}/${_aufs_patch}"
         "${_gcc_path}/${_gcc_patch}"
-        "${_lucjanpath}/arch-patches-v5-sep/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
-        "${_lucjanpath}/arch-patches-v5-sep/0002-x86-Fix-early-boot-crash-on-gcc-10-next-try.patch"
+        "${_lucjanpath}/arch-patches/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
         'sphinx-workaround.patch'
          # the main kernel config files
         'config')
@@ -322,7 +321,6 @@ done
 sha512sums=('SKIP'
             '9b51311a7cd84d9d72e7e433cb94a1f02675eef41e19869d9a3646861f946b563aaa6dd37a14b4f694650f9d082aae9232b6915e71e70fac86778e66cc57fb0b'
             '509cddc74347c29d14a28156b491acd3ee9307eff0b19eddb9d38503871464fb26ee2406490092d9d5b53a88cf1f9788f10b63c67d25fa319f5a0d242875e3e1'
-            'a5d17e9cb884591c83e94db3c27b4d6c4de03dcab322cdb0f71e453ca608f378f00bc4776972b7fe4cd3073c0a00e2abe4a6b8e098b050e67cb04386dd495ffb'
-            '1377ac5b8a593c13b823a5fd9fe8e3ab53d959246cc7b5b47a6206292449ccc75aad93ff72dd13160ea4c8f4e697af0f824241b0aff77d21bc7cad08509933f7'
+            '8eda2e01d9b198d67c789b0a8d685f020a9dc30744bcb3f99f88363bab93a695d06c0a4c7b72ab69dd878eadbaa274773b24780b5d403b1aa384f38ff822811b'
             '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
             'b479b4e9af294bc348420e64a5a46d55f578eb288b230158b28878f811e15e106dab2a485dbe614a08a2ad777d96eb2daed89bafb8ae89842838b1aae7a9d50c')
