@@ -45,12 +45,12 @@ _use_current=
 pkgbase=linux-zen-tag
 # pkgname=('linux-zen-tag' 'linux-zen-tag-headers' 'linux-zen-tag-docs')
 _major=5.6
-_minor=13
+_minor=14
 _zen=zen1
 _srcname=linux-${_major}
 pkgver=${_major}.${_minor}.${_zen}
 _pkgver=${_major}.${_minor}-${_zen}
-pkgrel=2
+pkgrel=1
 pkgdesc='Linux ZEN'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -302,7 +302,7 @@ done
 
 sha512sums=('80846fe2b4e4a7ff471d2dde28a8216ae807a3209f959e93d39ea4fc9a189ea28ec3db9d303b3fe15a28c2cb90e7446876678e93e23353c2d6f262e364a06bc9'
             'SKIP'
-            '11bf6b434b84302d0b75faf14853f24448ee7e191a63907497c33b3ea79426ee0fd20dc3a1f38abfd84edb6f4b63e836b3a8f2aa98d0d80250a4b278fee8bd7f'
+            'cbd8d401c2187198b1403a1b7f3286db6bee6f6b5563a8a59adbf827db7ed70a358c8f3bf3de11d6669654ca31df2aca75b43e1201c11b1b1c3ff849c9ba4da6'
             'SKIP'
             '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
             '48a009ed37196716080b378d0c44ce7bb494472a89984bae98bdbe0f3fea0b815d4a38257d787e602abfa2e3b4d33d7384e96e874c9e04a2494ee48ae58fa305')
@@ -311,4 +311,5 @@ validpgpkeys=(
               'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
               '647F28654894E3BD457199BE38DBBDC86092693E' # Greg Kroah-Hartman
               '8218F88849AAC522E94CF470A5E9288C4FA415FA' # Jan Alexander Steffens
+              'A2FF3A36AAA56654109064AB19802F8B0D70FC30' # Jan Alexander Steffens
              )
