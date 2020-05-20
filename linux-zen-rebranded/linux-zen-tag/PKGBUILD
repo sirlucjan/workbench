@@ -310,6 +310,5 @@ sha512sums=('80846fe2b4e4a7ff471d2dde28a8216ae807a3209f959e93d39ea4fc9a189ea28ec
 validpgpkeys=(
               'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
               '647F28654894E3BD457199BE38DBBDC86092693E' # Greg Kroah-Hartman
-              '8218F88849AAC522E94CF470A5E9288C4FA415FA' # Jan Alexander Steffens
               'A2FF3A36AAA56654109064AB19802F8B0D70FC30' # Jan Alexander Steffens
              )
