@@ -46,11 +46,11 @@ pkgbase=linux-zen-tag
 # pkgname=('linux-zen-tag' 'linux-zen-tag-headers' 'linux-zen-tag-docs')
 _major=5.6
 _minor=15
-_zen=zen1
+_zen=zen2
 _srcname=linux-${_major}
 pkgver=${_major}.${_minor}.${_zen}
 _pkgver=${_major}.${_minor}-${_zen}
-pkgrel=2
+pkgrel=1
 pkgdesc='Linux ZEN'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -302,7 +302,7 @@ done
 
 sha512sums=('80846fe2b4e4a7ff471d2dde28a8216ae807a3209f959e93d39ea4fc9a189ea28ec3db9d303b3fe15a28c2cb90e7446876678e93e23353c2d6f262e364a06bc9'
             'SKIP'
-            'd3207160178b42c6c3372f857cd5a7ffcec35a7ef4ba6a8df5f399e737eade3609ff15a5ad51b1f03620ff8c295789f9e23e4e960ce6bf2ce966c8dd18a0b0a5'
+            'eaa0227301f83166a520429f26d8794a6921e9b042d45d74f1d2a1a5a7323ebe3edefbf4cef3317e621db49602641d37081607cba4269fa76b2844badb81b47b'
             'SKIP'
             '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
             '3a431ec586933f1495b8be7e2b4b54dfda9bd8c22ab8f48b579cdc61e6ee6f8f6f6f65ecf033e87886fcb7762ac671d2315c4a5dec88e6a4ec9b3bb1529b6988')
