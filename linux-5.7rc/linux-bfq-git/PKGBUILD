@@ -51,7 +51,7 @@ _major=5.7
 _major_rc=5.7-rc
 _srcname=linux
 pkgver=5.7.r1305.gf359287765c0
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux BFQ-dev'
 arch=('x86_64')
 url="https://github.com/sirlucjan/bfq-mq-lucjan"
@@ -73,7 +73,7 @@ _bfq_patch="${_major}-${_bfq_path}-${_bfq_ver}-${_bfq_rel}.patch"
 _gcc_path="cpu-patches-v3-sep"
 _gcc_patch="0001-cpu-${_major}-merge-graysky-s-patchset.patch"
 
-source=("git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git"
+source=("git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git#commit=f359287765c0"
         "${_lucjanpath}/${_bfq_rev_path}/${_bfq_rev_patch}"
         "${_lucjanpath}/${_bfq_path}/${_bfq_patch}"
         "${_lucjanpath}/${_gcc_path}/${_gcc_patch}"
@@ -331,4 +331,4 @@ sha512sums=('SKIP'
             'b64e4d18572ba0b17f38ca1a1ae01b2f95690c6149a270a9c74adf8a891c480a50c21bb326508dc75bae07e2120472d18d7d33355d28cb6dc21c4e03b548e42e'
             '8eda2e01d9b198d67c789b0a8d685f020a9dc30744bcb3f99f88363bab93a695d06c0a4c7b72ab69dd878eadbaa274773b24780b5d403b1aa384f38ff822811b'
             '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
-            '8a16248931ab02818ae782104afc245ef7837ee59f8b81d300717a6208830f50a46b95990619db1a0529d0ebc652414da6c142e122213ef64fe03f9c8035f7f1')
+            '2807994a5432ae81aebf073a58cf543c03520a087834b3134bd39cacc594f4147e4e74947a4ce1f1033ade73f07def0d03c9cacaa2263c9441e724d8dd28da02')
