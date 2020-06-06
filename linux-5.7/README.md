@@ -28,7 +28,7 @@
 
 * [bfq-lucjan-dev](https://github.com/sirlucjan/bfq-mq-lucjan/tree/dev-bfq-on-5.6-lucjan) - latest fixes authored by Paolo Valente and BFQ Team and forked by Piotr Gorski
 
-* [bfq-dev-rc](https://github.com/sirlucjan/kernel-patches/tree/master/5.7/bfq-dev-lucjan-sep) / [bfq-dev-rc](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.7/bfq-dev-lucjan-sep) - specific patches authored by Paolo Valente and Piotr Gorski
+* [bfq-dev-rc](https://github.com/sirlucjan/kernel-patches/tree/master/5.7/bfq-dev-lucjan-sep-v2) / [bfq-dev-rc](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.7/bfq-dev-lucjan-sep-v2) - specific patches authored by Paolo Valente and Piotr Gorski
 
 * [LL-patches](https://github.com/sirlucjan/kernel-patches/tree/master/5.7/ll-patches) / [LL-patches](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.7/ll-patches) - specific patches authored by Piotr Gorski
 
