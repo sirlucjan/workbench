@@ -46,7 +46,7 @@ pkgbase=linux-zen-git
 # pkgname=('linux-zen-git' 'linux-zen-git-headers' 'linux-zen-git-docs')
 _major=5.7
 _srcname=zen-kernel
-pkgver=5.7.0.r917646.g7b0f9887829a
+pkgver=5.7.1.r917662.gf0be213b20b0
 pkgrel=1
 pkgdesc='Linux ZEN'
 arch=('x86_64')
@@ -54,7 +54,7 @@ url="https://github.com/zen-kernel/zen-kernel"
 license=('GPL2')
 options=('!strip')
 makedepends=('kmod' 'bc' 'libelf' 'git' 'python-sphinx' 'python-sphinx_rtd_theme'
-             'graphviz' 'imagemagick')
+             'graphviz' 'imagemagick' 'pahole')
 
 source=("git://github.com/${_srcname}/${_srcname}#branch=${_major}/master"
         'sphinx-workaround.patch'
@@ -187,7 +187,7 @@ _package() {
   echo "$pkgbase" | install -Dm644 /dev/stdin "$modulesdir/pkgbase"
 
   echo "Installing modules..."
-  make INSTALL_MOD_PATH="$pkgdir/usr" modules_install
+  make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 modules_install
 
   # remove build and source links
   rm "$modulesdir"/{source,build}
@@ -264,6 +264,9 @@ _package-headers() {
     esac
   done < <(find "$builddir" -type f -perm -u+x ! -name vmlinux -print0)
 
+  echo "Stripping vmlinux..."
+  strip -v $STRIP_STATIC "$builddir/vmlinux"
+
   echo "Adding symlink..."
   mkdir -p "$pkgdir/usr/src"
   ln -sr "$builddir" "$pkgdir/usr/src/$pkgbase"
@@ -299,4 +302,4 @@ done
 
 sha512sums=('SKIP'
             '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
-            '00845d8946dd5d81b04d6b4fb2c7aa2a58db9017b769621ba148dfeedaf8908d1b2c7b27c44c1205dd9c32330802e7596138814679b0270a053611355ef136ac')
+            '115c532231164a295539e4e7550b9ca5488ba9232c30979e1db92349e7c45ed547e439c77c43a07baf597d4caf850b9a845093f92d5081e47a94d72e1ad70d20')
