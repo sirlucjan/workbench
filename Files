@@ -88,12 +88,7 @@
 │   │       ├── config
 │   │       ├── PKGBUILD
 │   │       └── sphinx-workaround.patch
-│   ├── stable-rc
-│   │   └── linux-juliagoda-git
-│   │       ├── config
-│   │       ├── PKGBUILD
-│   │       └── sphinx-workaround.patch
-│   └── trunk
+│   └── stable-rc
 │       └── linux-juliagoda-git
 │           ├── config
 │           ├── PKGBUILD
@@ -224,4 +219,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-87 directories, 137 files
+85 directories, 134 files
