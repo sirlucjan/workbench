@@ -50,14 +50,14 @@ pkgbase=linux-aufs-git
 _major=5.7
 _srcname=linux-stable-rc
 pkgver=5.7.r13.g65992d1ef254
-pkgrel=0
+pkgrel=0.1
 pkgdesc='Linux AUFS'
 arch=('x86_64')
 url="https://github.com/sfjro/aufs5-standalone"
 license=('GPL2')
 options=('!strip')
 makedepends=('kmod' 'bc' 'libelf' 'git' 'python-sphinx' 'python-sphinx_rtd_theme'
-             'graphviz' 'imagemagick')
+             'graphviz' 'imagemagick' 'pahole')
 #_lucjanpath="https://raw.githubusercontent.com/sirlucjan/kernel-patches/master/${_major}"
 _lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major}"
 _aufs_path="aufs-patches"
@@ -208,7 +208,7 @@ _package() {
   echo "$pkgbase" | install -Dm644 /dev/stdin "$modulesdir/pkgbase"
 
   echo "Installing modules..."
-  make INSTALL_MOD_PATH="$pkgdir/usr" modules_install
+  make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 modules_install
 
   # remove build and source links
   rm "$modulesdir"/{source,build}
@@ -285,6 +285,9 @@ _package-headers() {
     esac
   done < <(find "$builddir" -type f -perm -u+x ! -name vmlinux -print0)
 
+  echo "Stripping vmlinux..."
+  strip -v $STRIP_STATIC "$builddir/vmlinux"
+
   echo "Adding symlink..."
   mkdir -p "$pkgdir/usr/src"
   ln -sr "$builddir" "$pkgdir/usr/src/$pkgbase"
@@ -323,4 +326,4 @@ sha512sums=('SKIP'
             'f13189fb9cc3488425bc82c45aedaf9ffa8a64f9320e89c18df528afa880ec8982ce9049359eb451690a22c503aace718cf98e89b0cc16b9566249bc7c4c34e0'
             '1f04c499a1dc00860ce515b105683daf9081d137bc6830ac6f9e68c8791e5032e583ecb628b5c35a6af80863cbda6222ed3515c6a55a24d193b2a11aa6766668'
             '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
-            '8ceabc5f836841b12489e74bf76c9b2231522d8f6d66f6fbdc7913f9f79e8b591f4ad705af0beae3ffbae51ae4f639ef1099b97c28e2f6ae1adbab9acc8fb17f')
+            'bdf91424b888534b59b00817df8c243beab0320f49835d5e7dbdd390f127bcdd3435ca31632f9d54fc6f0461336cca86dc686347ffeed62e0b2aa1a35ab0a484')
