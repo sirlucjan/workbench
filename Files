@@ -148,10 +148,6 @@
 │   │       ├── PKGBUILD
 │   │       └── sphinx-workaround.patch
 │   └── uml
-│       ├── linux-usermode-git
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
 │       ├── linux-usermode-rc
 │       │   ├── 70-uml.hook
 │       │   ├── config
@@ -210,4 +206,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-81 directories, 129 files
+80 directories, 126 files
