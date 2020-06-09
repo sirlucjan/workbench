@@ -100,11 +100,6 @@
 │   │       ├── config
 │   │       ├── PKGBUILD
 │   │       └── sphinx-workaround.patch
-│   ├── stable-rc
-│   │   └── linux-uksm
-│   │       ├── config
-│   │       ├── PKGBUILD
-│   │       └── sphinx-workaround.patch
 │   └── stable-rc-git
 │       ├── linux-aufs-git
 │       │   ├── config
@@ -168,4 +163,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-67 directories, 101 files
+65 directories, 98 files
