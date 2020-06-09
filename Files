@@ -88,10 +88,6 @@
 ├── linux-5.7
 │   ├── README.md
 │   └── stable-rc-git
-│       ├── linux-aufs-git
-│       │   ├── config
-│       │   ├── PKGBUILD
-│       │   └── sphinx-workaround.patch
 │       ├── linux-bfq-git
 │       │   ├── config
 │       │   ├── PKGBUILD
@@ -150,4 +146,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-61 directories, 89 files
+60 directories, 86 files
