@@ -48,11 +48,7 @@
 
 ######  linux-5.7rc
 
-[linux-5.7rc](https://github.com/sirlucjan/workbench/tree/master/linux-5.7rc) / [linux-5.7rc](https://gitlab.com/sirlucjan/workbench/tree/master/linux-5.7rc) - linux-aufs/linux-aufs-git && linux-bfq/linux-bfq-git && linux-uksm/linux-uksm-git
-
-###### linux-aufs/linux-aufs-git incorporates:
-
-* [AUFS](https://github.com/sfjro/aufs5-standalone/tree/aufs5.x-rcN) / [AUFS](http://aufs.sourceforge.net) - advanced multi-layered unification filesystem
+[linux-5.7rc](https://github.com/sirlucjan/workbench/tree/master/linux-5.7rc) / [linux-5.7rc](https://gitlab.com/sirlucjan/workbench/tree/master/linux-5.7rc) - linux-bfq/linux-bfq-git 
 
 ###### linux-bfq/linux-bfq-git incorporates:
 
@@ -73,10 +69,6 @@
 ###### To use linux-bfq/linux-bfq-git smoothly apply bfq-reverts before bfq-dev patch. Otherwise the kernel will not compile.
 
 * [bfq-reverts](https://github.com/sirlucjan/kernel-patches/tree/master/5.7-rc/bfq-reverts-all) / [bfq-reverts](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.7-rc/bfq-reverts-all) - specific patches authored by Piotr Gorski
-
-###### linux-uksm/linux-uksm-git incorporates:
-
-* [UKSM (sources)](https://github.com/dolohow/uksm) / [UKSM (info)](https://www.usenix.org/sites/default/files/conference/protected-files/fast18_slides_xia.pdf) - resync from dolohow’s github
 
 ######  linux-lqx-rebranded
 
