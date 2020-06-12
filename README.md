@@ -46,9 +46,9 @@
 
 * [bfq-reverts](https://github.com/sirlucjan/kernel-patches/tree/master/5.7/bfq-reverts) / [bfq-reverts](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.7/bfq-reverts) - specific patches authored by Piotr Gorski
 
-######  linux-5.7rc
+######  linux-5.8rc
 
-[linux-5.7rc](https://github.com/sirlucjan/workbench/tree/master/linux-5.7rc) / [linux-5.7rc](https://gitlab.com/sirlucjan/workbench/tree/master/linux-5.7rc) - linux-bfq/linux-bfq-git 
+[linux-5.8rc](https://github.com/sirlucjan/workbench/tree/master/linux-5.8rc) / [linux-5.8rc](https://gitlab.com/sirlucjan/workbench/tree/master/linux-5.8rc) - linux-bfq/linux-bfq-git 
 
 ###### linux-bfq/linux-bfq-git incorporates:
 
