@@ -1,24 +1,10 @@
 # Kernels and modules:
 
-- linux-aufs
-
-- linux-aufs-git
-
 - linux-bfq
  
 - linux-bfq-git
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/linux-bfq.svg)](https://repology.org/project/linux-bfq/versions)
-
-- linux-uksm
-
-- linux-uksm-git
-
-[![Packaging status](https://repology.org/badge/vertical-allrepos/linux-uksm.svg)](https://repology.org/project/linux-uksm/versions)
-
-###### linux-aufs/linux-aufs-git incorporates:
-
-* [AUFS](https://github.com/sfjro/aufs5-standalone/tree/aufs5.x-rcN) / [AUFS](http://aufs.sourceforge.net) - advanced multi-layered unification filesystem
 
 ###### linux-bfq/linux-bfq-git incorporates:
 
@@ -39,13 +25,6 @@
 ###### To use linux-bfq/linux-bfq-git smoothly apply bfq-reverts before bfq-dev patch. Otherwise the kernel will not compile.
 
 * [bfq-reverts](https://github.com/sirlucjan/kernel-patches/tree/master/5.7-rc/bfq-reverts-all) / [bfq-reverts](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.7-rc/bfq-reverts-all) - specific patches authored by Piotr Gorski
-
-###### linux-uksm/linux-uksm-git incorporates:
-
-* [UKSM (sources)](https://github.com/dolohow/uksm) / [UKSM (info)](https://www.usenix.org/sites/default/files/conference/protected-files/fast18_slides_xia.pdf) - resync from dolohow’s github
-
-[![latest packaged version(s)](https://repology.org/badge/latest-versions/linux-uksm.svg)](https://repology.org/project/linux-uksm/versions)
-
 
 ***
 
