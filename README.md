@@ -76,7 +76,7 @@
 
 ###### linux-lqx-git/linux-lqx-tag/linux-lqx-tag-git incorporates:
 
-* [liquorix patchset](https://github.com/damentz/liquorix-package/tree/5.6) - authored by Steven Barrett
+* [liquorix patchset](https://github.com/damentz/liquorix-package/tree/5.7) - authored by Steven Barrett
 
 [![latest packaged version(s)](https://repology.org/badge/latest-versions/linux-lqx.svg)](https://repology.org/project/linux-lqx/versions)
 
