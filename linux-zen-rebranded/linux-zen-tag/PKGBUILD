@@ -50,7 +50,7 @@ _zen=zen1
 _srcname=linux-${_major}
 pkgver=${_major}.${_minor}.${_zen}
 _pkgver=${_major}.${_minor}-${_zen}
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux ZEN'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -308,7 +308,7 @@ sha512sums=('45bde01593f6147c8c169b9e46b4b56eee998142552ae0ff82f1dd21b1fd54f3b32
             '2695ae63c9dadd3b233ffb11648d46d76bcac506f757351f6ceb66eecde35d4ea99ba633c8c8a31dd9103323b38c7115033b51f159a557a920b593f8450c30f8'
             'SKIP'
             '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
-            '0571cfe744e37f6b40815ae8c1073b6574cac39bd5a4b2a3c2684644ebb8bceb8929900b387a5a55b9d69d102550714f1994e7425a318b63a7cf594c8680dcf4')
+            '9564fa7d69fc5a79fec9dafb18ef7e9605a305c4dc59b5dfecec3d8c99557b852e61a94806b7dec6b855aab8833dea55b76588a0e8663117c120539f5eecd718')
 
 validpgpkeys=(
               'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
