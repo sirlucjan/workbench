@@ -46,9 +46,9 @@ pkgbase=linux-lqx-tag-git
 # pkgname=('linux-lqx-tag-git' 'linux-lqx-tag-git-headers' 'linux-lqx-tag-git-docs')
 _major=5.7
 _minor=6
-_lqx=lqx1
+_lqx=lqx2
 _srcname=zen-kernel
-pkgver=5.7.6.lqx1.r0.g73860ce2d940
+pkgver=5.7.6.lqx2.r0.g28a493009a07
 pkgrel=1
 pkgdesc='Linux LQX'
 arch=('x86_64')
@@ -300,4 +300,4 @@ done
 
 sha512sums=('SKIP'
             '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
-            'b7e4845ef98ed379244ac30a5cef3d67974af13e3eabe26f264ccbaa7151e90f4e18c82f87ff6842046a5b0cfa67a5534b947a3e61ff9509c825222dfcef9ed2')
+            '2298a96ca9d474fb9eaab499eaeae193f533067e91cd989ad120e8c80358d16575a210e1df481eff36f4a744efc45252a256e61ccf3759c21afb075bf9cbeb37')
