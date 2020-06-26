@@ -18,7 +18,7 @@
 │   │   │   ├── git
 │   │   │   │   ├── aufs-git
 │   │   │   │   │   └── config
-│   │   │   │   ├── bfq-git
+│   │   │   │   ├── bfq-dev-git
 │   │   │   │   │   └── config
 │   │   │   │   ├── lucjan-git
 │   │   │   │   │   └── config
@@ -31,7 +31,7 @@
 │   │   │   └── src
 │   │   │       ├── aufs
 │   │   │       │   └── config
-│   │   │       ├── bfq
+│   │   │       ├── bfq-dev
 │   │   │       │   └── config
 │   │   │       ├── lucjan
 │   │   │       │   └── config
