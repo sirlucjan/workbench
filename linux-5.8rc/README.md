@@ -1,10 +1,10 @@
 # Kernels and modules:
 
-- linux-bfq
+- linux-bfq-dev
  
-- linux-bfq-git
+- linux-bfq-dev-git
 
-[![Packaging status](https://repology.org/badge/vertical-allrepos/linux-bfq.svg)](https://repology.org/project/linux-bfq/versions)
+[![Packaging status](https://repology.org/badge/vertical-allrepos/linux-bfq-dev.svg)](https://repology.org/project/linux-bfq-dev/versions)
 
 ###### linux-bfq/linux-bfq-git incorporates:
 
@@ -18,11 +18,11 @@
 
 * [LL-patches](https://github.com/sirlucjan/kernel-patches/tree/master/5.8-rc/ll-patches) / [LL-patches](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.8-rc/ll-patches) - specific patches authored by Piotr Gorski
 
-[![latest packaged version(s)](https://repology.org/badge/latest-versions/linux-bfq.svg)](https://repology.org/project/linux-bfq/versions)
+[![latest packaged version(s)](https://repology.org/badge/latest-versions/linux-bfq-dev.svg)](https://repology.org/project/linux-bfq-dev/versions)
 
 ###### Some patches for BFQ conflict with patches for BFQ-dev.
 
-###### To use linux-bfq/linux-bfq-git smoothly apply bfq-reverts before bfq-dev patch. Otherwise the kernel will not compile.
+###### To use linux-bfq-dev/linux-bfq-dev-git smoothly apply bfq-reverts before bfq-dev patch. Otherwise the kernel will not compile.
 
 * [bfq-reverts](https://github.com/sirlucjan/kernel-patches/tree/master/5.8-rc/bfq-reverts-all) / [bfq-reverts](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.8-rc/bfq-reverts-all) - specific patches authored by Piotr Gorski
 
