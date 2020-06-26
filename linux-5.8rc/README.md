@@ -6,7 +6,7 @@
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/linux-bfq-dev.svg)](https://repology.org/project/linux-bfq-dev/versions)
 
-###### linux-bfq/linux-bfq-git incorporates:
+###### linux-bfq-dev/linux-bfq-dev-git incorporates:
 
 * [bfq improvements](https://groups.google.com/forum/#!forum/bfq-iosched) - latest fixes authored by Paolo Valente and BFQ Team
 
