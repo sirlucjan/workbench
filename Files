@@ -22,7 +22,7 @@
 │   │   │   │   │   └── config
 │   │   │   │   ├── lucjan-git
 │   │   │   │   │   └── config
-│   │   │   │   ├── rt-bfq-git
+│   │   │   │   ├── rt-bfq-dev-git
 │   │   │   │   │   └── config
 │   │   │   │   ├── uksm-git
 │   │   │   │   │   └── config
@@ -35,7 +35,7 @@
 │   │   │       │   └── config
 │   │   │       ├── lucjan
 │   │   │       │   └── config
-│   │   │       ├── rt-bfq
+│   │   │       ├── rt-bfq-dev
 │   │   │       │   └── config
 │   │   │       ├── uksm
 │   │   │       │   └── config
