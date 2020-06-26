@@ -48,7 +48,7 @@
 
 ######  linux-5.8rc
 
-[linux-5.8rc](https://github.com/sirlucjan/workbench/tree/master/linux-5.8rc) / [linux-5.8rc](https://gitlab.com/sirlucjan/workbench/tree/master/linux-5.8rc) - linux-bfq/linux-bfq-git 
+[linux-5.8rc](https://github.com/sirlucjan/workbench/tree/master/linux-5.8rc) / [linux-5.8rc](https://gitlab.com/sirlucjan/workbench/tree/master/linux-5.8rc) - linux-bfq-dev/linux-bfq-dev-git 
 
 ###### linux-bfq-dev/linux-bfq-dev-git incorporates:
 
