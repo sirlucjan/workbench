@@ -50,7 +50,7 @@ pkgbase=linux-bfq-dev-git
 _major=5.8
 _major_rc=5.8-rc
 _srcname=linux
-pkgver=5.8.rc3.r30.gcd77006e01b3
+pkgver=5.8.rc3.r82.gcdd3bb54332f
 pkgrel=1
 pkgdesc='Linux BFQ-dev'
 arch=('x86_64')
@@ -68,7 +68,7 @@ _bfq_rev_path="bfq-reverts-all"
 _bfq_rev_patch="0001-bfq-reverts.patch"
 _bfq_path="bfq-dev-lucjan"
 _bfq_ver="v11"
-_bfq_rel="r2K200701"
+_bfq_rel="r2K200702"
 _bfq_patch="${_major}-${_bfq_path}-${_bfq_ver}-${_bfq_rel}.patch"
 _gcc_path="cpu-patches-v3-sep"
 _gcc_patch="0001-cpu-${_major}-merge-graysky-s-patchset.patch"
@@ -340,7 +340,7 @@ done
 
 sha512sums=('SKIP'
             'eda1b208fa2ba8f08685a975436eb836e2090988a7ac0cca91c18f2581af0212a5d92ceeaa970ee78fedbad94becf6fbcfaa31c25740a3ce73e6f2da38f75f17'
-            '17d45679a34850546b74412de193559018223d3adec6a167781ac02216d1d4eb40d7c5dcdd3baeb439d5e1779e723b157aea85f7b4831ed02f0028c778fe0ea2'
+            '4c456c80b92702095347342b8cc45dfa2da10fdd19c6e735f7ddfc2df0ec6b936d88f73293ff6701fa8f810cecbcb6f648c67da9727906dd1e4d8741b650b517'
             '442d0ed07622c6c62107ecf1c73b44c7623d3c57c5c61bcfb29be04ee2d40af6c9e96b9467aeb811d0b205749b2363bc8f8af8853f75ecbce7d9c920c535789f'
             '11a66d1d1539c6fcf703c1524b87512227c1ee6a54b364202cd2400df9fc7868c0686d868110ae8cea0cc554bac67ce9379e576474f11a86bf534b9f98e0d765'
             '2d4fab27c52e15ba9fa1926e45ae2c9bb3874ea4930f4a767b24c4ad8c4d6a80b5d7440af64c3d7404fe2465840f1257abe2860f4a5f51676b98100b3e415265'
