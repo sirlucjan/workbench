@@ -50,7 +50,7 @@ pkgbase=linux-bfq-dev-git
 _major=5.8
 _major_rc=5.8-rc
 _srcname=linux
-pkgver=5.8.rc3.r82.gcdd3bb54332f
+pkgver=5.8.rc4.r0.gdcb7fd82c75e
 pkgrel=1
 pkgdesc='Linux BFQ-dev'
 arch=('x86_64')
@@ -77,9 +77,7 @@ source=("git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git"
         "${_lucjanpath}/${_bfq_rev_path}/${_bfq_rev_patch}"
         "${_lucjanpath}/${_bfq_path}/${_bfq_patch}"
         "${_lucjanpath}/${_gcc_path}/${_gcc_patch}"
-        "${_lucjanpath}/arch-patches-v3-sep/0001-fixes-5.8-add-knobs-to-disallow-unprivileged-CLONE_N.patch"
-        "${_lucjanpath}/arch-patches-v3-sep/0002-ALSA-usb-audio-Fix-packet-size-calculation.patch"
-        "${_lucjanpath}/arch-patches-v3-sep/0003-drm-amd-display-Only-revalidate-bandwidth-on-medium-.patch"
+        "${_lucjanpath}/arch-patches/0001-fixes-5.8-add-knobs-to-disallow-unprivileged-CLONE_N.patch"
         'sphinx-workaround.patch'
          # the main kernel config files
         'config')
@@ -342,8 +340,6 @@ sha512sums=('SKIP'
             'eda1b208fa2ba8f08685a975436eb836e2090988a7ac0cca91c18f2581af0212a5d92ceeaa970ee78fedbad94becf6fbcfaa31c25740a3ce73e6f2da38f75f17'
             '4c456c80b92702095347342b8cc45dfa2da10fdd19c6e735f7ddfc2df0ec6b936d88f73293ff6701fa8f810cecbcb6f648c67da9727906dd1e4d8741b650b517'
             '442d0ed07622c6c62107ecf1c73b44c7623d3c57c5c61bcfb29be04ee2d40af6c9e96b9467aeb811d0b205749b2363bc8f8af8853f75ecbce7d9c920c535789f'
-            '11a66d1d1539c6fcf703c1524b87512227c1ee6a54b364202cd2400df9fc7868c0686d868110ae8cea0cc554bac67ce9379e576474f11a86bf534b9f98e0d765'
-            '2d4fab27c52e15ba9fa1926e45ae2c9bb3874ea4930f4a767b24c4ad8c4d6a80b5d7440af64c3d7404fe2465840f1257abe2860f4a5f51676b98100b3e415265'
-            '3c6318f33a763cb842719abca535e0e4e5b944584ca8491415cb042edf15657368f702a7f7db2627c40c7ca2b27dcafa079a58b3a92b55926e4bd01e57723388'
+            'b42c802c90943eab465f2afc4490e246d617c66961ecdf50eae712643082b1370bba66f5f08ee4694df85349e7ed4c6b83ab5cb9e20e10ba4e96068be700cdc9'
             '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
             '24b3733edde49e8c267483ff0d3d72612eb7e4535a724376d585a15663f9d00723a3bada40ec8dff245b3fb3f9971f76440d448a7c15f277783bd19c87b08a97')
