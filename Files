@@ -93,6 +93,10 @@
 │   │   ├── config
 │   │   ├── PKGBUILD
 │   │   └── sphinx-workaround.patch
+│   ├── linux-uksm
+│   │   ├── config
+│   │   ├── PKGBUILD
+│   │   └── sphinx-workaround.patch
 │   └── README.md
 ├── linux-lqx-rebranded
 │   ├── linux-lqx-git
@@ -118,4 +122,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-53 directories, 65 files
+54 directories, 68 files
