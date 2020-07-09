@@ -53,7 +53,7 @@ _minor=rc4
 _tag=v${_major}-${_minor}
 pkgver=${_major}${_minor}
 _srcname=linux
-pkgrel=2
+pkgrel=3
 pkgdesc='Linux BFQ-dev'
 arch=('x86_64')
 url="https://github.com/sirlucjan/bfq-mq-lucjan"
@@ -79,7 +79,9 @@ source=("git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git#tag=${
         "${_lucjanpath}/${_bfq_rev_path}/${_bfq_rev_patch}"
         "${_lucjanpath}/${_bfq_path}/${_bfq_patch}"
         "${_lucjanpath}/${_gcc_path}/${_gcc_patch}"
-        "${_lucjanpath}/arch-patches/0001-fixes-5.8-add-knobs-to-disallow-unprivileged-CLONE_N.patch"
+        "${_lucjanpath}/arch-patches-v4-sep/0001-fixes-5.8-add-knobs-to-disallow-unprivileged-CLONE_N.patch"
+        "${_lucjanpath}/arch-patches-v4-sep/0002-Revert-ath9k-Fix-general-protection-fault-in-ath9k_h.patch"
+        "${_lucjanpath}/arch-patches-v4-sep/0003-iwlwifi-Make-some-Killer-Wireless-AC-1550-cards-work.patch"
         'sphinx-workaround.patch'
          # the main kernel config files
         'config')
@@ -335,7 +337,9 @@ sha512sums=('SKIP'
             'eda1b208fa2ba8f08685a975436eb836e2090988a7ac0cca91c18f2581af0212a5d92ceeaa970ee78fedbad94becf6fbcfaa31c25740a3ce73e6f2da38f75f17'
             'f4dd133d200d5e48f04c60ab0e079b206d1a8c85b26fc5491e05a38fef6c53ade41fd5b8a2ee8622dd9e4303992b7ba31cc6f7679534423d43ffdbc251985e85'
             '442d0ed07622c6c62107ecf1c73b44c7623d3c57c5c61bcfb29be04ee2d40af6c9e96b9467aeb811d0b205749b2363bc8f8af8853f75ecbce7d9c920c535789f'
-            'b42c802c90943eab465f2afc4490e246d617c66961ecdf50eae712643082b1370bba66f5f08ee4694df85349e7ed4c6b83ab5cb9e20e10ba4e96068be700cdc9'
+            'b09e755b512f8265b0da0a7a715931fd3242f04145f4509af686ae003e896caedc7c4f50286697b2348b3fedbd749b44b9940ec3747a4ad772aab06909e86e9c'
+            '44ce19ba16c8eaf409411412568d42105a654f73cc936af53fe848f1bf59aa8cf004ea2c43b8179721bb04815447b977336dc41defc36862413abbb0511cac33'
+            'e73bd07579a537870072003ade766e63ac32a5db3685e6944ee1cb64258b8b8c9c7f5fb5d106c7d33b47c70dfcfe3d12bab31cdfd56ab9bfab2cba6ede328636'
             '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
             '24b3733edde49e8c267483ff0d3d72612eb7e4535a724376d585a15663f9d00723a3bada40ec8dff245b3fb3f9971f76440d448a7c15f277783bd19c87b08a97')
 
