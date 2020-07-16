@@ -49,7 +49,7 @@ _minor=9
 _lqx=lqx1
 _srcname=zen-kernel
 pkgver=5.7.9.lqx1.r0.g8193f30e2d83
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux LQX'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -300,4 +300,4 @@ done
 
 sha512sums=('SKIP'
             '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
-            '2298a96ca9d474fb9eaab499eaeae193f533067e91cd989ad120e8c80358d16575a210e1df481eff36f4a744efc45252a256e61ccf3759c21afb075bf9cbeb37')
+            '57d9faa45fd9ad2270b292c5e066d8b308405d13b63b61d07e4be0d8b5041046c209bcd02a387ff3e9f6b409dfc21f208918d28c088826e8ec0e313821640768')
