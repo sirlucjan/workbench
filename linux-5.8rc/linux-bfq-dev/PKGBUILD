@@ -70,7 +70,7 @@ _bfq_rev_path="bfq-reverts-all"
 _bfq_rev_patch="0001-bfq-reverts.patch"
 _bfq_path="bfq-dev-lucjan"
 _bfq_ver="v12"
-_bfq_rel="r2K200723"
+_bfq_rel="r2K200729"
 _bfq_patch="${_major}-${_bfq_path}-${_bfq_ver}-${_bfq_rel}.patch"
 _gcc_path="cpu-patches-v3-sep"
 _gcc_patch="0001-cpu-${_major}-merge-graysky-s-patchset.patch"
@@ -79,9 +79,10 @@ source=("git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git#tag=${
         "${_lucjanpath}/${_bfq_rev_path}/${_bfq_rev_patch}"
         "${_lucjanpath}/${_bfq_path}/${_bfq_patch}"
         "${_lucjanpath}/${_gcc_path}/${_gcc_patch}"
-        "${_lucjanpath}/arch-patches-v7-sep/0001-fixes-5.8-add-knobs-to-disallow-unprivileged-CLONE_N.patch"
-        "${_lucjanpath}/arch-patches-v7-sep/0002-Revert-ath9k-Fix-general-protection-fault-in-ath9k_h.patch"
-        "${_lucjanpath}/arch-patches-v7-sep/0003-virt-vbox-Add-support-for-the-new-VBG_IOCTL_ACQUIRE_.patch"
+        "${_lucjanpath}/arch-patches-v8-sep/0001-fixes-5.8-add-knobs-to-disallow-unprivileged-CLONE_N.patch"
+        "${_lucjanpath}/arch-patches-v8-sep/0002-Revert-ath9k-Fix-general-protection-fault-in-ath9k_h.patch"
+        "${_lucjanpath}/arch-patches-v8-sep/0003-virt-vbox-Add-support-for-the-new-VBG_IOCTL_ACQUIRE_.patch"
+        "${_lucjanpath}/arch-patches-v8-sep/0004-drm-amd-display-Clear-dm_state-for-fast-updates.patch"
         'sphinx-workaround.patch'
          # the main kernel config files
         'config')
@@ -335,13 +336,14 @@ done
 
 sha512sums=('SKIP'
             'eda1b208fa2ba8f08685a975436eb836e2090988a7ac0cca91c18f2581af0212a5d92ceeaa970ee78fedbad94becf6fbcfaa31c25740a3ce73e6f2da38f75f17'
-            '9d729a0b9da6a3d788c5587ce594edb633efa4d1973aa31568839ef0ffa68a54fb60fbd772942a9c58ffc41f6bbca72e79291eac57824a1da3ea17cb593e8373'
+            'e9e503bcf3ce2646fa96f7fdd044b0f49568f0c52cb5635c1b1a644d913d7b59f1be789d77a9e4253dabc6a6572a83a30f24b2978145fe293f271d42113cb69a'
             '442d0ed07622c6c62107ecf1c73b44c7623d3c57c5c61bcfb29be04ee2d40af6c9e96b9467aeb811d0b205749b2363bc8f8af8853f75ecbce7d9c920c535789f'
-            '0137f6eb42cc5c0da9ce94ac29554a4540cf6069b29519357600afcc9fa826ced4209fe85f1b5a59ac1c0f534325d8f5625c5c22086710728f8d1ceefb4198bc'
-            '1e9711809304b97e4236baf55eca84efab8bb9d0d889f373cec65c8791a71bb7d1c601c5a7a4f942e3e40aa9c4d8e51b3f417ba3a3e5ab958089d6a5148f38f1'
-            'aeaeedc5bf7d3eae41fefd6483da10deba435edceadde9d1b847dbcc5ce434a23e6b8736234b7c6c58ac482c19c90515bf271cd3bf306611d15facd538ba4fb8'
+            '533a8bb98823adbb872f42699d94ae09ed98c83dc533707b54d9770b06d2af53d1712554d00248f92a9da7594dc8d63193e9e25ff275efd9f95476a0c74e8710'
+            'b4ab6daed182e8a9cde032cd5452177a5af476436d2133bc9d3bbdfa28ddf212d24ce0279b1844c8c04eae12a2386decb4333ca686d2db08acb9de9b104f9937'
+            '37f7fa62d08cf1953df75df073e09e8bb347b8223e44efdb44f078d8d704e5cf18b5e263eba2579cd76d1a5a27970bdfe6268c0b195b07aa4637f0764a5c814b'
+            '56000dd490ddf0c41def16d85af52af58d7a75d6d0431cf749324198fd0cae002c7dba56ae705993c9477085cb54cd7c5a40bef33811de0059ae86f02274c3be'
             '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
-            '24b3733edde49e8c267483ff0d3d72612eb7e4535a724376d585a15663f9d00723a3bada40ec8dff245b3fb3f9971f76440d448a7c15f277783bd19c87b08a97')
+            'b5f4da4fd44ade3d75ea4c6a74b76a7e7a3d6772c5bfab979ce57ce1d8d49929927f97bd73d507838c770ba9ced4b95cad1ea196f04501e82ab01e3a3a967fd6')
 
 validpgpkeys=(
               'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
