@@ -1,0 +1,41 @@
+# Maintainer: Piotr Górski <lucjan.lucjanov@gmail.com>
+# Contributor: Allan McRae <allan@archlinux.org>
+
+# toolchain build order: linux-api-headers->glibc->binutils->gcc->binutils->glibc
+
+pkgname=linux-api-headers
+_major=5.8
+#_minor=1
+#pkgver=${_major}.${_minor}
+pkgver=${_major}
+_srcname=linux-${pkgver}
+pkgrel=1
+pkgdesc="Kernel headers sanitized for use in userspace"
+arch=('any')
+url="http://www.gnu.org/software/libc"
+license=('GPL2')
+makedepends=('rsync')
+provides=("linux-api-headers=$pkgver")
+conflicts=('linux-api-headers')
+source=(https://www.kernel.org/pub/linux/kernel/v5.x/linux-${pkgver}.tar.xz
+        https://www.kernel.org/pub/linux/kernel/v5.x/linux-${pkgver}.tar.sign)
+md5sums=('0e5c4c15266218ef26c50fac0016095b'
+         'SKIP')
+
+validpgpkeys=('ABAF11C65A2970B130ABE3C479BE3E4300411886'   # Linus Torvalds
+              '647F28654894E3BD457199BE38DBBDC86092693E')  # Greg Kroah-Hartman
+
+build() {
+  cd linux-${pkgver}
+
+  make mrproper
+  make headers_check
+}
+
+package() {
+  cd linux-${pkgver}
+  make INSTALL_HDR_PATH="$pkgdir/usr" headers_install
+
+  # use headers from libdrm
+  rm -r "$pkgdir/usr/include/drm"
+}
