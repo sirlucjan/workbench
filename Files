@@ -135,8 +135,6 @@
 │           ├── 70-uml.hook
 │           ├── config
 │           └── PKGBUILD
-├── linux-5.8rc
-│   └── README.md
 ├── linux-lqx-rebranded
 │   ├── linux-lqx-git
 │   │   ├── PKGBUILD
@@ -161,4 +159,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-74 directories, 87 files
+73 directories, 86 files
