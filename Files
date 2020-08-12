@@ -149,7 +149,6 @@
 │       ├── linux-usermode
 │       │   ├── 70-uml.hook
 │       │   ├── config
-│       │   ├── linux-usermode-5.8.1-1.src.tar.gz
 │       │   └── PKGBUILD
 │       ├── linux-usermode-git
 │       │   ├── 70-uml.hook
@@ -187,4 +186,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-79 directories, 108 files
+79 directories, 107 files
