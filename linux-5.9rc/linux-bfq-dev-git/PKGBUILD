@@ -50,7 +50,7 @@ pkgbase=linux-bfq-dev-git
 _major=5.9
 _major_rc=5.9-rc
 _srcname=linux
-pkgver=5.9.rc2.r0.gd012a7190fc1
+pkgver=5.9.rc2.r41.g9907ab371426
 pkgrel=1
 pkgdesc='Linux BFQ-dev'
 arch=('x86_64')
@@ -64,7 +64,7 @@ _lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major_rc}
 # Some patches for BFQ conflict with patches for BFQ-dev.
 # To use linux-bfq-dev-git smoothly apply bfq-reverts before bfq-dev patch.
 # Otherwise the kernel will not compile.
-_bfq_rev_path="bfq-reverts-all"
+_bfq_rev_path="bfq-reverts-v2-all"
 _bfq_rev_patch="0001-bfq-reverts.patch"
 _bfq_path="bfq-dev-lucjan"
 _bfq_ver="v12"
@@ -337,7 +337,7 @@ for _p in "${pkgname[@]}"; do
 done
 
 sha512sums=('SKIP'
-            '76dbd7288978e5f1da821e4f5b3a2ef2785f518b24d730286755847419d8a79956e698878af9b508d26cbafc033e72964a523e1a5f468dca2a71ed90774ccf08'
+            '78ee9a12aea86ea0d832f70081a700c1d8f7edc561e07d574b47240f9d4c5de6232bcb30da6e3fa8ae889e69e8037f3949ae0ffecc91fdc40c623ad7c3ef46e5'
             '2bae42e2c6e2fbe58f93a93f598db3205cc80117cbbd358a6a956b5859189d77a999921650de43a7bc13fbd0e601f8cbe6eb55d4c53c6f29c3fc3527975d424c'
             '0c24d75a1350d1e974df342d77cb98bdc9c84a9af03788ff95e152c95d292b72ca870bb1e3b963a8f3a3387471e13e038b4bd1dc8b4063851a40e43e55c075c4'
             '6be8788bfa09f67273682cba1c4566cd1dc48b162c193a482d6565148779c80b6fb2fbe73d2d417dd9e53ca7a69d4ac2012fc98a48a8a0fcd5ac05161e7539c5'
