@@ -50,7 +50,7 @@ pkgbase=linux-uksm-git
 _major=5.9
 _major_rc=5.9-rc
 _srcname=linux
-pkgver=5.9.rc2.r0.gd012a7190fc1
+pkgver=5.9.rc2.r96.g15bc20c6af4c
 pkgrel=1
 pkgdesc='Linux UKSM'
 arch=('x86_64')
@@ -327,4 +327,4 @@ sha512sums=('SKIP'
             '0c24d75a1350d1e974df342d77cb98bdc9c84a9af03788ff95e152c95d292b72ca870bb1e3b963a8f3a3387471e13e038b4bd1dc8b4063851a40e43e55c075c4'
             '6be8788bfa09f67273682cba1c4566cd1dc48b162c193a482d6565148779c80b6fb2fbe73d2d417dd9e53ca7a69d4ac2012fc98a48a8a0fcd5ac05161e7539c5'
             '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
-            'd37d2dbec0ffcb61e395ae28db0fe7f84bad1aa6c543a833ad83127cd0b4143c7ac4361ac4aed0b6e0a56b35f13eb7ac38a62ceea646a1d3644ac609bbd3fd09')
+            'e16ff1e439b4dfa7a797f820aaa66f0c2e20217fe2cbfde9ed05cb96bad45afaab4fa452aa0343d74f6a0f21a629bd52b71be872a3de1e4fecb0878d6fec89d0')
