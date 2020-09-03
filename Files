@@ -105,8 +105,6 @@
 │           └── sphinx-workaround.patch
 ├── linux-5.8
 │   ├── api-headers
-│   │   ├── linux-api-headers-git
-│   │   │   └── PKGBUILD
 │   │   └── linux-api-headers-rc-git
 │   │       └── PKGBUILD
 │   ├── README.md
@@ -208,4 +206,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-88 directories, 120 files
+87 directories, 119 files
