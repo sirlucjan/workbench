@@ -132,20 +132,15 @@
 │   │       ├── config
 │   │       ├── PKGBUILD
 │   │       └── sphinx-workaround.patch
-│   ├── stable-rc-git
-│   │   ├── linux-bfq-dev-git
-│   │   │   ├── config
-│   │   │   ├── PKGBUILD
-│   │   │   └── sphinx-workaround.patch
-│   │   └── linux-uksm-git
-│   │       ├── config
-│   │       ├── PKGBUILD
-│   │       └── sphinx-workaround.patch
-│   └── uml
-│       └── linux-usermode-rc-git
-│           ├── 70-uml.hook
+│   └── stable-rc-git
+│       ├── linux-bfq-dev-git
+│       │   ├── config
+│       │   ├── PKGBUILD
+│       │   └── sphinx-workaround.patch
+│       └── linux-uksm-git
 │           ├── config
-│           └── PKGBUILD
+│           ├── PKGBUILD
+│           └── sphinx-workaround.patch
 ├── linux-5.9rc
 │   ├── linux-bfq-dev
 │   │   ├── config
@@ -191,4 +186,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-82 directories, 109 files
+80 directories, 106 files
