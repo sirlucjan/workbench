@@ -40,6 +40,9 @@ _localmodcfg=
 # a new kernel is released, but again, convenient for package bumps.
 _use_current=
 
+### Enable htmldocs (increases compile time)
+_htmldocs_enable=
+
 ### Do not edit below this line unless you know what you're doing
 
 pkgbase=linux-lqx-tag-git
@@ -55,13 +58,22 @@ arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
 license=('GPL2')
 options=('!strip')
-makedepends=('kmod' 'bc' 'libelf' 'git' 'python-sphinx' 'python-sphinx_rtd_theme'
-             'graphviz' 'imagemagick')
+makedepends=(bc kmod libelf zstd git)
+if [ -n "$_htmldocs_enable" ]; then
+    makedepends+=(xmlto python-sphinx python-sphinx_rtd_theme graphviz imagemagick)
+fi
+options=('!strip')
 
 source=("git://github.com/${_srcname}/${_srcname}#tag=v${_major}.${_minor}-${_lqx}"
         'sphinx-workaround.patch'
          # the main kernel config files
         'config')
+sha512sums=('SKIP'
+            '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
+            'f160d8b56daffdfd0dc82a4d93d331d618b0e127af38919833bff36e6fcd270dfb0b37eccca37aa0065394676aeb672fa8a094e7cc2ac09f7d206f520448fd5d')
+
+
+
 
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
@@ -164,15 +176,17 @@ build() {
   cd $_srcname
 
   make all
-  make htmldocs
+  if [ -n "$_htmldocs_enable" ]; then
+    make htmldocs
+  fi
 }
 
 _package() {
     pkgdesc="The $pkgdesc kernel and modules"
-    depends=('coreutils' 'kmod' 'initramfs')
+    depends=(coreutils kmod initramfs)
     optdepends=('crda: to set the correct wireless channels of your country'
                 'linux-firmware: firmware images needed for some devices'
-                'modprobed-db: Keeps track of EVERY kernel module that has ever been probed - useful for those of us who make localmodconfig')
+                'sof-firmware: firmware images needed for Sound Open Firmware capable devices')
     provides=(VIRTUALBOX-GUEST-MODULES WIREGUARD-MODULE)
 
   cd $_srcname
@@ -297,7 +311,3 @@ for _p in "${pkgname[@]}"; do
     _package${_p#$pkgbase}
   }"
 done
-
-sha512sums=('SKIP'
-            '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
-            'f160d8b56daffdfd0dc82a4d93d331d618b0e127af38919833bff36e6fcd270dfb0b37eccca37aa0065394676aeb672fa8a094e7cc2ac09f7d206f520448fd5d')
