@@ -18,8 +18,6 @@
 │   │   │   ├── git
 │   │   │   │   ├── aufs-git
 │   │   │   │   │   └── config
-│   │   │   │   ├── bfq-dev-git
-│   │   │   │   │   └── config
 │   │   │   │   ├── lucjan-git
 │   │   │   │   │   └── config
 │   │   │   │   ├── uksm-git
@@ -28,8 +26,6 @@
 │   │   │   │       └── config
 │   │   │   └── src
 │   │   │       ├── aufs
-│   │   │       │   └── config
-│   │   │       ├── bfq-dev
 │   │   │       │   └── config
 │   │   │       ├── lucjan
 │   │   │       │   └── config
@@ -148,4 +144,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-67 directories, 81 files
+65 directories, 79 files
