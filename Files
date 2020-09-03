@@ -18,14 +18,10 @@
 │   │   │   ├── git
 │   │   │   │   ├── aufs-git
 │   │   │   │   │   └── config
-│   │   │   │   ├── uksm-git
-│   │   │   │   │   └── config
 │   │   │   │   └── uml-git
 │   │   │   │       └── config
 │   │   │   └── src
 │   │   │       ├── aufs
-│   │   │       │   └── config
-│   │   │       ├── uksm
 │   │   │       │   └── config
 │   │   │       └── uml
 │   │   │           └── config
@@ -140,4 +136,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-63 directories, 77 files
+61 directories, 75 files
