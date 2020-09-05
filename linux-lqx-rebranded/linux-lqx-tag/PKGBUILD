@@ -48,12 +48,12 @@ _htmldocs_enable=
 pkgbase=linux-lqx-tag
 # pkgname=('linux-lqx-tag' 'linux-lqx-tag-headers' 'linux-lqx-tag-docs')
 _major=5.8
-_minor=6
+_minor=7
 _lqx=lqx1
 _srcname=linux-${_major}
 pkgver=${_major}.${_minor}.${_lqx}
 _pkgver=${_major}.${_minor}-${_lqx}
-pkgrel=4
+pkgrel=1
 pkgdesc='Linux Liquorix'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -74,7 +74,7 @@ source=("https://cdn.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.xz"
         'config')
 sha512sums=('45a53ecf351096ef6e98242cca4228b8da9b9139ecc6963695791ea6fb7a9484a4e1c19dcca7ce7cbfdfa49de0451b70973bb078f12bdae9cbaddbc3f8092556'
             'SKIP'
-            '1790e5b12cb2840d25ae9a3e8a0d259941cb13a3f491fcaafaed149ba899667220da5c18414a41f353807f2c9666fd721b9403584cfbc493640abde9b0218199'
+            'c9da6480fa1ef4ca6bb5cf1ef56e748b60c56e4b24662906ed01e74ada4d888872c4b1616ebb31ec8543f0ed7ce0d8c658f073b0a6f1a9f4ac1ef37a38ee0e05'
             'SKIP'
             '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
             'f160d8b56daffdfd0dc82a4d93d331d618b0e127af38919833bff36e6fcd270dfb0b37eccca37aa0065394676aeb672fa8a094e7cc2ac09f7d206f520448fd5d')
