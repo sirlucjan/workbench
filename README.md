@@ -68,7 +68,7 @@
 
 ###### To use linux-bfq-dev/linux-bfq-dev-git smoothly apply bfq-reverts before bfq-dev patch. Otherwise the kernel will not compile.
 
-* [bfq-reverts](https://github.com/sirlucjan/kernel-patches/tree/master/5.9-rc/bfq-reverts-all) / [bfq-reverts](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.9-rc/bfq-reverts-all) - specific patches authored by Piotr Gorski
+* [bfq-reverts](https://github.com/sirlucjan/kernel-patches/tree/master/5.9-rc/bfq-reverts-v3-all) / [bfq-reverts](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.9-rc/bfq-reverts-v3-all) - specific patches authored by Piotr Gorski
 
 ###### linux-uksm incorporates:
 
