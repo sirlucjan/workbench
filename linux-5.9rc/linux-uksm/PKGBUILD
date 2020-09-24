@@ -53,7 +53,7 @@ _minor=rc6
 _tag=v${_major}-${_minor}
 pkgver=${_major}${_minor}
 _srcname=linux
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux UKSM'
 arch=('x86_64')
 url="https://github.com/dolohow/uksm"
@@ -74,7 +74,7 @@ source=("git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git#tag=${
         "${_lucjanpath}/${_uksm_path}/${_uksm_patch}"
         "${_lucjanpath}/${_gcc_path}/${_gcc_patch}"
         "${_lucjanpath}/arch-patches/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
-        'sphinx-workaround.patch'
+        "${_lucjanpath}/docs-patches/0001-Documentation-Fix-sphinx-3.0-causes-compilation-erro.patch"
          # the main kernel config files
         'config')
 
@@ -322,7 +322,7 @@ sha512sums=('SKIP'
             '3335cfea903932ed41bb2a8f5da46609bc2bfeb0fd9deeed45eb894336f23e2c666e44c36e3364eb327348205abfc3eded880a23bac7ab9a95b570cec35a0fe4'
             '0c24d75a1350d1e974df342d77cb98bdc9c84a9af03788ff95e152c95d292b72ca870bb1e3b963a8f3a3387471e13e038b4bd1dc8b4063851a40e43e55c075c4'
             '6be8788bfa09f67273682cba1c4566cd1dc48b162c193a482d6565148779c80b6fb2fbe73d2d417dd9e53ca7a69d4ac2012fc98a48a8a0fcd5ac05161e7539c5'
-            '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be'
+            '711ecce2ce54c81e8b60b9b347cb88db054bf697396ee15e9b425671f88d22a14dae17c1c451aa10bd1d7a71c145b2fa588863205ec94e1439ed9b2769ee2e4c'
             '211b2447d0f9d75b9aab78bb18e3c24599fab3134d714ca8fb4ea9aea89b845ad6bae2a11ec806cea58e35175a53dff294f115a0d1a9cd9ee035e2e56e6ad1e5')
 
 validpgpkeys=(
