@@ -2,8 +2,7 @@
 ├── aur-rebased
 │   ├── linux-zen-git
 │   │   ├── config
-│   │   ├── PKGBUILD
-│   │   └── sphinx-workaround.patch
+│   │   └── PKGBUILD
 │   └── README.md
 ├── Devel
 │   ├── Config
@@ -121,4 +120,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-59 directories, 62 files
+59 directories, 61 files
