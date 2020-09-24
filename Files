@@ -114,12 +114,11 @@
 ├── linux-zen-rebranded
 │   ├── linux-zen-tag
 │   │   ├── config
-│   │   ├── PKGBUILD
-│   │   └── sphinx-workaround.patch
+│   │   └── PKGBUILD
 │   └── README.md
 ├── README.md
 └── xf86-video-intel-dev-git
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-59 directories, 63 files
+59 directories, 62 files
