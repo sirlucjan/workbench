@@ -91,8 +91,7 @@
 │   │   └── PKGBUILD
 │   ├── linux-bfq-dev-git
 │   │   ├── config
-│   │   ├── PKGBUILD
-│   │   └── sphinx-workaround.patch
+│   │   └── PKGBUILD
 │   ├── linux-uksm
 │   │   ├── config
 │   │   ├── PKGBUILD
@@ -129,4 +128,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-59 directories, 70 files
+59 directories, 69 files
