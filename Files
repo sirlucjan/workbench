@@ -88,8 +88,7 @@
 ├── linux-5.9rc
 │   ├── linux-bfq-dev
 │   │   ├── config
-│   │   ├── PKGBUILD
-│   │   └── sphinx-workaround.patch
+│   │   └── PKGBUILD
 │   ├── linux-bfq-dev-git
 │   │   ├── config
 │   │   ├── PKGBUILD
@@ -130,4 +129,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-59 directories, 71 files
+59 directories, 70 files
