@@ -80,8 +80,7 @@
 │   ├── stable
 │   │   └── linux-juliagoda-git
 │   │       ├── config
-│   │       ├── PKGBUILD
-│   │       └── sphinx-workaround.patch
+│   │       └── PKGBUILD
 │   └── stable-rc
 │       └── linux-juliagoda-git
 │           ├── config
@@ -132,4 +131,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-59 directories, 73 files
+59 directories, 72 files
