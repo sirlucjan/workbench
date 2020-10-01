@@ -53,7 +53,7 @@ _lqx=lqx2
 _srcname=linux-${_major}
 pkgver=${_major}.${_minor}.${_lqx}
 _pkgver=${_major}.${_minor}-${_lqx}
-pkgrel=2
+pkgrel=3
 pkgdesc='Linux Liquorix'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -145,7 +145,7 @@ prepare() {
         if [ -n "$_NUMAdisable" ]; then
             echo "Disabling NUMA from kernel config..."
             sed -i -e 's/CONFIG_NUMA=y/# CONFIG_NUMA is not set/' \
-                -i -e '/CONFIG_AMD_NUMA=y/d' \
+                -i -e '/# CONFIG_AMD_NUMA is not set/d' \
                 -i -e '/CONFIG_X86_64_ACPI_NUMA=y/d' \
                 -i -e '/# CONFIG_NUMA_EMU is not set/d' \
                 -i -e '/CONFIG_NODES_SHIFT=6/d' \
