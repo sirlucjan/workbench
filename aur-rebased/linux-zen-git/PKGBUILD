@@ -46,7 +46,7 @@ pkgbase=linux-zen-git
 # pkgname=('linux-zen-git' 'linux-zen-git-headers' 'linux-zen-git-docs')
 _major=5.8
 _srcname=zen-kernel
-pkgver=5.8.11.r937002.g89c83661c97b
+pkgver=5.8.12.r937072.g36f90083d7f7
 pkgrel=1
 pkgdesc='Linux ZEN'
 arch=('x86_64')
@@ -124,11 +124,9 @@ prepare() {
             sed -i -e 's/CONFIG_NUMA=y/# CONFIG_NUMA is not set/' \
                 -i -e '/CONFIG_AMD_NUMA=y/d' \
                 -i -e '/CONFIG_X86_64_ACPI_NUMA=y/d' \
-                -i -e '/CONFIG_NODES_SPAN_OTHER_NODES=y/d' \
                 -i -e '/# CONFIG_NUMA_EMU is not set/d' \
-                -i -e '/CONFIG_NODES_SHIFT=6/d' \
+                -i -e '/CONFIG_NODES_SHIFT=5/d' \
                 -i -e '/CONFIG_NEED_MULTIPLE_NODES=y/d' \
-                -i -e '/# CONFIG_MOVABLE_NODE is not set/d' \
                 -i -e '/CONFIG_USE_PERCPU_NUMA_NODE_ID=y/d' \
                 -i -e '/CONFIG_ACPI_NUMA=y/d' ./.config
         fi
