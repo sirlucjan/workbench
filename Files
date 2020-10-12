@@ -44,8 +44,11 @@
 │   │   │       └── uml
 │   │   │           └── config
 │   │   └── 5.9
-│   │       └── git
-│   │           └── uml-git
+│   │       ├── git
+│   │       │   └── uml-git
+│   │       │       └── config
+│   │       └── src
+│   │           └── uml
 │   │               └── config
 │   └── Kernel
 │       └── uml
@@ -112,4 +115,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-56 directories, 56 files
+58 directories, 57 files
