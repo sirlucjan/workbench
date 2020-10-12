@@ -45,8 +45,6 @@
 │   │   │           └── config
 │   │   └── 5.9-rc
 │   │       └── src
-│   │           ├── bfq-dev
-│   │           │   └── config
 │   │           └── uksm
 │   │               └── config
 │   └── Kernel
@@ -115,4 +113,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-56 directories, 59 files
+55 directories, 58 files
