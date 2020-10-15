@@ -6,6 +6,12 @@
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/linux-bfq-dev.svg)](https://repology.org/project/linux-bfq-dev/versions)
 
+- linux-rt-bfq-dev
+
+[![Packaging status](https://repology.org/badge/vertical-allrepos/linux-rt-bfq-dev.svg)](https://repology.org/project/linux-rt-bfq-dev/versions)
+
+- linux-rt-bfq-dev-git
+
 - linux-uksm
 
 - linux-uksm-git
