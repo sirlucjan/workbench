@@ -51,7 +51,7 @@
 │   │       │   │   └── config
 │   │       │   ├── lucjan-git
 │   │       │   │   └── config
-│   │       │   ├── rt-git
+│   │       │   ├── rt-bfq-dev-git
 │   │       │   │   └── config
 │   │       │   ├── uksm-git
 │   │       │   │   └── config
@@ -64,7 +64,7 @@
 │   │           │   └── config
 │   │           ├── lucjan
 │   │           │   └── config
-│   │           ├── rt
+│   │           ├── rt-bfq-dev
 │   │           │   └── config
 │   │           ├── uksm
 │   │           │   └── config
