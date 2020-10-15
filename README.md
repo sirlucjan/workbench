@@ -48,9 +48,9 @@
 
 ######  linux-5.9
 
-[linux-5.9](https://github.com/sirlucjan/workbench/tree/master/linux-5.9) / [linux-5.9](https://gitlab.com/sirlucjan/workbench/tree/master/linux-5.9) - linux-bfq-dev/linux-bfq-dev-git && linux-uksm/linux-uksm-git
+[linux-5.9](https://github.com/sirlucjan/workbench/tree/master/linux-5.9) / [linux-5.9](https://gitlab.com/sirlucjan/workbench/tree/master/linux-5.9) - linux-bfq-dev/linux-bfq-dev-git && linux-rt-bfq-dev/linux-rt-bfq-dev-git && linux-uksm/linux-uksm-git
 
-###### linux-bfq-dev/linux-bfq-dev-git incorporates:
+###### linux-bfq-dev/linux-bfq-dev-git/linux-rt-bfq-dev/linux-rt-bfq-dev-git incorporates:
 
 * [bfq improvements](https://groups.google.com/forum/#!forum/bfq-iosched) - latest fixes authored by Paolo Valente and BFQ Team
 
@@ -63,6 +63,8 @@
 * [LL-patches](https://github.com/sirlucjan/kernel-patches/tree/master/5.9/ll-patches) / [LL-patches](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.9/ll-patches) - specific patches authored by Piotr Gorski
 
 [![latest packaged version(s)](https://repology.org/badge/latest-versions/linux-bfq-dev.svg)](https://repology.org/project/linux-bfq-dev/versions)
+
+[![latest packaged version(s)](https://repology.org/badge/latest-versions/linux-rt-bfq-dev.svg)](https://repology.org/project/linux-rt-bfq-dev/versions)
 
 ###### Some patches for BFQ conflict with patches for BFQ-dev.
 
