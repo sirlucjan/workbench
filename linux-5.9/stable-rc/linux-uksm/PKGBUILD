@@ -56,7 +56,7 @@ pkgver=${_major}.${_minorc}
 _stable=${_major}
 _stablerc=${pkgver}-${_rcver}
 _srcname=linux-${_stable}
-pkgrel=0
+pkgrel=0.1
 pkgdesc='Linux UKSM'
 arch=('x86_64')
 url="https://github.com/dolohow/uksm"
@@ -81,7 +81,8 @@ source=("https://www.kernel.org/pub/linux/kernel/v5.x/linux-${_stable}.tar.xz"
         # "patch-${_stablerc}.diff::https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable-rc.git/patch/?id=linux-${_major}.y&id2=v${_major}.${_minor}"
         "${_lucjanpath}/${_uksm_path}/${_uksm_patch}"
         "${_lucjanpath}/${_gcc_path}/${_gcc_patch}"
-        "${_lucjanpath}/arch-patches/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
+        "${_lucjanpath}/arch-patches-v2-sep/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
+        "${_lucjanpath}/arch-patches-v2-sep/0002-i2c-core-Restore-acpi_walk_dep_device_list-getting-c.patch"
         "${_lucjanpath}/docs-patches/0001-Documentation-Fix-sphinx-3.0-causes-compilation-erro.patch"
          # the main kernel config files
         'config')
@@ -336,7 +337,8 @@ sha512sums=('d3d92ce4246bad74c9a784212f160d98449b1e8793970c2c308276568d852b8effe
             'SKIP'
             'fa79b1abfb94693e2dfcc9348e508e8d35103f5c1e57fc74f28eeee5b237c692994aee94567431976bd4bff9ac5964306194c0970ac8c72a2e9ddf47c0510523'
             '96427eecb0078ce57a40ef4ee78d3576216f27390ba6b9dfbb851f4d969558a82b698cc633217ad8f6b9d991e7eaebd613ed4bd5741cafe7fa40b2502dacd43a'
-            '91573b031dda497a6ce490a55caab6dd00d007def488db04eb7d9cb828a1b29fbd88ee6525eff7ca89a79e96eecfe260adf5a4d5343199c591b9005125b34f78'
+            '82601180156862d6652d023ff9f80776a5dab67f1c46c3b27e177245fd7e12c9f8c4597990925940e215ddd673c24c1cfd1e5ef1ca69762c2cc5724d11133e55'
+            '9646cf65b2dd6b16d0df3c74e43eacfbc1fdc8ab241fe698a1f0762497ccc612df01b019cdf82430cca28bf843f91ba784c8bdfb7eb204330b7c73154ef6dda1'
             'b1abc4b21191c841326db341aeea6eac9918a4628f38e32f616a8eeeb9919395656fc4b805110dce93aa38188172fb672831fd76e848b3711fcd6ea9115118c6'
             '05fa26eb7ae135bbe4fdf6675d4eef95dbdf7a763a1ccc03313b8225143d9a20494f117eb2dd32a3f49c99c93b4e5d6cb47fddcaf39eebdff1528bcc11e4c047')
 
