@@ -110,10 +110,6 @@
 │           └── PKGBUILD
 ├── linux-5.9
 │   ├── README.md
-│   ├── rt
-│   │   └── linux-rt-bfq-dev-git
-│   │       ├── config
-│   │       └── PKGBUILD
 │   ├── stable
 │   │   ├── linux-bfq-dev
 │   │   │   ├── config
@@ -164,4 +160,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-81 directories, 83 files
+79 directories, 81 files
