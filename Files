@@ -138,16 +138,11 @@
 │   │   └── linux-uksm
 │   │       ├── config
 │   │       └── PKGBUILD
-│   ├── stable-rc-git
-│   │   ├── linux-bfq-dev-git
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
-│   │   └── linux-uksm-git
-│   │       ├── config
-│   │       └── PKGBUILD
-│   └── uml
-│       └── linux-usermode-rc-git
-│           ├── 70-uml.hook
+│   └── stable-rc-git
+│       ├── linux-bfq-dev-git
+│       │   ├── config
+│       │   └── PKGBUILD
+│       └── linux-uksm-git
 │           ├── config
 │           └── PKGBUILD
 ├── linux-lqx-rebranded
@@ -172,4 +167,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-84 directories, 88 files
+82 directories, 85 files
