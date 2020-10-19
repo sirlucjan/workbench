@@ -7,9 +7,6 @@
 ├── Devel
 │   ├── Config
 │   │   ├── 5.6
-│   │   │   ├── git
-│   │   │   │   └── rt-bfq-dev-git
-│   │   │   │       └── config
 │   │   │   └── src
 │   │   │       └── rt-bfq-dev
 │   │   │           └── config
@@ -122,4 +119,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-62 directories, 60 files
+60 directories, 59 files
