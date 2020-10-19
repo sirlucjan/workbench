@@ -14,9 +14,6 @@
 │   │   │       └── aufs
 │   │   │           └── config
 │   │   ├── 5.8
-│   │   │   ├── git
-│   │   │   │   └── uml-git
-│   │   │   │       └── config
 │   │   │   └── src
 │   │   │       └── uml
 │   │   │           └── config
@@ -99,4 +96,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-49 directories, 50 files
+47 directories, 49 files
