@@ -91,10 +91,6 @@
 │       └── repo-schema.sh
 ├── Files
 ├── juliagoda-kernels
-│   ├── experimental
-│   │   └── linux-juliagoda-git
-│   │       ├── config
-│   │       └── PKGBUILD
 │   ├── README.md
 │   ├── stable
 │   │   └── linux-juliagoda-git
@@ -130,4 +126,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-66 directories, 64 files
+64 directories, 62 files
