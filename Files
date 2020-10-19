@@ -96,11 +96,7 @@
 │   │   └── linux-juliagoda-git
 │   │       ├── config
 │   │       └── PKGBUILD
-│   ├── stable-rc
-│   │   └── linux-juliagoda-git
-│   │       ├── config
-│   │       └── PKGBUILD
-│   └── trunk
+│   └── stable-rc
 │       └── linux-juliagoda-git
 │           ├── config
 │           └── PKGBUILD
@@ -126,4 +122,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-64 directories, 62 files
+62 directories, 60 files
