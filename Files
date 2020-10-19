@@ -110,8 +110,6 @@
 │           └── PKGBUILD
 ├── linux-5.9
 │   ├── api-headers
-│   │   ├── linux-api-headers-git
-│   │   │   └── PKGBUILD
 │   │   └── linux-api-headers-rc-git
 │   │       └── PKGBUILD
 │   ├── README.md
@@ -189,4 +187,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-90 directories, 99 files
+89 directories, 98 files
