@@ -46,7 +46,7 @@ pkgbase=linux-zen-git
 # pkgname=('linux-zen-git' 'linux-zen-git-headers' 'linux-zen-git-docs')
 _major=5.9
 _srcname=zen-kernel
-pkgver=5.9.0.r951327.geb2d16835254
+pkgver=5.9.1.r951349.g0573df1b6cbb
 pkgrel=1
 pkgdesc='Linux ZEN'
 arch=('x86_64')
@@ -121,14 +121,7 @@ prepare() {
         # (x86 kernels do not support NUMA)
         if [ -n "$_NUMAdisable" ]; then
             echo "Disabling NUMA from kernel config..."
-            sed -i -e 's/CONFIG_NUMA=y/# CONFIG_NUMA is not set/' \
-                -i -e '/CONFIG_AMD_NUMA=y/d' \
-                -i -e '/CONFIG_X86_64_ACPI_NUMA=y/d' \
-                -i -e '/# CONFIG_NUMA_EMU is not set/d' \
-                -i -e '/CONFIG_NODES_SHIFT=5/d' \
-                -i -e '/CONFIG_NEED_MULTIPLE_NODES=y/d' \
-                -i -e '/CONFIG_USE_PERCPU_NUMA_NODE_ID=y/d' \
-                -i -e '/CONFIG_ACPI_NUMA=y/d' ./.config
+            scripts/config --disable CONFIG_NUMA
         fi
 
     ### Optionally load needed modules for the make localmodconfig
