@@ -40,6 +40,9 @@ _localmodcfg=
 # a new kernel is released, but again, convenient for package bumps.
 _use_current=
 
+### Disable MUQSS
+_muqss_disable=
+
 ### Enable htmldocs (increases compile time)
 _htmldocs_enable=
 
@@ -52,7 +55,7 @@ _minor=16
 _lqx=lqx1
 _srcname=zen-kernel
 pkgver=5.8.16.lqx1.r0.g21b0a2fc5cc1
-pkgrel=2
+pkgrel=3
 pkgdesc='Linux Liquorix'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -129,6 +132,12 @@ prepare() {
 			exit
 		fi
 	fi
+
+    ### Disable MUQSS
+        if [ -n "$_muqss_disable" ]; then
+        echo "Disabling MUQSS..."
+        scripts/config --disable CONFIG_SCHED_MUQSS
+        fi
 
     ### Optionally disable NUMA for 64-bit kernels only
         # (x86 kernels do not support NUMA)
