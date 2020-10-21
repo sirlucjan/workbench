@@ -57,7 +57,7 @@ _srcname=linux-${_major}
 _lqxpatchname=liquorix-package
 pkgbase=linux-lqx-git
 pkgver=5.8.16.1.r1756.g2b93c71
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux Liquorix'
 arch=('x86_64')
 url="http://liquorix.net/"
@@ -155,7 +155,13 @@ prepare() {
     ### Disable MUQSS
         if [ -n "$_muqss_disable" ]; then
         echo "Disabling MUQSS..."
-        scripts/config --disable CONFIG_SCHED_MUQSS
+            scripts/config --disable CONFIG_SCHED_MUQSS
+            scripts/config --disable CONFIG_RQ_NONE
+            scripts/config --disable CONFIG_RQ_SMT
+            scripts/config --disable CONFIG_RQ_MC
+            scripts/config --disable CONFIG_RQ_MC_LLC
+            scripts/config --disable CONFIG_RQ_SMP
+            scripts/config --disable CONFIG_RQ_ALL
         fi
 
     ### Optionally disable NUMA for 64-bit kernels only
