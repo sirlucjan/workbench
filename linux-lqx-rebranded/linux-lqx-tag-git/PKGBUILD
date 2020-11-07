@@ -50,11 +50,11 @@ _htmldocs_enable=
 
 pkgbase=linux-lqx-tag-git
 # pkgname=('linux-lqx-tag-git' 'linux-lqx-tag-git-headers' 'linux-lqx-tag-git-docs')
-_major=5.8
-_minor=17
+_major=5.9
+_minor=6
 _lqx=lqx2
 _srcname=zen-kernel
-pkgver=5.8.17.lqx2.r0.gca31b42343ac
+pkgver=5.9.6.lqx2.r0.g16e0d9a93f8f
 pkgrel=1
 pkgdesc='Linux Liquorix'
 arch=('x86_64')
@@ -75,7 +75,7 @@ source=("git://github.com/${_srcname}/${_srcname}#tag=v${_major}.${_minor}-${_lq
         'config')
 sha512sums=('SKIP'
             '711ecce2ce54c81e8b60b9b347cb88db054bf697396ee15e9b425671f88d22a14dae17c1c451aa10bd1d7a71c145b2fa588863205ec94e1439ed9b2769ee2e4c'
-            '8d814f24c45b2a805fc108063fafc3f6fb3c98a6b33909810d5f7b848798fced15277f6055b9770a706b4467b159479a0f129e3695b713f9d0e676c1b5869276')
+            'ee3e00f06d57d0aedf75d518e0137991ceb667776bb02804c8e573e37e90e3f692fcd88b45a68d685d3580886bb517ada4ec3b5f46cd970066083207d998fc66')
 
 
 
