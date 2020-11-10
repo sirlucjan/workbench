@@ -45,7 +45,7 @@ _use_current=
 pkgbase=linux-zen-tag
 # pkgname=('linux-zen-tag' 'linux-zen-tag-headers' 'linux-zen-tag-docs')
 _major=5.9
-_minor=6
+_minor=7
 _zen=zen1
 _srcname=linux-${_major}
 pkgver=${_major}.${_minor}.${_zen}
@@ -298,7 +298,7 @@ done
 
 sha512sums=('d3d92ce4246bad74c9a784212f160d98449b1e8793970c2c308276568d852b8effe0528686bdb87d55d691f09a826abf7938d69bdd4759ce65ddd5c05ffe4eca'
             'SKIP'
-            'f11ea4724e202eb32d13eff7b6b990ca1c20ce36d90cd6390b46fd57f8f7c8d07f8890c18035352acd3a389d8cd7e1da33f4d303d7393595cab528010cf4966b'
+            'dd60b33dd6ae9896489c1dea74c79e794c23120fd143f6fe328303e20e59a146e471c9ca8eec1451893424a6be53afb3c9a0318c0dae388bea0bbda0ecdd429f'
             'SKIP'
             'b1abc4b21191c841326db341aeea6eac9918a4628f38e32f616a8eeeb9919395656fc4b805110dce93aa38188172fb672831fd76e848b3711fcd6ea9115118c6'
             '7fa83b30b5fac48816e2f396155c77561a611f4757c95cc6b34a62f98a88e03f5b8bd915c2dbb6fc60dd7b760f42337e26e8139e7991ac444842f10ce8882e32')
