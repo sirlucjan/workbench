@@ -56,6 +56,10 @@
 
 [![latest packaged version(s)](https://repology.org/badge/latest-versions/linux-lqx.svg)](https://repology.org/project/linux-lqx/versions)
 
+###### linux-rolling-stable
+
+[linux-rolling-stable](https://github.com/sirlucjan/workbench/tree/master/linux-rolling-stable) / [linux-rolling-stable](https://gitlab.com/sirlucjan/workbench/tree/master/linux-rolling-stable) - linux-api-headers-git && linux-usermode-git
+
 ###### linux-zen-rebranded
 
 [linux-zen-rebranded](https://github.com/sirlucjan/workbench/tree/master/linux-zen-rebranded) / [linux-zen-rebranded](https://gitlab.com/sirlucjan/workbench/tree/master/linux-zen-rebranded) - linux-zen-tag
