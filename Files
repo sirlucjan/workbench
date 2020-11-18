@@ -84,7 +84,7 @@
 │   │   ├── config
 │   │   └── PKGBUILD
 │   └── README.md
-├── linux-rolling
+├── linux-rolling-stable
 │   ├── api-headers
 │   │   └── linux-api-headers-git
 │   │       └── PKGBUILD
