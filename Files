@@ -82,11 +82,11 @@
 │           ├── config
 │           └── PKGBUILD
 ├── linux-5.10rc
+│   ├── kernel-5.10rc
+│   │   └── linux-bfq-dev
+│   │       ├── config
+│   │       └── PKGBUILD
 │   └── uml-5.10rc
-│       ├── kernel-5.10rc
-│       │   └── linux-bfq-dev
-│       │       ├── config
-│       │       └── PKGBUILD
 │       ├── linux-usermode-dev-git
 │       │   ├── 70-uml.hook
 │       │   ├── config
