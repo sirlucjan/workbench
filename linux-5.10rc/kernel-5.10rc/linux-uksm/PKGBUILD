@@ -53,14 +53,14 @@ _minor=rc7
 _tag=v${_major}-${_minor}
 pkgver=${_major}${_minor}
 _srcname=linux
-pkgrel=2
+pkgrel=3
 pkgdesc='Linux UKSM'
 arch=('x86_64')
 url="https://github.com/dolohow/uksm"
 license=('GPL2')
 options=('!strip')
 makedepends=('kmod' 'bc' 'libelf' 'git' 'python-sphinx' 'python-sphinx_rtd_theme'
-             'graphviz' 'imagemagick' 'pahole')
+             'graphviz' 'imagemagick' 'pahole' 'cpio' 'perl' 'tar' 'xz')
 #_lucjanpath="https://raw.githubusercontent.com/sirlucjan/kernel-patches/master/${_major_rc}"
 _lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major_rc}"
 _uksm_path="uksm-patches"
@@ -318,7 +318,7 @@ sha512sums=('SKIP'
             '71d3ffd5d23af8945f832b9bdc7ef1cb7e3deb152a912bb8cc4dd94a1108113acec4d3bc07a509418674fed6345d18fb4ed1e775576914b09e240b6791c2546e'
             'a95d1385d4f8d1a55593f1cb974f27ff7e0b7ce2ff429a57cda6773347d316a9d957c4501fb8657c368814b6e56ccf38e13b4170e862deadeea3b191f5fdd2b9'
             '800569dda8dd0db196950b18c742e35945b33ce981b358439f63628e3d1c2cd35208cbc7bf77dd99731559ff3b71e9532c1a08d22510e397e32c87d7a20541dc'
-            '4c8709b402943941152cc9b659691fae9c31bb3a69602c964c69d6e5400224d244c3867198340a3662ab482e28dbc54f5d56d90bb32e69a958c3ee2e454d4438')
+            '538b6db08ea8742840f819ae994a98f2efa404cb04da59afee6fa1b601853423770042e30deda1db2cb1f0cef556f2f81ea1cf3274ad35a4b5b23fd26c50744b')
 
 validpgpkeys=(
               'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
