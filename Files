@@ -13,10 +13,6 @@
 │   │   │   └── src
 │   │   │       └── uml
 │   │   │           └── config
-│   │   ├── 5.10-rc
-│   │   │   └── src
-│   │   │       └── uml
-│   │   │           └── config
 │   │   ├── 5.7
 │   │   │   ├── git
 │   │   │   │   └── aufs-git
@@ -168,4 +164,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-78 directories, 90 files
+75 directories, 89 files
