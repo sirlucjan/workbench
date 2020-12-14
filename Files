@@ -104,12 +104,6 @@
 │           ├── 70-uml.hook
 │           ├── config
 │           └── PKGBUILD
-├── linux-5.10rc
-│   └── uml-5.10rc
-│       └── linux-usermode-git
-│           ├── 70-uml.hook
-│           ├── config
-│           └── PKGBUILD
 ├── linux-lqx-rebranded
 │   ├── linux-lqx-git
 │   │   └── PKGBUILD
@@ -140,4 +134,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-67 directories, 73 files
+64 directories, 70 files
