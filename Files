@@ -106,9 +106,6 @@
 │           └── PKGBUILD
 ├── linux-5.10rc
 │   ├── kernel-5.10rc
-│   │   ├── linux-uksm
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
 │   │   ├── linux-uksm-git
 │   │   │   ├── config
 │   │   │   └── PKGBUILD
@@ -152,4 +149,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-71 directories, 81 files
+70 directories, 79 files
