@@ -105,11 +105,6 @@
 │           ├── config
 │           └── PKGBUILD
 ├── linux-5.10rc
-│   ├── kernel-5.10rc
-│   │   ├── linux-uksm-git
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
-│   │   └── README.md
 │   └── uml-5.10rc
 │       ├── linux-usermode-dev-git
 │       │   ├── 70-uml.hook
@@ -149,4 +144,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-70 directories, 79 files
+68 directories, 76 files
