@@ -44,9 +44,9 @@ _use_current=
 
 pkgbase=linux-zen-git
 # pkgname=('linux-zen-git' 'linux-zen-git-headers' 'linux-zen-git-docs')
-_major=5.9
+_major=5.10
 _srcname=zen-kernel
-pkgver=5.9.14.r953569.g6be00b97b0a7
+pkgver=5.10.1.r968798.g8d0ba610450a
 pkgrel=1
 pkgdesc='Linux ZEN'
 arch=('x86_64')
@@ -59,7 +59,6 @@ makedepends=('kmod' 'bc' 'libelf' 'git' 'python-sphinx' 'python-sphinx_rtd_theme
 _lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major}"
 
 source=("git://github.com/${_srcname}/${_srcname}#branch=${_major}/master"
-        "${_lucjanpath}/docs-patches/0001-Documentation-Fix-sphinx-3.0-causes-compilation-erro.patch"
          # the main kernel config files
         'config')
 
@@ -294,5 +293,4 @@ for _p in "${pkgname[@]}"; do
 done
 
 sha512sums=('SKIP'
-            'b1abc4b21191c841326db341aeea6eac9918a4628f38e32f616a8eeeb9919395656fc4b805110dce93aa38188172fb672831fd76e848b3711fcd6ea9115118c6'
-            'cb1b449044ea0773503d1dc99246cef606024ebf36a9c591f327a8f72607108c187ba849630c30ff9dc734112741bd56a073a35705abd0799040ccbbc3d74b6b')
+            '809b0a527b3f14ff090486f7500eb0e14c0ea47909287653a962ccb9de621bc2ef748205cf7a684142cb0e73c4e2682b1750d55b1923d1ec36b58bee8e2cc789')
