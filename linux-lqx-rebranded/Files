@@ -1,0 +1,13 @@
+.
+├── Files
+├── linux-lqx-git
+│   └── PKGBUILD
+├── linux-lqx-tag
+│   ├── config
+│   └── PKGBUILD
+├── linux-lqx-tag-git
+│   ├── config
+│   └── PKGBUILD
+└── README.md
+
+3 directories, 7 files
