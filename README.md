@@ -68,7 +68,7 @@
 
 ###### Some patches for BFQ conflict with patches for BFQ-dev.
 
-###### To use linux-bfq-dev/linux-bfq-dev-git smoothly apply bfq-reverts before bfq-dev patch. Otherwise the kernel will not compile.
+###### To use linux-bfq-dev/linux-bfq-dev-git/linux-rt-bfq-dev/linux-rt-bfq-dev-git smoothly apply bfq-reverts before bfq-dev patch. Otherwise the kernel will not compile.
 
 * [bfq-reverts](https://github.com/sirlucjan/kernel-patches/tree/master/5.10/bfq-reverts-all) / [bfq-reverts](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.10/bfq-reverts-all) - specific patches authored by Piotr Gorski
 
