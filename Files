@@ -88,6 +88,14 @@
 │       └── repo-schema.sh
 ├── Files
 ├── juliagoda-kernels
+│   ├── depends
+│   │   └── kmod-zstd
+│   │       ├── 0001-add-Zstandard-compression-support.patch
+│   │       ├── 0002-testsuite-add-test-for-zstd-compressed-module.patch
+│   │       ├── depmod.hook
+│   │       ├── depmod.script
+│   │       ├── depmod-search.conf
+│   │       └── PKGBUILD
 │   ├── experimental
 │   │   └── linux-juliagoda-git
 │   │       ├── config
@@ -198,4 +206,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-93 directories, 105 files
+95 directories, 111 files
