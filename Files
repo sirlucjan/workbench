@@ -89,12 +89,16 @@
 ├── Files
 ├── juliagoda-kernels
 │   ├── depends
-│   │   └── kmod-zstd
-│   │       ├── 0001-add-Zstandard-compression-support.patch
-│   │       ├── 0002-testsuite-add-test-for-zstd-compressed-module.patch
-│   │       ├── depmod.hook
-│   │       ├── depmod.script
-│   │       ├── depmod-search.conf
+│   │   ├── kmod-zstd
+│   │   │   ├── 0001-add-Zstandard-compression-support.patch
+│   │   │   ├── 0002-testsuite-add-test-for-zstd-compressed-module.patch
+│   │   │   ├── depmod.hook
+│   │   │   ├── depmod.script
+│   │   │   ├── depmod-search.conf
+│   │   │   └── PKGBUILD
+│   │   └── mkinitcpio-zstd
+│   │       ├── 0001-Add-zstd-module-decompression.patch
+│   │       ├── mkinitcpio.install
 │   │       └── PKGBUILD
 │   ├── experimental
 │   │   └── linux-juliagoda-git
@@ -206,4 +210,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-95 directories, 111 files
+96 directories, 114 files
