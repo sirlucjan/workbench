@@ -74,7 +74,7 @@ _1k_HZ_ticks=y
 # Leave it unselected.
 # However, if you want to test the new solution,
 # first install mkinitcpio-zstd and kmod-zstd
-# https://gitlab.com/sirlucjan/lucjan-kernels/-/tree/master/depends
+# https://gitlab.com/sirlucjan/workbench/-/tree/master/juliagoda-kernels/depends
 _zstd_modules=
 
 ### Download ll-reverts patchset
