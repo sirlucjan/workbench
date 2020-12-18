@@ -55,7 +55,7 @@ git clone https://gitlab.com/sirlucjan/workbench.git
 ### Stable
 
 ```
-cd /some_path/workbench/linux-juliagoda/stable/package_name
+cd /some_path/workbench/juliagoda-kernels/stable/package_name
 makepkg -srci
 
 ```
@@ -63,14 +63,14 @@ makepkg -srci
 ### Stable RC
 
 ```
-cd /some_path/workbench/linux-juliagoda/stable-rc/package_name
+cd /some_path/workbench/juliagoda-kernels/stable-rc/package_name
 makepkg -srci
 
 ```
 ### Rolling
 
 ```
-cd /some_path/workbench/linux-juliagoda/rolling/package_name
+cd /some_path/workbench/juliagoda-kernels/rolling/package_name
 makepkg -srci
 
 ```
@@ -93,6 +93,34 @@ ACTION=="add|change", KERNEL=="sd[a-z]", ATTR{queue/rotational}=="1", ATTR{queue
 
 For now, bfq is enabled by default! [(since 5.0-lucjan-ll1-rc1.patch and LL-elevator-set-default-scheduler-to-bfq-for-blk-mq.patch)](https://github.com/sirlucjan/kernel-patches/blob/master/5.0/ll-patches/0002-LL-elevator-set-default-scheduler-to-bfq-for-blk-mq.patch)
 
+
+***
+
+***
+# Enable zstd compressed modules
+
+###### To build a kernel with modules compressed in zstd format, insert any character here (it can be "y", "x" or any other value):
+
+```
+### Enable MODULE_COMPRESS_ZSTD
+# WARNING Not recommended.
+# An experimental solution, still in testing phase.
+# Possible compilation and installation errors.
+# Leave it unselected.
+# However, if you want to test the new solution,
+# first install mkinitcpio-zstd and kmod-zstd
+# https://gitlab.com/sirlucjan/juliagoda-kernels/-/tree/master/depends
+_zstd_modules=
+```
+###### Remember that to do this you need to install modified versions of kmod (kmod-zstd) and mkinitcpio (mkinitcpio-zstd). To do this, run the following command:
+
+```
+cd /some_path/juliagoda-kernels/depends/package_name
+makepkg -srci
+
+```
+
+###### NOTE: mkinitcpio-zstd will overwrite the mkinitcpio.conf file and the old one will be saved as mkinitcpio.conf.pacsave - however, I recommend backing up this file before installing the modified mkinitcpio version.
 
 ***
 # You've been warned.
