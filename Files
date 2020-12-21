@@ -163,10 +163,6 @@
 │   │   └── linux-uksm-git
 │   │       ├── config
 │   │       └── PKGBUILD
-│   ├── stable-rolling-git
-│   │   └── linux-uksm-git
-│   │       ├── config
-│   │       └── PKGBUILD
 │   └── uml
 │       ├── linux-usermode
 │       │   ├── 70-uml.hook
@@ -214,4 +210,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-98 directories, 116 files
+96 directories, 114 files
