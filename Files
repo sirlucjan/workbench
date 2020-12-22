@@ -42,8 +42,6 @@
 │   │   │           └── config
 │   │   └── 5.9
 │   │       ├── git
-│   │       │   ├── bfq-dev-git
-│   │       │   │   └── config
 │   │       │   ├── lucjan-git
 │   │       │   │   └── config
 │   │       │   ├── rt-bfq-dev-git
@@ -53,8 +51,6 @@
 │   │       │   └── uml-git
 │   │       │       └── config
 │   │       └── src
-│   │           ├── bfq-dev
-│   │           │   └── config
 │   │           ├── lucjan
 │   │           │   └── config
 │   │           ├── rt-bfq-dev
@@ -139,4 +135,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-66 directories, 73 files
+64 directories, 71 files
