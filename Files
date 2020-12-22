@@ -42,13 +42,9 @@
 │   │   │           └── config
 │   │   └── 5.9
 │   │       ├── git
-│   │       │   ├── uksm-git
-│   │       │   │   └── config
 │   │       │   └── uml-git
 │   │       │       └── config
 │   │       └── src
-│   │           ├── uksm
-│   │           │   └── config
 │   │           └── uml
 │   │               └── config
 │   └── Kernel
@@ -127,4 +123,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-60 directories, 67 files
+58 directories, 65 files
