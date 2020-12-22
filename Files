@@ -116,9 +116,6 @@
 ├── linux-5.10
 │   ├── README.md
 │   └── stable-rc-git
-│       ├── linux-bfq-dev-git
-│       │   ├── config
-│       │   └── PKGBUILD
 │       └── linux-uksm-git
 │           ├── config
 │           └── PKGBUILD
@@ -152,4 +149,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-72 directories, 80 files
+71 directories, 78 files
