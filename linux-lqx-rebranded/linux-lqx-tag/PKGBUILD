@@ -50,8 +50,8 @@ _htmldocs_enable=
 
 pkgbase=linux-lqx-tag
 # pkgname=('linux-lqx-tag' 'linux-lqx-tag-headers' 'linux-lqx-tag-docs')
-_major=5.9
-_minor=16
+_major=5.10
+_minor=3
 _lqx=lqx1
 _srcname=linux-${_major}
 pkgver=${_major}.${_minor}.${_lqx}
@@ -74,15 +74,13 @@ source=("https://cdn.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.xz"
         "https://cdn.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.sign"
         "https://github.com/zen-kernel/zen-kernel/releases/download/v${_pkgver}/v${_pkgver}.patch.xz"
         "https://github.com/zen-kernel/zen-kernel/releases/download/v${_pkgver}/v${_pkgver}.patch.xz.sig"
-        "${_lucjanpath}/docs-patches/0001-Documentation-Fix-sphinx-3.0-causes-compilation-erro.patch"
          # the main kernel config files
         'config')
-sha512sums=('d3d92ce4246bad74c9a784212f160d98449b1e8793970c2c308276568d852b8effe0528686bdb87d55d691f09a826abf7938d69bdd4759ce65ddd5c05ffe4eca'
+sha512sums=('95bc137d0cf9148da6a9d1f1a878698dc27b40f68e22c597544010a6c591ce1b256f083489d3ff45ff77753289b535135590194d88ef9f007d0ddab3d74de70e'
             'SKIP'
-            '13388a2e68b3300641d670a08ecebcec1128d8419e3b04cc6ac84ddfb30043e9ee2803b6d1b27b858201b9a73c2536cce6743ba2f08e33a1987c3454065c67f8'
+            '661f7d716b8e34ef093138cb143a871233aba772e12bd49698f27479965003f244ecec566148275e5115942b656fdde2de3132e68652cd410c91082816bdeba5'
             'SKIP'
-            'b1abc4b21191c841326db341aeea6eac9918a4628f38e32f616a8eeeb9919395656fc4b805110dce93aa38188172fb672831fd76e848b3711fcd6ea9115118c6'
-            '97a9b2878e6d5057770d797fe6a0561f43789ffcbc9afad1d1e28fa1765e1e64ed53e395e01146871809c64a1fed2dabc317af2b288a624b06e4fd62956f3445')
+            '527ce25ad6225927eef6a56adafe4dd00068be60a047ac0c6d4e89ddb859165ed214b726a5e27bd1bf3ae946162aa97374949f83c86492ba69811ce228f5c555')
 
 validpgpkeys=(
               'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
