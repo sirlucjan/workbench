@@ -50,11 +50,11 @@ _htmldocs_enable=
 
 pkgbase=linux-lqx-tag-git
 # pkgname=('linux-lqx-tag-git' 'linux-lqx-tag-git-headers' 'linux-lqx-tag-git-docs')
-_major=5.9
-_minor=16
+_major=5.10
+_minor=3
 _lqx=lqx1
 _srcname=zen-kernel
-pkgver=5.9.16.lqx1.r0.gd0b51fee86fe
+pkgver=5.10.3.lqx1.r0.g87c8a1fdd55a
 pkgrel=1
 pkgdesc='Linux Liquorix'
 arch=('x86_64')
@@ -70,12 +70,10 @@ options=('!strip')
 _lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major}"
 
 source=("git://github.com/${_srcname}/${_srcname}#tag=v${_major}.${_minor}-${_lqx}"
-        "${_lucjanpath}/docs-patches/0001-Documentation-Fix-sphinx-3.0-causes-compilation-erro.patch"
          # the main kernel config files
         'config')
 sha512sums=('SKIP'
-            'b1abc4b21191c841326db341aeea6eac9918a4628f38e32f616a8eeeb9919395656fc4b805110dce93aa38188172fb672831fd76e848b3711fcd6ea9115118c6'
-            '97a9b2878e6d5057770d797fe6a0561f43789ffcbc9afad1d1e28fa1765e1e64ed53e395e01146871809c64a1fed2dabc317af2b288a624b06e4fd62956f3445')
+            '527ce25ad6225927eef6a56adafe4dd00068be60a047ac0c6d4e89ddb859165ed214b726a5e27bd1bf3ae946162aa97374949f83c86492ba69811ce228f5c555')
 
 
 
