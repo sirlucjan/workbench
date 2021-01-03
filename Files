@@ -65,6 +65,7 @@
 │   │   ├── kmod-zstd
 │   │   │   ├── 0001-add-Zstandard-compression-support.patch
 │   │   │   ├── 0002-testsuite-add-test-for-zstd-compressed-module.patch
+│   │   │   ├── 0003-build-fix-distcheck-due-to-missing-zstd.patch
 │   │   │   ├── depmod.hook
 │   │   │   ├── depmod.script
 │   │   │   ├── depmod-search.conf
@@ -116,4 +117,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-53 directories, 63 files
+53 directories, 64 files
