@@ -76,8 +76,10 @@ _mm_protect=y
 # Possible compilation and installation errors.
 # Leave it unselected.
 # However, if you want to test the new solution,
-# first install mkinitcpio-zstd and kmod-zstd
-# https://gitlab.com/sirlucjan/workbench/-/tree/master/juliagoda-kernels/depends
+# first install mkinitcpio-zstd and kmod-zstd:
+# https://gitlab.com/sirlucjan/workbench/tree/master/juliagoda-kernels/depends
+# or
+# https://github.com/sirlucjan/workbench/tree/master/juliagoda-kernels/depends
 _zstd_modules=
 
 ### Download ll-reverts patchset
