@@ -87,8 +87,8 @@
 │       └── linux-juliagoda-git
 │           ├── config
 │           └── PKGBUILD
-├── kernel-5.11rc
-│   ├── linux-5.11rc
+├── linux-5.11rc
+│   ├── kernel-5.11rc
 │   │   ├── linux-bfq-dev
 │   │   │   ├── config
 │   │   │   └── PKGBUILD
