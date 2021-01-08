@@ -114,7 +114,7 @@ For now, bfq is enabled by default! [(since 5.0-lucjan-ll1-rc1.patch and LL-elev
 # https://github.com/sirlucjan/workbench/tree/master/juliagoda-kernels/depends
 _zstd_modules=
 ```
-###### Remember that to do this you need to install modified versions of mkinitcpio (mkinitcpio-zstd). To do this, run the following command:
+###### Remember that to do this you need to install modified version of mkinitcpio (mkinitcpio-zstd). To do this, run the following command:
 
 ```
 cd /some_path/juliagoda-kernels/depends/package_name
