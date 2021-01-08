@@ -62,11 +62,6 @@
 ├── Files
 ├── juliagoda-kernels
 │   ├── depends
-│   │   ├── kmod-zstd
-│   │   │   ├── depmod.hook
-│   │   │   ├── depmod.script
-│   │   │   ├── depmod-search.conf
-│   │   │   └── PKGBUILD
 │   │   └── mkinitcpio-zstd
 │   │       ├── 0001-Add-zstd-module-decompression.patch
 │   │       ├── 0002-Set-default-compressor-to-zstd.patch
@@ -141,4 +136,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-62 directories, 79 files
+61 directories, 75 files
