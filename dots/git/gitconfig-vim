@@ -3,6 +3,17 @@
 	username = sirlucjan
 	email = lucjan.lucjanov@gmail.com
 	signingkey = BDB26C5A
+	
+[sendemail]
+        from = Piotr Gorski lucjan.lucjanov@gmail.com>
+        chainreplyto = false
+        smtpencryption = tls
+        smtpserver = smtp.gmail.com
+        smtpserverport = 587
+        smtpuser = lucjan.lucjanov@gmail.com
+
+[include]
+        path = ~/.gitpasswd
 
 [credential "https://github.com"]
         username = sirlucjan
