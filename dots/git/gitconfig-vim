@@ -5,7 +5,6 @@
 	signingkey = BDB26C5A
 	
 [sendemail]
-        from = Piotr Gorski lucjan.lucjanov@gmail.com>
         chainreplyto = false
         smtpencryption = tls
         smtpserver = smtp.gmail.com
