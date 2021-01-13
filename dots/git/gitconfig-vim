@@ -3,7 +3,13 @@
 	username = sirlucjan
 	email = lucjan.lucjanov@gmail.com
 	signingkey = BDB26C5A
-	
+
+[core]
+	editor = vim
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	excludesfile = ~/.gitignore
+	pager = delta
+
 [sendemail]
         chainreplyto = false
         smtpencryption = tls
@@ -32,33 +38,15 @@
 [url "https://gitlab.com/"]
     insteadOf = gitlab:    
 
-[core]
-        editor = vim
-	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = ~/.gitignore	
-
-[rerere]	
+[rerere]
 	enabled = 1
 	autoupdate = 1
 
 [push]
-	default = matching	
+	default = matching
 
-[diff]
-	tool = vimdiff
-
-[difftool]	
-	prompt = false
-
-[gitflow "prefix"]	
-	feature = feature-
-	release = release-
-	hotfix = hotfix-
-	support = support-
-	versiontag = v	
-
-[color]	
-	ui = auto	
+[color]
+	ui = auto
 
 [color "branch"]
 	current = yellow bold
@@ -66,16 +54,51 @@
 	remote = cyan bold
 
 [color "diff"]
-        meta = yellow bold
+	meta = yellow bold
 	frag = magenta bold
 	old = red bold
 	new = green bold
 	whitespace = red reverse
 
 [color "status"]
-        added = green bold
+	added = green bold
 	changed = yellow bold
 	untracked = red bold
+
+[diff]
+	tool = vimdiff
+
+[difftool]
+	prompt = false
+
+[delta]
+	features = line-numbers decorations
+	line-numbers = true
+	
+[delta "decorations"]
+	minus-style = red bold normal
+	plus-style = green bold normal
+	minus-emph-style = white bold red
+	minus-non-emph-style = red bold normal
+	plus-emph-style = white bold green
+	plus-non-emph-style = green bold normal
+	file-style = yellow bold none
+	file-decoration-style = yellow box
+	hunk-header-style = magenta bold
+	hunk-header-decoration-style = magenta box
+	minus-empty-line-marker-style = normal normal
+	plus-empty-line-marker-style = normal normal
+	line-numbers-right-format = "{np:^4}│ "
+
+[gitflow "prefix"]	
+	feature = feature-
+	release = release-
+	hotfix = hotfix-
+	support = support-
+	versiontag = v
+	
+[sequence]
+	editor = interactive-rebase-tool
 
 [alias]
 	a = add --all
@@ -96,6 +119,7 @@
 	br = branch -r
 	bc = rev-parse --abbrev-ref HEAD
 	bu = !git rev-parse --abbrev-ref --symbolic-full-name "@{u}"
+	bs = !git-branch-status
 	#############
 	c = commit
 	ca = commit -a
@@ -121,7 +145,8 @@
 	clc = clone --bare
 	cld = clone --depth 1
 	clg = !sh -c 'git clone git://github.com/$1 $(basename $1)' -
-	clgp = !sh -c 'git clone git@github.com:$(git config --get user.username)/$1 $1' -
+	clgp = !sh -c 'git clone git@github.com:$1 $(basename $1)' -
+	clgu = !sh -c 'git clone git@github.com:$(git config --get user.username)/$1 $1' -
 	clm = clone --mirror
 	#############
 	cpi = cherry-pick
@@ -165,7 +190,9 @@
 	ms = merge --skip
 	#############
 	o = checkout
+	om = checkout master
 	ob = checkout -b
+	opr = !sh -c 'git fo pull/$1/head:pr-$1 && git o pr-$1'
 	#############
 	prv = prune -v
 	#############
@@ -221,6 +248,7 @@
 	rehh = reset --hard HEAD
 	remh = reset --mixed HEAD
 	resh = reset --soft HEAD
+	rehom = reset --hard origin/master
 	#############
 	r = remote
 	ra = remote add
@@ -260,6 +288,7 @@
 	sl = stash list
 	sp = stash pop
 	ss = stash save
+	ssk = stash save -k
 	sw = stash show
 	st = !git stash list | wc -l 2>/dev/null | grep -oEi '[0-9][0-9]*'
 	#############
@@ -275,6 +304,7 @@
 	svnl = svn log --oneline --show-commit
 	#############
 	subadd = !sh -c 'git submodule add git://github.com/$1 $2/$(basename $1)' -
+	subrm = !sh -c 'git submodule deinit -f -- $1 && rm -rf .git/modules/$1 && git rm -f $1' -
 	subup = submodule update --init --recursive
 	subpull = !git submodule foreach git pull --tags origin master
 	#############
@@ -287,6 +317,7 @@
 	bump = !sh -c 'git commit -am \"Version bump v$1\" && git psuoc && git release $1' -
 	releases = !sh -c 'git tag v$1 && git pst' -
 	unreleases = !sh -c 'git tag -d v$1 && git pso :v$1' -
+	merged = !sh -c 'git o master && git plom && git bd $1 && git rpo' -
 	aliases = !git config -l | grep alias | cut -c 7-
 	snap = !git stash save 'snapshot: $(date)' && git stash apply 'stash@{0}'
 	bare = !sh -c 'git symbolic-ref HEAD refs/heads/$1 && git rm --cached -r . && git clean -xfd' -
@@ -300,4 +331,8 @@
 	theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
 	subrepo = !sh -c 'git filter-branch --prune-empty --subdirectory-filter $1 master' -
 	human = name-rev --name-only --refs=refs/heads/*
-	
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
