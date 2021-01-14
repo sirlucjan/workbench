@@ -1,5 +1,5 @@
 [user]
-        name = Piotr Gorski
+	name = Piotr Gorski
 	username = sirlucjan
 	email = lucjan.lucjanov@gmail.com
 	signingkey = BDB26C5A
@@ -11,32 +11,32 @@
 	pager = delta
 
 [sendemail]
-        chainreplyto = false
-        smtpencryption = tls
-        smtpserver = smtp.gmail.com
-        smtpserverport = 587
-        smtpuser = lucjan.lucjanov@gmail.com
+	chainreplyto = false
+	smtpencryption = tls
+	smtpserver = smtp.gmail.com
+	smtpserverport = 587
+	smtpuser = lucjan.lucjanov@gmail.com
 
 [include]
-        path = ~/.gitpasswd
+	path = ~/.gitpasswd
 
 [credential "https://github.com"]
-        username = sirlucjan
-	
+	username = sirlucjan
+
 [credential "https://gitlab.com"]
-        username = sirlucjan
+	username = sirlucjan
 	
 [url "https://aur.archlinux.org/"]
-    insteadOf = aur:
+	insteadOf = aur:
 
 [url "ssh://aur@aur.archlinux.org/"]
-    insteadOf = aurs:
+	insteadOf = aurs:
 
 [url "https://github.com/"]
-    insteadOf = github:
+	insteadOf = github:
 
 [url "https://gitlab.com/"]
-    insteadOf = gitlab:    
+	insteadOf = gitlab:    
 
 [rerere]
 	enabled = 1
