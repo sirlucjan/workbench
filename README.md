@@ -48,7 +48,11 @@
 
 ######  linux-5.11rc
 
-[linux-5.11rc](https://github.com/sirlucjan/workbench/tree/master/linux-5.11rc) / [linux-5.11rc](https://gitlab.com/sirlucjan/workbench/tree/master/linux-5.11rc) - linux-bfq-dev/linux-bfq-dev-git && linux-rt-bfq-dev/linux-rt-bfq-dev && linux-uksm/linux-uksm-git
+[linux-5.11rc](https://github.com/sirlucjan/workbench/tree/master/linux-5.11rc) / [linux-5.11rc](https://gitlab.com/sirlucjan/workbench/tree/master/linux-5.11rc) - linux-aufs/linux-aufs-git && linux-bfq-dev/linux-bfq-dev-git && linux-uksm/linux-uksm-git
+
+###### linux-aufs/linux-aufs-git incorporates:
+
+* [AUFS](https://github.com/sfjro/aufs5-standalone/tree/aufs5.x-rcN) / [AUFS](http://aufs.sourceforge.net) - advanced multi-layered unification filesystem
 
 ###### linux-bfq-dev/linux-bfq-dev-git incorporates:
 
