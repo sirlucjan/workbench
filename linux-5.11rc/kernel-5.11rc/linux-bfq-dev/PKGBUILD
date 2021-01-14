@@ -295,6 +295,7 @@ _package-headers() {
 }
 
 _package-docs() {
+    pkgdesc="Documentation for the $pkgdesc kernel"
     depends=('linux-bfq-dev')
     replaces=('linux-bfq-docs')
     conflicts=('linux-bfq-docs')
