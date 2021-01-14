@@ -25,7 +25,7 @@
 
 [credential "https://gitlab.com"]
 	username = sirlucjan
-	
+
 [url "https://aur.archlinux.org/"]
 	insteadOf = aur:
 
@@ -74,7 +74,7 @@
 [delta]
 	features = line-numbers decorations
 	line-numbers = true
-	
+
 [delta "decorations"]
 	minus-style = red bold normal
 	plus-style = green bold normal
@@ -96,7 +96,7 @@
 	hotfix = hotfix-
 	support = support-
 	versiontag = v
-	
+
 [sequence]
 	editor = interactive-rebase-tool
 
@@ -331,6 +331,7 @@
 	theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
 	subrepo = !sh -c 'git filter-branch --prune-empty --subdirectory-filter $1 master' -
 	human = name-rev --name-only --refs=refs/heads/*
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
