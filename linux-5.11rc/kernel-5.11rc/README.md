@@ -1,5 +1,9 @@
 # Kernels and modules:
 
+- linux-aufs
+
+- linux-aufs-git
+
 - linux-bfq-dev
  
 - linux-bfq-dev-git
@@ -11,6 +15,10 @@
 - linux-uksm-git
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/linux-uksm.svg)](https://repology.org/project/linux-uksm/versions)
+
+###### linux-aufs/linux-aufs-git incorporates:
+
+* [AUFS](https://github.com/sfjro/aufs5-standalone/tree/aufs5.x-rcN) / [AUFS](http://aufs.sourceforge.net) - advanced multi-layered unification filesystem
 
 ###### linux-bfq-dev/linux-bfq-dev-git incorporates:
 
