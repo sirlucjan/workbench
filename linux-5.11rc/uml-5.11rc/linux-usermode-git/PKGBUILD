@@ -4,12 +4,12 @@
 pkgbase=linux-usermode-git
 pkgname=('linux-usermode-git' 'linux-usermode-git-modules')
 _major=5.11
-_minor=rc3
+_minor=rc4
 _tag=v${_major}-${_minor}
 _kernelname=-usermodelinux-git
 _srcname=linux
-pkgver=5.11.rc3.r0.g7c53f6b671f4
-pkgrel=2
+pkgver=5.11.rc4.r0.g19c329f68089
+pkgrel=1
 pkgdesc="User mode Linux kernel and modules"
 arch=('x86_64')
 license=('GPL2')
