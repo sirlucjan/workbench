@@ -32,17 +32,17 @@
 [url "ssh://aur@aur.archlinux.org/"]
 	insteadOf = aurs:
 
-[url "https://github.com/"]
-	insteadOf = github:
-
-[url "https://gitlab.com/"]
-	insteadOf = gitlab:
-
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
 
 [url "ssh://git@gitlab.com/"]
 	insteadOf = https://gitlab.com/
+
+[url "https://github.com/"]
+	insteadOf = github:
+
+[url "https://gitlab.com/"]
+	insteadOf = gitlab:
 
 [rerere]
 	enabled = 1
