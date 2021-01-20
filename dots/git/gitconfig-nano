@@ -36,7 +36,13 @@
 	insteadOf = github:
 
 [url "https://gitlab.com/"]
-	insteadOf = gitlab:    
+	insteadOf = gitlab:
+
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+
+[url "ssh://git@gitlab.com/"]
+	insteadOf = https://gitlab.com/
 
 [rerere]
 	enabled = 1
