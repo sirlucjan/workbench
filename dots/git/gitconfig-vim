@@ -38,6 +38,16 @@
 [url "https://gitlab.com/"]
 	insteadOf = gitlab:
 
+[url "git@github.com:"]
+	insteadOf = githubs:
+	pushInsteadOf = github:
+	pushInsteadOf = git://github.com/
+
+[url "git@gitlab.com:"]
+	insteadOf = gitlabs:
+	pushInsteadOf = gitlab:
+	pushInsteadOf = git://gitlab.com/
+
 [rerere]
 	enabled = 1
 	autoupdate = 1
