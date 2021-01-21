@@ -38,15 +38,17 @@
 [url "https://gitlab.com/"]
 	insteadOf = gitlab:
 
+[url "git://github.com/"]
+	insteadOf = gitgit:
+
 [url "git@github.com:"]
 	insteadOf = githubs:
 	pushInsteadOf = github:
-	pushInsteadOf = git://github.com/
+	pushInsteadOf = gitgit:
 
 [url "git@gitlab.com:"]
 	insteadOf = gitlabs:
 	pushInsteadOf = gitlab:
-	pushInsteadOf = git://gitlab.com/
 
 [rerere]
 	enabled = 1
