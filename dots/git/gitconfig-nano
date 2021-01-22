@@ -45,10 +45,13 @@
 	insteadOf = githubs:
 	pushInsteadOf = github:
 	pushInsteadOf = gitgit:
+	pushInsteadOf = https://github.com/
+	pushInsteadOf = git://github.com/
 
 [url "git@gitlab.com:"]
 	insteadOf = gitlabs:
 	pushInsteadOf = gitlab:
+	pushInsteadOf = https://gitlab.com/
 
 [rerere]
 	enabled = 1
