@@ -26,7 +26,7 @@
 
 * [AUFS](https://github.com/sfjro/aufs5-standalone/tree/aufs5.x-rcN) / [AUFS](http://aufs.sourceforge.net) - advanced multi-layered unification filesystem
 
-###### linux-bfq-dev/linux-bfq-dev-git incorporates:
+###### linux-bfq-dev/linux-bfq-dev-git/linux-rt-bfq-dev/linux-rt-bfq-dev-git incorporates:
 
 * [bfq improvements](https://groups.google.com/forum/#!forum/bfq-iosched) - latest fixes authored by Paolo Valente and BFQ Team
 
