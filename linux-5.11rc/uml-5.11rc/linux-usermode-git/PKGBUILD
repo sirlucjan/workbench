@@ -9,7 +9,7 @@ _tag=v${_major}-${_minor}
 _kernelname=-usermodelinux-git
 _srcname=linux
 pkgver=5.11.rc5.r0.g6ee1d745b7c9
-pkgrel=1
+pkgrel=2
 pkgdesc="User mode Linux kernel and modules"
 arch=('x86_64')
 license=('GPL2')
@@ -22,7 +22,7 @@ source=(
   '70-uml.hook')
 
 sha256sums=('SKIP'
-            '17b5b1488f226173fda3156c71ec5bb7cb06120ec3548f7377f581e3123f1c75'
+            '084fa27d336bc75ea63703fa085598499fcd02839ca6e82a0afcdb8a6a6c7931'
             '05ea4e00d1e99bf8140a21c94e3c42acf17b9debad9c6f5decbe1dd1fe04332c')
 
 pkgver() {
