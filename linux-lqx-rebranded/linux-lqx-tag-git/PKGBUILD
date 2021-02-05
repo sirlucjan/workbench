@@ -52,9 +52,9 @@ pkgbase=linux-lqx-tag-git
 # pkgname=('linux-lqx-tag-git' 'linux-lqx-tag-git-headers' 'linux-lqx-tag-git-docs')
 _major=5.10
 _minor=13
-_lqx=lqx1
+_lqx=lqx2
 _srcname=zen-kernel
-pkgver=5.10.13.lqx1.r0.g148cc203c8c9
+pkgver=5.10.13.lqx2.r0.g36cf58010bb3
 pkgrel=1
 pkgdesc='Linux Liquorix'
 arch=('x86_64')
@@ -73,7 +73,7 @@ source=("git://github.com/${_srcname}/${_srcname}#tag=v${_major}.${_minor}-${_lq
          # the main kernel config files
         'config')
 sha512sums=('SKIP'
-            'bc48e8ccc4f309f93dc42a49ce92684a7794a90825aa97edaab327a108384f015c86a88a3e52421e5191c4a456c6c01645a6d6899bd112712592e683e8b8ad9e')
+            '0348e4a4ebe9ea646f77ddbce1cf440b6d6cf35af2d563efaf7e750a711a6318c14f2633e0e9c8820fc39be57d85053e1da256295d74686f2ecc947a9ddb4df3')
 
 
 
