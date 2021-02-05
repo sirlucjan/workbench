@@ -47,7 +47,7 @@ pkgbase=linux-zen-git
 _major=5.10
 _srcname=zen-kernel
 pkgver=5.10.13.r970601.gfd4d4ab12786
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux ZEN'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -293,4 +293,4 @@ for _p in "${pkgname[@]}"; do
 done
 
 sha512sums=('SKIP'
-            'd3342f26b030bfe0116265e3b6b4c081ae4d5d8e271c73323e831e06436db00c2a1223742980d002fd3a27f697ef34eb34fbe975e065c6e569c21994769ee35e')
+            '1ead7aa3f964377d74354dc557370fc2c94b56514c274a48e837677f689fb3d259d83ffee146e204491e4addfe0305da1c08f0e5e4acd73af07650c04306d025')
