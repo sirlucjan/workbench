@@ -91,10 +91,7 @@
 │   ├── depends
 │   │   └── mkinitcpio-zstd
 │   │       ├── 0001-Add-zstd-module-decompression.patch
-│   │       ├── 0002-Set-default-compressor-to-zstd.patch
-│   │       ├── 0003-Silence-messages-in-zstd-format.patch
-│   │       ├── 0004-Allow-user-to-override-default-compression-options.patch
-│   │       ├── 0005-mkinitcpio-Lower-zstd-compression-level-to-15.patch
+│   │       ├── 0002-Silence-messages-in-zstd-format.patch
 │   │       ├── mkinitcpio.install
 │   │       └── PKGBUILD
 │   ├── experimental
@@ -184,4 +181,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-84 directories, 100 files
+84 directories, 97 files
