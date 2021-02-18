@@ -155,8 +155,6 @@
 │           ├── config
 │           └── PKGBUILD
 ├── linux-5.11rc
-│   ├── kernel-5.11rc
-│   │   └── README.md
 │   └── uml-5.11rc
 │       ├── linux-usermode-dev-git
 │       │   ├── 70-uml.hook
@@ -196,4 +194,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-92 directories, 104 files
+91 directories, 103 files
