@@ -154,12 +154,6 @@
 │       └── linux-uksm-git
 │           ├── config
 │           └── PKGBUILD
-├── linux-5.11rc
-│   └── uml-5.11rc
-│       └── linux-usermode-git
-│           ├── 70-uml.hook
-│           ├── config
-│           └── PKGBUILD
 ├── linux-lqx-rebranded
 │   ├── linux-lqx-git
 │   │   └── PKGBUILD
@@ -190,4 +184,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-90 directories, 100 files
+87 directories, 97 files
