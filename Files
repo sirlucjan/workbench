@@ -156,9 +156,6 @@
 │           └── PKGBUILD
 ├── linux-5.11rc
 │   ├── kernel-5.11rc
-│   │   ├── linux-aufs
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
 │   │   ├── linux-aufs-git
 │   │   │   ├── config
 │   │   │   └── PKGBUILD
@@ -220,4 +217,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-100 directories, 120 files
+99 directories, 118 files
