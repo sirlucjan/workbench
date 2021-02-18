@@ -116,11 +116,15 @@
 │           ├── config
 │           └── PKGBUILD
 ├── linux-5.11
-│   └── rt
-│       ├── linux-rt-bfq-dev
-│       │   ├── config
-│       │   └── PKGBUILD
-│       └── linux-rt-bfq-dev-git
+│   ├── rt
+│   │   ├── linux-rt-bfq-dev
+│   │   │   ├── config
+│   │   │   └── PKGBUILD
+│   │   └── linux-rt-bfq-dev-git
+│   │       ├── config
+│   │       └── PKGBUILD
+│   └── stable
+│       └── linux-bfq-dev
 │           ├── config
 │           └── PKGBUILD
 ├── linux-5.11rc
@@ -189,4 +193,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-88 directories, 101 files
+90 directories, 103 files
