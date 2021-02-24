@@ -87,10 +87,6 @@
 │   │       ├── 0002-Silence-messages-in-zstd-format.patch
 │   │       ├── mkinitcpio.install
 │   │       └── PKGBUILD
-│   ├── experimental
-│   │   └── linux-juliagoda-git
-│   │       ├── config
-│   │       └── PKGBUILD
 │   ├── README.md
 │   ├── rolling
 │   │   └── linux-juliagoda-git
@@ -209,4 +205,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-94 directories, 115 files
+92 directories, 113 files
