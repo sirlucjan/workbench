@@ -101,9 +101,6 @@
 │           ├── config
 │           └── PKGBUILD
 ├── linux-5.11
-│   ├── api-headers
-│   │   └── linux-api-headers-rc-git
-│   │       └── PKGBUILD
 │   ├── README.md
 │   ├── rt
 │   │   ├── linux-rt-bfq-dev
@@ -199,4 +196,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-89 directories, 110 files
+87 directories, 109 files
