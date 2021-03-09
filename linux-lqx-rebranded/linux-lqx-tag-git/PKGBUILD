@@ -55,13 +55,13 @@ _minor=4
 _lqx=lqx1
 _srcname=zen-kernel
 pkgver=5.11.4.lqx1.r0.gb6e4db9bd60b
-pkgrel=4
+pkgrel=5
 pkgdesc='Linux Liquorix'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
 license=('GPL2')
 options=('!strip')
-makedepends=(bc kmod libelf git)
+makedepends=(bc kmod libelf git pahole)
 if [ -n "$_htmldocs_enable" ]; then
     makedepends+=(xmlto python-sphinx python-sphinx_rtd_theme graphviz imagemagick)
 fi
@@ -217,7 +217,7 @@ _package() {
 
 _package-headers() {
     pkgdesc="Headers and scripts for building modules for the $pkgdesc kernel"
-    depends=('linux-lqx-tag-git')
+    depends=('linux-lqx-tag-git' 'pahole')
 
   cd $_srcname
   local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
