@@ -46,7 +46,7 @@ pkgbase=linux-zen-git
 # pkgname=('linux-zen-git' 'linux-zen-git-headers' 'linux-zen-git-docs')
 _major=5.11
 _srcname=zen-kernel
-pkgver=5.11.4.r985257.g31306b844d6c
+pkgver=5.11.6.r985344.gfb5321b47823
 pkgrel=1
 pkgdesc='Linux ZEN'
 arch=('x86_64')
@@ -164,7 +164,7 @@ _package() {
     optdepends=('crda: to set the correct wireless channels of your country'
                 'linux-firmware: firmware images needed for some devices'
                 'modprobed-db: Keeps track of EVERY kernel module that has ever been probed - useful for those of us who make localmodconfig')
-    provides=(VIRTUALBOX-GUEST-MODULES WIREGUARD-MODULE)
+    provides=(VIRTUALBOX-GUEST-MODULES WIREGUARD-MODULE VHBA-MODULE)
 
   cd $_srcname
   local kernver="$(<version)"
