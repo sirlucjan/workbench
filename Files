@@ -58,6 +58,7 @@
 │   │   └── mkinitcpio-zstd
 │   │       ├── 0001-Add-zstd-module-decompression.patch
 │   │       ├── 0002-Silence-messages-in-zstd-format.patch
+│   │       ├── 0003-Add-rm-flag-to-minimize-the-size-of-initramfs.patch
 │   │       ├── mkinitcpio.install
 │   │       └── PKGBUILD
 │   ├── README.md
@@ -103,4 +104,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-47 directories, 56 files
+47 directories, 57 files
