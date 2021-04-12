@@ -94,7 +94,7 @@ _ll_rev='stable'
 # 'pending' - resync stable releases (active only temporarily)
 # 'testing' - rc releases (active only temporarily)
 # 'trunk' - pre-rc releases (active only temporarily)
-_linux_lucjan='actual'
+_linux_lucjan='pending'
 
 ### Do not edit below this line unless you know what you're doing
 
@@ -506,7 +506,7 @@ for _p in "${pkgname[@]}"; do
 done
 
 sha512sums=('SKIP'
-            'a66da07ede0371518cdc4896e59ccd1952aa2ad7d77a2e1f6cc12375858fc9f5049e02cf43c90f221b2f9c7d17fa6b459ddaf5faa6fad325030bcb105b89ae88'
+            '89ccc26e8fc7d2e1ea7db160464a0550fa5c1b6311c31b537136721941f9b167e0e182371cb2d51032c30c81837bcbd112e1780dac914280f77e2f92e7589190'
             'SKIP'
             '7ecc1ea45662340abc0e1932766984fc558e8d504c6ebecb9571680139791897761963720b15c5cc9b8b04b2773633cbdb71775812c3c658e785260ab1088c60')
 
