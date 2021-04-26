@@ -6,31 +6,38 @@
 │   └── README.md
 ├── Devel
 │   ├── Config
-│   │   └── 5.11
+│   │   ├── 5.11
+│   │   │   ├── git
+│   │   │   │   ├── aufs-git
+│   │   │   │   │   └── config
+│   │   │   │   ├── bfq-dev-git
+│   │   │   │   │   └── config
+│   │   │   │   ├── lucjan-git
+│   │   │   │   │   └── config
+│   │   │   │   ├── rt-bfq-dev-git
+│   │   │   │   │   └── config
+│   │   │   │   ├── uksm-git
+│   │   │   │   │   └── config
+│   │   │   │   └── uml-git
+│   │   │   │       └── config
+│   │   │   └── src
+│   │   │       ├── aufs
+│   │   │       │   └── config
+│   │   │       ├── bfq-dev
+│   │   │       │   └── config
+│   │   │       ├── lucjan
+│   │   │       │   └── config
+│   │   │       ├── rt-bfq-dev
+│   │   │       │   └── config
+│   │   │       ├── uksm
+│   │   │       │   └── config
+│   │   │       └── uml
+│   │   │           └── config
+│   │   └── 5.12
 │   │       ├── git
-│   │       │   ├── aufs-git
-│   │       │   │   └── config
-│   │       │   ├── bfq-dev-git
-│   │       │   │   └── config
-│   │       │   ├── lucjan-git
-│   │       │   │   └── config
-│   │       │   ├── rt-bfq-dev-git
-│   │       │   │   └── config
-│   │       │   ├── uksm-git
-│   │       │   │   └── config
 │   │       │   └── uml-git
 │   │       │       └── config
 │   │       └── src
-│   │           ├── aufs
-│   │           │   └── config
-│   │           ├── bfq-dev
-│   │           │   └── config
-│   │           ├── lucjan
-│   │           │   └── config
-│   │           ├── rt-bfq-dev
-│   │           │   └── config
-│   │           ├── uksm
-│   │           │   └── config
 │   │           └── uml
 │   │               └── config
 │   └── Kernel
@@ -104,4 +111,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-47 directories, 57 files
+52 directories, 59 files
