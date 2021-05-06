@@ -84,10 +84,6 @@
 │   │       ├── 0003-Add-rm-flag-to-minimize-the-size-of-initramfs.patch
 │   │       ├── mkinitcpio.install
 │   │       └── PKGBUILD
-│   ├── experimental
-│   │   └── linux-juliagoda-git
-│   │       ├── config
-│   │       └── PKGBUILD
 │   ├── README.md
 │   ├── rolling
 │   │   └── linux-juliagoda-git
@@ -199,4 +195,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-89 directories, 110 files
+87 directories, 108 files
