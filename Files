@@ -140,10 +140,6 @@
 │   │       ├── config
 │   │       └── PKGBUILD
 │   └── uml
-│       ├── linux-usermode
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
 │       ├── linux-usermode-git
 │       │   ├── 70-uml.hook
 │       │   ├── config
@@ -186,4 +182,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-82 directories, 104 files
+81 directories, 101 files
