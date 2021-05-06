@@ -99,10 +99,6 @@
 │           └── PKGBUILD
 ├── linux-5.12
 │   ├── README.md
-│   ├── stable-git
-│   │   └── linux-uksm-git
-│   │       ├── config
-│   │       └── PKGBUILD
 │   └── stable-rc-git
 │       ├── linux-aufs-git
 │       │   ├── config
@@ -143,4 +139,4 @@
     ├── PKGBUILD
     └── xf86-video-intel-dev-git.install
 
-67 directories, 76 files
+65 directories, 74 files
