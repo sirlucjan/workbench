@@ -52,12 +52,12 @@ _htmldocs_enable=
 ### Do not edit below this line unless you know what you're doing
 
 # pkgname=('linux-lqx-git' 'linux-lqx-git-headers' 'linux-lqx-git-docs')
-_major=5.11
+_major=5.12
 _srcname=linux-${_major}
 _lqxpatchname=liquorix-package
 pkgbase=linux-lqx-git
-pkgver=5.11.4.1.r1970.g2682380
-pkgrel=3
+pkgver=5.12.4.2.r2115.ge6237e1
+pkgrel=1
 pkgdesc='Linux Liquorix'
 arch=('x86_64')
 url="http://liquorix.net/"
@@ -74,7 +74,7 @@ _lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major}"
 source=("https://cdn.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.xz"
         "https://cdn.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.sign"
         "git://github.com/damentz/${_lqxpatchname}.git#branch=${_major}/master")
-sha512sums=('a567ec133018bb5ec00c60281479b466c26e02137a93a9c690e83997947df02b6fd94e76e8df748f6d70ceb58a19bacc3b1467de10b7a1fad2763db32b3f1330'
+sha512sums=('be03b6fee1d1ea8087b09874d27c0a602c0b04fd90ad38b975bd2c8455a07e83c29b56814aaf1389e82305fae0e4c2d1701075a7f0a7295dd28149f967ec5b3d'
             'SKIP'
             'SKIP')
 
