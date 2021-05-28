@@ -51,7 +51,7 @@ _htmldocs_enable=
 pkgbase=linux-lqx-tag
 # pkgname=('linux-lqx-tag' 'linux-lqx-tag-headers' 'linux-lqx-tag-docs')
 _major=5.12
-_minor=7
+_minor=8
 _lqx=lqx1
 _srcname=linux-${_major}
 pkgver=${_major}.${_minor}.${_lqx}
@@ -78,7 +78,7 @@ source=("https://cdn.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.xz"
         'config')
 sha512sums=('be03b6fee1d1ea8087b09874d27c0a602c0b04fd90ad38b975bd2c8455a07e83c29b56814aaf1389e82305fae0e4c2d1701075a7f0a7295dd28149f967ec5b3d'
             'SKIP'
-            'df8be5b8982ff86a884ba30d7d5cf84d1b592a252aac365e5a365760ae6bbb3090798c79a2013918df14c2abb40a0626e8e974b0bfb02c043cb96a35f50ab615'
+            '0ff7184ac2f6a48834e32e55ec37b1caa3fc4a799cecf08659eea841f07a9dfbe1612f1329a10d0b54cfd99dea9ed04f91515aeb730973e43615342f63fe38bd'
             'SKIP'
             '176db6a8deaf5a18e666bd9184637defc735726e931b7d0b70f399181fb64046adc8d34767682346f0d8d693077d1d8df6542fcb24e87438f62b55b4ff96962d')
 
