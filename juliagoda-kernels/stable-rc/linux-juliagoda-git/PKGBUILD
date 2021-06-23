@@ -53,8 +53,8 @@ _ll_branding='yes'
 # https://github.com/graysky2/kernel_compiler_patch#expanded-cpus-include
 _compiler_tune=y
 
-### Disable Deadline I/O scheduler
-_deadline_disable=
+### Disable MQ-Deadline I/O scheduler with cgroup support
+_mq_deadline_disable=
 
 ### Disable Kyber I/O scheduler
 _kyber_disable=y
@@ -121,7 +121,7 @@ _major=5.12
 _patches=${_major}-dev
 _srcname=linux-stable-rc
 pkgver=5.12.12.r179.g88a915cf22fc.ll70
-pkgrel=0
+pkgrel=0.1
 pkgdesc='Linux LL'
 arch=('x86_64')
 url="https://gitlab.com/sirlucjan/lucjan-kernels/wikis/README"
@@ -277,9 +277,9 @@ prepare() {
 		scripts/config --enable CONFIG_MK10
 	fi
 
-    ### Disable Deadline I/O scheduler
-	if [ -n "$_deadline_disable" ]; then
-		echo "Disabling Deadline I/O scheduler..."
+    ### Disable MQ-Deadline I/O scheduler with cgroup support
+	if [ -n "$_mq_deadline_disable" ]; then
+		echo "Disabling MQ-Deadline I/O scheduler with cgroup support..."
 		scripts/config --disable CONFIG_MQ_IOSCHED_DEADLINE
 		scripts/config --disable CONFIG_MQ_IOSCHED_DEADLINE_CGROUP
 	fi
