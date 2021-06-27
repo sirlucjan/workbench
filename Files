@@ -53,12 +53,14 @@
 │   │   ├── gitconfig-nano
 │   │   ├── gitconfig-vim
 │   │   └── gitignore
-│   └── scripts
-│       ├── app.sh
-│       ├── git-patching.sh
-│       ├── patcher.sh
-│       ├── patching.sh
-│       └── repo-schema.sh
+│   ├── scripts
+│   │   ├── app.sh
+│   │   ├── git-patching.sh
+│   │   ├── patcher.sh
+│   │   ├── patching.sh
+│   │   └── repo-schema.sh
+│   └── sound
+│       └── asoundrc
 ├── Files
 ├── juliagoda-kernels
 │   ├── depends
@@ -108,4 +110,4 @@
 │   └── README.md
 └── README.md
 
-50 directories, 58 files
+51 directories, 59 files
