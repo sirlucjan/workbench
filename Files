@@ -40,6 +40,8 @@
 │       └── uml
 │           └── 70-uml.hook
 ├── dots
+│   ├── bash
+│   │   └── bashrc
 │   ├── boot
 │   │   └── syslinux.cfg
 │   ├── fancontrol
@@ -106,4 +108,4 @@
 │   └── README.md
 └── README.md
 
-49 directories, 57 files
+50 directories, 58 files
