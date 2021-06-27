@@ -102,9 +102,6 @@
 │   │   ├── config
 │   │   └── PKGBUILD
 │   └── README.md
-├── README.md
-└── xf86-video-intel-dev-git
-    ├── PKGBUILD
-    └── xf86-video-intel-dev-git.install
+└── README.md
 
-50 directories, 57 files
+49 directories, 55 files
