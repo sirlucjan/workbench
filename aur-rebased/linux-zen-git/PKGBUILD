@@ -46,7 +46,7 @@ pkgbase=linux-zen-git
 # pkgname=('linux-zen-git' 'linux-zen-git-headers' 'linux-zen-git-docs')
 _major=5.12
 _srcname=zen-kernel
-pkgver=5.12.13.r1001021.g884c5750ced7
+pkgver=5.12.14.r1001139.geee3dd1a15f5
 pkgrel=1
 pkgdesc='Linux ZEN'
 arch=('x86_64')
@@ -213,13 +213,16 @@ _package-headers() {
   install -Dt "$builddir/drivers/md" -m644 drivers/md/*.h
   install -Dt "$builddir/net/mac80211" -m644 net/mac80211/*.h
 
-  # http://bugs.archlinux.org/task/13146
+  # https://bugs.archlinux.org/task/13146
   install -Dt "$builddir/drivers/media/i2c" -m644 drivers/media/i2c/msp3400-driver.h
 
-  # http://bugs.archlinux.org/task/20402
+  # https://bugs.archlinux.org/task/20402
   install -Dt "$builddir/drivers/media/usb/dvb-usb" -m644 drivers/media/usb/dvb-usb/*.h
   install -Dt "$builddir/drivers/media/dvb-frontends" -m644 drivers/media/dvb-frontends/*.h
   install -Dt "$builddir/drivers/media/tuners" -m644 drivers/media/tuners/*.h
+
+  # https://bugs.archlinux.org/task/71392
+  install -Dt "$builddir/drivers/iio/common/hid-sensors" -m644 drivers/iio/common/hid-sensors/*.h
 
   echo "Installing KConfig files..."
   find . -name 'Kconfig*' -exec install -Dm644 {} "$builddir/{}" \;
@@ -293,4 +296,4 @@ for _p in "${pkgname[@]}"; do
 done
 
 sha512sums=('SKIP'
-            '4e03cd1edfc1c383a0ee434a3cf1780e886cf0a970fbdf6ad97096dbf3cb0849b47c8c0ef65cb16d5694034dd289f4d5bbc71e1d52da37cbc4829e64b788e3ee')
+            '3d411917201e2145dc66d570811642d0d27e86a3a9dc167eba1583d0205fc0b2e4a684d414a1b0f1ea1c495f324d16995647d30d6c8afb87dbb2a7ab6334dece')
