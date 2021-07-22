@@ -44,9 +44,9 @@ _use_current=
 
 pkgbase=linux-zen-tag
 # pkgname=('linux-zen-tag' 'linux-zen-tag-headers' 'linux-zen-tag-docs')
-_major=5.12
-_minor=15
-_zen=zen1
+_major=5.13
+_minor=4
+_zen=zen2
 _srcname=linux-${_major}
 pkgver=${_major}.${_minor}.${_zen}
 _pkgver=${_major}.${_minor}-${_zen}
@@ -298,14 +298,16 @@ for _p in "${pkgname[@]}"; do
   }"
 done
 
-sha512sums=('be03b6fee1d1ea8087b09874d27c0a602c0b04fd90ad38b975bd2c8455a07e83c29b56814aaf1389e82305fae0e4c2d1701075a7f0a7295dd28149f967ec5b3d'
+sha512sums=('a8edf97e9d38a49f1be2bde1e29ad96274bb2c6f7e8a2bebaa1161dd4df9cabcbaec4ff644c45bee94f86ae47725087d6deed0cd954209cec717621d137db85e'
             'SKIP'
-            '04ba95bcdc16344270ec2b90d6032ec34d019fec75ae22b76cf4524f0163a75119982ebaf4640f6dceff7ac11c92448429624b1c07d63568fbd360ac139e670d'
+            '186d770a2aa6973dca4c3e30b70e905634bfbaab6f85397b35b4d39b4abfc0c40b208344a1340e4bd8b0e9f00844d29f955f76ba68f904b15f94c1658416e5e3'
             'SKIP'
-            '3d411917201e2145dc66d570811642d0d27e86a3a9dc167eba1583d0205fc0b2e4a684d414a1b0f1ea1c495f324d16995647d30d6c8afb87dbb2a7ab6334dece')
+            'f989a379ad088e0ffa4bb1ef39486bd9864b18329452ddc517d0c3e6d0fc5022c07be8c0521b297cc02efb2972f3eb5974c2ab43210546fcc678557cda2eb9f8')
 
 validpgpkeys=(
               'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
               '647F28654894E3BD457199BE38DBBDC86092693E' # Greg Kroah-Hartman
-              'A2FF3A36AAA56654109064AB19802F8B0D70FC30' # Jan Alexander Steffens
+              'A2FF3A36AAA56654109064AB19802F8B0D70FC30' # Jan Alexander Steffens (heftig)
+              'C7E7849466FE2358343588377258734B41C31549' # David Runge <dvzrv@archlinux.org>
+              'C5ADB4F3FEBBCE27A3E54D7D9AE4078033F8024D' # Steven Barrett
              )
