@@ -113,8 +113,6 @@
 │           └── PKGBUILD
 ├── linux-5.13
 │   ├── api-headers
-│   │   ├── linux-api-headers-git
-│   │   │   └── PKGBUILD
 │   │   └── linux-api-headers-rc-git
 │   │       └── PKGBUILD
 │   ├── rt
@@ -208,4 +206,4 @@
 │   └── README.md
 └── README.md
 
-94 directories, 114 files
+93 directories, 113 files
