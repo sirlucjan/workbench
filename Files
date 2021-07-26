@@ -6,13 +6,6 @@
 │   └── README.md
 ├── Devel
 │   ├── Config
-│   │   ├── 5.12
-│   │   │   ├── git
-│   │   │   │   └── uml-git
-│   │   │   │       └── config
-│   │   │   └── src
-│   │   │       └── uml
-│   │   │           └── config
 │   │   └── 5.13
 │   │       ├── git
 │   │       │   ├── aufs-git
@@ -116,4 +109,4 @@
 │   └── README.md
 └── README.md
 
-54 directories, 62 files
+49 directories, 60 files
