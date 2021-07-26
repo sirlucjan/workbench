@@ -112,9 +112,6 @@
 │           ├── config
 │           └── PKGBUILD
 ├── linux-5.13
-│   ├── api-headers
-│   │   └── linux-api-headers-rc-git
-│   │       └── PKGBUILD
 │   ├── rt
 │   │   ├── linux-rt-bfq-dev
 │   │   │   ├── config
@@ -206,4 +203,4 @@
 │   └── README.md
 └── README.md
 
-93 directories, 113 files
+91 directories, 112 files
