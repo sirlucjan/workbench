@@ -8,15 +8,11 @@
 │   ├── Config
 │   │   ├── 5.12
 │   │   │   ├── git
-│   │   │   │   ├── lucjan-git
-│   │   │   │   │   └── config
 │   │   │   │   ├── uksm-git
 │   │   │   │   │   └── config
 │   │   │   │   └── uml-git
 │   │   │   │       └── config
 │   │   │   └── src
-│   │   │       ├── lucjan
-│   │   │       │   └── config
 │   │   │       ├── uksm
 │   │   │       │   └── config
 │   │   │       └── uml
@@ -124,4 +120,4 @@
 │   └── README.md
 └── README.md
 
-58 directories, 66 files
+56 directories, 64 files
