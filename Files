@@ -98,10 +98,6 @@
 │   │   │   ├── mkinitcpio.install
 │   │   │   └── PKGBUILD
 │   │   └── README.md
-│   ├── exeperimental
-│   │   └── linux-juliagoda-git
-│   │       ├── config
-│   │       └── PKGBUILD
 │   ├── README.md
 │   ├── rolling
 │   │   └── linux-juliagoda-git
@@ -216,4 +212,4 @@
 │   └── README.md
 └── README.md
 
-98 directories, 118 files
+96 directories, 116 files
