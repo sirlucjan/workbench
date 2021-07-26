@@ -113,9 +113,6 @@
 │           └── PKGBUILD
 ├── linux-5.13
 │   ├── stable-rc-git
-│   │   ├── linux-bfq-dev-git
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
 │   │   └── linux-uksm-git
 │   │       ├── config
 │   │       └── PKGBUILD
@@ -163,4 +160,4 @@
 │   └── README.md
 └── README.md
 
-75 directories, 88 files
+74 directories, 86 files
