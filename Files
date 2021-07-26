@@ -8,8 +8,6 @@
 │   ├── Config
 │   │   ├── 5.12
 │   │   │   ├── git
-│   │   │   │   ├── aufs-git
-│   │   │   │   │   └── config
 │   │   │   │   ├── bfq-dev-git
 │   │   │   │   │   └── config
 │   │   │   │   ├── lucjan-git
@@ -19,8 +17,6 @@
 │   │   │   │   └── uml-git
 │   │   │   │       └── config
 │   │   │   └── src
-│   │   │       ├── aufs
-│   │   │       │   └── config
 │   │   │       ├── bfq-dev
 │   │   │       │   └── config
 │   │   │       ├── lucjan
@@ -132,4 +128,4 @@
 │   └── README.md
 └── README.md
 
-62 directories, 70 files
+60 directories, 68 files
