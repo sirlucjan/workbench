@@ -70,7 +70,7 @@
 
 ###### linux-zen-tag incorporates:
 
-* [zen-kernel](https://github.com/zen-kernel/zen-kernel/tree/5.12/master) - specific patchset authored by ZEN Kernel Team
+* [zen-kernel](https://github.com/zen-kernel/zen-kernel/tree/5.13/master) - specific patchset authored by ZEN Kernel Team
 
 #### DOTS
 
