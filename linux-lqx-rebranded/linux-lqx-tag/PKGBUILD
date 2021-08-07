@@ -50,9 +50,9 @@ _htmldocs_enable=
 
 pkgbase=linux-lqx-tag
 # pkgname=('linux-lqx-tag' 'linux-lqx-tag-headers' 'linux-lqx-tag-docs')
-_major=5.12
-_minor=19
-_lqx=lqx4
+_major=5.13
+_minor=8
+_lqx=lqx1
 _srcname=linux-${_major}
 pkgver=${_major}.${_minor}.${_lqx}
 _pkgver=${_major}.${_minor}-${_lqx}
@@ -76,11 +76,11 @@ source=("https://cdn.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.xz"
         "https://github.com/zen-kernel/zen-kernel/releases/download/v${_pkgver}/v${_pkgver}.patch.xz.sig"
          # the main kernel config files
         'config')
-sha512sums=('be03b6fee1d1ea8087b09874d27c0a602c0b04fd90ad38b975bd2c8455a07e83c29b56814aaf1389e82305fae0e4c2d1701075a7f0a7295dd28149f967ec5b3d'
+sha512sums=('a8edf97e9d38a49f1be2bde1e29ad96274bb2c6f7e8a2bebaa1161dd4df9cabcbaec4ff644c45bee94f86ae47725087d6deed0cd954209cec717621d137db85e'
             'SKIP'
-            'bfd1f4df159420f76d86eedbb1fccfb2aa46d3af3a57042a5c4123c5860f0ed672e185bfdfb7b8904e51a15ae57b1c8adb0f7789c7f67c3975c13dfea0d6ce02'
+            'cbd7d535f3ab08e13175a87ab4442aedbb04dce9b2f3eb7777e44cf4fa3f919979c7806ce53dcc17082243d656fdd8ac70a6b187f8718f99c9645edec3bc1587'
             'SKIP'
-            'e4936a709ae21ef6ceba52d8e7f3b0d7a4a2ae097a33989f5c68394a123ab44627c072aa55ffaca6d1c20b04a4aa110a24a0540bd9a8ee8aa9ffcb0647c2f63e')
+            'd64af0466c6447ab1c6081ad15586f710ad2faba3e885a6a5b7b2c00d59b360dfc20a03440d92e500543f6ea3c4b9bc82c7572e21625e802bb1ca2b24c204954')
 
 validpgpkeys=(
               'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
