@@ -61,13 +61,12 @@
 ├── Files
 ├── juliagoda-kernels
 │   ├── depends
-│   │   ├── mkinitcpio-zstd
-│   │   │   ├── 0001-Add-zstd-module-decompression.patch
-│   │   │   ├── 0002-Silence-messages-in-zstd-format.patch
-│   │   │   ├── 0003-Add-rm-flag-to-minimize-the-size-of-initramfs.patch
-│   │   │   ├── mkinitcpio.install
-│   │   │   └── PKGBUILD
-│   │   └── README.md
+│   │   └── mkinitcpio-zstd
+│   │       ├── 0001-Add-zstd-module-decompression.patch
+│   │       ├── 0002-Silence-messages-in-zstd-format.patch
+│   │       ├── 0003-Add-rm-flag-to-minimize-the-size-of-initramfs.patch
+│   │       ├── mkinitcpio.install
+│   │       └── PKGBUILD
 │   ├── README.md
 │   ├── rolling
 │   │   └── linux-juliagoda-git
@@ -108,4 +107,4 @@
 │   └── README.md
 └── README.md
 
-48 directories, 60 files
+48 directories, 59 files
