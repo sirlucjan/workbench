@@ -35,16 +35,16 @@
 [url "https://github.com/"]
 	insteadOf = github:
 
+[url "git://github.com/"]
+	insteadOf = hubgit:
+
 [url "https://gitlab.com/"]
 	insteadOf = gitlab:
-
-[url "git://github.com/"]
-	insteadOf = gitgit:
 
 [url "git@github.com:"]
 	insteadOf = githubs:
 	pushInsteadOf = github:
-	pushInsteadOf = gitgit:
+	pushInsteadOf = hubgit:
 	pushInsteadOf = https://github.com/
 	pushInsteadOf = git://github.com/
 
