@@ -52,7 +52,7 @@ pkgbase=linux-lqx-tag
 # pkgname=('linux-lqx-tag' 'linux-lqx-tag-headers' 'linux-lqx-tag-docs')
 _major=5.13
 _minor=12
-_lqx=lqx3
+_lqx=lqx4
 _srcname=linux-${_major}
 pkgver=${_major}.${_minor}.${_lqx}
 _pkgver=${_major}.${_minor}-${_lqx}
@@ -78,9 +78,9 @@ source=("https://cdn.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.xz"
         'config')
 sha512sums=('a8edf97e9d38a49f1be2bde1e29ad96274bb2c6f7e8a2bebaa1161dd4df9cabcbaec4ff644c45bee94f86ae47725087d6deed0cd954209cec717621d137db85e'
             'SKIP'
-            '93d94332fdbdcf5845a19a0e76829bd75a9572c4b133510ee65d1931bfa1e5b7bb8f34ed0486dd0382520d565cfcc5e73ba02a2acb9fa4d49a37c9930117551a'
+            '469eae72fb5c19b02e951dc69c37ddaaa0b83167bda8fe1d82378cd26a827e8674a572f20f9b9c8ec1c999c4d29c4ddf7d8c766c7b020e9baf715c1fa34ba242'
             'SKIP'
-            'd33e092e54b9de5bef93b40168dde7b6520a0aedfb9b8161a159c3af9672cdf3ac3dd1a74674ba419e244f18d9c1d339a6572bcc3862c6a0948c35fefaaa4f40')
+            '83f50a03a2b344e808b0b25b45fa1fc4e44fa00c1be115fe6fc4713996147eadf304b39dad115a4a7f8398567206593a380820e36ecba0dbfea57263781bf8b3')
 
 validpgpkeys=(
               'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
