@@ -44,13 +44,13 @@ _use_current=
 
 pkgbase=linux-zen-tag
 # pkgname=('linux-zen-tag' 'linux-zen-tag-headers' 'linux-zen-tag-docs')
-_major=5.13
-_minor=13
+_major=5.14
+_minor=1
 _zen=zen1
 _srcname=linux-${_major}
 pkgver=${_major}.${_minor}.${_zen}
 _pkgver=${_major}.${_minor}-${_zen}
-pkgrel=2
+pkgrel=1
 pkgdesc='Linux ZEN'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -298,11 +298,11 @@ for _p in "${pkgname[@]}"; do
   }"
 done
 
-sha512sums=('a8edf97e9d38a49f1be2bde1e29ad96274bb2c6f7e8a2bebaa1161dd4df9cabcbaec4ff644c45bee94f86ae47725087d6deed0cd954209cec717621d137db85e'
+sha512sums=('8e4f3ec3d36f774280f75dc7b004a43e09417af58f12e9c9f8348976659d4cfda7ad905f306f43fed66a27922e5c45db22e46bbfa7a0b9f365012380de3b6f64'
             'SKIP'
-            '738d88ef395b45319ca04000f0fdafcf2d1efd409fbb4444e33902925cd8246acd14f9ca0472fb127222e5d9574693ad0a2b15d6b41ab0f6a2ede5e607158850'
+            '3f0aa761e17be825ae03b50ca4eef216c2e36762de0923e25a7ea3b77f24283766b41f8ebce784ed480e32fd97fcb047c0d6b84db8afac4dc2a67869a7316976'
             'SKIP'
-            'cb50b54ddc3e225145c2231c92c0994926715a6ec8cc06f4434358adeff44e050e2cc7a8ae522d38c614c2f9a5714bdff0ec1ab912893131d58cacedd20c4613')
+            'c0dd381b7da20b0062b5f7cd89470cce9f2f5e58b172554dbe39e69ab553a8deaeddcf0ed7cd7650d11a141ae2a2b991365e0a9ba01437ddeb78a528cec1fd30')
 
 validpgpkeys=(
               'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
