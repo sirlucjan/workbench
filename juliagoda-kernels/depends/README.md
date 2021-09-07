@@ -10,7 +10,7 @@
 
 ## Selecting the ZSTD module compression level
 
-###### To select the compression level, choose between "normal" and "ultra".  
+###### To select the compression level, choose between "normal" and "ultra".
 
 ```
 ### Selecting the ZSTD module compression level
