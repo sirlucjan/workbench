@@ -1,6 +1,7 @@
 # mkinitcpio-zstd
 
 ##### mkinitcpio in the current version 30 does not full support modules compressed in zstd format.
+##### These changes will significantly reduce the size of initramfs and also simplify the format of system logs.
 ##### A pull request has been approved by the developers and the next version 31 will support decompression of modules in this format without any problems.
 ##### Source: https://github.com/archlinux/mkinitcpio/pull/43/commits
 ##### I have been testing this solution since December 2020 and have not found any irregularities. Please report any bugs in this exact repository.
@@ -9,7 +10,7 @@
 
 ## Selecting the ZSTD module compression level
 
-###### To select the compression level, choose between "normal" and "ultra". 
+###### To select the compression level, choose between "normal" and "ultra".  
 
 ```
 ### Selecting the ZSTD module compression level
@@ -41,11 +42,10 @@ _zstd_module_level='normal'
 	else
 		if [ -n "$_zstd_module_level" ]; then
 			error "The value $_zstd_module_level is invalid. Choose the correct one again."
-			error "Selecting the ZSTD module compression level failed!"
 		else
 			error "The value is empty. Choose the correct one again."
-			error "Selecting the ZSTD module compression level failed!"
 		fi
+		error "Selecting the ZSTD module compression level failed!"
 		exit
 	fi
 ```
