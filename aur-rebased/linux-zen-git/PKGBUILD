@@ -46,7 +46,7 @@ pkgbase=linux-zen-git
 # pkgname=('linux-zen-git' 'linux-zen-git-headers' 'linux-zen-git-docs')
 _major=5.14
 _srcname=zen-kernel
-pkgver=5.14.1.r1031594.g723e7e6616bf
+pkgver=5.14.2.r1031615.geddce3e5803f
 pkgrel=1
 pkgdesc='Linux ZEN'
 arch=('x86_64')
@@ -296,4 +296,4 @@ for _p in "${pkgname[@]}"; do
 done
 
 sha512sums=('SKIP'
-            'c0dd381b7da20b0062b5f7cd89470cce9f2f5e58b172554dbe39e69ab553a8deaeddcf0ed7cd7650d11a141ae2a2b991365e0a9ba01437ddeb78a528cec1fd30')
+            '6ea640598f7b48d0ac03c52dde694c012c4fd10ba3757d80ea53f027c419207f7995c478519f9722f76ff547367f6bc81c26bf59b09add4bb47351a41acb5d07')
