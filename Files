@@ -121,9 +121,6 @@
 │   │       ├── config
 │   │       └── PKGBUILD
 │   └── stable-rc-git
-│       ├── linux-aufs-git
-│       │   ├── config
-│       │   └── PKGBUILD
 │       ├── linux-bfq-dev-git
 │       │   ├── config
 │       │   └── PKGBUILD
@@ -157,4 +154,4 @@
 │   └── README.md
 └── README.md
 
-72 directories, 85 files
+71 directories, 83 files
