@@ -111,9 +111,6 @@
 │           └── PKGBUILD
 ├── linux-5.14
 │   ├── rt
-│   │   ├── linux-rt-bfq-dev
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
 │   │   └── linux-rt-bfq-dev-git
 │   │       ├── config
 │   │       └── PKGBUILD
@@ -184,4 +181,4 @@
 │   └── README.md
 └── README.md
 
-83 directories, 101 files
+82 directories, 99 files
