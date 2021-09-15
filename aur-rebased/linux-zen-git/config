@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 5.14.2-zen2 Kernel Configuration
+# Linux/x86 5.14.4-zen1 Kernel Configuration
 #
 CONFIG_CC_VERSION_TEXT="gcc (GCC) 11.1.0"
 CONFIG_CC_IS_GCC=y
@@ -24,7 +24,6 @@ CONFIG_THREAD_INFO_IN_TASK=y
 #
 # General setup
 #
-# CONFIG_SCHED_MUQSS is not set
 CONFIG_ZEN_INTERACTIVE=y
 CONFIG_INIT_ENV_ARG_LIMIT=32
 # CONFIG_COMPILE_TEST is not set
@@ -187,10 +186,12 @@ CONFIG_HAVE_UNSTABLE_SCHED_CLOCK=y
 #
 # Scheduler features
 #
+# CONFIG_SCHED_ALT is not set
 CONFIG_UCLAMP_TASK=y
 CONFIG_UCLAMP_BUCKETS_COUNT=5
 # end of Scheduler features
 
+# CONFIG_CACULE_SCHED is not set
 CONFIG_ARCH_SUPPORTS_NUMA_BALANCING=y
 CONFIG_ARCH_WANT_BATCHED_UNMAP_TLB_FLUSH=y
 CONFIG_CC_HAS_INT128=y
