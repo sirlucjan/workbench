@@ -40,8 +40,12 @@ _localmodcfg=
 # a new kernel is released, but again, convenient for package bumps.
 _use_current=
 
-### Disable MUQSS
-_muqss_disable=
+### Selecting the CPU scheduler
+# ATTENTION - one of three predefined values should be selected!
+# 'bmq' - select 'BitMap Queue CPU scheduler'
+# 'pds' - select 'Priority and Deadline based Skip list multiple queue CPU scheduler'
+# 'none' - select 'Completely Fair Scheduler'
+_projectc='pds'
 
 ### Enable htmldocs (increases compile time)
 _htmldocs_enable=
@@ -50,9 +54,9 @@ _htmldocs_enable=
 
 pkgbase=linux-lqx-tag
 # pkgname=('linux-lqx-tag' 'linux-lqx-tag-headers' 'linux-lqx-tag-docs')
-_major=5.13
-_minor=16
-_lqx=lqx2
+_major=5.14
+_minor=4
+_lqx=lqx1
 _srcname=linux-${_major}
 pkgver=${_major}.${_minor}.${_lqx}
 _pkgver=${_major}.${_minor}-${_lqx}
@@ -76,11 +80,11 @@ source=("https://cdn.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.xz"
         "https://github.com/zen-kernel/zen-kernel/releases/download/v${_pkgver}/v${_pkgver}.patch.xz.sig"
          # the main kernel config files
         'config')
-sha512sums=('a8edf97e9d38a49f1be2bde1e29ad96274bb2c6f7e8a2bebaa1161dd4df9cabcbaec4ff644c45bee94f86ae47725087d6deed0cd954209cec717621d137db85e'
+sha512sums=('8e4f3ec3d36f774280f75dc7b004a43e09417af58f12e9c9f8348976659d4cfda7ad905f306f43fed66a27922e5c45db22e46bbfa7a0b9f365012380de3b6f64'
             'SKIP'
-            '7b85e3ac58f5d03b690cc07642bcf0ac71f443a38613cb56262eb99726a383a63a54d927f26746c472f1d3e7c606afa6c8deaf200be1162dd736fced65a0ff1e'
+            'a1dae521d8acd66f3dbcff3a9c08abeaa4100abbac7eac75b3edad189e5c0ed9ec49e7766a3184be7f4487b9e1fd132cb92ce83ee824f81f8bbd921cdbd56199'
             'SKIP'
-            '83f50a03a2b344e808b0b25b45fa1fc4e44fa00c1be115fe6fc4713996147eadf304b39dad115a4a7f8398567206593a380820e36ecba0dbfea57263781bf8b3')
+            'bae3d569faab68724cade9236dc847395a536ecdea1e6a8c20abc3d4cff8d6b55d2774a9ce554a58b8f6223d212fbfc99082c8af1d7aafe90604e5c1b26c5849')
 
 validpgpkeys=(
               'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
@@ -141,18 +145,27 @@ prepare() {
 		fi
 	fi
 
-    ### Disable MUQSS
-        if [ -n "$_muqss_disable" ]; then
-        echo "Disabling MUQSS..."
-            scripts/config --disable CONFIG_SCHED_MUQSS
-            scripts/config --disable CONFIG_RQ_NONE
-            scripts/config --disable CONFIG_RQ_SMT
-            scripts/config --disable CONFIG_RQ_MC
-            scripts/config --disable CONFIG_RQ_MC_LLC
-            scripts/config --disable CONFIG_RQ_SMP
-            scripts/config --disable CONFIG_RQ_ALL
-            scripts/config --undefine CONFIG_SHARERQ
-        fi
+    ### Selecting the CPU scheduler
+	if [ "$_projectc" = "bmq" ]; then
+		echo "Selecting BMQ CPU scheduler..."
+		scripts/config --enable CONFIG_SCHED_BMQ
+		scripts/config --disable CONFIG_SCHED_PDS
+	elif [ "$_projectc" = "pds" ]; then
+		echo "Selecting PDS CPU scheduler..."
+		scripts/config --disable CONFIG_SCHED_BMQ
+		scripts/config --enable CONFIG_SCHED_PDS
+	elif [ "$_projectc" = "none" ]; then
+		echo "Selecting Completely Fair Scheduler..."
+		scripts/config --disable CONFIG_SCHED_ALT
+	else
+		if [ -n "$_projectc" ]; then
+			error "The value $_projectc is invalid. Choose the correct one again."
+		else
+			error "The value is empty. Choose the correct one again."
+		fi
+		error "Selecting the CPU scheduler failed!"
+		exit
+	fi
 
     ### Optionally disable NUMA for 64-bit kernels only
         # (x86 kernels do not support NUMA)
