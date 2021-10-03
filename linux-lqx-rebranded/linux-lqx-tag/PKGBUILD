@@ -56,11 +56,11 @@ pkgbase=linux-lqx-tag
 # pkgname=('linux-lqx-tag' 'linux-lqx-tag-headers' 'linux-lqx-tag-docs')
 _major=5.14
 _minor=9
-_lqx=lqx3
+_lqx=lqx4
 _srcname=linux-${_major}
 pkgver=${_major}.${_minor}.${_lqx}
 _pkgver=${_major}.${_minor}-${_lqx}
-pkgrel=2
+pkgrel=1
 pkgdesc='Linux Liquorix'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -82,9 +82,9 @@ source=("https://cdn.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.xz"
         'config')
 sha512sums=('8e4f3ec3d36f774280f75dc7b004a43e09417af58f12e9c9f8348976659d4cfda7ad905f306f43fed66a27922e5c45db22e46bbfa7a0b9f365012380de3b6f64'
             'SKIP'
-            'd9355d97f572be7e3247ba062de1e0f0e816a8b514e2fc330a47261987b628ed18a882039ff380895d882ee8082e26eb3863f847ef185ae492ecee46d3371b6f'
+            '1520f4a2f376990cae022003be4f468d411526b2eb55d265e587ebbacdf442da787732e6c317874b52fe107729c308c71f1c0d7f5f32b07d117be9c15014d03c'
             'SKIP'
-            'f774d9430700e671685ee1526e045771e01bbacde363ee6c1f63e5cbd16b55eb7362d8300f8b2ba36e491b4cb70026378389ccbec309ea66053ae19f113d9c91')
+            '3b6a960068741c53ef74e49c86e9385d434be6b8d2e1f4ba98e87e83a388a83001496376d02764649f88ae677f582acd3521e4e948b3f28078ec4923d86a60e1')
 
 validpgpkeys=(
               'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
