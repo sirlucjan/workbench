@@ -59,7 +59,7 @@ _minor=11
 _lqx=lqx1
 _srcname=zen-kernel
 pkgver=5.14.11.lqx1.r0.g3d21289af280
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux Liquorix'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -115,6 +115,7 @@ prepare() {
         echo "Setting config..."
         cp ../config .config
         make olddefconfig
+        diff -u ../config .config || :
 
     ### Prepared version
         make -s kernelrelease > version
