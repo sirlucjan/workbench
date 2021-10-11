@@ -46,7 +46,7 @@ pkgbase=linux-zen-git
 # pkgname=('linux-zen-git' 'linux-zen-git-headers' 'linux-zen-git-docs')
 _major=5.14
 _srcname=zen-kernel
-pkgver=5.14.10.r1033290.g6ab06d2eb5cd
+pkgver=5.14.11.r1033357.g708216a7e68d
 pkgrel=1
 pkgdesc='Linux ZEN'
 arch=('x86_64')
@@ -96,6 +96,7 @@ prepare() {
         echo "Setting config..."
         cp ../config .config
         make olddefconfig
+        diff -u ../config .config || :
 
     ### Prepared version
         make -s kernelrelease > version
