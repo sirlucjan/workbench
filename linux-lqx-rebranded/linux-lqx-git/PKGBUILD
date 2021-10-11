@@ -60,7 +60,7 @@ _major=5.14
 _srcname=linux-${_major}
 _lqxpatchname=liquorix-package
 pkgbase=linux-lqx-git
-pkgver=5.14.4.1.r2279.g02a05be
+pkgver=5.14.11.1.r2327.g11b3d20
 pkgrel=1
 pkgdesc='Linux Liquorix'
 arch=('x86_64')
@@ -134,6 +134,7 @@ prepare() {
         echo "Setting config..."
         cat ${srcdir}/${_lqxpatchname}/linux-liquorix/debian/config/kernelarch-x86/config-arch-64 >./.config
         make olddefconfig
+        diff -u ${srcdir}/${_lqxpatchname}/linux-liquorix/debian/config/kernelarch-x86/config-arch-64 .config || :
 
     ### Prepared version
         make -s kernelrelease > version
