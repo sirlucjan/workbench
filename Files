@@ -66,6 +66,7 @@
 │   │   │   ├── 0002-Silence-messages-in-zstd-format.patch
 │   │   │   ├── 0003-Add-rm-flag-to-minimize-the-size-of-initramfs.patch
 │   │   │   ├── 0004-Merge-mkinitcpio-libalpm-scripts-into-one.patch
+│   │   │   ├── 0005-install-block-include-vmd-module.patch
 │   │   │   ├── mkinitcpio.install
 │   │   │   └── PKGBUILD
 │   │   └── README.md
@@ -109,4 +110,4 @@
 │   └── README.md
 └── README.md
 
-48 directories, 61 files
+48 directories, 62 files
