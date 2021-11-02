@@ -77,7 +77,7 @@ source=("git://github.com/${_srcname}/${_srcname}#tag=v${_major}.${_minor}-${_lq
          # the main kernel config files
         'config')
 sha512sums=('SKIP'
-            '3b6a960068741c53ef74e49c86e9385d434be6b8d2e1f4ba98e87e83a388a83001496376d02764649f88ae677f582acd3521e4e948b3f28078ec4923d86a60e1')
+            '511c674473d910ad3b045d5b1994bfc4babeef32cd3918fc5c501970f8b7852086a52f5e60342679943739f4a3047642364b12da488c8120a68feda8992307f2')
 
 
 
