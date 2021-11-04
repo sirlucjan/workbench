@@ -2,7 +2,7 @@
 
 ###### linux-zen-tag incorporates:
 
-* [zen-kernel](https://github.com/zen-kernel/zen-kernel/tree/5.14/master) - specific patchset authored by ZEN Kernel Team
+* [zen-kernel](https://github.com/zen-kernel/zen-kernel/tree/5.15/master) - specific patchset authored by ZEN Kernel Team
 
 ***
 # Download:
