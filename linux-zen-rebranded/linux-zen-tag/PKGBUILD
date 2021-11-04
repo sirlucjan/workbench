@@ -44,12 +44,14 @@ _use_current=
 
 pkgbase=linux-zen-tag
 # pkgname=('linux-zen-tag' 'linux-zen-tag-headers' 'linux-zen-tag-docs')
-_major=5.14
-_minor=16
+_major=5.15
+_minor=0
 _zen=zen1
 _srcname=linux-${_major}
-pkgver=${_major}.${_minor}.${_zen}
-_pkgver=${_major}.${_minor}-${_zen}
+#pkgver=${_major}.${_minor}.${_zen}
+#_pkgver=${_major}.${_minor}-${_zen}
+pkgver=${_major}.${_zen}
+_pkgver=${_major}-${_zen}
 pkgrel=1
 pkgdesc='Linux ZEN'
 arch=('x86_64')
@@ -299,11 +301,11 @@ for _p in "${pkgname[@]}"; do
   }"
 done
 
-sha512sums=('8e4f3ec3d36f774280f75dc7b004a43e09417af58f12e9c9f8348976659d4cfda7ad905f306f43fed66a27922e5c45db22e46bbfa7a0b9f365012380de3b6f64'
+sha512sums=('d25ad40b5bcd6a4c6042fd0fd84e196e7a58024734c3e9a484fd0d5d54a0c1d87db8a3c784eff55e43b6f021709dc685eb0efa18d2aec327e4f88a79f405705a'
             'SKIP'
-            '15e6a4007cb6282fac49490cf3f9e634513a2b6c8021215e1c8be71f73e5d606489cd0596ea1f634a2554b8d9f4907366ca284899c262b5e770d3580edb07bea'
+            '4661bc3d307f299eed7e493a2b1b733bdaa3af9b02abe1b9f590685055f6423ded97bf1137c1e57e54b308e42dc5801edabaa467ff3f63c191513dd476eecaa3'
             'SKIP'
-            '635d0c9b665180b32723d7c70bcb61ca8b6e4000e189871821b673faf9007f69362bd66145ba530585fadab380cd09bcd89ee665cb1ede7cf0e3833b8600f003')
+            '9aa488aaa057fe6e33f3720e100874acc84c883f03334df37dd447e8c5e778307bf13d7202d5aa0da153d0618b51d86a0e849cb52f8dd6eb1aa77c35409cfe41')
 
 validpgpkeys=(
               'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
