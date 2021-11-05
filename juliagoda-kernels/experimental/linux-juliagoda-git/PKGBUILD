@@ -94,6 +94,10 @@ _lrng_config='none'
 _tcp_bbr2=y
 
 ### Enable FULLCONENAT
+# WARNING Not recommended.
+# An experimental solution, still in testing phase.
+# Possible compilation and installation errors.
+# Leave it unselected.
 _nf_cone=
 
 ### Enable SECURITY_FORK_BRUTE
