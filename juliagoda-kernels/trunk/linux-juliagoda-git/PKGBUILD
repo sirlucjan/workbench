@@ -94,7 +94,7 @@ _lrng_config='none'
 _tcp_bbr2=y
 
 ### Enable FULLCONENAT
-_nf_cone=y
+_nf_cone=
 
 ### Enable SECURITY_FORK_BRUTE
 # WARNING Not recommended.
