@@ -48,9 +48,8 @@ _1k_HZ_ticks=
 pkgbase=linux-aufs
 # pkgname=('linux-aufs' 'linux-aufs-headers' 'linux-aufs-docs')
 _major=5.15
-_minor=0
-#pkgver=${_major}.${_minor}
-pkgver=${_major}
+_minor=1
+pkgver=${_major}.${_minor}
 _srcname=linux-${pkgver}
 pkgrel=1
 pkgdesc='Linux AUFS'
@@ -312,7 +311,7 @@ for _p in "${pkgname[@]}"; do
   }"
 done
 
-sha512sums=('d25ad40b5bcd6a4c6042fd0fd84e196e7a58024734c3e9a484fd0d5d54a0c1d87db8a3c784eff55e43b6f021709dc685eb0efa18d2aec327e4f88a79f405705a'
+sha512sums=('bfa8f7a4a742038ebf8f9a5b151554e268545543abca1ea1817fffcf388d6a5f3af3dce1c8279824af3938a9155f5a0d547edad334486d0fe78b7bdf3aef78f0'
             'SKIP'
             '5ab59979604b7ea9f803ce7b343ee9f1b3957df31ee852c3062cec07b276dbf49396e3328438ac94c6a8f99bb49c4f62735d03b380477efd5e901a3c8947ffea'
             '60d7b70a59054fe998a829763b6d0ff01f0e457aa28df904c1625fc8d55fd4f9faca0df110c8ffc84d48df715e921f5d8fe87c731b62d69411255a201611f555'
