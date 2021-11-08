@@ -56,7 +56,7 @@ pkgver=${_major}.${_minorc}
 _stable=${_major}
 _stablerc=${pkgver}-${_rcver}
 _srcname=linux-${_stable}
-pkgrel=0
+pkgrel=0.1
 pkgdesc='Linux BFQ-dev'
 arch=('x86_64')
 url="https://github.com/sirlucjan/bfq-mq-lucjan"
@@ -360,7 +360,7 @@ sha512sums=('d25ad40b5bcd6a4c6042fd0fd84e196e7a58024734c3e9a484fd0d5d54a0c1d87db
             'f5167747754d1f6468d8e25fb50fcd74d6158e4251603a4878dd249de3ca66bc80009dbd23eb2b13270496313fc59894a451d9d24a11db33846835f4307977f2'
             '60d7b70a59054fe998a829763b6d0ff01f0e457aa28df904c1625fc8d55fd4f9faca0df110c8ffc84d48df715e921f5d8fe87c731b62d69411255a201611f555'
             '4d78cc5cfad2a5a9e26f350e28a0f059464f75c2f9d4e4140f0869775bd73c916ac8bd5d68c30aa5688227193885d94264abb1a571c20dec58bd1514c0bec31d'
-            '533aa53c4bf5be162a47718be2fa18f7aeea72ad06c1286ed2a0886a3e3478099d187f1209039c7ba047479f19309c2e41c431e12abfd63ed023fd357d84f264')
+            '93ddf608a02435352fa152ecf55335819cc77209d1af0e052d68c0550d72cc9fe8f22cffc95ba0d6de83921c8f5af757245ec88bdaaaa57cce78df6fe6a494ac')
 
 validpgpkeys=(
               'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
