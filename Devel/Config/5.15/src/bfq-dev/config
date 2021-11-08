@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 5.15.0-arch1 Kernel Configuration
+# Linux/x86 5.15.1-arch1 Kernel Configuration
 #
 CONFIG_CC_VERSION_TEXT="gcc (GCC) 11.1.0"
 CONFIG_CC_IS_GCC=y
@@ -399,8 +399,8 @@ CONFIG_ACRN_GUEST=y
 # CONFIG_MZEN2 is not set
 # CONFIG_MZEN3 is not set
 # CONFIG_MPSC is not set
-# CONFIG_MATOM is not set
 # CONFIG_MCORE2 is not set
+# CONFIG_MATOM is not set
 # CONFIG_MNEHALEM is not set
 # CONFIG_MWESTMERE is not set
 # CONFIG_MSILVERMONT is not set
