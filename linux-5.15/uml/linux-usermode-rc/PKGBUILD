@@ -5,14 +5,14 @@ pkgbase=linux-usermode-rc
 pkgname=('linux-usermode-rc' 'linux-usermode-rc-modules')
 _kernelname=-usermodelinux-rc
 _major=5.15
-_minor=2
+_minor=3
 _minorc=$((_minor+1))
-_rcver=rc4
+_rcver=rc1
 pkgver=${_major}.${_minorc}
 _stable=${_major}.${_minor}
 _stablerc=${pkgver}-${_rcver}
 _srcname=linux-${_stable}
-pkgrel=0.3
+pkgrel=0
 pkgdesc="User mode Linux kernel and modules"
 arch=('x86_64')
 license=('GPL2')
@@ -39,9 +39,9 @@ source=("https://www.kernel.org/pub/linux/kernel/v5.x/linux-${_stable}.tar.xz"
         'config'
         '70-uml.hook')
 
-sha256sums=('5634033a4981be42d3259f50d5371a2cdc9ace5d9860da67a2879630533ab175'
+sha256sums=('a9f3dae18387b5a315bda66004cd10777a7dc5da11517214e4fd016fd5fc05e6'
             'SKIP'
-            '0c2fd7f926639303ee2bee4d0306ad3dbb7d123ec64f7e4fdc86444f28783006'
+            '9e69627595179a3fd47cae678ad101f8144d6d81efb68abe0f275a9a2cbe20ce'
             'SKIP'
             '209dccee2eeb3e6326087c3df9adad77729bec94451c39361f4375821b0ddbb4'
             '05ea4e00d1e99bf8140a21c94e3c42acf17b9debad9c6f5decbe1dd1fe04332c')
