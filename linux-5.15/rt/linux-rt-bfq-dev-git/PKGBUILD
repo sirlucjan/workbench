@@ -49,7 +49,7 @@ pkgbase=linux-rt-bfq-dev-git
 # pkgname=('linux-rt-bfq-dev-git' 'linux-rt-bfq-dev-git-headers' 'linux-rt-bfq-dev-git-docs')
 _major=5.15
 _srcname=linux-rt-devel
-pkgver=5.15.2.rt19.r0.g6cf712a67c99
+pkgver=5.15.3.rt21.r0.g2534ec53a47a
 pkgrel=2
 pkgdesc='Linux RT-BFQ-dev'
 arch=('x86_64')
@@ -348,4 +348,4 @@ sha512sums=('SKIP'
             'dee07b06dafbf4cb5335cb435b4274d78d7304d62bc514f4f51099371f5e1735c0c42afddb65d6ebadf87d52a13cf3629e072333dc5a86dcffd48fccc641744b'
             '2c5c7c775747263def81b0d48a7f16c6e0f9055fd11e4bc990517ff36a4b550073e9b05fe089eaaeb668045d5503ccd5c96c00c463b5d60fd238da05dd436e81'
             'ca71539acefa8a4404366446750f4bdada63c909222a4c87eb982be01bf6d78d1ba8590170330e2f8e1f45c18d56e187240ee59d6d7c4c2562afff859edf0b33'
-            'd7b53e230b7b161904892ef1bd228331a095f54ed4e0ec03c33f676885645554564c8032f48d2ee8274e67967a8aa94e967912d9153c7d42ab39cf5acf19cb4f')
+            '02de5e2360aa59c5f5db3c7d9325a118b106686f2e9715b2e0afd5a34c8bea890d3bcba8a1726f9daf8e14df2a401187e85782c7b29a6d31975efb90aeab00a0')
