@@ -132,7 +132,7 @@
 │   │       ├── config
 │   │       └── PKGBUILD
 │   ├── stable
-│   │   ├── linux-aufs-git
+│   │   ├── linux-aufs
 │   │   │   ├── config
 │   │   │   └── PKGBUILD
 │   │   ├── linux-bfq-dev
