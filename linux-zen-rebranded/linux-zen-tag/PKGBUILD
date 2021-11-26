@@ -42,23 +42,29 @@ _use_current=
 
 ### Do not edit below this line unless you know what you're doing
 
-pkgbase=linux-zen-git
-# pkgname=('linux-zen-git' 'linux-zen-git-headers' 'linux-zen-git-docs')
+pkgbase=linux-zen-tag
+# pkgname=('linux-zen-tag' 'linux-zen-tag-headers' 'linux-zen-tag-docs')
 _major=5.15
-_srcname=zen-kernel
-pkgver=5.15.5.r1046553.g5de11dd4f510
+_minor=5
+_zen=zen1
+_srcname=linux-${_major}
+pkgver=${_major}.${_minor}.${_zen}
+_pkgver=${_major}.${_minor}-${_zen}
 pkgrel=1
 pkgdesc='Linux ZEN'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
 license=('GPL2')
 options=('!strip')
-makedepends=('kmod' 'bc' 'libelf' 'git' 'python-sphinx' 'python-sphinx_rtd_theme'
+makedepends=('kmod' 'bc' 'libelf' 'python-sphinx' 'python-sphinx_rtd_theme'
              'graphviz' 'imagemagick' 'pahole' 'cpio' 'perl' 'tar' 'xz')
 #_lucjanpath="https://raw.githubusercontent.com/sirlucjan/kernel-patches/master/${_major}"
 _lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major}"
 
-source=("git://github.com/${_srcname}/${_srcname}#branch=${_major}/master"
+source=("https://cdn.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.xz"
+        "https://cdn.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.sign"
+        "https://github.com/zen-kernel/zen-kernel/releases/download/v${_pkgver}/v${_pkgver}.patch.xz"
+        "https://github.com/zen-kernel/zen-kernel/releases/download/v${_pkgver}/v${_pkgver}.patch.xz.sig"
          # the main kernel config files
         'config')
 
@@ -66,16 +72,13 @@ export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
 export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
 
-pkgver() {
-  cd $_srcname
-
-  _ver="$(cat Makefile | grep -m3 -e VERSION -e PATCHLEVEL -e SUBLEVEL | grep -o "[[:digit:]]*" | paste -sd'.')"
-  echo "${_ver}.r$(git rev-list --count HEAD).g$(git rev-parse --short HEAD)"
-}
-
 prepare() {
     cd $_srcname
-
+    
+     ### Applying zen patchset
+        echo "Applying zen patchset"
+        patch -p1 -i ../v${_pkgver}.patch
+    
     ### Setting version
         echo "Setting version..."
         scripts/setlocalversion --save-scmversion
@@ -116,7 +119,7 @@ prepare() {
 			exit
 		fi
 	fi
-	
+
     ### Optionally disable NUMA for 64-bit kernels only
         # (x86 kernels do not support NUMA)
         if [ -n "$_NUMAdisable" ]; then
@@ -188,7 +191,7 @@ _package() {
 
 _package-headers() {
     pkgdesc="Headers and scripts for building modules for the $pkgdesc kernel"
-    depends=('linux-zen-git' 'pahole')
+    depends=('linux-zen-tag' 'pahole')
 
   cd $_srcname
   local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
@@ -270,7 +273,7 @@ _package-headers() {
 
 _package-docs() {
     pkgdesc="Documentation for the $pkgdesc kernel"
-    depends=('linux-zen-git')
+    depends=('linux-zen-tag')
 
   cd $_srcname
   local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
@@ -296,5 +299,16 @@ for _p in "${pkgname[@]}"; do
   }"
 done
 
-sha512sums=('SKIP'
+sha512sums=('d25ad40b5bcd6a4c6042fd0fd84e196e7a58024734c3e9a484fd0d5d54a0c1d87db8a3c784eff55e43b6f021709dc685eb0efa18d2aec327e4f88a79f405705a'
+            'SKIP'
+            '3add4df3505f483550b85bdef5ddb31f43daf37f9c1708059cf62f5fe0d76ffad3c42e917101a6a1d242ee9a273a28a945c3d32a84bba302452cfcfbaaf5d332'
+            'SKIP'
             '6c45dca5da95d264644c36345a7fb7a795f21b0324c354d49eccf6e6200a8f779d901331be2d544b66c9f2ade412dc4a177819639fdb8a3163d6e0a30d7d23cf')
+
+validpgpkeys=(
+              'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
+              '647F28654894E3BD457199BE38DBBDC86092693E' # Greg Kroah-Hartman
+              'A2FF3A36AAA56654109064AB19802F8B0D70FC30' # Jan Alexander Steffens (heftig)
+              'C7E7849466FE2358343588377258734B41C31549' # David Runge <dvzrv@archlinux.org>
+              'C5ADB4F3FEBBCE27A3E54D7D9AE4078033F8024D' # Steven Barrett
+             )
