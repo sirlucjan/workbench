@@ -45,19 +45,18 @@ _1k_HZ_ticks=
 
 ### Do not edit below this line unless you know what you're doing
 
-pkgbase=linux-aufs
-# pkgname=('linux-aufs' 'linux-aufs-headers' 'linux-aufs-docs')
+pkgbase=linux-aufs-git
+# pkgname=('linux-aufs-git' 'linux-aufs-git-headers' 'linux-aufs-git-docs')
 _major=5.15
-_minor=5
-pkgver=${_major}.${_minor}
-_srcname=linux-${pkgver}
+_srcname=linux
+pkgver=5.15.5.r0.gf00712e27083
 pkgrel=2
 pkgdesc='Linux AUFS'
 arch=('x86_64')
 url="https://github.com/sfjro/aufs5-standalone"
 license=('GPL2')
 options=('!strip')
-makedepends=('kmod' 'bc' 'libelf' 'python-sphinx' 'python-sphinx_rtd_theme'
+makedepends=('kmod' 'bc' 'libelf' 'git' 'python-sphinx' 'python-sphinx_rtd_theme'
              'graphviz' 'imagemagick' 'pahole' 'cpio' 'perl' 'tar' 'xz')
 #_lucjanpath="https://raw.githubusercontent.com/sirlucjan/kernel-patches/master/${_major}"
 _lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major}"
@@ -67,8 +66,7 @@ _aufs_patch="0001-aufs-${_aufs_ver}.patch"
 _compiler_path="cpu-patches-v2-sep"
 _compiler_patch="0001-cpu-${_major}-merge-graysky-s-patchset.patch"
 
-source=("https://www.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.xz"
-        "https://www.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.sign"
+source=("git://git.kernel.org/pub/scm/linux/kernel/git/stable/${_srcname}.git#branch=linux-${_major}.y"
         "${_lucjanpath}/${_aufs_path}/${_aufs_patch}"
         "${_lucjanpath}/${_compiler_path}/${_compiler_patch}"
         "${_lucjanpath}/arch-patches-v6-sep/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch"
@@ -84,6 +82,12 @@ source=("https://www.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.xz"
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
 export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+
+pkgver() {
+  cd $_srcname
+
+  git describe --long --tags | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
+}
 
 prepare() {
     cd $_srcname
@@ -208,8 +212,8 @@ _package() {
 }
 
 _package-headers() {
-   pkgdesc="Headers and scripts for building modules for the $pkgdesc kernel"
-   depends=('linux-aufs' 'pahole')
+    pkgdesc="Headers and scripts for building modules for the $pkgdesc kernel"
+    depends=('linux-aufs-git' 'pahole')
 
   cd $_srcname
   local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
@@ -291,7 +295,7 @@ _package-headers() {
 
 _package-docs() {
     pkgdesc="Documentation for the $pkgdesc kernel"
-    depends=('linux-aufs')
+    depends=('linux-aufs-git')
 
   cd $_srcname
   local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
@@ -317,8 +321,7 @@ for _p in "${pkgname[@]}"; do
   }"
 done
 
-sha512sums=('7b9a78c734a24e8b67f93c8de65fb57cce498f18f4ce6a5c4cff0b834407dbf66cda6834118e67cfef3101979f2df78a7cc45854d943ffecee60a990783497df'
-            'SKIP'
+sha512sums=('SKIP'
             '7dca7735a7f0f6a14f3ffff3778e1d8d944f00f876ca551167512bc6203361bedcc76a392d5144bc7c510146bc41d8f676c6caa42025a2f3735a79cf8792a136'
             '53fa9b8a6fa451a7d57846d261f9af2de24e6442d2f318dfef899580d85e9cc54fa17267803a4f064eecab8ba3739062bfdf185de0afe119a1c86fe71cf3c711'
             'e7462d4ccb73bd13aae7003366d46dc18941f7b6b5609fc4bfc36357d243e9b77a892d78dfcd337ddb096162a38360ae2755720ae153746d6cbb9478eeaefd45'
@@ -329,8 +332,3 @@ sha512sums=('7b9a78c734a24e8b67f93c8de65fb57cce498f18f4ce6a5c4cff0b834407dbf66cd
             '48f18f0ced71b80a2fcd95ec9ddd4f6ddab5b591ed246816838afec31ee351952bdef392e4a6fcf650eaef6eab5a20d67438c9b9f887df038663bf853aa1c9da'
             '431f8fc2cb361df7afec983196ddbedb858498f20987abd1447dc6afff0f63256f0e5bd9834a720cc2fa58a1e2cd4453f11aafc3e699ff3da9edf841cc494819'
             'f344ae4919a821add724ec756df923df6b4cdcfcb2a7e22817409c24a818283c75a93cb1f0cf6e3e1ebce2bfb4e805db4e1b5ee5ab8a07fc40cfa017aed5333e')
-
-validpgpkeys=(
-              'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
-              '647F28654894E3BD457199BE38DBBDC86092693E' # Greg Kroah-Hartman
-             )
