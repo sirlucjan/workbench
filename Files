@@ -88,7 +88,7 @@
 ├── Files
 ├── juliagoda-kernels
 │   ├── depends
-│   │   ├── mkinitcpio-zstd
+│   │   ├── mkinitcpio-lucjan
 │   │   │   ├── 0001-Merge-mkinitcpio-libalpm-scripts-into-one.patch
 │   │   │   ├── mkinitcpio.install
 │   │   │   └── PKGBUILD
