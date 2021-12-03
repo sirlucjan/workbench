@@ -8,13 +8,9 @@
 │   ├── Config
 │   │   ├── 5.14
 │   │   │   ├── git
-│   │   │   │   ├── uksm-git
-│   │   │   │   │   └── config
 │   │   │   │   └── uml-git
 │   │   │   │       └── config
 │   │   │   └── src
-│   │   │       ├── uksm
-│   │   │       │   └── config
 │   │   │       └── uml
 │   │   │           └── config
 │   │   └── 5.15
@@ -117,4 +113,4 @@
 │   └── README.md
 └── README.md
 
-55 directories, 62 files
+53 directories, 60 files
