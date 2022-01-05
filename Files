@@ -70,6 +70,7 @@
 │   │   │   ├── 0006-mkinitcpio-add-VERSION_ID-to-EFISTUB.patch
 │   │   │   ├── 0007-functions-no-progress-for-zstd-decompression.patch
 │   │   │   ├── 0008-mkinitcpio-Support-etc-kernel-cmdline.d.patch
+│   │   │   ├── 0009-presets-when-using-_efi_image-make-_image-optional.patch
 │   │   │   ├── mkinitcpio.install
 │   │   │   └── PKGBUILD
 │   │   └── README.md
@@ -113,4 +114,4 @@
 │   └── README.md
 └── README.md
 
-48 directories, 65 files
+48 directories, 66 files
