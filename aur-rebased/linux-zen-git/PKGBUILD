@@ -44,10 +44,10 @@ _use_current=
 
 pkgbase=linux-zen-git
 # pkgname=('linux-zen-git' 'linux-zen-git-headers' 'linux-zen-git-docs')
-_major=5.15
+_major=5.16
 _srcname=zen-kernel
-pkgver=5.15.12.r1047481.g4632bff31622
-pkgrel=2
+pkgver=5.16.0.r1060360.g965b761b8317
+pkgrel=1
 pkgdesc='Linux ZEN'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -58,7 +58,7 @@ makedepends=('kmod' 'bc' 'libelf' 'git' 'python-sphinx' 'python-sphinx_rtd_theme
 #_lucjanpath="https://raw.githubusercontent.com/sirlucjan/kernel-patches/master/${_major}"
 _lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major}"
 
-source=("git://github.com/${_srcname}/${_srcname}#branch=${_major}/master"
+source=("git+https://github.com/${_srcname}/${_srcname}#branch=${_major}/master"
          # the main kernel config files
         'config')
 
@@ -200,11 +200,11 @@ _package-headers() {
   install -Dt "$builddir/arch/x86" -m644 arch/x86/Makefile
   cp -t "$builddir" -a scripts
 
-  # add objtool for external module building and enabled VALIDATION_STACK option
+  # required when STACK_VALIDATION is enabled
   install -Dt "$builddir/tools/objtool" tools/objtool/objtool
 
-  # add xfs and shmem for aufs building
-  mkdir -p "$builddir"/{fs/xfs,mm}
+  # required when DEBUG_INFO_BTF_MODULES is enabled
+  install -Dt "$builddir/tools/bpf/resolve_btfids" tools/bpf/resolve_btfids/resolve_btfids
 
   echo "Installing headers..."
   cp -t "$builddir" -a include
@@ -297,4 +297,4 @@ for _p in "${pkgname[@]}"; do
 done
 
 sha512sums=('SKIP'
-            'b700a68a07b4984db74ee3aad407326cbad380aef951a8f90a5394915e90913434c98f1faaa03927b63250f3f0cd1f4e2a9224db10ccc079798942c4a6f5a5da')
+            'cb8f220aa1e09b8c77cc2aac2bb36f52bf446aa00f35519a6efbaba2436bf8734d3a5720dd679748a144c8fc5ca39313284334a016a81ad27a966e35eaf0c588')
