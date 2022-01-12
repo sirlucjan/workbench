@@ -110,7 +110,11 @@
 │   │   └── linux-juliagoda-git
 │   │       ├── config
 │   │       └── PKGBUILD
-│   └── stable-rc
+│   ├── stable-rc
+│   │   └── linux-juliagoda-git
+│   │       ├── config
+│   │       └── PKGBUILD
+│   └── trunk
 │       └── linux-juliagoda-git
 │           ├── config
 │           └── PKGBUILD
@@ -190,4 +194,4 @@
 │   └── README.md
 └── README.md
 
-83 directories, 107 files
+85 directories, 109 files
