@@ -134,7 +134,7 @@
 │   │   └── linux-uksm
 │   │       ├── config
 │   │       └── PKGBUILD
-│   ├── stable-rc
+│   ├── stable-git
 │   │   ├── linux-aufs-git
 │   │   │   ├── config
 │   │   │   └── PKGBUILD
