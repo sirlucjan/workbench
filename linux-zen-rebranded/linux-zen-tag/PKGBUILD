@@ -45,13 +45,11 @@ _use_current=
 pkgbase=linux-zen-tag
 # pkgname=('linux-zen-tag' 'linux-zen-tag-headers' 'linux-zen-tag-docs')
 _major=5.16
-_minor=0
+_minor=1
 _zen=zen1
 _srcname=linux-${_major}
-#pkgver=${_major}.${_minor}.${_zen}
-#_pkgver=${_major}.${_minor}-${_zen}
-pkgver=${_major}.${_zen}
-_pkgver=${_major}-${_zen}
+pkgver=${_major}.${_minor}.${_zen}
+_pkgver=${_major}.${_minor}-${_zen}
 pkgrel=1
 pkgdesc='Linux ZEN'
 arch=('x86_64')
@@ -303,7 +301,7 @@ done
 
 sha512sums=('7a257dd576bc8493595ec7d6f3c9cb6e22c772a8b2dbe735d2485c4f5c56e26a08695546e7e0f1f1cd04a533f25e829361958d4da0b98bf0ba8094dd57a85aaf'
             'SKIP'
-            'a61478c8270c43c88565aabe4b5d669301f63615d6e446b137f9d927eefcb1b49d92f3c336c271b00535c2cbbb6deac541ff2683b7396e0f17280a873ed24ad6'
+            'a09c58ce93df24998ed684aa5370e2eae61646b0fb1508b934d661f5ecae8ad65eb33d82f7b836531f34c0edd457a1495e63cada3d50970b220b3185665caa9a'
             'SKIP'
             'cb8f220aa1e09b8c77cc2aac2bb36f52bf446aa00f35519a6efbaba2436bf8734d3a5720dd679748a144c8fc5ca39313284334a016a81ad27a966e35eaf0c588')
 
