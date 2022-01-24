@@ -112,9 +112,6 @@
 │           └── PKGBUILD
 ├── linux-5.16
 │   ├── stable
-│   │   ├── linux-bfq-dev
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
 │   │   └── linux-uksm
 │   │       ├── config
 │   │       └── PKGBUILD
@@ -175,4 +172,4 @@
 │   └── README.md
 └── README.md
 
-77 directories, 98 files
+76 directories, 96 files
