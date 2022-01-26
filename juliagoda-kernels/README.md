@@ -1,5 +1,5 @@
 # Fork of linux-lucjan. Use at your own risk.
-###### HP G62 with AMD Athlon II P340 optimized.
+###### HP 840 G1 with Fourth Gen Intel Core i3/i5/i7 optimized.
 ###### linux-lucjan/linux-juliagoda varies considerably from stock kernel. 
 ***
 ###### linux-lucjan/linux-juliagoda incorporates:
