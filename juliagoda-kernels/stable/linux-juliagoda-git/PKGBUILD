@@ -53,6 +53,9 @@ _ll_branding='yes'
 # https://github.com/graysky2/kernel_compiler_patch#expanded-cpus-include
 _compiler_tune=y
 
+### Set performance governor as default
+_per_gov=y
+
 ### Disable MQ-Deadline I/O scheduler
 _mq_deadline_disable=y
 
@@ -108,7 +111,7 @@ _zstd_level='ultra'
 # 'normal' - standard compression ratio
 # WARNING: the ultra settings can sometimes
 # be counterproductive in both size and speed.
-_zstd_module_level='normal'
+_zstd_module_level='ultra'
 
 ### Download ll-reverts patchset
 # ATTENTION - one of two predefined values should be selected!
@@ -133,7 +136,7 @@ _major=5.16
 _patches=${_major}-dev
 _srcname=linux
 pkgver=5.16.2.r0.g5fd3e07fd10e.ll14
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux LL'
 arch=('x86_64')
 url="https://gitlab.com/sirlucjan/lucjan-kernels/wikis/README"
@@ -289,10 +292,22 @@ prepare() {
 
     ### Set GCC/Clang flags
 	if [ -n "$_compiler_tune" ]; then
-		echo "Setting GCC/Clang flags for AMD K10-family CPU..."
+		echo "Setting GCC/Clang flags for Intel Haswell CPU..."
 		scripts/config --disable CONFIG_GENERIC_CPU
-		scripts/config --enable CONFIG_MK10
+		scripts/config --enable CONFIG_MHASWELL
 	fi
+
+    ### Set performance governor
+        if [ -n "$_per_gov" ]; then
+		echo "Setting performance governor..."
+		scripts/config --disable CONFIG_CPU_FREQ_DEFAULT_GOV_SCHEDUTIL
+		scripts/config --enable CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE
+		echo "Disabling uneeded governors..."
+		scripts/config --disable CONFIG_CPU_FREQ_GOV_ONDEMAND
+		scripts/config --disable CONFIG_CPU_FREQ_GOV_CONSERVATIVE
+		scripts/config --disable CONFIG_CPU_FREQ_GOV_USERSPACE
+		scripts/config --disable CONFIG_CPU_FREQ_GOV_SCHEDUTIL
+        fi
 
     ### Disable MQ-Deadline I/O scheduler
 	if [ -n "$_mq_deadline_disable" ]; then
@@ -591,7 +606,7 @@ build() {
 }
 
 _package-kernel() {
-  pkgdesc="The $pkgdesc kernel and modules with the ${_lucjanname}-${_lucjanrev} patchset. AMD K10-family optimized."
+  pkgdesc="The $pkgdesc kernel and modules with the ${_lucjanname}-${_lucjanrev} patchset. Fourth Gen Intel Core i3/i5/i7 optimized."
   depends=('coreutils' 'kmod' 'initramfs-lucjan')
   optdepends=('crda: to set the correct wireless channels of your country'
               'linux-firmware: firmware images needed for some devices'
@@ -620,7 +635,7 @@ _package-kernel() {
 }
 
 _package-headers() {
-  pkgdesc="Headers and scripts for building modules for the $pkgdesc kernel. K10-family optimized."
+  pkgdesc="Headers and scripts for building modules for the $pkgdesc kernel. Fourth Gen Intel Core i3/i5/i7 optimized."
   depends=('linux-juliagoda-git-kernel' 'pahole')
   groups=('linux-juliagoda-git')
 
@@ -703,7 +718,7 @@ _package-headers() {
 }
 
 _package-docs() {
-  pkgdesc="Documentation for the $pkgdesc kernel. K10-family optimized."
+  pkgdesc="Documentation for the $pkgdesc kernel. Fourth Gen Intel Core i3/i5/i7 optimized."
   depends=('linux-juliagoda-git-kernel')
   groups=('linux-juliagoda-git')
 
