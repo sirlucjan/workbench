@@ -54,11 +54,11 @@ _htmldocs_enable=
 
 pkgbase=linux-lqx-tag-git
 # pkgname=('linux-lqx-tag-git' 'linux-lqx-tag-git-headers' 'linux-lqx-tag-git-docs')
-_major=5.15
-_minor=18
-_lqx=lqx1
+_major=5.16
+_minor=4
+_lqx=lqx2
 _srcname=zen-kernel
-pkgver=5.15.18.lqx1.r0.gefd799b3efd9
+pkgver=5.16.4.lqx2.r0.ge3ac21b52ddc
 pkgrel=1
 pkgdesc='Linux Liquorix'
 arch=('x86_64')
@@ -77,7 +77,7 @@ source=("git+https://github.com/${_srcname}/${_srcname}#tag=v${_major}.${_minor}
          # the main kernel config files
         'config')
 sha512sums=('SKIP'
-            '1858dd6461db0cfe90048e44ee190b840db6c8c3aa7edb29dca9c0e7f0434fc017d21621d890e3c91d0d2b471e77f0b3da5619b626cfe30df8bbe65846fe9ea5')
+            '325b6294779903999301e0820f6381c3add1d07cbc83c597faf9b4d44db48cc37e939e4a7b898dbb1c608abc2cd529d3a8ccb65b13b96257187b25844642bf3c')
 
 
 
@@ -243,11 +243,11 @@ _package-headers() {
   install -Dt "$builddir/arch/x86" -m644 arch/x86/Makefile
   cp -t "$builddir" -a scripts
 
-  # add objtool for external module building and enabled VALIDATION_STACK option
+  # required when STACK_VALIDATION is enabled
   install -Dt "$builddir/tools/objtool" tools/objtool/objtool
 
-  # add xfs and shmem for aufs building
-  mkdir -p "$builddir"/{fs/xfs,mm}
+  # required when DEBUG_INFO_BTF_MODULES is enabled
+  install -Dt "$builddir/tools/bpf/resolve_btfids" tools/bpf/resolve_btfids/resolve_btfids
 
   echo "Installing headers..."
   cp -t "$builddir" -a include
