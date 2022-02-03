@@ -4,9 +4,9 @@
 # toolchain build order: linux-api-headers->glibc->binutils->gcc->binutils->glibc
 
 pkgname=linux-api-headers-git
-_major=5.15
+_major=5.16
 _srcname=linux
-pkgver=5.14.20.r36066.gd293389b3f0d
+pkgver=5.16.5.r28062.g7878125accab
 pkgrel=1
 pkgdesc="Kernel headers sanitized for use in userspace"
 arch=('any')
