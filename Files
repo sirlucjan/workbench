@@ -6,13 +6,6 @@
 │   └── README.md
 ├── Devel
 │   ├── Config
-│   │   ├── 5.15
-│   │   │   ├── git
-│   │   │   │   └── rt-bfq-dev-git
-│   │   │   │       └── config
-│   │   │   └── src
-│   │   │       └── rt-bfq-dev
-│   │   │           └── config
 │   │   └── 5.16
 │   │       ├── git
 │   │       │   ├── aufs-git
@@ -121,4 +114,4 @@
 │   └── README.md
 └── README.md
 
-53 directories, 68 files
+48 directories, 66 files
