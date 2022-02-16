@@ -112,6 +112,9 @@
 │   │   ├── config
 │   │   └── PKGBUILD
 │   └── README.md
+├── psl-discord
+│   └── hidpi-daemon-git
+│       └── PKGBUILD
 └── README.md
 
-48 directories, 66 files
+50 directories, 67 files
