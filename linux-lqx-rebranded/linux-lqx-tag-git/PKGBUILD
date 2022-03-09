@@ -59,7 +59,7 @@ _minor=13
 _lqx=lqx2
 _srcname=zen-kernel
 pkgver=5.16.13.lqx2.r0.gda9175932a74
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux Liquorix'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -77,7 +77,7 @@ source=("git+https://github.com/${_srcname}/${_srcname}#tag=v${_major}.${_minor}
          # the main kernel config files
         'config')
 sha512sums=('SKIP'
-            '156bd01ac58d5c16999510bb81a5ab7d76e774728ee0423598f1ff9a15707cbe37d7a4557730d13fdf2e35c028c82b99404bf6a79f70904f1b3d2ebf9ea8e3aa')
+            '046e11e64e695b97d3a0ecf25662218be98a854db17780d0083b6a2c1a823f799c6665a8aad05219b3542b8ecd6fec27abbdf321f174e04bd556c5f24cba5ae4')
 
 
 
