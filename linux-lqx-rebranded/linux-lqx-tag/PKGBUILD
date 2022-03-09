@@ -60,7 +60,7 @@ _lqx=lqx2
 _srcname=linux-${_major}
 pkgver=${_major}.${_minor}.${_lqx}
 _pkgver=${_major}.${_minor}-${_lqx}
-pkgrel=2
+pkgrel=3
 pkgdesc='Linux Liquorix'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -84,7 +84,7 @@ sha512sums=('7a257dd576bc8493595ec7d6f3c9cb6e22c772a8b2dbe735d2485c4f5c56e26a086
             'SKIP'
             'b82f76b6fb9ac5a5ecb487560033473317eddb8b117d86f5bd5c92e0464a25f65182c398aacb4f857bb7d8660fcf386debf9c05d27764d87c84389bd65c0ec89'
             'SKIP'
-            '046e11e64e695b97d3a0ecf25662218be98a854db17780d0083b6a2c1a823f799c6665a8aad05219b3542b8ecd6fec27abbdf321f174e04bd556c5f24cba5ae4')
+            '5ec833f7ea7bea0a6503c0a67aa3abd5eb997e00232063063b7ef4fd82a36db6fbc13071f5f5f9d98696746b7d5e3befa0bae801113d5d044a1e87d014491564')
 
 validpgpkeys=(
               'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
