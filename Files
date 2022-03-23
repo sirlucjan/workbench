@@ -41,6 +41,8 @@
 │   │       │   │   └── config
 │   │       │   ├── lucjan-git
 │   │       │   │   └── config
+│   │       │   ├── uksm-git
+│   │       │   │   └── config
 │   │       │   └── uml-git
 │   │       │       └── config
 │   │       └── src
@@ -49,6 +51,8 @@
 │   │           ├── bfq-dev
 │   │           │   └── config
 │   │           ├── lucjan
+│   │           │   └── config
+│   │           ├── uksm
 │   │           │   └── config
 │   │           └── uml
 │   │               └── config
@@ -204,4 +208,4 @@
 │       └── PKGBUILD
 └── README.md
 
-85 directories, 119 files
+87 directories, 121 files
