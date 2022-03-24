@@ -42,29 +42,23 @@ _use_current=
 
 ### Do not edit below this line unless you know what you're doing
 
-pkgbase=linux-zen-tag
-# pkgname=('linux-zen-tag' 'linux-zen-tag-headers' 'linux-zen-tag-docs')
-_major=5.16
-_minor=16
-_zen=zen1
-_srcname=linux-${_major}
-pkgver=${_major}.${_minor}.${_zen}
-_pkgver=${_major}.${_minor}-${_zen}
+pkgbase=linux-zen-git
+# pkgname=('linux-zen-git' 'linux-zen-git-headers' 'linux-zen-git-docs')
+_major=5.17
+_srcname=zen-kernel
+pkgver=5.17.0.r1074569.gf8579e702e35
 pkgrel=1
 pkgdesc='Linux ZEN'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
 license=('GPL2')
 options=('!strip')
-makedepends=('kmod' 'bc' 'libelf' 'python-sphinx' 'python-sphinx_rtd_theme'
+makedepends=('kmod' 'bc' 'libelf' 'git' 'python-sphinx' 'python-sphinx_rtd_theme'
              'graphviz' 'imagemagick' 'pahole' 'cpio' 'perl' 'tar' 'xz')
 #_lucjanpath="https://raw.githubusercontent.com/sirlucjan/kernel-patches/master/${_major}"
 _lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major}"
 
-source=("https://cdn.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.xz"
-        "https://cdn.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.sign"
-        "https://github.com/zen-kernel/zen-kernel/releases/download/v${_pkgver}/v${_pkgver}.patch.xz"
-        "https://github.com/zen-kernel/zen-kernel/releases/download/v${_pkgver}/v${_pkgver}.patch.xz.sig"
+source=("git+https://github.com/${_srcname}/${_srcname}#branch=${_major}/master"
          # the main kernel config files
         'config')
 
@@ -72,13 +66,16 @@ export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
 export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
 
+pkgver() {
+  cd $_srcname
+
+  _ver="$(cat Makefile | grep -m3 -e VERSION -e PATCHLEVEL -e SUBLEVEL | grep -o "[[:digit:]]*" | paste -sd'.')"
+  echo "${_ver}.r$(git rev-list --count HEAD).g$(git rev-parse --short HEAD)"
+}
+
 prepare() {
     cd $_srcname
-    
-     ### Applying zen patchset
-        echo "Applying zen patchset"
-        patch -p1 -i ../v${_pkgver}.patch
-    
+
     ### Setting version
         echo "Setting version..."
         scripts/setlocalversion --save-scmversion
@@ -119,7 +116,7 @@ prepare() {
 			exit
 		fi
 	fi
-
+	
     ### Optionally disable NUMA for 64-bit kernels only
         # (x86 kernels do not support NUMA)
         if [ -n "$_NUMAdisable" ]; then
@@ -191,7 +188,7 @@ _package() {
 
 _package-headers() {
     pkgdesc="Headers and scripts for building modules for the $pkgdesc kernel"
-    depends=('linux-zen-tag' 'pahole')
+    depends=('linux-zen-git' 'pahole')
 
   cd $_srcname
   local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
@@ -273,7 +270,7 @@ _package-headers() {
 
 _package-docs() {
     pkgdesc="Documentation for the $pkgdesc kernel"
-    depends=('linux-zen-tag')
+    depends=('linux-zen-git')
 
   cd $_srcname
   local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
@@ -299,16 +296,5 @@ for _p in "${pkgname[@]}"; do
   }"
 done
 
-sha512sums=('7a257dd576bc8493595ec7d6f3c9cb6e22c772a8b2dbe735d2485c4f5c56e26a08695546e7e0f1f1cd04a533f25e829361958d4da0b98bf0ba8094dd57a85aaf'
-            'SKIP'
-            'a942a69d6bdea5abf9354b1f0724f0e78267fe6661facbcde9f6ed29af86a5928590773ac26c1dd0dc39e78fdb7d1eebd386ec8f46416fc02570d8d1927ae80c'
-            'SKIP'
-            '5b686229236d8e0269be6da2e3dbfdd8bb5a9017119a0ebbd23ebcc8943000c1df33e7a0dfe250e7e883360ea4dd0104ba58045945f980566083ae73bdab9509')
-
-validpgpkeys=(
-              'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
-              '647F28654894E3BD457199BE38DBBDC86092693E' # Greg Kroah-Hartman
-              'A2FF3A36AAA56654109064AB19802F8B0D70FC30' # Jan Alexander Steffens (heftig)
-              'C7E7849466FE2358343588377258734B41C31549' # David Runge <dvzrv@archlinux.org>
-              'C5ADB4F3FEBBCE27A3E54D7D9AE4078033F8024D' # Steven Barrett
-             )
+sha512sums=('SKIP'
+            '05acd0cc33ed928276319413fe88cd5c4b73dd69e78793187ce8e43a235ff82831a8f4011e4e47cc14b9cc21e35c0807192534210985f110a1159db3fc37db74')
