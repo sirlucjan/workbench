@@ -155,6 +155,10 @@
 │   │   └── linux-uksm-git
 │   │       ├── config
 │   │       └── PKGBUILD
+│   ├── stable-rc
+│   │   └── linux-aufs
+│   │       ├── config
+│   │       └── PKGBUILD
 │   ├── stable-rc-git
 │   │   ├── linux-aufs-git
 │   │   │   ├── config
@@ -212,4 +216,4 @@
 │       └── PKGBUILD
 └── README.md
 
-88 directories, 124 files
+90 directories, 126 files
