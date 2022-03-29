@@ -8,8 +8,6 @@
 │   ├── Config
 │   │   ├── 5.16
 │   │   │   ├── git
-│   │   │   │   ├── aufs-git
-│   │   │   │   │   └── config
 │   │   │   │   ├── bfq-dev-git
 │   │   │   │   │   └── config
 │   │   │   │   ├── lucjan-git
@@ -21,8 +19,6 @@
 │   │   │   │   └── uml-git
 │   │   │   │       └── config
 │   │   │   └── src
-│   │   │       ├── aufs
-│   │   │       │   └── config
 │   │   │       ├── bfq-dev
 │   │   │       │   └── config
 │   │   │       ├── lucjan
@@ -151,4 +147,4 @@
 │       └── PKGBUILD
 └── README.md
 
-63 directories, 88 files
+61 directories, 86 files
