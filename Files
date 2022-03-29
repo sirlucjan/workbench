@@ -121,12 +121,6 @@
 │       └── linux-juliagoda-git
 │           ├── config
 │           └── PKGBUILD
-├── linux-5.17
-│   └── uml
-│       └── linux-usermode-rc-git
-│           ├── 70-uml.hook
-│           ├── config
-│           └── PKGBUILD
 ├── linux-lqx-rebranded
 │   ├── linux-lqx-git
 │   │   └── PKGBUILD
@@ -157,4 +151,4 @@
 │       └── PKGBUILD
 └── README.md
 
-66 directories, 91 files
+63 directories, 88 files
