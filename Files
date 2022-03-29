@@ -8,14 +8,10 @@
 │   ├── Config
 │   │   ├── 5.16
 │   │   │   ├── git
-│   │   │   │   ├── rt-bfq-dev-git
-│   │   │   │   │   └── config
-│   │   │   │   └── uml-git
+│   │   │   │   └── rt-bfq-dev-git
 │   │   │   │       └── config
 │   │   │   └── src
-│   │   │       ├── rt-bfq-dev
-│   │   │       │   └── config
-│   │   │       └── uml
+│   │   │       └── rt-bfq-dev
 │   │   │           └── config
 │   │   └── 5.17
 │   │       ├── git
@@ -135,4 +131,4 @@
 │       └── PKGBUILD
 └── README.md
 
-55 directories, 80 files
+53 directories, 78 files
