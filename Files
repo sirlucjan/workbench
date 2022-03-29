@@ -122,10 +122,6 @@
 │           ├── config
 │           └── PKGBUILD
 ├── linux-5.17
-│   ├── stable-rc
-│   │   └── linux-uksm
-│   │       ├── config
-│   │       └── PKGBUILD
 │   └── uml
 │       ├── linux-usermode
 │       │   ├── 70-uml.hook
@@ -173,4 +169,4 @@
 │       └── PKGBUILD
 └── README.md
 
-71 directories, 102 files
+69 directories, 100 files
