@@ -10,14 +10,10 @@
 │   │   │   ├── git
 │   │   │   │   ├── rt-bfq-dev-git
 │   │   │   │   │   └── config
-│   │   │   │   ├── uksm-git
-│   │   │   │   │   └── config
 │   │   │   │   └── uml-git
 │   │   │   │       └── config
 │   │   │   └── src
 │   │   │       ├── rt-bfq-dev
-│   │   │       │   └── config
-│   │   │       ├── uksm
 │   │   │       │   └── config
 │   │   │       └── uml
 │   │   │           └── config
@@ -139,4 +135,4 @@
 │       └── PKGBUILD
 └── README.md
 
-57 directories, 82 files
+55 directories, 80 files
