@@ -123,9 +123,6 @@
 │           └── PKGBUILD
 ├── linux-5.17
 │   ├── stable-rc
-│   │   ├── linux-aufs
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
 │   │   ├── linux-bfq-dev
 │   │   │   ├── config
 │   │   │   └── PKGBUILD
@@ -179,4 +176,4 @@
 │       └── PKGBUILD
 └── README.md
 
-73 directories, 106 files
+72 directories, 104 files
