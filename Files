@@ -123,8 +123,6 @@
 │           └── PKGBUILD
 ├── linux-5.17
 │   ├── api-headers
-│   │   ├── linux-api-headers-git
-│   │   │   └── PKGBUILD
 │   │   └── linux-api-headers-rc-git
 │   │       └── PKGBUILD
 │   ├── stable
@@ -214,4 +212,4 @@
 │       └── PKGBUILD
 └── README.md
 
-88 directories, 126 files
+87 directories, 125 files
