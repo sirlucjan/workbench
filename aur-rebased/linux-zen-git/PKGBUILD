@@ -47,7 +47,7 @@ pkgbase=linux-zen-git
 _major=5.17
 _srcname=zen-kernel
 pkgver=5.17.1.r1074626.ga4dbd491a390
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux ZEN'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -162,7 +162,7 @@ build() {
 _package() {
     pkgdesc="The $pkgdesc kernel and modules"
     depends=('coreutils' 'kmod' 'initramfs')
-    optdepends=('crda: to set the correct wireless channels of your country'
+    optdepends=('wireless-regdb: to set the correct wireless channels of your country'
                 'linux-firmware: firmware images needed for some devices'
                 'modprobed-db: Keeps track of EVERY kernel module that has ever been probed - useful for those of us who make localmodconfig')
     provides=(VIRTUALBOX-GUEST-MODULES WIREGUARD-MODULE VHBA-MODULE)
@@ -297,4 +297,4 @@ for _p in "${pkgname[@]}"; do
 done
 
 sha512sums=('SKIP'
-            '3f642dabafd167ad78775a2e8d36d4cc6214ad430615495e3269fdd34245f0207dc2133d2b66636d7b57465c842cdd244a4b824dff57ab9c3da2dc4b64764062')
+            'bb962953d5aaa46bf69911241107d87fd49e164717bdf263d609132561974c839073ef6ef5a3e98f2fbb53220c54e058282af61bd91d49591879963304abfeb4')
