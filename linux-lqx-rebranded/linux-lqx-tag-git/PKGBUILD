@@ -59,7 +59,7 @@ _minor=1
 _lqx=lqx1
 _srcname=zen-kernel
 pkgver=5.17.1.lqx1.r0.g8fbbf8fceec9
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux Liquorix'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
@@ -205,7 +205,7 @@ build() {
 _package() {
     pkgdesc="The $pkgdesc kernel and modules"
     depends=(coreutils kmod initramfs)
-    optdepends=('crda: to set the correct wireless channels of your country'
+    optdepends=('wireless-regdb: to set the correct wireless channels of your country'
                 'linux-firmware: firmware images needed for some devices'
                 'sof-firmware: firmware images needed for Sound Open Firmware capable devices')
     provides=(VIRTUALBOX-GUEST-MODULES WIREGUARD-MODULE)
