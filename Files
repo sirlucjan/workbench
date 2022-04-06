@@ -7,9 +7,6 @@
 ├── Devel
 │   ├── Config
 │   │   ├── 5.16
-│   │   │   ├── git
-│   │   │   │   └── rt-bfq-dev-git
-│   │   │   │       └── config
 │   │   │   └── src
 │   │   │       └── rt-bfq-dev
 │   │   │           └── config
@@ -135,4 +132,4 @@
 │       └── PKGBUILD
 └── README.md
 
-55 directories, 80 files
+53 directories, 79 files
