@@ -50,13 +50,13 @@ _zen=zen1
 _srcname=linux-${_major}
 pkgver=${_major}.${_minor}.${_zen}
 _pkgver=${_major}.${_minor}-${_zen}
-pkgrel=1
+pkgrel=2
 pkgdesc='Linux ZEN'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
 license=('GPL2')
 options=('!strip')
-makedepends=('kmod' 'bc' 'libelf' 'python-sphinx' 'python-sphinx_rtd_theme'
+makedepends=('bc' 'libelf' 'python-sphinx' 'python-sphinx_rtd_theme'
              'graphviz' 'imagemagick' 'pahole' 'cpio' 'perl' 'tar' 'xz')
 #_lucjanpath="https://raw.githubusercontent.com/sirlucjan/kernel-patches/master/${_major}"
 _lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major}"
@@ -183,7 +183,8 @@ _package() {
   echo "$pkgbase" | install -Dm644 /dev/stdin "$modulesdir/pkgbase"
 
   echo "Installing modules..."
-  make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 modules_install
+  make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 \
+    DEPMOD=/doesnt/exist modules_install  # Suppress depmod
 
   # remove build and source links
   rm "$modulesdir"/{source,build}
@@ -303,7 +304,7 @@ sha512sums=('89f0a7ca69d20a539d4b612a7028a30a5e98b402e4b6b88516f14237e5da4b626d7
             'SKIP'
             'e7837c90296e43f4a7fd779ea08a52faf6c9ce0ad216508173e6f5636f885a0821bf7732c472bf4d1c74a3770ed296b056019e9fee788d4a69b975c756a5df24'
             'SKIP'
-            '1da6f37824b2890a401b5be388b93490829e7ce9a44de528e115529c07363557bdca98f1feb26f2a09a617ea8aeffcdb3792e9cd059d69c0b3e5f4f5425c00eb')
+            'da395a13326a42e8c0e596ce1a321e1ff5c804958431c00bfa3e18bc28ec936fd6c4c38d7041589c593130d7953f8a5ff8bd80fe214e8e8af23f23c637c3916c')
 
 validpgpkeys=(
               'ABAF11C65A2970B130ABE3C479BE3E4300411886' # Linus Torvalds
