@@ -47,14 +47,15 @@ pkgbase=linux-zen-git
 _major=5.17
 _srcname=zen-kernel
 pkgver=5.17.2.r1076037.g6bf4b2301353
-pkgrel=1
+pkgrel=3
 pkgdesc='Linux ZEN'
 arch=('x86_64')
 url="https://github.com/zen-kernel/zen-kernel"
 license=('GPL2')
 options=('!strip')
 makedepends=('bc' 'libelf' 'git' 'python-sphinx' 'python-sphinx_rtd_theme'
-             'graphviz' 'imagemagick' 'pahole' 'cpio' 'perl' 'tar' 'xz')
+             'graphviz' 'imagemagick' 'pahole' 'cpio' 'perl' 'tar' 'xz'
+             'texlive-latexextra' 'xmlto')
 #_lucjanpath="https://raw.githubusercontent.com/sirlucjan/kernel-patches/master/${_major}"
 _lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major}"
 
