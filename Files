@@ -83,6 +83,8 @@
 │   │   │   ├── 0019-Fix-typo-in-commit-reproducibility.patch
 │   │   │   ├── 0020-mkinitcpio-preserve-module-dir-by-the-kernel-remove-.patch
 │   │   │   ├── 0021-Typo-correction.patch
+│   │   │   ├── 0022-Revert-presets-when-using-_efi_image-make-_image-opt.patch
+│   │   │   ├── 0023-preset-Change-unified-image-generation-options.patch
 │   │   │   ├── mkinitcpio.install
 │   │   │   └── PKGBUILD
 │   │   └── README.md
@@ -129,4 +131,4 @@
 │       └── PKGBUILD
 └── README.md
 
-50 directories, 79 files
+50 directories, 81 files
