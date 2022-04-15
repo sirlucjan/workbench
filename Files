@@ -85,6 +85,7 @@
 │   │   │   ├── 0021-Typo-correction.patch
 │   │   │   ├── 0022-Revert-presets-when-using-_efi_image-make-_image-opt.patch
 │   │   │   ├── 0023-preset-Change-unified-image-generation-options.patch
+│   │   │   ├── 0024-fixed-missing-uefistub-detection.patch
 │   │   │   ├── mkinitcpio.install
 │   │   │   └── PKGBUILD
 │   │   └── README.md
@@ -131,4 +132,4 @@
 │       └── PKGBUILD
 └── README.md
 
-50 directories, 81 files
+50 directories, 82 files
