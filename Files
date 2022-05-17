@@ -88,7 +88,9 @@
 │   │   │   ├── 0024-fixed-missing-uefistub-detection.patch
 │   │   │   ├── mkinitcpio.install
 │   │   │   └── PKGBUILD
-│   │   └── README.md
+│   │   ├── README.md
+│   │   └── uksmd-git
+│   │       └── PKGBUILD
 │   ├── README.md
 │   ├── rolling
 │   │   └── linux-juliagoda-git
@@ -132,4 +134,4 @@
 │       └── PKGBUILD
 └── README.md
 
-50 directories, 82 files
+51 directories, 83 files
