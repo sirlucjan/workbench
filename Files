@@ -16,7 +16,7 @@
 │   │   │   │   │   └── config
 │   │   │   │   ├── rt-bfq-dev-git
 │   │   │   │   │   └── config
-│   │   │   │   ├── uksm-git
+│   │   │   │   ├── uksmd-git
 │   │   │   │   │   └── config
 │   │   │   │   └── uml-git
 │   │   │   │       └── config
@@ -29,7 +29,7 @@
 │   │   │       │   └── config
 │   │   │       ├── rt-bfq-dev
 │   │   │       │   └── config
-│   │   │       ├── uksm
+│   │   │       ├── uksmd
 │   │   │       │   └── config
 │   │   │       └── uml
 │   │   │           └── config
