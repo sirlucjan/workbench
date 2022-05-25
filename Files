@@ -44,7 +44,7 @@
 │   │       └── src
 │   │           ├── aufs
 │   │           │   └── config
-│   │           ├── bfq-dev-git
+│   │           ├── bfq-dev
 │   │           │   └── config
 │   │           └── uml
 │   │               └── config
