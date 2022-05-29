@@ -147,9 +147,6 @@
 │   │       ├── config
 │   │       └── PKGBUILD
 │   ├── stable-rc
-│   │   ├── linux-aufs
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
 │   │   ├── linux-bfq-dev
 │   │   │   ├── config
 │   │   │   └── PKGBUILD
@@ -196,4 +193,4 @@
 │       └── PKGBUILD
 └── README.md
 
-81 directories, 115 files
+80 directories, 113 files
