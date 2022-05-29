@@ -166,19 +166,14 @@
 │   │   └── linux-uksmd
 │   │       ├── config
 │   │       └── PKGBUILD
-│   ├── stable-rc-git
-│   │   ├── linux-aufs-git
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
-│   │   ├── linux-bfq-dev-git
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
-│   │   └── linux-uksmd-git
-│   │       ├── config
-│   │       └── PKGBUILD
-│   └── uml
-│       └── linux-usermode-rc-git
-│           ├── 70-uml.hook
+│   └── stable-rc-git
+│       ├── linux-aufs-git
+│       │   ├── config
+│       │   └── PKGBUILD
+│       ├── linux-bfq-dev-git
+│       │   ├── config
+│       │   └── PKGBUILD
+│       └── linux-uksmd-git
 │           ├── config
 │           └── PKGBUILD
 ├── linux-lqx-rebranded
@@ -211,4 +206,4 @@
 │       └── PKGBUILD
 └── README.md
 
-87 directories, 124 files
+85 directories, 121 files
