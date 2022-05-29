@@ -137,9 +137,6 @@
 │           └── PKGBUILD
 ├── linux-5.18
 │   ├── stable
-│   │   ├── linux-aufs
-│   │   │   ├── config
-│   │   │   └── PKGBUILD
 │   │   ├── linux-bfq-dev
 │   │   │   ├── config
 │   │   │   └── PKGBUILD
@@ -206,4 +203,4 @@
 │       └── PKGBUILD
 └── README.md
 
-85 directories, 121 files
+84 directories, 119 files
