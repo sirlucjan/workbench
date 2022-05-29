@@ -136,10 +136,6 @@
 │           ├── config
 │           └── PKGBUILD
 ├── linux-5.18
-│   ├── stable-git
-│   │   └── linux-uksmd-git
-│   │       ├── config
-│   │       └── PKGBUILD
 │   └── stable-rc-git
 │       ├── linux-aufs-git
 │       │   ├── config
@@ -180,4 +176,4 @@
 │       └── PKGBUILD
 └── README.md
 
-75 directories, 105 files
+73 directories, 103 files
