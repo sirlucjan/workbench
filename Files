@@ -137,9 +137,6 @@
 │           └── PKGBUILD
 ├── linux-5.18
 │   └── stable-rc-git
-│       ├── linux-aufs-git
-│       │   ├── config
-│       │   └── PKGBUILD
 │       ├── linux-bfq-dev-git
 │       │   ├── config
 │       │   └── PKGBUILD
@@ -176,4 +173,4 @@
 │       └── PKGBUILD
 └── README.md
 
-73 directories, 103 files
+72 directories, 101 files
