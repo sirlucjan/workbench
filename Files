@@ -135,11 +135,6 @@
 │       └── linux-juliagoda-git
 │           ├── config
 │           └── PKGBUILD
-├── linux-5.18
-│   └── stable-rc-git
-│       └── linux-uksmd-git
-│           ├── config
-│           └── PKGBUILD
 ├── linux-lqx-rebranded
 │   ├── linux-lqx-git
 │   │   └── PKGBUILD
@@ -170,4 +165,4 @@
 │       └── PKGBUILD
 └── README.md
 
-71 directories, 99 files
+68 directories, 97 files
