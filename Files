@@ -94,10 +94,6 @@
 │   │   ├── README.md
 │   │   └── uksmd-git
 │   │       └── PKGBUILD
-│   ├── experimental
-│   │   └── linux-juliagoda-git
-│   │       ├── config
-│   │       └── PKGBUILD
 │   ├── README.md
 │   ├── rolling
 │   │   └── linux-juliagoda-git
@@ -145,4 +141,4 @@
 │       └── PKGBUILD
 └── README.md
 
-58 directories, 87 files
+56 directories, 85 files
