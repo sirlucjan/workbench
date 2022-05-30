@@ -6,13 +6,6 @@
 │   └── README.md
 ├── Devel
 │   ├── Config
-│   │   ├── 5.17
-│   │   │   ├── git
-│   │   │   │   └── rt-bfq-dev-git
-│   │   │   │       └── config
-│   │   │   └── src
-│   │   │       └── rt-bfq-dev
-│   │   │           └── config
 │   │   └── 5.18
 │   │       ├── git
 │   │       │   ├── aufs-git
@@ -141,4 +134,4 @@
 │       └── PKGBUILD
 └── README.md
 
-56 directories, 85 files
+51 directories, 83 files
