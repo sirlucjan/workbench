@@ -137,7 +137,7 @@ _linux_lucjan='current'
 
 pkgbase=linux-juliagoda-git
 _pkgbase=linux-lucjan
-# pkgname=('linux-juliagoda-git-kernel' 'linux-juliagoda-git-headers')
+# pkgname=('linux-juliagoda-git-kernel' 'linux-juliagoda-git-headers' 'linux-juliagoda-docs-headers')
 _major=5.18
 _patches=${_major}-dev
 _srcname=linux
@@ -148,7 +148,9 @@ arch=('x86_64')
 url="https://gitlab.com/sirlucjan/lucjan-kernels/wikis/README"
 license=('GPL2')
 options=('!strip')
-makedepends=('bc' 'libelf' 'pahole' 'cpio' 'perl' 'tar' 'xz')
+makedepends=('bc' 'libelf' 'git' 'python-sphinx' 'python-sphinx_rtd_theme'
+             'graphviz' 'imagemagick' 'pahole' 'cpio' 'perl' 'tar' 'xz'
+             'texlive-latexextra' 'xmlto')
 
 ### LL reverts
 # Some patches for BFQ/block-stable conflict with
@@ -676,6 +678,7 @@ build() {
   cd $_srcname
 
   make all
+  make htmldocs
 }
 
 _package-kernel() {
@@ -791,7 +794,28 @@ _package-headers() {
   ln -sr "$builddir" "$pkgdir/usr/src/$pkgbase"
 }
 
-pkgname=("$pkgbase-kernel" "$pkgbase-headers")
+_package-docs() {
+  pkgdesc="Documentation for the $pkgdesc kernel. Fourth Gen Intel Core i3/i5/i7 optimized."
+  depends=('linux-juliagoda-git-kernel')
+  groups=('linux-juliagoda-git')
+
+  cd $_srcname
+  local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
+
+  echo "Installing documentation..."
+  local src dst
+  while read -rd '' src; do
+    dst="${src#Documentation/}"
+    dst="$builddir/Documentation/${dst#output/}"
+    install -Dm644 "$src" "$dst"
+  done < <(find Documentation -name '.*' -prune -o ! -type d -print0)
+
+  echo "Adding symlink..."
+  mkdir -p "$pkgdir/usr/share/doc"
+  ln -sr "$builddir/Documentation" "$pkgdir/usr/share/doc/$pkgbase"
+}
+
+pkgname=("$pkgbase-kernel" "$pkgbase-headers" "$pkgbase-docs")
 for _p in "${pkgname[@]}"; do
   eval "package_$_p() {
     $(declare -f "_package${_p#$pkgbase}")
