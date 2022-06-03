@@ -57,7 +57,7 @@ _major=5.17
 _srcname=linux-${_major}
 _lqxpatchname=liquorix-package
 pkgbase=linux-lqx-git
-pkgver=5.17.12.1.r2587.g11a8b845
+pkgver=5.17.12.2.r2591.g60c4a511
 pkgrel=1
 pkgdesc='Linux Liquorix'
 arch=('x86_64')
@@ -217,8 +217,9 @@ _package() {
     depends=(coreutils kmod initramfs)
     optdepends=('wireless-regdb: to set the correct wireless channels of your country'
                 'linux-firmware: firmware images needed for some devices'
-                'sof-firmware: firmware images needed for Sound Open Firmware capable devices')
-    provides=(VIRTUALBOX-GUEST-MODULES WIREGUARD-MODULE)
+                'sof-firmware: firmware images needed for Sound Open Firmware capable devices'
+                'uksmd: Userspace KSM helper daemon')
+    provides=(VIRTUALBOX-GUEST-MODULES WIREGUARD-MODULE UKSMD-BUILTIN)
 
   cd $_srcname
   local kernver="$(<version)"
