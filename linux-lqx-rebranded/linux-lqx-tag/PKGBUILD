@@ -52,7 +52,7 @@ _projectc='pds'
 pkgbase=linux-lqx-tag
 # pkgname=('linux-lqx-tag' 'linux-lqx-tag-headers')
 _major=5.18
-_minor=8
+_minor=9
 _lqx=lqx1
 _srcname=linux-${_major}
 pkgver=${_major}.${_minor}.${_lqx}
@@ -76,7 +76,7 @@ source=("https://cdn.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.xz"
         'config')
 sha512sums=('dbbc9d1395898a498fa4947fceda1781344fa5d360240f753810daa4fa88e519833e2186c4e582a8f1836e6413e9e85f6563c7770523b704e8702d67622f98b5'
             'SKIP'
-            'a2b00ec8f1dc90dcc87f75ab5003776c92734097ee84f28428392672fae50545e173df9e5235975d5b85b57ad5c0a0a3f8cdcafb34262280c77f6e885abedac4'
+            '325d7acff83998e543ee61960485b34b44082a73c4a9156cbf355f43900c5d0119d5634a17d8ffca64ee00b7249752a82577d2467b99b991ec2f34cb897703c5'
             'SKIP'
             'dbc71f608747893bb8ed9952908f56a050b3ae3e5465a032faf660077284db0f036915f2cbc4f7e93e3084485376bd92cbf9ec1ed650bec01c640c199a7434e1')
 
