@@ -86,6 +86,9 @@
 │   │   │   ├── 0022-Revert-presets-when-using-_efi_image-make-_image-opt.patch
 │   │   │   ├── 0023-preset-Change-unified-image-generation-options.patch
 │   │   │   ├── 0024-fixed-missing-uefistub-detection.patch
+│   │   │   ├── 0025-Fix-the-warning-about-missing-modules.builtin.modinf.patch
+│   │   │   ├── 0026-Expand-as-it-fails-when-extglob-is-not-set.patch
+│   │   │   ├── 0027-autodetect-does-not-work-for-overlay-fs-set-autodete.patch
 │   │   │   ├── mkinitcpio.install
 │   │   │   └── PKGBUILD
 │   │   ├── README.md
@@ -134,4 +137,4 @@
 │       └── PKGBUILD
 └── README.md
 
-51 directories, 83 files
+51 directories, 86 files
