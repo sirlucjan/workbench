@@ -26,6 +26,9 @@
 [credential "https://gitlab.com"]
 	username = sirlucjan
 
+[credential "https://codeberg.org"]
+	username = sirlucjan
+
 [url "https://aur.archlinux.org/"]
 	insteadOf = aur:
 
@@ -38,6 +41,9 @@
 [url "https://gitlab.com/"]
 	insteadOf = gitlab:
 
+[url "https://codeberg.org/"]
+	insteadOf = codeberg:
+
 [url "git@github.com:"]
 	insteadOf = githubs:
 	pushInsteadOf = github:
@@ -47,6 +53,11 @@
 	insteadOf = gitlabs:
 	pushInsteadOf = gitlab:
 	pushInsteadOf = https://gitlab.com/
+
+[url "git@codeberg.org:"]
+	insteadOf = codebergs:
+	pushInsteadOf = codeberg:
+	pushInsteadOf = https://codeberg.org/
 
 [rerere]
 	enabled = 1
