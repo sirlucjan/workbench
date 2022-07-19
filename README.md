@@ -12,6 +12,9 @@
 
 ###### juliagoda-kernels
 
+# As of July 19, 2022, the project will cease to be developed. Thank you to all users for their willingness to use the project and bug reports.
+# I encourage all users to use [CachyOS kernels](https://github.com/CachyOS/linux-cachyos), in the development of which I will take an active part from now on.
+
 [juliagoda-kernels](https://github.com/sirlucjan/workbench/tree/master/juliagoda-kernels) / [juliagoda-kernels](https://gitlab.com/sirlucjan/workbench/tree/master/juliagoda-kernels) - linux-juliagoda-git (stable and stable-rc)
 
 ###### linux-juliagoda-git incorporates:

@@ -1,6 +1,10 @@
 # Fork of linux-lucjan. Use at your own risk.
 ###### HP 840 G1 with Fourth Gen Intel Core i3/i5/i7 optimized.
 ###### linux-lucjan/linux-juliagoda varies considerably from stock kernel. 
+
+# As of July 19, 2022, the project will cease to be developed. Thank you to all users for their willingness to use the project and bug reports.
+# I encourage all users to use [CachyOS kernels](https://github.com/CachyOS/linux-cachyos), in the development of which I will take an active part from now on.
+
 ***
 ###### linux-lucjan/linux-juliagoda incorporates:
 
