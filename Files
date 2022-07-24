@@ -55,55 +55,6 @@
 │   └── sound
 │       └── asoundrc
 ├── Files
-├── juliagoda-kernels
-│   ├── depends
-│   │   ├── mkinitcpio-lucjan
-│   │   │   ├── 0001-Merge-mkinitcpio-libalpm-scripts-into-one.patch
-│   │   │   ├── 0002-functions-allow-tailing-for-custom-kernel-build-upon.patch
-│   │   │   ├── 0003-Fix-ability-to-manually-specify-uefistub.patch
-│   │   │   ├── 0004-Add-support-for-post-generation-hooks.patch
-│   │   │   ├── 0005-Allow-overriding-hooks.patch
-│   │   │   ├── 0006-mkinitcpio-add-VERSION_ID-to-EFISTUB.patch
-│   │   │   ├── 0007-functions-no-progress-for-zstd-decompression.patch
-│   │   │   ├── 0008-mkinitcpio-Support-etc-kernel-cmdline.d.patch
-│   │   │   ├── 0009-presets-when-using-_efi_image-make-_image-optional.patch
-│   │   │   ├── 0010-Revert-functions-no-progress-for-zstd-decompression.patch
-│   │   │   ├── 0011-add-zst-compressed-firmware-support-fpr-future-kerne.patch
-│   │   │   ├── 0012-add-real-symlink-support.patch
-│   │   │   ├── 0013-add-real-symlink-support.patch
-│   │   │   ├── 0014-add-MODULES_DECOMPRESS-switch.patch
-│   │   │   ├── 0015-fix-reproducibility-in-case-of-var-cache-is-included.patch
-│   │   │   ├── 0016-Good-idea-add-the-default-value.patch
-│   │   │   ├── 0017-mkinitcpio-improve-MODULES_DECOMPRESS.patch
-│   │   │   ├── 0018-Replace-check-with-rm-f.patch
-│   │   │   ├── 0019-Fix-typo-in-commit-reproducibility.patch
-│   │   │   ├── 0020-mkinitcpio-preserve-module-dir-by-the-kernel-remove-.patch
-│   │   │   ├── 0021-Typo-correction.patch
-│   │   │   ├── 0022-Revert-presets-when-using-_efi_image-make-_image-opt.patch
-│   │   │   ├── 0023-preset-Change-unified-image-generation-options.patch
-│   │   │   ├── 0024-fixed-missing-uefistub-detection.patch
-│   │   │   ├── 0025-Fix-the-warning-about-missing-modules.builtin.modinf.patch
-│   │   │   ├── 0026-Expand-as-it-fails-when-extglob-is-not-set.patch
-│   │   │   ├── 0027-autodetect-does-not-work-for-overlay-fs-set-autodete.patch
-│   │   │   ├── mkinitcpio.install
-│   │   │   └── PKGBUILD
-│   │   ├── README.md
-│   │   └── uksmd-git
-│   │       ├── PKGBUILD
-│   │       └── uksmdstats
-│   ├── README.md
-│   ├── rolling
-│   │   └── linux-juliagoda-git
-│   │       ├── config
-│   │       └── PKGBUILD
-│   ├── stable
-│   │   └── linux-juliagoda-git
-│   │       ├── config
-│   │       └── PKGBUILD
-│   └── stable-rc
-│       └── linux-juliagoda-git
-│           ├── config
-│           └── PKGBUILD
 ├── linux-lqx-rebranded
 │   ├── linux-lqx-git
 │   │   └── PKGBUILD
@@ -134,4 +85,4 @@
 │       └── PKGBUILD
 └── README.md
 
-49 directories, 85 files
+39 directories, 46 files
