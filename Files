@@ -5,30 +5,6 @@
 │   │   └── PKGBUILD
 │   └── README.md
 ├── Devel
-│   ├── Config
-│   │   └── 5.18
-│   │       ├── git
-│   │       │   ├── aufs-git
-│   │       │   │   └── config
-│   │       │   ├── bfq-dev-git
-│   │       │   │   └── config
-│   │       │   ├── rt-bfq-dev-git
-│   │       │   │   └── config
-│   │       │   ├── uksmd-git
-│   │       │   │   └── config
-│   │       │   └── uml-git
-│   │       │       └── config
-│   │       └── src
-│   │           ├── aufs
-│   │           │   └── config
-│   │           ├── bfq-dev
-│   │           │   └── config
-│   │           ├── rt-bfq-dev
-│   │           │   └── config
-│   │           ├── uksmd
-│   │           │   └── config
-│   │           └── uml
-│   │               └── config
 │   └── Kernel
 │       └── uml
 │           └── 70-uml.hook
@@ -85,4 +61,4 @@
 │       └── PKGBUILD
 └── README.md
 
-39 directories, 46 files
+25 directories, 36 files
