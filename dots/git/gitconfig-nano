@@ -134,6 +134,9 @@
 	#############
 	ama = am --abort
 	amr = am --resolved
+	amc = am -s
+	amcc = am -S
+	amcs = am -S -s
 	ams = am --skip
 	#############
 	b = branch
