@@ -17,27 +17,16 @@
 │       └── uml
 │           └── 70-uml.hook
 ├── dots
-│   ├── bash
-│   │   └── bashrc
-│   ├── boot
-│   │   └── syslinux.cfg
-│   ├── fancontrol
-│   │   ├── fancontrol-4.14
-│   │   ├── fancontrol-4.16
-│   │   ├── fancontrol-5.10-v1
-│   │   └── fancontrol-5.10-v2
 │   ├── git
 │   │   ├── gitconfig-nano
 │   │   ├── gitconfig-vim
 │   │   └── gitignore
-│   ├── scripts
-│   │   ├── app.sh
-│   │   ├── git-patching.sh
-│   │   ├── patcher.sh
-│   │   ├── patching.sh
-│   │   └── repo-schema.sh
-│   └── sound
-│       └── asoundrc
+│   └── scripts
+│       ├── app.sh
+│       ├── git-patching.sh
+│       ├── patcher.sh
+│       ├── patching.sh
+│       └── repo-schema.sh
 ├── Files
 ├── linux-lqx-rebranded
 │   ├── linux-lqx-git
@@ -69,4 +58,4 @@
 │       └── PKGBUILD
 └── README.md
 
-31 directories, 38 files
+27 directories, 31 files
