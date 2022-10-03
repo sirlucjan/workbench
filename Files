@@ -6,7 +6,14 @@
 │   └── README.md
 ├── Devel
 │   ├── Config
-│   │   └── 5.19
+│   │   ├── 5.19
+│   │   │   ├── git
+│   │   │   │   └── uml-git
+│   │   │   │       └── config
+│   │   │   └── src
+│   │   │       └── uml
+│   │   │           └── config
+│   │   └── 6.0
 │   │       ├── git
 │   │       │   └── uml-git
 │   │       │       └── config
@@ -71,4 +78,4 @@
 │       └── PKGBUILD
 └── README.md
 
-33 directories, 38 files
+38 directories, 40 files
