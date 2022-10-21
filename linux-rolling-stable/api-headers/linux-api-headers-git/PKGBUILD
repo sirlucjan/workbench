@@ -4,9 +4,9 @@
 # toolchain build order: linux-api-headers->glibc->binutils->gcc->glibc->binutils->gcc
 
 pkgname=linux-api-headers-git
-_major=5.19
+_major=6.0
 _srcname=linux
-pkgver=5.18.19.r53038.gcba4bc47739f
+pkgver=6.0.3.r15975.g898428bc3fd4
 pkgrel=1
 pkgdesc="Kernel headers sanitized for use in userspace"
 arch=('any')
@@ -15,7 +15,7 @@ license=('GPL2')
 makedepends=('rsync')
 provides=("linux-api-headers=$pkgver")
 conflicts=('linux-api-headers')
-source=("git://git.kernel.org/pub/scm/linux/kernel/git/stable/${_srcname}.git#branch=linux-rolling-stable")
+source=("git://git.kernel.org/pub/scm/linux/kernel/git/stable/${_srcname}.git#branch=linux-stable-rolling")
 md5sums=('SKIP')
 
 pkgver() {
