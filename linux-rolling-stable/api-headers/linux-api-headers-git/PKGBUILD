@@ -6,7 +6,7 @@
 pkgname=linux-api-headers-git
 _major=6.0
 _srcname=linux
-pkgver=6.0.3.r15975.g898428bc3fd4
+pkgver=6.0.3.r41672.g03f5126405a3
 pkgrel=1
 pkgdesc="Kernel headers sanitized for use in userspace"
 arch=('any')
@@ -15,7 +15,7 @@ license=('GPL2')
 makedepends=('rsync')
 provides=("linux-api-headers=$pkgver")
 conflicts=('linux-api-headers')
-source=("git://git.kernel.org/pub/scm/linux/kernel/git/stable/${_srcname}.git#branch=linux-stable-rolling")
+source=("git://git.kernel.org/pub/scm/linux/kernel/git/stable/${_srcname}.git#branch=linux-rolling-stable")
 md5sums=('SKIP')
 
 pkgver() {

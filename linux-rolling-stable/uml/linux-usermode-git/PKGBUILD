@@ -6,7 +6,7 @@ pkgname=('linux-usermode-git' 'linux-usermode-git-modules')
 _major=6.0
 _kernelname=-usermodelinux-git
 _srcname=linux
-pkgver=6.0.3.r15975.g898428bc3fd4
+pkgver=6.0.3.r41672.g03f5126405a3
 pkgrel=1
 pkgdesc="User mode Linux kernel and modules"
 arch=('x86_64')
@@ -18,7 +18,7 @@ makedepends=('bc' 'inetutils' 'git')
 _lucjanpath="https://gitlab.com/sirlucjan/kernel-patches/raw/master/${_major}"
 
 source=(
-  "git://git.kernel.org/pub/scm/linux/kernel/git/stable/${_srcname}.git#branch=linux-stable-rolling"
+  "git://git.kernel.org/pub/scm/linux/kernel/git/stable/${_srcname}.git#branch=linux-rolling-stable"
   'config'
   '70-uml.hook')
 
