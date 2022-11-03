@@ -205,8 +205,7 @@
 	iq = init --quiet
 	#############
 	l = log --oneline
-	ld = log --oneline --decorate
-	lgd = log --oneline --graph --decorate
+	lg = log --oneline --graph
 	#############
 	ls = ls-files
 	lsf = !git ls-files | grep -i
