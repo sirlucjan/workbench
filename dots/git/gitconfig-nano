@@ -13,6 +13,9 @@
 [init]	
 	defaultBranch = master
 
+[protocol "file"]
+	allow = always
+
 [sendemail]
 	chainreplyto = false
 	smtpencryption = tls
