@@ -343,7 +343,7 @@
 	unassumeall = !git assumed | xargs git unassume
 	assumeall = !git status -s | awk {'print $2'} | xargs git assume
 	#############
-	bump = !sh -c 'git commit -am \"Version bump v$1\" && git psuoc && git release $1' -
+	bump = !sh -c 'git commit -am \"Version bump v$1\" && git psuoc && git releases $1' -
 	releases = !sh -c 'git tag v$1 && git pst' -
 	unreleases = !sh -c 'git tag -d v$1 && git pso :v$1' -
 	merged = !sh -c 'git o master && git plom && git bd $1 && git rpo' -
