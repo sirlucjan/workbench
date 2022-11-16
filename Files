@@ -1,9 +1,4 @@
 .
-├── aur-rebased
-│   ├── linux-zen-git
-│   │   ├── config
-│   │   └── PKGBUILD
-│   └── README.md
 ├── Devel
 │   ├── Config
 │   │   └── 6.0
@@ -28,16 +23,6 @@
 │       ├── patching.sh
 │       └── repo-schema.sh
 ├── Files
-├── linux-lqx-rebranded
-│   ├── linux-lqx-git
-│   │   └── PKGBUILD
-│   ├── linux-lqx-tag
-│   │   ├── config
-│   │   └── PKGBUILD
-│   ├── linux-lqx-tag-git
-│   │   ├── config
-│   │   └── PKGBUILD
-│   └── README.md
 ├── linux-rolling-stable
 │   ├── api-headers
 │   │   └── linux-api-headers-git
@@ -48,14 +33,9 @@
 │           ├── 70-uml.hook
 │           ├── config
 │           └── PKGBUILD
-├── linux-zen-rebranded
-│   ├── linux-zen-tag
-│   │   ├── config
-│   │   └── PKGBUILD
-│   └── README.md
 ├── psl-discord
 │   └── hidpi-daemon-git
 │       └── PKGBUILD
 └── README.md
 
-27 directories, 31 files
+19 directories, 19 files
