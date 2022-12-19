@@ -30,29 +30,6 @@
 │       ├── patching.sh
 │       └── repo-schema.sh
 ├── Files
-├── linux-6.1
-│   ├── api-headers
-│   │   ├── linux-api-headers-git
-│   │   │   └── PKGBUILD
-│   │   └── linux-api-headers-rc-git
-│   │       └── PKGBUILD
-│   └── uml
-│       ├── linux-usermode
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
-│       ├── linux-usermode-git
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
-│       ├── linux-usermode-rc
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
-│       └── linux-usermode-rc-git
-│           ├── 70-uml.hook
-│           ├── config
-│           └── PKGBUILD
 ├── linux-rolling-stable
 │   ├── api-headers
 │   │   └── linux-api-headers-git
@@ -68,4 +45,4 @@
 │       └── PKGBUILD
 └── README.md
 
-33 directories, 35 files
+24 directories, 21 files
