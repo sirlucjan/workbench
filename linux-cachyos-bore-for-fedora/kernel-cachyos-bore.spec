@@ -150,6 +150,13 @@ scripts/config --set-val MODULE_COMPRESS_ZSTD_LEVEL 19
 scripts/config --d MODULE_COMPRESS_ZSTD_ULTRA
 scripts/config --set-val ZSTD_COMP_VAL 22
 
+# Enable bbr2
+scripts/config -m TCP_CONG_CUBIC
+scripts/config -d DEFAULT_CUBIC
+scripts/config -e TCP_CONG_BBR2
+scripts/config -e DEFAULT_BBR2
+scripts/config --set-str DEFAULT_TCP_CONG bbr2
+
 # Set kernel version string as build salt
 scripts/config --set-str BUILD_SALT "%{kverstr}"
 
