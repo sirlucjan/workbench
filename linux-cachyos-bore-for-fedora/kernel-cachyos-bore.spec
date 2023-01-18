@@ -135,6 +135,11 @@ scripts/config -u LOCALVERSION
 # Enable BORE Scheduler
 scripts/config -e SCHED_BORE
 
+# Setting tick rate
+scripts/config -d HZ_300
+scripts/config -e HZ_500
+scripts/config --set-val HZ 500
+
 # Set kernel version string as build salt
 scripts/config --set-str BUILD_SALT "%{kverstr}"
 
