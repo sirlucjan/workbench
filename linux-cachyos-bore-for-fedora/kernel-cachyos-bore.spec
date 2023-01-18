@@ -143,7 +143,7 @@ scripts/config --set-val HZ 500
 # Enable MGLRU
 scripts/config -e LRU_GEN
 scripts/config -e LRU_GEN_ENABLED
-scripts/config -e LRU_GEN_STATS
+scripts/config -d LRU_GEN_STATS
 
 # Enabling better ZSTD modules and kernel compression ratio
 scripts/config --set-val MODULE_COMPRESS_ZSTD_LEVEL 19
