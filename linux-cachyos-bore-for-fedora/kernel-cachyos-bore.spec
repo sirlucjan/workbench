@@ -140,6 +140,11 @@ scripts/config -d HZ_300
 scripts/config -e HZ_500
 scripts/config --set-val HZ 500
 
+# Enable MGLRU
+scripts/config -e LRU_GEN
+scripts/config -e LRU_GEN_ENABLED
+scripts/config -e LRU_GEN_STATS
+
 # Set kernel version string as build salt
 scripts/config --set-str BUILD_SALT "%{kverstr}"
 
