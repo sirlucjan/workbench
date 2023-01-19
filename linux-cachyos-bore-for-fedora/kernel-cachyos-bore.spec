@@ -173,6 +173,10 @@ scripts/config -d SCHED_DEBUG
 scripts/config -d LATENCYTOP
 scripts/config -d DEBUG_PREEMPT
 
+# Enable x86_64_v3
+scripts/config -d GENERIC_CPU
+scripts/config -e GENERIC_CPU3
+
 # Unset hostname
 scripts/config --set-str DEFAULT_HOSTNAME (none)
 
