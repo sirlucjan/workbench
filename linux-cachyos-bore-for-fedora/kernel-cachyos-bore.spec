@@ -205,7 +205,7 @@ scripts/config -e PREEMPTION
 scripts/config -e PREEMPT_DYNAMIC
 
 # Unset hostname
-scripts/config --set-str DEFAULT_HOSTNAME (none)
+scripts/config --set-str DEFAULT_HOSTNAME '(none)'
 
 # Set kernel version string as build salt
 scripts/config --set-str BUILD_SALT "%{kverstr}"
