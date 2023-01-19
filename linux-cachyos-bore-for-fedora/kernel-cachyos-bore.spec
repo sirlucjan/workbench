@@ -147,7 +147,7 @@ scripts/config -d LRU_GEN_STATS
 
 # Enabling better ZSTD modules and kernel compression ratio
 scripts/config --set-val MODULE_COMPRESS_ZSTD_LEVEL 19
-scripts/config --d MODULE_COMPRESS_ZSTD_ULTRA
+scripts/config -d MODULE_COMPRESS_ZSTD_ULTRA
 scripts/config --set-val ZSTD_COMP_VAL 22
 
 # Enable bbr2
