@@ -173,6 +173,9 @@ scripts/config -d SCHED_DEBUG
 scripts/config -d LATENCYTOP
 scripts/config -d DEBUG_PREEMPT
 
+# Unset hostname
+scripts/config --set-str DEFAULT_HOSTNAME (none)
+
 # Set kernel version string as build salt
 scripts/config --set-str BUILD_SALT "%{kverstr}"
 
