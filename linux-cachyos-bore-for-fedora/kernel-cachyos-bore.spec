@@ -176,10 +176,6 @@ scripts/config -d DEBUG_PREEMPT
 # Unset hostname
 scripts/config --set-str DEFAULT_HOSTNAME (none)
 
-# Enable x86_64_v3
-scripts/config -e GENERIC_CPU
-scripts/config -d GENERIC_CPU3
-
 # Set kernel version string as build salt
 scripts/config --set-str BUILD_SALT "%{kverstr}"
 
