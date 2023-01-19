@@ -24,6 +24,7 @@
 │       └── repo-schema.sh
 ├── Files
 ├── linux-cachyos-bore-for-fedora
+│   ├── config
 │   ├── Fedora-linux-cachyos-bore.png
 │   ├── kernel-cachyos-bore.spec
 │   └── README.md
@@ -42,4 +43,4 @@
 │       └── PKGBUILD
 └── README.md
 
-21 directories, 22 files
+21 directories, 23 files
