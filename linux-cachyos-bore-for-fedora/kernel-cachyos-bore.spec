@@ -181,6 +181,10 @@ scripts/config -e GENERIC_CPU3
 scripts/config -d CPU_FREQ_DEFAULT_GOV_SCHEDUTIL
 scripts/config -e CPU_FREQ_DEFAULT_GOV_PERFORMANCE
 
+# Set O3
+scripts/config -d CC_OPTIMIZE_FOR_PERFORMANCE
+scripts/config -e CC_OPTIMIZE_FOR_PERFORMANCE_O3
+
 # Unset hostname
 scripts/config --set-str DEFAULT_HOSTNAME (none)
 
