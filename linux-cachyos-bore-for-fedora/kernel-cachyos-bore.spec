@@ -195,6 +195,15 @@ scripts/config -e NO_HZ
 scripts/config -e NO_HZ_COMMON
 scripts/config -e CONTEXT_TRACKING
 
+# Enable full preempt
+scripts/config -e PREEMPT_BUILD
+scripts/config -d PREEMPT_NONE
+scripts/config -d PREEMPT_VOLUNTARY
+scripts/config -e PREEMPT
+scripts/config -e PREEMPT_COUNT
+scripts/config -e PREEMPTION
+scripts/config -e PREEMPT_DYNAMIC
+
 # Unset hostname
 scripts/config --set-str DEFAULT_HOSTNAME (none)
 
