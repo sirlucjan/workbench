@@ -15,15 +15,13 @@
 - Scheduler patches from linux-next/tip
 - rcu fixes and improvements.
 - printk patches
-- BBRv2 tcp_congestion_control.
-- LRNG Framework. (default disabled)
+- BBRv2 tcp_congestion_control
 - Latest & improved ZSTD patch-set.
 - Latest BTRFS/XFS/EXT4 improvements & fixes.
 - AMD PSTATE EPP Driver enabled by default and with enhancements patches/fixes.
 - Clearlinux Patchset.
 - Futex fixes and winesync is available
 - UserKSM daemon from pf.
-- per VMA lock - https://lore.kernel.org/lkml/20230109205336.3665937-1-surenb@google.com/T/#ma04517b963591298a9eb76d96d2c453256a4d9ab (default disabled)
 
 ### Checking for the cpu support
 Check support by the following the command
