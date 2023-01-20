@@ -43,7 +43,7 @@ Patch2: https://raw.githubusercontent.com/CachyOS/kernel-patches/master/6.1/sche
 # Patch3: fedora-config.diff
 %define __spec_install_post /usr/lib/rpm/brp-compress || :
 %define debug_package %{nil}
-BuildRequires: python3-devel make perl-generators perl-interpreter openssl-devel bison flex findutils git-core perl-devel openssl elfutils-devel gawk binutils m4 tar hostname bzip2 bash gzip xz bc diffutils redhat-rpm-config net-tools elfutils patch rpm-build dwarves kmod libkcapi-hmaccalc perl-Carp rsync grubby wget
+BuildRequires: python3-devel python3 make perl-generators perl-interpreter openssl-devel bison flex findutils git-core perl-devel openssl elfutils-devel gawk binutils m4 tar hostname bzip2 bash gzip xz bc diffutils redhat-rpm-config net-tools elfutils patch rpm-build dwarves kmod libkcapi-hmaccalc perl-Carp rsync grubby wget clang clang-devel llvm lld 
 %if %{llvm_kbuild}
 BuildRequires: llvm%{_isa} lld%{_isa} clang%{_isa}
 %else
@@ -203,6 +203,17 @@ scripts/config -e PREEMPT
 scripts/config -e PREEMPT_COUNT
 scripts/config -e PREEMPTION
 scripts/config -e PREEMPT_DYNAMIC
+
+# Enable thin lto
+scripts/config -e LTO
+scripts/config -e LTO_CLANG
+scripts/config -e ARCH_SUPPORTS_LTO_CLANG
+scripts/config -e ARCH_SUPPORTS_LTO_CLANG_THIN
+scripts/config -d LTO_NONE
+scripts/config -e HAS_LTO_CLANG
+scripts/config -d LTO_CLANG_FULL
+scripts/config -e LTO_CLANG_THIN
+scripts/config -e HAVE_GCC_PLUGINS
 
 # Unset hostname
 scripts/config -u DEFAULT_HOSTNAME
