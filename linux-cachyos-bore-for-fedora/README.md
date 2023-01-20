@@ -10,17 +10,17 @@
 - Choose between `LLVM/LTO` or `GCC`.
 - Improved BFQ Scheduler.
 - Back-ported patches from `linux-next`.
-- MEMCG MG LRU Patchset
+- MEMCG MG LRU Patchset.
 - Latency Nice Patchset included usuage with `ananicy-cpp` [feature branch](https://lore.kernel.org/lkml/20220925143908.10846-1-vincent.guittot@linaro.org/T/#t).
-- Scheduler patches from linux-next/tip
+- Scheduler patches from linux-next/tip.
 - rcu fixes and improvements.
-- printk patches
-- BBRv2 tcp_congestion_control
+- printk patches.
+- BBRv2 tcp_congestion_control.
 - Latest & improved ZSTD patch-set.
 - Latest BTRFS/XFS/EXT4 improvements & fixes.
 - AMD PSTATE EPP Driver enabled by default and with enhancements patches/fixes.
 - Clearlinux Patchset.
-- Futex fixes and winesync is available
+- Futex fixes and winesync is available.
 - UserKSM daemon from pf.
 
 ### Checking for the cpu support
