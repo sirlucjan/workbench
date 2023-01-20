@@ -8,7 +8,6 @@
 
 ### Features
 - Choose between `LLVM/LTO` or `GCC`.
-- Choose between 300Hz, 500Hz, 600 Hz ,750Hz and 1000Hz. Defaults to 750 Hz.
 - Improved BFQ Scheduler.
 - Back-ported patches from `linux-next`.
 - MEMCG MG LRU Patchset
