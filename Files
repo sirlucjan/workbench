@@ -30,6 +30,7 @@
 │   │   └── config
 │   ├── Fedora-linux-cachyos-bore.png
 │   ├── kernel-cachyos-bore-lto.spec
+│   ├── kernel-cachyos-bore.spec
 │   └── README.md
 ├── linux-rolling-stable
 │   ├── api-headers
@@ -46,4 +47,4 @@
 │       └── PKGBUILD
 └── README.md
 
-23 directories, 24 files
+23 directories, 25 files
