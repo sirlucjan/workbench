@@ -14,7 +14,7 @@
 # whether to use LLVM-built kernel package dependencies
 %define llvm_kbuild 0
 
-%define flavor cachyos-bore
+%define flavor cachyos-bore-lto
 Name: kernel%{?flavor:-%{flavor}}
 Summary: The Linux Kernel with Cachyos-BORE Patches
 

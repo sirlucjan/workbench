@@ -29,7 +29,7 @@
 │   ├── config-xanmod-old
 │   │   └── config
 │   ├── Fedora-linux-cachyos-bore.png
-│   ├── kernel-cachyos-bore.spec
+│   ├── kernel-cachyos-bore-lto.spec
 │   └── README.md
 ├── linux-rolling-stable
 │   ├── api-headers
