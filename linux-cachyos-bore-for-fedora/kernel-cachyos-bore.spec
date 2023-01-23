@@ -1,3 +1,14 @@
+### A port of linux-cachyos-bore for the Fedora operating system.
+# https://github.com/CachyOS/linux-cachyos
+### The authors of linux-cachyos patchset:
+# Peter Jung ptr1337 <admin@ptr1337.dev>
+# Piotr Gorski sirlucjan <piotrgorski@cachyos.org>
+### The author of BORE Scheduler:
+# Masahito Suzuki <firelzrd@gmail.com>
+### The port maintainer for Fedora:
+# bieszczaders <zbyszek@linux.pl>
+# https://copr.fedorainfracloud.org/coprs/bieszczaders/
+
 %define _build_id_links none
 %define _disable_source_fetch 0
 
