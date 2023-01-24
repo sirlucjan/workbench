@@ -3,7 +3,7 @@
   <h1 align="center">linux-cachyos-bore for Fedora</h1>
 </div>
 
-### linux-cachyos uses as default the BORE scheduler
+### linux-cachyos-bore uses as default the BORE scheduler
 - BORE (Burst-Oriented Response Enhancer) CPU Scheduler by [firelzrd (BORE)](https://github.com/firelzrd/bore-scheduler)
 
 ### Features
