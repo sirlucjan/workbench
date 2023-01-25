@@ -23,13 +23,6 @@
 │       ├── patching.sh
 │       └── repo-schema.sh
 ├── Files
-├── linux-cachyos-bore-for-fedora
-│   ├── config-cachyos-bore
-│   │   └── config
-│   ├── Fedora-linux-cachyos-bore.png
-│   ├── kernel-cachyos-bore-lto.spec
-│   ├── kernel-cachyos-bore.spec
-│   └── README.md
 ├── linux-rolling-stable
 │   ├── api-headers
 │   │   └── linux-api-headers-git
@@ -45,4 +38,4 @@
 │       └── PKGBUILD
 └── README.md
 
-22 directories, 24 files
+20 directories, 19 files
