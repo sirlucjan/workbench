@@ -181,7 +181,10 @@
 	#############
 	cpi = cherry-pick
 	cpia = cherry-pick --abort
-	cpic = cherry-pick --continue
+	cpico = cherry-pick --continue
+	cpics = cherry-pick -s
+	cpis = cherry-pick -S
+	cpiss = cherry-pick -S -s
 	#############
 	d = diff
 	dp = diff --patience
