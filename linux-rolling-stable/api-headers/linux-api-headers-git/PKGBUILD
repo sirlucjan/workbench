@@ -6,7 +6,7 @@
 pkgname=linux-api-headers-git
 _major=6.1
 _srcname=linux
-pkgver=6.1.5.r45587.g41b44b9371c2
+pkgver=6.1.15.r62469.g8a1c87c391aa
 pkgrel=1
 pkgdesc="Kernel headers sanitized for use in userspace"
 arch=('any')
