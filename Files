@@ -9,8 +9,11 @@
 │   │   │       └── uml
 │   │   │           └── config
 │   │   └── 6.3
-│   │       └── git
-│   │           └── uml-git
+│   │       ├── git
+│   │       │   └── uml-git
+│   │       │       └── config
+│   │       └── src
+│   │           └── uml
 │   │               └── config
 │   └── Kernel
 │       └── uml
@@ -42,4 +45,4 @@
 │       └── PKGBUILD
 └── README.md
 
-23 directories, 20 files
+25 directories, 21 files
