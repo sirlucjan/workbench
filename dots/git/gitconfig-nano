@@ -35,6 +35,12 @@
 [credential "https://codeberg.org"]
 	username = sirlucjan
 
+[credential "https://gitlab.archlinux.org"]
+	username = sirlucjan
+
+[credential "https://invent.kde.org"]
+	username = lucjan.lucjanov
+
 [url "https://aur.archlinux.org/"]
 	insteadOf = aur:
 
@@ -50,6 +56,12 @@
 [url "https://codeberg.org/"]
 	insteadOf = codeberg:
 
+[url "https://gitlab.archlinux.org/"]
+	insteadOf = archlinux:
+
+[url "https://invent.kde.org/"]
+	insteadOf = kde:
+
 [url "git@github.com:"]
 	insteadOf = githubs:
 	pushInsteadOf = github:
@@ -64,6 +76,16 @@
 	insteadOf = codebergs:
 	pushInsteadOf = codeberg:
 	pushInsteadOf = https://codeberg.org/
+
+[url "git@gitlab.archlinux.org:"]
+	insteadOf = archlinuxs:
+	pushInsteadOf = archlinux:
+	pushInsteadOf = https://gitlab.archlinux.org/
+
+[url "git@invent.kde.org:"]
+	insteadOf = kdes:
+	pushInsteadOf = kde:
+	pushInsteadOf = https://https://invent.kde.org/
 
 [rerere]
 	enabled = 1
