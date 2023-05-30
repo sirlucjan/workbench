@@ -85,7 +85,7 @@
 [url "git@invent.kde.org:"]
 	insteadOf = kdes:
 	pushInsteadOf = kde:
-	pushInsteadOf = https://https://invent.kde.org/
+	pushInsteadOf = https://invent.kde.org/
 
 [rerere]
 	enabled = 1
