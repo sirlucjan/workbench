@@ -31,11 +31,6 @@
 │       └── repo-schema.sh
 ├── Files
 ├── linux-6.4
-│   ├── api-headers
-│   │   ├── linux-api-headers-git
-│   │   │   └── PKGBUILD
-│   │   └── linux-api-headers-rc-git
-│   │       └── PKGBUILD
 │   └── uml
 │       ├── linux-usermode
 │       │   ├── 70-uml.hook
@@ -68,4 +63,4 @@
 │       └── PKGBUILD
 └── README.md
 
-34 directories, 35 files
+31 directories, 33 files
