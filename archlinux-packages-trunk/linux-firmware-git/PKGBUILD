@@ -65,8 +65,7 @@ package_linux-firmware-git() {
 
   cd ${_pkgbase}
 
-  #make DESTDIR="${pkgdir}" FIRMWAREDIR=/usr/lib/firmware ZSTD_CLEVEL=19 install-zst
-  make DESTDIR="${pkgdir}" FIRMWAREDIR=/usr/lib/firmware install-zst
+  make DESTDIR="${pkgdir}" FIRMWAREDIR=/usr/lib/firmware ZSTD_CLEVEL=19 install-zst
 
   # useless (FS#46591)
   # Trigger a microcode reload for configurations not using early updates
