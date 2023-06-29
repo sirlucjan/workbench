@@ -36,7 +36,15 @@
 │   │   │   └── PKGBUILD
 │   │   └── linux-api-headers-rc-git-6.4.r0.g6995e2de6891c-1.src.tar.gz
 │   └── uml
-│       └── linux-usermode
+│       ├── linux-usermode
+│       │   ├── 70-uml.hook
+│       │   ├── config
+│       │   └── PKGBUILD
+│       ├── linux-usermode-git
+│       │   ├── 70-uml.hook
+│       │   ├── config
+│       │   └── PKGBUILD
+│       └── linux-usermode-rc-git
 │           ├── 70-uml.hook
 │           ├── config
 │           └── PKGBUILD
@@ -50,14 +58,6 @@
 │           ├── 70-uml.hook
 │           ├── config
 │           └── PKGBUILD
-├── linux-usermode-git
-│   ├── 70-uml.hook
-│   ├── config
-│   └── PKGBUILD
-├── linux-usermode-rc-git
-│   ├── 70-uml.hook
-│   ├── config
-│   └── PKGBUILD
 ├── psl-discord
 │   └── hidpi-daemon-git
 │       └── PKGBUILD
