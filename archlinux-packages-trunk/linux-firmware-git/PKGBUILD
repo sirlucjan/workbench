@@ -9,7 +9,7 @@ pkgname=(linux-firmware-whence-git linux-firmware-git amd-ucode-git
          linux-firmware-{nfp,mellanox,marvell,qcom,liquidio,qlogic,bnx2x}-git
 )
 pkgver=20230625.r0.gee91452d
-pkgrel=2
+pkgrel=3
 pkgdesc="Firmware files for Linux"
 url="http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=summary"
 license=('GPL2' 'GPL3' 'custom')
@@ -65,7 +65,7 @@ package_linux-firmware-git() {
 
   cd ${_pkgbase}
 
-  make DESTDIR="${pkgdir}" FIRMWAREDIR=/usr/lib/firmware ZSTD_CLEVEL=19 install-zst
+  ZSTD_CLEVEL=19 make DESTDIR="${pkgdir}" FIRMWAREDIR=/usr/lib/firmware install-zst
 
   # useless (FS#46591)
   # Trigger a microcode reload for configurations not using early updates
