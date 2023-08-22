@@ -38,9 +38,6 @@
 [credential "https://gitlab.archlinux.org"]
 	username = sirlucjan
 
-[credential "https://invent.kde.org"]
-	username = lucjan.lucjanov
-
 [url "https://aur.archlinux.org/"]
 	insteadOf = aur:
 
@@ -58,9 +55,6 @@
 
 [url "https://gitlab.archlinux.org/"]
 	insteadOf = archlinux:
-
-[url "https://invent.kde.org/"]
-	insteadOf = kde:
 
 [url "git@github.com:"]
 	insteadOf = githubs:
@@ -81,11 +75,6 @@
 	insteadOf = archlinuxs:
 	pushInsteadOf = archlinux:
 	pushInsteadOf = https://gitlab.archlinux.org/
-
-[url "git@invent.kde.org:"]
-	insteadOf = kdes:
-	pushInsteadOf = kde:
-	pushInsteadOf = https://invent.kde.org/
 
 [rerere]
 	enabled = 1
