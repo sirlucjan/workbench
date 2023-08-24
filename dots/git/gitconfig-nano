@@ -26,21 +26,6 @@
 [include]
 	path = ~/.gitpasswd
 
-[credential "https://github.com"]
-	username = sirlucjan
-
-[credential "https://gitlab.com"]
-	username = sirlucjan
-
-[credential "https://codeberg.org"]
-	username = sirlucjan
-
-[credential "https://gitlab.archlinux.org"]
-	username = sirlucjan
-
-[credential "https://invent.kde.org"]
-	username = sirlucjan
-
 [url "https://aur.archlinux.org/"]
 	insteadOf = aur:
 
