@@ -39,7 +39,7 @@
 	username = sirlucjan
 
 [credential "https://invent.kde.org"]
-	username = lucjan.lucjanov
+	username = sirlucjan
 
 [url "https://aur.archlinux.org/"]
 	insteadOf = aur:
