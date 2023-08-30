@@ -47,6 +47,9 @@
 [url "https://invent.kde.org/"]
 	insteadOf = kde:
 
+[url "https://gitlab.freedesktop.org/"]
+	insteadOf = freedesktop:
+
 [url "git@github.com:"]
 	insteadOf = githubs:
 	pushInsteadOf = github:
@@ -71,6 +74,11 @@
 	insteadOf = kdes:
 	pushInsteadOf = kde:
 	pushInsteadOf = https://invent.kde.org/
+
+[url "git@gitlab.freedesktop.org:"]
+	insteadOf = freedesktops:
+	pushInsteadOf = freedesktop:
+	pushInsteadOf = https://gitlab.freedesktop.org/
 
 [rerere]
 	enabled = 1
