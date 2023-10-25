@@ -238,6 +238,7 @@
 	#############
 	o = checkout
 	om = checkout master
+	oma = checkout main
 	ob = checkout -b
 	opr = !sh -c 'git fo pull/$1/head:pr-$1 && git o pr-$1'
 	#############
