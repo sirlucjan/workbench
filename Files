@@ -1,7 +1,14 @@
 .
 ├── Devel
 │   ├── Config
-│   │   └── 6.5
+│   │   ├── 6.5
+│   │   │   ├── git
+│   │   │   │   └── uml-git
+│   │   │   │       └── config
+│   │   │   └── src
+│   │   │       └── uml
+│   │   │           └── config
+│   │   └── 6.6
 │   │       ├── git
 │   │       │   └── uml-git
 │   │       │       └── config
@@ -38,4 +45,4 @@
 │       └── PKGBUILD
 └── README.md
 
-20 directories, 19 files
+25 directories, 21 files
