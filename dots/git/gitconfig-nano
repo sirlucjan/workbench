@@ -259,6 +259,10 @@
 	psaom = push --all origin master
 	psfom = push -f origin master
 	psuom = push -u origin master
+	psoma = push origin main
+	psaoma = push --all origin main
+	psfoma = push -f origin main
+	psuoma = push -u origin main
 	psoc = !git push origin $(git bc)
 	psaoc = !git push --all origin $(git bc)
 	psfoc = !git push -f origin $(git bc)
@@ -272,14 +276,18 @@
 	plo = pull origin
 	pbo = pull --rebase origin
 	plom = pull origin master
+	ploma = pull origin main
 	ploc = !git pull origin $(git bc)
 	pbom = pull --rebase origin master
+	pboma = pull --rebase origin main
 	pboc = !git pull --rebase origin $(git bc)
 	#############
 	plu = pull upstream
 	plum = pull upstream master
+	pluma = pull upstream main
 	pluc = !git pull upstream $(git bc)
 	pbum = pull --rebase upstream master
+	pbuma = pull --rebase upstream main
 	pbuc = !git pull --rebase upstream $(git bc)
 	#############
 	rb = rebase
@@ -297,6 +305,7 @@
 	remh = reset --mixed HEAD
 	resh = reset --soft HEAD
 	rehom = reset --hard origin/master
+	rehoma = reset --hard origin/main
 	#############
 	r = remote
 	ra = remote add
@@ -355,6 +364,7 @@
 	subrm = !sh -c 'git submodule deinit -f -- $1 && rm -rf .git/modules/$1 && git rm -f $1' -
 	subup = submodule update --init --recursive
 	subpull = !git submodule foreach git pull --tags -f origin master
+	subpulla = !git submodule foreach git pull --tags -f origin main
 	#############
 	assume = update-index --assume-unchanged
 	unassume = update-index --no-assume-unchanged
@@ -366,6 +376,7 @@
 	releases = !sh -c 'git tag v$1 && git pst' -
 	unreleases = !sh -c 'git tag -d v$1 && git pso :v$1' -
 	merged = !sh -c 'git o master && git plom && git bd $1 && git rpo' -
+	mergeda = !sh -c 'git o main && git plom && git bd $1 && git rpo' -
 	aliases = !git config -l | grep alias | cut -c 7-
 	snap = !git stash save 'snapshot: $(date)' && git stash apply 'stash@{0}'
 	bare = !sh -c 'git symbolic-ref HEAD refs/heads/$1 && git rm --cached -r . && git clean -xfd' -
@@ -378,6 +389,7 @@
 	ours = "!f() { git checkout --ours $@ && git add $@; }; f"
 	theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
 	subrepo = !sh -c 'git filter-branch --prune-empty --subdirectory-filter $1 master' -
+	subrepoa = !sh -c 'git filter-branch --prune-empty --subdirectory-filter $1 main' -
 	human = name-rev --name-only --refs=refs/heads/*
 
 [filter "lfs"]
