@@ -235,6 +235,9 @@
 	ma = merge --abort
 	mc = merge --continue
 	ms = merge --skip
+	me = merge --no-edit
+	mn = merge --no-commit
+	mq = merge --squash
 	#############
 	o = checkout
 	om = checkout master
