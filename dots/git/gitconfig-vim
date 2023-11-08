@@ -200,6 +200,8 @@
 	cpics = cherry-pick -s
 	cpis = cherry-pick -S
 	cpiss = cherry-pick -S -s
+	cpin = cherry-pick -n
+	cpie = cherry-pick -e
 	#############
 	d = diff
 	dp = diff --patience
