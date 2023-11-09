@@ -13,6 +13,7 @@
 │           └── 70-uml.hook
 ├── dots
 │   ├── git
+│   │   ├── gitconfig-codium
 │   │   ├── gitconfig-nano
 │   │   ├── gitconfig-vim
 │   │   └── gitignore
@@ -38,4 +39,4 @@
 │       └── PKGBUILD
 └── README.md
 
-20 directories, 19 files
+20 directories, 20 files
