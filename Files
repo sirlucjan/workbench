@@ -34,9 +34,6 @@
 │           ├── 70-uml.hook
 │           ├── config
 │           └── PKGBUILD
-├── psl-discord
-│   └── hidpi-daemon-git
-│       └── PKGBUILD
 └── README.md
 
-20 directories, 20 files
+18 directories, 19 files
