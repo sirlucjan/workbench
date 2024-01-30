@@ -13,7 +13,7 @@
 │           └── 70-uml.hook
 ├── dots
 │   ├── git
-│   │   ├── gitconfig-codium
+│   │   ├── gitconfig-code
 │   │   ├── gitconfig-nano
 │   │   ├── gitconfig-vim
 │   │   └── gitignore
