@@ -12,11 +12,17 @@
 │       └── uml
 │           └── 70-uml.hook
 ├── dots
-│   └── git
-│       ├── gitconfig-code
-│       ├── gitconfig-nano
-│       ├── gitconfig-vim
-│       └── gitignore
+│   ├── git
+│   │   ├── gitconfig-code
+│   │   ├── gitconfig-nano
+│   │   ├── gitconfig-vim
+│   │   └── gitignore
+│   └── scripts
+│       ├── app.sh
+│       ├── git-patching.sh
+│       ├── patcher.sh
+│       ├── patching.sh
+│       └── repo-schema.sh
 ├── Files
 ├── linux-rolling-stable
 │   ├── api-headers
@@ -30,4 +36,4 @@
 │           └── PKGBUILD
 └── README.md
 
-17 directories, 14 files
+18 directories, 19 files
