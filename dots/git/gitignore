@@ -40,4 +40,9 @@ Icon?
 Thumbs.db
 
 *.lock
-package-lock.json 
+package-lock.json
+
+# Git trashes #
+######################
+*.orig
+*.rej
