@@ -389,6 +389,8 @@
 	bare = !sh -c 'git symbolic-ref HEAD refs/heads/$1 && git rm --cached -r . && git clean -xfd' -
 	whois = !sh -c 'git log -i -1 --author=\"$1\" --pretty=\"format:%an <%ae>\"' -
 	serve = daemon --reuseaddr --verbose --base-path=. --export-all ./.git
+	backports = "!f() { git log --format='%H # %s' -$1 --reverse; }; f"
+	reverts = "!f() { git log --format='%H # %s' -$1; }; f"
 	#############
 	behind = !git rev-list --left-only --count $(git bu)...HEAD
 	ahead = !git rev-list --right-only --count $(git bu)...HEAD
