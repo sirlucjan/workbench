@@ -31,6 +31,14 @@
 │   │   └── linux-api-headers-rc-git
 │   │       └── PKGBUILD
 │   └── uml
+│       ├── linux-usermode
+│       │   ├── 70-uml.hook
+│       │   ├── config
+│       │   └── PKGBUILD
+│       ├── linux-usermode-git
+│       │   ├── 70-uml.hook
+│       │   ├── config
+│       │   └── PKGBUILD
 │       └── linux-usermode-rc-git
 │           ├── 70-uml.hook
 │           ├── config
@@ -45,14 +53,6 @@
 │           ├── 70-uml.hook
 │           ├── config
 │           └── PKGBUILD
-├── linux-usermode
-│   ├── 70-uml.hook
-│   ├── config
-│   └── PKGBUILD
-├── linux-usermode-git
-│   ├── 70-uml.hook
-│   ├── config
-│   └── PKGBUILD
 └── README.md
 
 26 directories, 30 files
