@@ -4,7 +4,6 @@
 	email = lucjan.lucjanov@gmail.com
 	signingkey = BDB26C5A
 
-
 [core]
 	editor = nano
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
