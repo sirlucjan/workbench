@@ -50,10 +50,6 @@
 │           ├── 70-uml.hook
 │           ├── config
 │           └── PKGBUILD
-├── linux-usermode-git
-│   ├── 70-uml.hook
-│   ├── config
-│   └── PKGBUILD
 └── README.md
 
-29 directories, 28 files
+28 directories, 25 files
