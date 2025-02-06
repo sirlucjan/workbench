@@ -25,9 +25,6 @@
 │       └── repo-schema.sh
 ├── Files
 ├── linux-rolling-stable
-│   ├── api-headers
-│   │   └── linux-api-headers-git
-│   │       └── PKGBUILD
 │   ├── README.md
 │   └── uml
 │       └── linux-usermode-git
@@ -36,4 +33,4 @@
 │           └── PKGBUILD
 └── README.md
 
-18 directories, 19 files
+16 directories, 18 files
