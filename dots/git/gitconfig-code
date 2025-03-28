@@ -5,7 +5,7 @@
 	signingkey = BDB26C5A
 
 [core]
-	editor = 'code --wait --reuse-window'
+	editor = code --wait --reuse-window
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = ~/.gitignore
 	pager = delta
