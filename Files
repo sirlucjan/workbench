@@ -32,24 +32,6 @@
 │       ├── patching.sh
 │       └── repo-schema.sh
 ├── Files
-├── linux-6.14
-│   └── uml
-│       ├── linux-usermode
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
-│       ├── linux-usermode-git
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
-│       ├── linux-usermode-rc
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
-│       └── linux-usermode-rc-git
-│           ├── 70-uml.hook
-│           ├── config
-│           └── PKGBUILD
 ├── linux-rolling-stable
 │   ├── README.md
 │   └── uml
@@ -59,4 +41,4 @@
 │           └── PKGBUILD
 └── README.md
 
-27 directories, 33 files
+21 directories, 21 files
