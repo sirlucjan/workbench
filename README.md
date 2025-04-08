@@ -3,7 +3,7 @@
 #### DOTS
 
 gitconfig based on [pksunkara](https://gist.github.com/pksunkara/988716)
-Versions for nano/vim/code.
+Versions for nano/vim/code/codium (code and codium also in flatpak version)
 
 # Kernels and modules:
 
