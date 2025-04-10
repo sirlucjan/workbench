@@ -8,22 +8,22 @@
 │   │       └── src
 │   │           └── uml
 │   │               └── config
+│   ├── Dots
+│   │   ├── git
+│   │   │   ├── gitconfig-code
+│   │   │   ├── gitconfig-codium
+│   │   │   ├── gitconfig-nano
+│   │   │   ├── gitconfig-vim
+│   │   │   └── gitignore
+│   │   └── scripts
+│   │       ├── app.sh
+│   │       ├── git-patching.sh
+│   │       ├── patcher.sh
+│   │       ├── patching.sh
+│   │       └── repo-schema.sh
 │   └── Kernel
 │       └── uml
 │           └── 70-uml.hook
-├── dots
-│   ├── git
-│   │   ├── gitconfig-code
-│   │   ├── gitconfig-codium
-│   │   ├── gitconfig-nano
-│   │   ├── gitconfig-vim
-│   │   └── gitignore
-│   └── scripts
-│       ├── app.sh
-│       ├── git-patching.sh
-│       ├── patcher.sh
-│       ├── patching.sh
-│       └── repo-schema.sh
 ├── Files
 ├── PKGBUILDs
 │   ├── aur-kernels
