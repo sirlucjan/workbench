@@ -30,7 +30,6 @@
 │   │   └── linux-lqx
 │   │       └── PKGBUILD
 │   └── linux-rolling-stable
-│       ├── README.md
 │       └── uml
 │           └── linux-usermode-git
 │               ├── 70-uml.hook
@@ -38,4 +37,4 @@
 │               └── PKGBUILD
 └── README.md
 
-19 directories, 20 files
+19 directories, 19 files
