@@ -1,7 +1,4 @@
 .
-├── aur-kernels
-│   └── linux-lqx
-│       └── PKGBUILD
 ├── Devel
 │   ├── Config
 │   │   └── 6.14
@@ -28,13 +25,17 @@
 │       ├── patching.sh
 │       └── repo-schema.sh
 ├── Files
-├── linux-rolling-stable
-│   ├── README.md
-│   └── uml
-│       └── linux-usermode-git
-│           ├── 70-uml.hook
-│           ├── config
-│           └── PKGBUILD
+├── PKGBUILDs
+│   ├── aur-kernels
+│   │   └── linux-lqx
+│   │       └── PKGBUILD
+│   └── linux-rolling-stable
+│       ├── README.md
+│       └── uml
+│           └── linux-usermode-git
+│               ├── 70-uml.hook
+│               ├── config
+│               └── PKGBUILD
 └── README.md
 
-18 directories, 20 files
+19 directories, 20 files
