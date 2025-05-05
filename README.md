@@ -23,7 +23,7 @@ Versions for nano/vim/code/codium (code and codium also in flatpak version)
 
 ###### The only difference is that if you change the kernel version to a higher one, there will be no need to change the branch in the sources section - the new version will compile automatically.
 
-[1] * [archlinux-lucjan](https://github.com/archlinux-lucjan) / [archlinux-lucjan](https://gitlab.com/archlinux-lucjan)
+[1] * [archlinux-lucjan](https://github.com/archlinux-lucjan) / [archlinux-lucjan](https://gitlab.com/archlinux-lucjan) / [archlinux-lucjan](https://codeberg.org/archlinux-lucjan)
 
 [2] * [POLAUR](https://github.com/polaur) / [POLAUR](https://gitlab.com/polaur)
 
