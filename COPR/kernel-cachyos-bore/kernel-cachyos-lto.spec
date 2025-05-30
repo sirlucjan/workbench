@@ -177,7 +177,7 @@ Patch11:        https://raw.githubusercontent.com/CachyOS/copr-linux-cachyos/ref
     %endif
 
     %if %{_build_lto}
-        scripts/config -e LTO_CLANG_THIN
+        scripts/config -e LTO_CLANG_THIN_DIST
     %endif
 
     %if %{_build_minimal}
