@@ -1,4 +1,7 @@
 .
+├── COPR
+│   └── kernel-cachyos-bore
+│       └── kernel-cachyos-lto.spec
 ├── Devel
 │   ├── Config
 │   │   ├── 6.14
@@ -58,4 +61,4 @@
 │               └── PKGBUILD
 └── README.md
 
-29 directories, 30 files
+31 directories, 31 files
