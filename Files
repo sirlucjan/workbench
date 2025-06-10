@@ -4,13 +4,6 @@
 │       └── kernel-cachyos-lto.spec
 ├── Devel
 │   ├── Config
-│   │   ├── 6.14
-│   │   │   ├── git
-│   │   │   │   └── uml-git
-│   │   │   │       └── config
-│   │   │   └── src
-│   │   │       └── uml
-│   │   │           └── config
 │   │   └── 6.15
 │   │       ├── git
 │   │       │   └── uml-git
@@ -47,4 +40,4 @@
 │               └── PKGBUILD
 └── README.md
 
-26 directories, 22 files
+21 directories, 20 files
