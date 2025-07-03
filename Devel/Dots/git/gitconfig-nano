@@ -10,14 +10,24 @@
 	excludesfile = ~/.gitignore
 	pager = delta
 
+[column]
+	ui = auto
+
+[branch]
+	sort = -committerdate
+
 [commit]
 	gpgsign = true
 
 [tag]
 	gpgSign = true
+	sort = version:refname
 
-[init]	
+[init]
 	defaultBranch = master
+
+[checkout]
+	defaultRemote = origin
 
 [protocol "file"]
 	allow = always
@@ -90,8 +100,27 @@
 	enabled = 1
 	autoupdate = 1
 
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	renames = true
+	tool = nvimdiff
+
+[difftool]
+	prompt = false
+
 [push]
-	default = matching
+	autoSetupRemote = true
+	followTags = true
+
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+
+[rebase]
+	autoSquash = true
+	updateRefs = true
 
 [color]
 	ui = auto
@@ -113,12 +142,6 @@
 	changed = yellow bold
 	untracked = red bold
 
-[diff]
-	tool = vimdiff
-
-[difftool]
-	prompt = false
-
 [delta]
 	features = line-numbers decorations
 	line-numbers = true
@@ -138,15 +161,18 @@
 	plus-empty-line-marker-style = normal normal
 	line-numbers-right-format = "{np:^4}│ "
 
-[gitflow "prefix"]	
-	feature = feature-
-	release = release-
-	hotfix = hotfix-
-	support = support-
-	versiontag = v
+[trim]
+	bases = master,main
+	protected = *production
 
 [sequence]
 	editor = interactive-rebase-tool
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 
 [alias]
 	a = add --all
@@ -172,6 +198,11 @@
 	bu = !git rev-parse --abbrev-ref --symbolic-full-name "@{u}"
 	bs = !git-branch-status
 	#############
+	bl = blame -w
+	bll = blame -w -L
+	blm = blame -w -C -C -C
+	blml = blame -w -C -C -C -L
+	#############
 	c = commit
 	ca = commit -a
 	cac = commit -a -s
@@ -195,9 +226,13 @@
 	clbs = clone --single-branch -b
 	clc = clone --bare
 	cld = clone --depth 1
-	clg = !sh -c 'git clone https://github.com/$1 $(basename $1)' -
-	clgp = !sh -c 'git clone git@github.com:$1 $(basename $1)' -
-	clgu = !sh -c 'git clone git@github.com:$(git config --get user.username)/$1 $1' -
+	cl = clone
+	cld = clone --depth 1
+	clg = !sh -c 'git clone https://github.com/$1' -
+	clgp = !sh -c 'git clone git@github.com:$1' -
+	clsp = !sh -c 'git clone git@git.sr.ht:~$1' -
+	clgu = !sh -c 'git clone git@github.com:$(git config --get user.username)/$1' -
+	clsu = !sh -c 'git clone git@git.sr.ht:~$(git config --get user.username)/$1' -
 	clm = clone --mirror
 	#############
 	cpi = cherry-pick
@@ -213,9 +248,10 @@
 	dp = diff --patience
 	dc = diff --cached
 	dk = diff --check
-	dck = diff --cached --check
+	dkc = diff --cached --check
 	dt = difftool
-	dct = difftool --cached
+	dtc = difftool --cached
+	dw = diff --word-diff
 	#############
 	f = fetch
 	fo = fetch origin
@@ -234,7 +270,9 @@
 	iq = init --quiet
 	#############
 	l = log --oneline
-	lg = log --oneline --graph
+	lg = log --oneline --graph --decorate
+	ll = log -L
+	lf = log -S
 	#############
 	ls = ls-files
 	lsf = !git ls-files | grep -i
@@ -256,27 +294,27 @@
 	prv = prune -v
 	#############
 	ps = push
-	psf = push -f
+	psf = push --force-with-lease
 	psm = push --mirror
 	psu = push -u
 	pst = push --tags
 	#############
 	pso = push origin
 	psao = push --all origin
-	psfo = push -f origin
+	psfo = push --force-with-lease origin
 	psuo = push -u origin
 	#############
 	psom = push origin master
 	psaom = push --all origin master
-	psfom = push -f origin master
+	psfom = push --force-with-lease origin master
 	psuom = push -u origin master
 	psoma = push origin main
 	psaoma = push --all origin main
-	psfoma = push -f origin main
+	psfoma = push --force-with-lease origin main
 	psuoma = push -u origin main
 	psoc = !git push origin $(git bc)
 	psaoc = !git push --all origin $(git bc)
-	psfoc = !git push -f origin $(git bc)
+	psfoc = !git push --force-with-lease origin $(git bc)
 	psuoc = !git push -u origin $(git bc)
 	psdc = !git push origin :$(git bc)
 	#############
@@ -366,18 +404,18 @@
 	td = tag -d
 	#############
 	w = show
-	wp = show -p
-	wr = show -p --no-color
 	#############
-	svnr = svn rebase
-	svnd = svn dcommit
-	svnl = svn log --oneline --show-commit
+	wa = worktree add
+	wl = worktree list
+	wp = worktree prune
+	wr = worktree remove
+	wx = worktree repair
 	#############
 	subadd = !sh -c 'git submodule add https://github.com/$1 $2/$(basename $1)' -
 	subrm = !sh -c 'git submodule deinit -f -- $1 && rm -rf .git/modules/$1 && git rm -f $1' -
 	subup = submodule update --init --recursive
-	subpull = !git submodule foreach git pull --tags -f origin master
-	subpulla = !git submodule foreach git pull --tags -f origin main
+	subpull = submodule foreach 'git pull --tags -f origin master || git pull --tags -f origin main || git pull --tags -f origin development'
+	subsync = submodule sync --recursive
 	#############
 	assume = update-index --assume-unchanged
 	unassume = update-index --no-assume-unchanged
@@ -388,8 +426,8 @@
 	bump = !sh -c 'git commit -am \"Version bump v$1\" && git psuoc && git releases $1' -
 	releases = !sh -c 'git tag v$1 && git pst' -
 	unreleases = !sh -c 'git tag -d v$1 && git pso :v$1' -
-	merged = !sh -c 'git o master && git plom && git bd $1 && git rpo' -
-	mergeda = !sh -c 'git o main && git plom && git bd $1 && git rpo' -
+	merged = !sh -c 'git om && git plom && git trim'
+	mergeda = !sh -c 'git oma && git ploma && git trim'
 	aliases = !git config -l | grep alias | cut -c 7-
 	snap = !git stash save 'snapshot: $(date)' && git stash apply 'stash@{0}'
 	bare = !sh -c 'git symbolic-ref HEAD refs/heads/$1 && git rm --cached -r . && git clean -xfd' -
