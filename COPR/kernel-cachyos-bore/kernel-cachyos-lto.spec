@@ -10,8 +10,8 @@
 %undefine _include_frame_pointers
 
 # Linux Kernel Versions
-%define _basekver 6.15
-%define _stablekver 7
+%define _basekver 6.16
+%define _stablekver 0
 %define _rpmver %{version}-%{release}
 %define _kver %{_rpmver}.%{_arch}
 
@@ -34,10 +34,12 @@
 %define _nv_pkg open-gpu-kernel-modules-%{_nv_ver}
 %if 0%{?fedora} >= 43
     %define _build_nv 1
-    %define _nv_ver 575.64.03
+    %define _nv_ver 575.64.05
+%elif 0%{?rhel}
+    %define _build_nv 0
 %else
     %define _build_nv 1
-    %define _nv_ver 575.64.03
+    %define _nv_ver 575.64.05
     %define _nv_old 1
 %endif
 
