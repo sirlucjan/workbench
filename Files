@@ -35,24 +35,6 @@
 │       └── uml
 │           └── 70-uml.hook
 ├── Files
-├── linux-6.16
-│   └── uml
-│       ├── linux-usermode
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
-│       ├── linux-usermode-git
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
-│       ├── linux-usermode-rc
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
-│       └── linux-usermode-rc-git
-│           ├── 70-uml.hook
-│           ├── config
-│           └── PKGBUILD
 ├── PKGBUILDs
 │   ├── aur-kernels
 │   │   └── linux-lqx
@@ -65,4 +47,4 @@
 │               └── PKGBUILD
 └── README.md
 
-32 directories, 34 files
+26 directories, 22 files
