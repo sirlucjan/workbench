@@ -11,7 +11,7 @@
 
 # Linux Kernel Versions
 %define _basekver 6.16
-%define _stablekver 0
+%define _stablekver 1
 %define _rpmver %{version}-%{release}
 %define _kver %{_rpmver}.%{_arch}
 
@@ -174,6 +174,14 @@ Patch10:        %{_patch_src}/misc/nvidia/0001-Enable-atomic-kernel-modesetting-
         echo "Invalid x86_64 ISA Level. Using x86_64_v3"
         scripts/config --set-val X86_64_VERSION 3
     %endif
+
+    # Enable Secure boot support
+    scripts/config -e CONFIG_IMA_SECURE_AND_OR_TRUSTED_BOOT
+    scripts/config -e CONFIG_IMA
+    scripts/config -e CONFIG_IMA_APPRAISE_BOOTPARAM
+    scripts/config -e CONFIG_IMA_APPRAISE
+    scripts/config -e CONFIG_IMA_ARCH_POLICY
+    
 
     %if %{_build_lto}
         scripts/config -e LTO_CLANG_THIN_DIST
