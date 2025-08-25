@@ -14,6 +14,7 @@
 │   ├── Dots
 │   │   ├── git
 │   │   │   ├── gitconfig-code
+│   │   │   ├── gitconfig-code-oss
 │   │   │   ├── gitconfig-codium
 │   │   │   ├── gitconfig-nano
 │   │   │   ├── gitconfig-vim
@@ -40,4 +41,4 @@
 │               └── PKGBUILD
 └── README.md
 
-21 directories, 20 files
+21 directories, 21 files
