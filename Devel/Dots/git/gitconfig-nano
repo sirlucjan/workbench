@@ -436,6 +436,7 @@
 	backports = "!f() { git log --format='%H # %s' -$1 --reverse; }; f"
 	reverts = "!f() { git log --format='%H # %s' -$1; }; f"
 	add-upstream = "!f() { git remote add upstream \"$1\" && git remote set-url --push upstream no_push; }; f"
+	ignore = !sh -c 'echo "$1" >> .git/info/exclude' -
 	#############
 	behind = !git rev-list --left-only --count $(git bu)...HEAD
 	ahead = !git rev-list --right-only --count $(git bu)...HEAD
