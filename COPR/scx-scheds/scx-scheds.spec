@@ -51,7 +51,7 @@ sched_ext is a Linux kernel feature which enables implementing kernel thread sch
 
 %build
 export CARGO_HOME=%(pwd)/.cargo
-cargo fetch
+cargo fetch --locked
 cargo build --release --frozen --locked
 
 %install
