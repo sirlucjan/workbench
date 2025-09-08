@@ -8,7 +8,8 @@
 │       ├── rust-scx_bpfland.spec
 │       ├── rust-scx_chaos.spec
 │       ├── rust-scx_cosmos.spec
-│       └── rust-scx_flash.spec
+│       ├── rust-scx_flash.spec
+│       └── rust-scx_lavd.spec
 ├── Devel
 │   ├── Config
 │   │   └── 6.16
@@ -48,4 +49,4 @@
 │               └── PKGBUILD
 └── README.md
 
-23 directories, 26 files
+23 directories, 27 files
