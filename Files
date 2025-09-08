@@ -10,7 +10,8 @@
 │       ├── rust-scx_cosmos.spec
 │       ├── rust-scx_flash.spec
 │       ├── rust-scx_lavd.spec
-│       └── rust-scx_layered.spec
+│       ├── rust-scx_layered.spec
+│       └── rust-scx_loader.spec
 ├── Devel
 │   ├── Config
 │   │   └── 6.16
@@ -50,4 +51,4 @@
 │               └── PKGBUILD
 └── README.md
 
-23 directories, 28 files
+23 directories, 29 files
