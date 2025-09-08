@@ -13,7 +13,8 @@
 │       ├── rust-scx_layered.spec
 │       ├── rust-scx_loader.spec
 │       ├── rust-scx_p2dq.spec
-│       └── rust-scx_rustland.spec
+│       ├── rust-scx_rustland.spec
+│       └── rust-scx_rusty.spec
 ├── Devel
 │   ├── Config
 │   │   └── 6.16
@@ -53,4 +54,4 @@
 │               └── PKGBUILD
 └── README.md
 
-23 directories, 31 files
+23 directories, 32 files
