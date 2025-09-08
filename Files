@@ -8,6 +8,7 @@
 │       ├── rust-scx_bpfland.spec
 │       ├── rust-scx_chaos.spec
 │       ├── rust-scx_cosmos.spec
+│       ├── rust-scxctl.spec
 │       ├── rust-scx_flash.spec
 │       ├── rust-scx_lavd.spec
 │       ├── rust-scx_layered.spec
@@ -55,4 +56,4 @@
 │               └── PKGBUILD
 └── README.md
 
-23 directories, 33 files
+23 directories, 34 files
