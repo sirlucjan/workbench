@@ -1,5 +1,3 @@
-
-
 %define _disable_source_fetch 0
 
 Name:           scx-scheds
@@ -37,13 +35,11 @@ Conflicts: scx-scheds-git
 Conflicts: scx_layered
 Conflicts: scx_rustland
 Conflicts: scx_rusty
-Conflicts: scx_c_schedulers
 Conflicts: rust-scx_utils-devel
 Obsoletes: scxctl >= 0.3.4
 Provides: scx_layered
 Provides: scx_rustland
 Provides: scx_rusty
-Provides: scx_c_schedulers
 Provides: rust-scx_utils-devel
 Provides: scxctl = %{version}
 
