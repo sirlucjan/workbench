@@ -2,22 +2,8 @@
 ├── COPR
 │   ├── kernel-cachyos-bore
 │   │   └── kernel-cachyos-lto.spec
-│   ├── scx-scheds
-│   │   └── scx-scheds.spec
-│   └── scx-scheds-cargo
-│       ├── rust-scx_bpfland.spec
-│       ├── rust-scx_chaos.spec
-│       ├── rust-scx_cosmos.spec
-│       ├── rust-scxctl.spec
-│       ├── rust-scx_flash.spec
-│       ├── rust-scx_lavd.spec
-│       ├── rust-scx_layered.spec
-│       ├── rust-scx_loader.spec
-│       ├── rust-scx_p2dq.spec
-│       ├── rust-scx_rustland.spec
-│       ├── rust-scx_rusty.spec
-│       ├── rust-scx_tickless.spec
-│       └── rust-scxtop.spec
+│   └── scx-scheds
+│       └── scx-scheds.spec
 ├── Devel
 │   ├── Config
 │   │   └── 6.16
@@ -57,4 +43,4 @@
 │               └── PKGBUILD
 └── README.md
 
-23 directories, 35 files
+22 directories, 22 files
