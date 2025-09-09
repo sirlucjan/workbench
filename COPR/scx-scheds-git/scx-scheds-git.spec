@@ -7,7 +7,7 @@
 
 Name:           scx-scheds-git
 Version:        1.0.16.%{commitdate}.git.%{shortcommit}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
 License:        GPL=2.0
@@ -16,7 +16,6 @@ Source0:        %{URL}/archive/%{commit}/scx-%{commit}.tar.gz
 
 BuildRequires:  gcc
 BuildRequires:  git
-BuildRequires:  meson >= 1.2
 BuildRequires:  python
 BuildRequires:  cargo
 BuildRequires:  rust
