@@ -27,6 +27,37 @@ Versions for nano/vim/code/codium (code and codium also in flatpak version)
 
 [2] * [POLAUR](https://github.com/polaur) / [POLAUR](https://gitlab.com/polaur)
 
+#### COPR
+
+###### scx-scheds will soon drop meson. Here you will find a test version compiled in cargo.
+
+First, enable the [COPR](https://copr.fedorainfracloud.org/coprs/sirlucjan/scx-scheds-cargo/) repository hosting addon package.
+
+```
+sudo dnf copr enable sirlucjan/scx-scheds-cargo
+```
+
+or for Fedora Silverblue/Kinoite
+
+```
+cd /etc/yum.repos.d/
+sudo wget https://copr.fedorainfracloud.org/coprs/sirlucjan/scx-scheds-cargo/repo/fedora-$(rpm -E %fedora)/sirlucjan-scx-scheds-cargo-$(rpm -E %fedora).repo
+```
+
+Then you can install scx-scheds:
+
+```
+sudo dnf install scx-scheds
+```
+
+or for Fedora Silverblue/Kinoite
+
+```
+sudo rpm-ostree install scx-scheds
+sudo systemctl reboot
+```
+You can learn how to use scx-scheds from [this](https://wiki.cachyos.org/configuration/sched-ext/) wiki.
+
 ***
 # Download:
 
