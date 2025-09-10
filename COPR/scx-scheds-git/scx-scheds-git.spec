@@ -85,7 +85,7 @@ install -Dm644 tools/scx_loader/org.scx.Loader.conf \
 install -Dm644 services/scx_loader.toml \
     %{buildroot}/usr/share/scx_loader/config.toml
 
-# Install SCX configuration
+# Install scx configuration
 install -Dm644 services/scx \
     %{buildroot}/etc/default/scx
 
