@@ -55,7 +55,24 @@ or for Fedora Silverblue/Kinoite
 ```
 sudo rpm-ostree install scx-scheds
 sudo systemctl reboot
+
 ```
+
+You can also use -git version:
+
+```
+sudo dnf install scx-scheds-git
+```
+
+or for Fedora Silverblue/Kinoite
+
+```
+sudo rpm-ostree install scx-scheds-git
+sudo systemctl reboot
+
+```
+
+
 You can learn how to use scx-scheds from [this](https://wiki.cachyos.org/configuration/sched-ext/) wiki.
 
 ***
