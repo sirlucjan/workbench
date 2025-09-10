@@ -36,7 +36,7 @@ Requires:  libseccomp
 Requires:  protobuf
 Requires:  zlib
 Requires:  jq
-Obsoletes: scxctl >= 0.3.4
+Obsoletes: scxctl = 0.3.4
 Conflicts: scx-scheds
 Conflicts: scx_layered
 Conflicts: scx_rustland

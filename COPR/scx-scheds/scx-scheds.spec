@@ -36,7 +36,7 @@ Conflicts: scx_layered
 Conflicts: scx_rustland
 Conflicts: scx_rusty
 Conflicts: rust-scx_utils-devel
-Obsoletes: scxctl >= 0.3.4
+Obsoletes: scxctl = 0.3.4
 Provides: scx_layered
 Provides: scx_rustland
 Provides: scx_rusty
