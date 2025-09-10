@@ -1,106 +1,106 @@
-## W O R K B E N C H
+# 🛠️ Workbench
 
-#### DOTS
+A collection of useful tools, configurations, and Linux-related packages.  
 
-gitconfig based on [pksunkara](https://gist.github.com/pksunkara/988716)
-Versions for nano/vim/code/codium (code and codium also in flatpak version)
+---
 
-# Kernels and modules:
+## 📂 DOTS
 
-- linux-lqx
+**gitconfig** inspired by [pksunkara](https://gist.github.com/pksunkara/988716).  
+Available versions for **nano**, **vim**, **VS Code**, and **Codium** (also in Flatpak builds).
 
-[![Packaging status](https://repology.org/badge/vertical-allrepos/linux-lqx.svg)](https://repology.org/project/linux-lqx/versions)
+---
 
-#### linux-lqx incorporates:
+## 🧩 Kernels & Modules
 
-* [liquorix patchset](https://github.com/damentz/liquorix-package/tree/6.16/master) - authored by Steven Barrett
+### 🔹 linux-lqx
+- Kernel variant based on the **Liquorix patchset** authored by [Steven Barrett](https://github.com/damentz/liquorix-package/tree/6.16/master).
+- Packaging status:  
+  [![Packaging status](https://repology.org/badge/vertical-allrepos/linux-lqx.svg)](https://repology.org/project/linux-lqx/versions)  
+  [![Latest packaged version(s)](https://repology.org/badge/latest-versions/linux-lqx.svg)](https://repology.org/project/linux-lqx/versions)
 
-[![latest packaged version(s)](https://repology.org/badge/latest-versions/linux-lqx.svg)](https://repology.org/project/linux-lqx/versions)
+---
 
-#### linux-rolling-stable
+### 🔹 linux-rolling-stable
+These sources are not fundamentally different from **archlinux-lucjan** [1] and **POLAUR** [2].  
+The main difference: when upgrading the kernel version, there is **no need to switch branches manually** — the build process will handle it automatically.  
 
-###### These sources are not fundamentally different from those available in the archlinux-lucjan [1] and POLAUR repository [2]. 
+- [1] **archlinux-lucjan** [GitHub](https://github.com/archlinux-lucjan) · [GitLab](https://gitlab.com/archlinux-lucjan) · [Codeberg](https://codeberg.org/archlinux-lucjan)  
+- [2] **POLAUR** [GitHub](https://github.com/polaur) · [GitLab](https://gitlab.com/polaur)
 
-###### The only difference is that if you change the kernel version to a higher one, there will be no need to change the branch in the sources section - the new version will compile automatically.
+---
 
-[1] * [archlinux-lucjan](https://github.com/archlinux-lucjan) / [archlinux-lucjan](https://gitlab.com/archlinux-lucjan) / [archlinux-lucjan](https://codeberg.org/archlinux-lucjan)
+## 📦 COPR (Fedora 42 / Silverblue / Kinoite)
 
-[2] * [POLAUR](https://github.com/polaur) / [POLAUR](https://gitlab.com/polaur)
+The **scx-scheds** project will soon [switch](https://github.com/sched-ext/scx/discussions/2731) from **Meson** to **Cargo**.
+Here you can find test builds compiled in **Rust (cargo)** for **Fedora 42**.
 
-#### COPR
+1. Enable the [COPR](https://copr.fedorainfracloud.org/coprs/sirlucjan/scx-scheds-cargo/) repository:
 
-###### scx-scheds will soon drop meson. Here you will find a test version compiled in cargo.
+   ```bash
+   sudo dnf copr enable sirlucjan/scx-scheds-cargo
+   ```
 
-First, enable the [COPR](https://copr.fedorainfracloud.org/coprs/sirlucjan/scx-scheds-cargo/) repository hosting addon package.
+   **For Fedora Silverblue / Kinoite:**
+   ```bash
+   cd /etc/yum.repos.d/
+   sudo wget https://copr.fedorainfracloud.org/coprs/sirlucjan/scx-scheds-cargo/repo/fedora-$(rpm -E %fedora)/sirlucjan-scx-scheds-cargo-$(rpm -E %fedora).repo
+   ```
 
-```
-sudo dnf copr enable sirlucjan/scx-scheds-cargo
-```
+2. Install `scx-scheds`: 
 
-or for Fedora Silverblue/Kinoite
+   ```bash
+   sudo dnf install scx-scheds
+   ```
 
-```
-cd /etc/yum.repos.d/
-sudo wget https://copr.fedorainfracloud.org/coprs/sirlucjan/scx-scheds-cargo/repo/fedora-$(rpm -E %fedora)/sirlucjan-scx-scheds-cargo-$(rpm -E %fedora).repo
-```
+   **For Fedora Silverblue 42 / Kinoite 42:**
+   ```bash
+   sudo rpm-ostree install scx-scheds
+   sudo systemctl reboot
+   ```
 
-Then you can install scx-scheds:
+3. Install the `scx-scheds-git` version:
 
-```
-sudo dnf install scx-scheds
-```
+   ```bash
+   sudo dnf install scx-scheds-git
+   ```
 
-or for Fedora Silverblue/Kinoite
+   **For Fedora Silverblue 42 / Kinoite 42:**
+   ```bash
+   sudo rpm-ostree install scx-scheds-git
+   sudo systemctl reboot
+   ```
 
-```
-sudo rpm-ostree install scx-scheds
-sudo systemctl reboot
+📖 Usage guide available in the [CachyOS wiki](https://wiki.cachyos.org/configuration/sched-ext/).
 
-```
+---
 
-You can also use -git version:
+## ⬇️ Download
 
-```
-sudo dnf install scx-scheds-git
-```
-
-or for Fedora Silverblue/Kinoite
-
-```
-sudo rpm-ostree install scx-scheds-git
-sudo systemctl reboot
-
-```
-
-
-You can learn how to use scx-scheds from [this](https://wiki.cachyos.org/configuration/sched-ext/) wiki.
-
-***
-# Download:
-
-```
+```bash
 git clone https://github.com/sirlucjan/workbench.git
-
 ```
 
-or
+or:
 
-```
+```bash
 git clone https://gitlab.com/sirlucjan/workbench.git
-
 ```
-or
 
-```
+or:
+
+```bash
 git clone https://codeberg.org/sirlucjan/workbench.git
-
 ```
 
-# Install:
+---
 
+## ⚙️ Installation
 
-```
-cd /some_path/workbench/package_name
+```bash
+cd /path/to/workbench/package_name
 makepkg -srci
-
 ```
+
+---
+
