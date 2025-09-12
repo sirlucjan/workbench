@@ -30,6 +30,8 @@ BuildRequires:  pkgconfig(libbpf) >= %{libbpf_min_ver}
 BuildRequires:  pkgconfig(libseccomp)
 BuildRequires:  pkgconfig(protobuf)
 BuildRequires:  pkgconfig(systemd)
+Conflicts: scx
+Provides: scx = %{version}
 
 %description
 sched_ext is a Linux kernel feature which enables implementing kernel thread schedulers in BPF and dynamically loading them. This package contains various scheduler implementations and support utilities.
