@@ -6,6 +6,9 @@
 │   │   └── scx-scheds.spec
 │   └── scx-scheds-git
 │       └── scx-scheds-git.spec
+├── COPR-SUSE
+│   └── scx
+│       └── scx.spec
 ├── Devel
 │   ├── Config
 │   │   └── 6.16
@@ -45,4 +48,4 @@
 │               └── PKGBUILD
 └── README.md
 
-23 directories, 23 files
+25 directories, 24 files
