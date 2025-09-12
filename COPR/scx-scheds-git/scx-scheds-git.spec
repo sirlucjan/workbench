@@ -7,7 +7,7 @@
 
 Name:           scx-scheds-git
 Version:        1.0.16.%{commitdate}.git.%{shortcommit}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
 License:        GPL=2.0
@@ -87,9 +87,8 @@ install -Dm644 services/scx_loader.toml \
 # Binaries
 %{_bindir}/*
 
-# Systemd services
+# Systemd service
 %{_unitdir}/scx_loader.service
-%{_unitdir}/scx.service
 
 # DBus service and configuration
 %{_datadir}/dbus-1/system-services/org.scx.Loader.service
