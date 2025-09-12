@@ -1,6 +1,6 @@
 %global _default_patch_fuzz 2
 %global commitdate 20250912
-%global commit f016e6a52c894f5306e4c71641bed02d3d2942ad
+%global commit c3b6b3c066ad5e8997c5aabd068c4718cd9f5f48
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 %define _disable_source_fetch 0
@@ -66,12 +66,9 @@ cargo build --release --frozen --locked
 find target/release -maxdepth 1 -type f -executable ! -name '*.so' \
     -exec install -Dm755 -t %{buildroot}/usr/bin {} +
 
-# Install systemd service files
+# Install systemd service file
 install -Dm644 services/systemd/scx_loader.service \
     %{buildroot}/usr/lib/systemd/system/scx_loader.service
-
-install -Dm644 services/systemd/scx.service \
-    %{buildroot}/usr/lib/systemd/system/scx.service
 
 # Install DBus service file
 install -Dm644 services/systemd/org.scx.Loader.service \
@@ -84,10 +81,6 @@ install -Dm644 tools/scx_loader/org.scx.Loader.conf \
 # Install scx_loader configuration
 install -Dm644 services/scx_loader.toml \
     %{buildroot}/usr/share/scx_loader/config.toml
-
-# Install scx configuration
-install -Dm644 services/scx \
-    %{buildroot}/etc/default/scx
 
 %files
 
@@ -103,5 +96,4 @@ install -Dm644 services/scx \
 %{_datadir}/dbus-1/system.d/org.scx.Loader.conf
 
 # Configuration files
-%attr(0644,root,root) %config(noreplace) %{_sysconfdir}/default/scx
 %{_datadir}/scx_loader/config.toml
