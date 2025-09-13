@@ -4,7 +4,7 @@
 %define llvm_min_ver 17
 Name:           scx
 Version:        1.0.16
-Release:        4
+Release:        2
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
@@ -60,7 +60,7 @@ install -Dm644 tools/scx_loader/org.scx.Loader.conf \
 
 # Install scx_loader configuration
 install -Dm644 services/scx_loader.toml \
-    %{buildroot}/usr/etc/scx_loader/config.toml
+    %{buildroot}/usr/share/scx_loader/config.toml
 
 # Install scx configuration
 install -Dm644 services/scx \
@@ -81,4 +81,4 @@ install -Dm644 services/scx \
 
 # Configuration files
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/default/scx
-%{_sysconfdir}/scx_loader/config.toml
+%{_datadir}/scx_loader/config.toml
