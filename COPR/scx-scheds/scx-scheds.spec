@@ -2,7 +2,7 @@
 
 Name:           scx-scheds
 Version:        1.0.16
-Release:        3%{?dist}
+Release:        5%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
 License:        GPL=2.0
@@ -58,30 +58,30 @@ cargo build --release --frozen --locked
 
 # Install binary files (all executables except *.so)
 find target/release -maxdepth 1 -type f -executable ! -name '*.so' \
-    -exec install -Dm755 -t %{buildroot}/usr/bin {} +
+    -exec install -Dm755 -t %{buildroot}%{_bindir} {} +
 
 # Install systemd service files
 install -Dm644 services/systemd/scx_loader.service \
-    %{buildroot}/usr/lib/systemd/system/scx_loader.service
+    %{buildroot}%{_unitdir}/scx_loader.service
 
 install -Dm644 services/systemd/scx.service \
-    %{buildroot}/usr/lib/systemd/system/scx.service
+    %{buildroot}%{_unitdir}/scx.service
 
 # Install DBus service file
 install -Dm644 services/systemd/org.scx.Loader.service \
-    %{buildroot}/usr/share/dbus-1/system-services/org.scx.Loader.service
+    %{buildroot}%{_datadir}/dbus-1/system-services/org.scx.Loader.service
 
 # Install DBus configuration
 install -Dm644 tools/scx_loader/org.scx.Loader.conf \
-    %{buildroot}/usr/share/dbus-1/system.d/org.scx.Loader.conf
+    %{buildroot}%{_datadir}/dbus-1/system.d/org.scx.Loader.conf
 
 # Install scx_loader configuration
 install -Dm644 services/scx_loader.toml \
-    %{buildroot}/usr/share/scx_loader/config.toml
+    %{buildroot}%{_datadir}/scx_loader/config.toml
 
 # Install scx configuration
 install -Dm644 services/scx \
-    %{buildroot}/etc/default/scx
+    %{buildroot}%{_sysconfdir}/default/scx
 
 %files
 
