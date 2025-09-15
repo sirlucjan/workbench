@@ -3,7 +3,7 @@
 
 Name: scx-manager
 Version: 1.15.5
-Release: 1
+Release: 3
 Summary: Simple GUI for managing sched-ext schedulers via scx_loader
 
 License:        GPL-3.0
@@ -21,7 +21,9 @@ BuildRequires:  rust
 BuildRequires:  clang >= 17
 BuildRequires:  llvm >= 17
 BuildRequires:  lld >= 17
-BuildRequires:  qt6-tools-devel
+BuildRequires:  qt6-base-devel
+BuildRequires:  qt6-widgets-devel
+BuildRequires:  qt6-linguist-devel
 BuildRequires:  cmake
 Requires:       scx
 
