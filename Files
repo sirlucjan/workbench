@@ -9,8 +9,10 @@
 ├── COPR-SUSE
 │   ├── scx
 │   │   └── scx.spec
-│   └── scx-git
-│       └── scx-git.spec
+│   ├── scx-git
+│   │   └── scx-git.spec
+│   └── scx-manager
+│       └── scx-manager.spec
 ├── Devel
 │   ├── Config
 │   │   └── 6.16
@@ -50,4 +52,4 @@
 │               └── PKGBUILD
 └── README.md
 
-26 directories, 25 files
+27 directories, 26 files
