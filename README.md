@@ -105,6 +105,13 @@ sudo zypper refresh
 sudo zypper install scx scx-manager
 ```
 
+You can also install -git version of scx:
+
+```bash
+sudo zypper refresh
+sudo zypper install scx-git
+```
+
 📖 Usage guide available in the [CachyOS wiki](https://wiki.cachyos.org/configuration/sched-ext/).
 
 ---
