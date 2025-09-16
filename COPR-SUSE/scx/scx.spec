@@ -4,7 +4,7 @@
 %define llvm_min_ver 17
 Name:           scx
 Version:        1.0.16
-Release:        6
+Release:        7
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
@@ -43,26 +43,26 @@ find target/release -maxdepth 1 -type f -executable ! -name '*.so' \
 
 # Install systemd service files
 install -Dm644 services/systemd/scx_loader.service \
-    %{buildroot}%{_unitdir}/
+    %{buildroot}%{_unitdir}/scx_loader.service
 
 install -Dm644 services/systemd/scx.service \
-    %{buildroot}%{_unitdir}/
+    %{buildroot}%{_unitdir}/scx.service
 
 # Install DBus service file
 install -Dm644 services/systemd/org.scx.Loader.service \
-    %{buildroot}%{_datadir}/dbus-1/system-services/
+    %{buildroot}%{_datadir}/dbus-1/system-services/org.scx.Loader.service
 
 # Install DBus configuration
 install -Dm644 tools/scx_loader/org.scx.Loader.conf \
-    %{buildroot}%{_datadir}/dbus-1/system.d/
+    %{buildroot}%{_datadir}/dbus-1/system.d/org.scx.Loader.conf
 
-# Install scx_loader sample configuration
+# Install scx_loader configuration
 install -Dm644 services/scx_loader.toml \
     %{buildroot}%{_datadir}/scx_loader/config.toml
 
-# Install scx default configuration
+# Install scx configuration
 install -Dm644 services/scx \
-    %{buildroot}%{_sysconfdir}/default/
+    %{buildroot}%{_sysconfdir}/default/scx
 
 %files
 
