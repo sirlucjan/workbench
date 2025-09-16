@@ -56,7 +56,7 @@ Here you can find test builds compiled in **Rust (cargo)** for **Fedora 42**.
    sudo dnf install scx-scheds
    ```
 
-   **For Fedora Silverblue 42 / Kinoite 42:**
+   **For Fedora Silverblue / Kinoite:**
 
    ```bash
    sudo rpm-ostree install scx-scheds
@@ -69,7 +69,7 @@ Here you can find test builds compiled in **Rust (cargo)** for **Fedora 42**.
    sudo dnf install scx-scheds-git
    ```
 
-   **For Fedora Silverblue 42 / Kinoite 42:**
+   **For Fedora Silverblue / Kinoite:**
 
    ```bash
    sudo rpm-ostree install scx-scheds-git
