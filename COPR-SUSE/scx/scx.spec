@@ -4,7 +4,7 @@
 %define llvm_min_ver 17
 Name:           scx
 Version:        1.0.16
-Release:        7
+Release:        8
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
@@ -37,8 +37,9 @@ cargo build --release --frozen --locked
 
 %install
 
-# Install binary files (all executables except *.so)
-find target/release -maxdepth 1 -type f -executable ! -name '*.so' \
+# Install all built executables (skip .so and .d files)
+find target/release \
+    -maxdepth 1 -type f -executable ! -name '*.so' \
     -exec install -Dm755 -t %{buildroot}%{_bindir} {} +
 
 # Install systemd service files
