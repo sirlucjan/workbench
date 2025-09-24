@@ -7,7 +7,7 @@
 
 Name:           scx-scheds-git
 Version:        1.0.16.%{commitdate}.git.%{shortcommit}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
 License:        GPL=2.0
@@ -62,8 +62,9 @@ cargo build --release --frozen --locked
 
 %install
 
-# Install binary files (all executables except *.so)
-find target/release -maxdepth 1 -type f -executable ! -name '*.so' \
+# Install all built executables (skip .so and .d files)
+find target/release \
+    -maxdepth 1 -type f -executable ! -name '*.so' \
     -exec install -Dm755 -t %{buildroot}%{_bindir} {} +
 
 # Install systemd service file
