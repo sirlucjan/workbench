@@ -11,6 +11,8 @@
 ├── COPR-SUSE
 │   ├── scx
 │   │   └── scx.spec
+│   ├── scx-beerland-git
+│   │   └── scx-beerland-git.spec
 │   ├── scx-git
 │   │   └── scx-git.spec
 │   └── scx-manager
@@ -68,4 +70,4 @@
 │               └── PKGBUILD
 └── README.md
 
-36 directories, 33 files
+37 directories, 34 files
