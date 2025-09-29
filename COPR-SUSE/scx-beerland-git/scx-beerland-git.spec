@@ -9,7 +9,7 @@
 
 Name:           scx-beerland-git
 Version:        1.0.16.%{commitdate}.git.%{shortcommit}
-Release:        1
+Release:        2
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
