@@ -4,6 +4,8 @@
 │   │   └── kernel-cachyos-lto.spec
 │   ├── scx-scheds
 │   │   └── scx-scheds.spec
+│   ├── scx-scheds-beerland-git
+│   │   └── scx-scheds-beerland-git.spec
 │   └── scx-scheds-git
 │       └── scx-scheds-git.spec
 ├── COPR-SUSE
@@ -66,4 +68,4 @@
 │               └── PKGBUILD
 └── README.md
 
-35 directories, 32 files
+36 directories, 33 files
