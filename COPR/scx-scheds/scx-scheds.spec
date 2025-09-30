@@ -2,7 +2,7 @@
 
 Name:           scx-scheds
 Version:        1.0.16
-Release:        8%{?dist}
+Release:        10%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
 License:        GPL=2.0
@@ -63,18 +63,18 @@ find target/release \
 
 # Install systemd service files
 install -Dm644 services/systemd/scx_loader.service \
-    %{buildroot}%{_unitdir}/scx_loader.service
+   -t %{buildroot}%{_unitdir}/
 
 install -Dm644 services/systemd/scx.service \
-    %{buildroot}%{_unitdir}/scx.service
+   -t %{buildroot}%{_unitdir}/
 
 # Install DBus service file
 install -Dm644 services/systemd/org.scx.Loader.service \
-    %{buildroot}%{_datadir}/dbus-1/system-services/org.scx.Loader.service
+   -t %{buildroot}%{_datadir}/dbus-1/system-services/
 
 # Install DBus configuration
 install -Dm644 tools/scx_loader/org.scx.Loader.conf \
-    %{buildroot}%{_datadir}/dbus-1/system.d/org.scx.Loader.conf
+   -t %{buildroot}%{_datadir}/dbus-1/system.d/
 
 # Install scx_loader configuration
 install -Dm644 services/scx_loader.toml \
@@ -82,7 +82,7 @@ install -Dm644 services/scx_loader.toml \
 
 # Install scx configuration
 install -Dm644 services/scx \
-    %{buildroot}%{_sysconfdir}/default/scx
+   -t %{buildroot}%{_sysconfdir}/default/
 
 %files
 
