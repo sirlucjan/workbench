@@ -9,7 +9,7 @@
 
 Name:           scx-git
 Version:        1.0.16.%{commitdate}.git.%{shortcommit}
-Release:        1
+Release:        2
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
@@ -51,15 +51,15 @@ find target/release \
 
 # Install systemd service file
 install -Dm644 services/systemd/scx_loader.service \
-    %{buildroot}%{_unitdir}/scx_loader.service
+   -t %{buildroot}%{_unitdir}/
 
 # Install DBus service file
 install -Dm644 services/systemd/org.scx.Loader.service \
-    %{buildroot}%{_datadir}/dbus-1/system-services/org.scx.Loader.service
+   -t %{buildroot}%{_datadir}/dbus-1/system-services/
 
 # Install DBus configuration
 install -Dm644 tools/scx_loader/org.scx.Loader.conf \
-    %{buildroot}%{_datadir}/dbus-1/system.d/org.scx.Loader.conf
+   -t %{buildroot}%{_datadir}/dbus-1/system.d/
 
 # Install scx_loader configuration
 install -Dm644 services/scx_loader.toml \
