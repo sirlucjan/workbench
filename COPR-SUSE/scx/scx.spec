@@ -4,7 +4,7 @@
 %define llvm_min_ver 17
 Name:           scx
 Version:        1.0.16
-Release:        10
+Release:        11
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
@@ -33,7 +33,16 @@ sched_ext is a Linux kernel feature which enables implementing kernel thread sch
 %build
 export CARGO_HOME=%{_builddir}/.cargo
 cargo fetch --locked
-cargo build --release --frozen --locked
+cargo build \
+     --release \
+     --locked \
+     --frozen \
+     --workspace \
+     --exclude scx_rlfifo \
+     --exclude scx_mitosis \
+     --exclude scx_wd40 \
+     --exclude vmlinux_docify \
+     --exclude scx_lib_selftests
 
 %install
 
