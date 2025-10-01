@@ -24,11 +24,11 @@ Available versions for **nano**, **vim**, **VS Code**, and **Codium** (also in F
 
 ### 🔹 linux-rolling-stable
 
-These sources are not fundamentally different from **archlinux-lucjan** \[1] and **POLAUR** \[2].
+These sources are not fundamentally different from **archlinux-lucjan** [1] and **POLAUR** [2].
 The main difference: when upgrading the kernel version, there is **no need to switch branches manually** — the build process will handle it automatically.
 
-* \[1] **archlinux-lucjan** [GitHub](https://github.com/archlinux-lucjan) · [GitLab](https://gitlab.com/archlinux-lucjan) · [Codeberg](https://codeberg.org/archlinux-lucjan)
-* \[2] **POLAUR** [GitHub](https://github.com/polaur) · [GitLab](https://gitlab.com/polaur)
+* [1] **archlinux-lucjan** [GitHub](https://github.com/archlinux-lucjan) · [GitLab](https://gitlab.com/archlinux-lucjan) · [Codeberg](https://codeberg.org/archlinux-lucjan)
+* [2] **POLAUR** [GitHub](https://github.com/polaur) · [GitLab](https://gitlab.com/polaur)
 
 ---
 
@@ -78,6 +78,29 @@ Here you can find test builds compiled in **Rust (cargo)** for **Fedora 42**.
 
 📖 Usage guide available in the [CachyOS wiki](https://wiki.cachyos.org/configuration/sched-ext/).
 
+### 🍺 Experimental Beerland Scheduler (Fedora)
+
+Enable repository:
+
+```bash
+sudo dnf copr enable sirlucjan/scx-scheds-beerland-git
+```
+
+Install:
+
+```bash
+sudo dnf install scx-scheds-beerland-git
+```
+
+**For Fedora Silverblue / Kinoite:**
+
+```bash
+sudo rpm-ostree install scx-scheds-beerland-git
+sudo systemctl reboot
+```
+
+⚠️ **Note:** This scheduler is **experimental** and not yet merged upstream.
+
 ---
 
 ## 📦 COPR (openSUSE Tumbleweed)
@@ -111,6 +134,17 @@ You can also install -git version of scx:
 sudo zypper refresh
 sudo zypper install scx-git
 ```
+
+### 🍺 Experimental Beerland Scheduler (openSUSE)
+
+Install Beerland:
+
+```bash
+sudo zypper refresh
+sudo zypper install scx-beerland-git
+```
+
+⚠️ **Note:** This scheduler is **experimental** and not yet merged upstream.
 
 📖 Usage guide available in the [CachyOS wiki](https://wiki.cachyos.org/configuration/sched-ext/).
 
