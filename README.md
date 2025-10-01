@@ -76,8 +76,6 @@ Here you can find test builds compiled in **Rust (cargo)** for **Fedora 42**.
    sudo systemctl reboot
    ```
 
-📖 Usage guide available in the [CachyOS wiki](https://wiki.cachyos.org/configuration/sched-ext/).
-
 ### 🍺 Experimental Beerland Scheduler (Fedora)
 
 Enable repository:
@@ -100,6 +98,8 @@ sudo systemctl reboot
 ```
 
 ⚠️ **Note:** This scheduler is **experimental** and not yet merged upstream.
+
+📖 Usage guide available in the [CachyOS wiki](https://wiki.cachyos.org/configuration/sched-ext/).
 
 ---
 
