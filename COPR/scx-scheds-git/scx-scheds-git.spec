@@ -7,7 +7,7 @@
 
 Name:           scx-scheds-git
 Version:        1.0.16.%{commitdate}.git.%{shortcommit}
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
 License:        GPL=2.0
@@ -58,7 +58,17 @@ sched_ext is a Linux kernel feature which enables implementing kernel thread sch
 %build
 export CARGO_HOME=%{_builddir}/.cargo
 cargo fetch --locked
-cargo build --release --frozen --locked
+cargo build \
+     --release \
+     --locked \
+     --frozen \
+     --workspace \
+     --exclude scx_rlfifo \
+     --exclude scx_mitosis \
+     --exclude scx_wd40 \
+     --exclude xtask \
+     --exclude vmlinux_docify \
+     --exclude arenalib_selftests
 
 %install
 
