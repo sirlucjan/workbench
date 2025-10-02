@@ -7,7 +7,7 @@
 
 Name:           scx-scheds-beerland-git
 Version:        1.0.16.%{commitdate}.git.%{shortcommit}
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
 License:        GPL=2.0
@@ -67,6 +67,7 @@ cargo build \
      --exclude scx_mitosis \
      --exclude scx_wd40 \
      --exclude xtask \
+     --exclude scxcash \
      --exclude vmlinux_docify \
      --exclude arenalib_selftests
 
