@@ -2,7 +2,7 @@
 
 Name:           scx-scheds
 Version:        1.0.16
-Release:        11%{?dist}
+Release:        12%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
 License:        GPL=2.0
@@ -60,6 +60,7 @@ cargo build \
      --exclude scx_rlfifo \
      --exclude scx_mitosis \
      --exclude scx_wd40 \
+     --exclude scxcash \
      --exclude vmlinux_docify \
      --exclude scx_lib_selftests
 
