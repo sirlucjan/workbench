@@ -7,7 +7,7 @@
 
 Name:           scx-scheds-beerland-git
 Version:        1.0.16.%{commitdate}.git.%{shortcommit}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
 License:        GPL=2.0
@@ -60,8 +60,8 @@ export CARGO_HOME=%{_builddir}/.cargo
 cargo fetch --locked
 cargo build \
      --release \
-     --locked \
      --frozen \
+     --all-features \
      --workspace \
      --exclude scx_rlfifo \
      --exclude scx_mitosis \
