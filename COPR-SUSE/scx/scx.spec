@@ -4,7 +4,7 @@
 %define llvm_min_ver 17
 Name:           scx
 Version:        1.0.16
-Release:        12
+Release:        13
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
@@ -35,8 +35,8 @@ export CARGO_HOME=%{_builddir}/.cargo
 cargo fetch --locked
 cargo build \
      --release \
-     --locked \
      --frozen \
+     --all-features \
      --workspace \
      --exclude scx_rlfifo \
      --exclude scx_mitosis \
