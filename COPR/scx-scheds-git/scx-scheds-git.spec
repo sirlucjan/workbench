@@ -1,13 +1,13 @@
 %global _default_patch_fuzz 2
 %global commitdate 20251006
-%global commit 0e90df34953024280f9165a1ce9c94858a747c94
+%global commit 3b3f964dd505e9c4b5f7c4af0dfae8011efea10a
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 %define _disable_source_fetch 0
 
 Name:           scx-scheds-git
 Version:        1.0.16.%{commitdate}.git.%{shortcommit}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
 License:        GPL=2.0
@@ -69,7 +69,7 @@ cargo build \
      --exclude xtask \
      --exclude scxcash \
      --exclude vmlinux_docify \
-     --exclude arenalib_selftests
+     --exclude scx_arena_selftests
 
 %install
 
