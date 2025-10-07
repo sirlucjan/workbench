@@ -3,8 +3,8 @@
 %define libbpf_min_ver 1.4
 %define llvm_min_ver 17
 %global _default_patch_fuzz 2
-%global commitdate 20251006
-%global commit 6d408a143b98653aea95cbd8622e25cafaff358a
+%global commitdate 20251007
+%global commit 50ca486b480b32f9bbe4d2b16b3c784555325a9e
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           scx-beerland-git
@@ -51,7 +51,7 @@ cargo build \
      --exclude xtask \
      --exclude scxcash \
      --exclude vmlinux_docify \
-     --exclude arenalib_selftests
+     --exclude scx_arena_selftests
 
 %install
 
