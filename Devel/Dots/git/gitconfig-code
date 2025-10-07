@@ -124,9 +124,13 @@
 [rebase]
 	autoSquash = true
 	updateRefs = true
+	autoStash = true
 
 [pull]
 	rebase = true
+
+[merge]
+    conflictstyle = diff3
 
 [color]
 	ui = auto
@@ -148,9 +152,14 @@
 	changed = yellow bold
 	untracked = red bold
 
+[interactive]
+    diffFilter = delta --color-only
+
 [delta]
 	features = line-numbers decorations
 	line-numbers = true
+	navigate = true
+	side-by-side = true
 
 [delta "decorations"]
 	minus-style = red bold normal
