@@ -3,8 +3,8 @@
 %define libbpf_min_ver 1.4
 %define llvm_min_ver 17
 Name:           scx
-Version:        1.0.16
-Release:        13
+Version:        1.0.17
+Release:        1
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
@@ -30,6 +30,7 @@ sched_ext is a Linux kernel feature which enables implementing kernel thread sch
 %prep
 %autosetup -n scx-%{version}
 
+
 %build
 export CARGO_HOME=%{_builddir}/.cargo
 cargo fetch --locked
@@ -41,9 +42,10 @@ cargo build \
      --exclude scx_rlfifo \
      --exclude scx_mitosis \
      --exclude scx_wd40 \
+     --exclude xtask \
      --exclude scxcash \
      --exclude vmlinux_docify \
-     --exclude scx_lib_selftests
+     --exclude scx_arena_selftests
 
 %install
 
@@ -52,11 +54,8 @@ find target/release \
     -maxdepth 1 -type f -executable ! -name '*.so' \
     -exec install -Dm755 -t %{buildroot}%{_bindir} {} +
 
-# Install systemd service files
+# Install systemd service file
 install -Dm644 services/systemd/scx_loader.service \
-   -t %{buildroot}%{_unitdir}/
-
-install -Dm644 services/systemd/scx.service \
    -t %{buildroot}%{_unitdir}/
 
 # Install DBus service file
@@ -71,23 +70,17 @@ install -Dm644 tools/scx_loader/org.scx.Loader.conf \
 install -Dm644 services/scx_loader.toml \
     %{buildroot}%{_datadir}/scx_loader/config.toml
 
-# Install scx configuration
-install -Dm644 services/scx \
-   -t %{buildroot}%{_sysconfdir}/default/
-
 %files
 
 # Binaries
 %{_bindir}/*
 
-# Systemd services
+# Systemd service
 %{_unitdir}/scx_loader.service
-%{_unitdir}/scx.service
 
 # DBus service and configuration
 %{_datadir}/dbus-1/system-services/org.scx.Loader.service
 %{_datadir}/dbus-1/system.d/org.scx.Loader.conf
 
 # Configuration files
-%attr(0644,root,root) %config(noreplace) %{_sysconfdir}/default/scx
 %{_datadir}/scx_loader/config.toml
