@@ -325,7 +325,7 @@
 	psdc = !git push origin :$(git bc)
 	#############
 	pl = pull
-	pb = pull --rebase
+	pb = pull --autostash
 	pm = pull --rebase=false
 	#############
 	plo = pull origin
