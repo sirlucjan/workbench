@@ -16,6 +16,8 @@
 
 [branch]
 	sort = -committerdate
+	autosetupmerge = always
+	autosetuprebase = always
 
 [commit]
 	gpgSign = true
@@ -122,6 +124,9 @@
 [rebase]
 	autoSquash = true
 	updateRefs = true
+
+[pull]
+	rebase = true
 
 [color]
 	ui = auto
