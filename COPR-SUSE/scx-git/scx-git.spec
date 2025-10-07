@@ -8,7 +8,7 @@
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           scx-git
-Version:        1.0.16.%{commitdate}.git.%{shortcommit}
+Version:        1.0.17.%{commitdate}.git.%{shortcommit}
 Release:        1
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
