@@ -4,7 +4,7 @@
 %define llvm_min_ver 17
 %global _default_patch_fuzz 2
 %global commitdate 20251007
-%global commit 7b0657076a2fc6117b120bffe9b9fe8ae77ee65d
+%global commit 76e7eadc8caab8b91f17effe9bdd2b5b7b03e7a3
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           scx-git
