@@ -129,7 +129,7 @@
 	rebase = true
 
 [merge]
-    conflictstyle = diff3
+	conflictstyle = diff3
 
 [color]
 	ui = auto
@@ -152,7 +152,7 @@
 	untracked = red bold
 
 [interactive]
-    diffFilter = delta --color-only
+	diffFilter = delta --color-only
 
 [delta]
 	features = line-numbers decorations
