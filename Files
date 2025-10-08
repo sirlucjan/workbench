@@ -19,13 +19,6 @@
 │       └── scx-manager.spec
 ├── Devel
 │   ├── Config
-│   │   ├── 6.16
-│   │   │   ├── git
-│   │   │   │   └── uml-git
-│   │   │   │       └── config
-│   │   │   └── src
-│   │   │       └── uml
-│   │   │           └── config
 │   │   └── 6.17
 │   │       ├── git
 │   │       │   └── uml-git
@@ -64,4 +57,4 @@
 │               └── PKGBUILD
 └── README.md
 
-34 directories, 31 files
+29 directories, 29 files
