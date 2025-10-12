@@ -3,8 +3,8 @@
 %define libbpf_min_ver 1.4
 %define llvm_min_ver 17
 %global _default_patch_fuzz 2
-%global commitdate 20251009
-%global commit 1a61b99709ec6a5f25f8052b09208adeeebf840e
+%global commitdate 20251012
+%global commit 4bfc7a7c94d0bcb4c309f14a6cf730005299a9f4
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           scx-beerland-git
