@@ -3,13 +3,13 @@
 %define libbpf_min_ver 1.4
 %define llvm_min_ver 17
 %global _default_patch_fuzz 2
-%global commitdate 20251027
-%global commit ce8b7ca9a19ef8d4dd45f4bb05f0a3a393d15587
+%global commitdate 20251030
+%global commit fbe9be188a06e45cf44ad9a0c155acebd9a1ee34
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           scx-beerland-git
 Version:        1.0.17.%{commitdate}.git.%{shortcommit}
-Release:        6
+Release:        1
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
@@ -60,33 +60,7 @@ find target/release \
     -maxdepth 1 -type f -executable ! -name '*.so' \
     -exec install -Dm755 -t %{buildroot}%{_bindir} {} +
 
-# Install systemd service file
-install -Dm644 services/systemd/scx_loader.service \
-   -t %{buildroot}%{_unitdir}/
-
-# Install DBus service file
-install -Dm644 services/systemd/org.scx.Loader.service \
-   -t %{buildroot}%{_datadir}/dbus-1/system-services/
-
-# Install DBus configuration
-install -Dm644 tools/scx_loader/org.scx.Loader.conf \
-   -t %{buildroot}%{_datadir}/dbus-1/system.d/
-
-# Install scx_loader configuration
-install -Dm644 services/scx_loader.toml \
-    %{buildroot}%{_datadir}/scx_loader/config.toml
-
 %files
 
 # Binaries
 %{_bindir}/*
-
-# Systemd service
-%{_unitdir}/scx_loader.service
-
-# DBus service and configuration
-%{_datadir}/dbus-1/system-services/org.scx.Loader.service
-%{_datadir}/dbus-1/system.d/org.scx.Loader.conf
-
-# Configuration files
-%{_datadir}/scx_loader/config.toml
