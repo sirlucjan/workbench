@@ -66,13 +66,13 @@ Here you can find test builds compiled in **Rust (cargo)** for **Fedora 42**.
 3. Install the `scx-scheds-git` version:
 
    ```bash
-   sudo dnf install scx-scheds-git
+   sudo dnf install scx-scheds-git scx-tools-git
    ```
 
    **For Fedora Silverblue / Kinoite:**
 
    ```bash
-   sudo rpm-ostree install scx-scheds-git
+   sudo rpm-ostree install scx-scheds-git scx-tools-git
    sudo systemctl reboot
    ```
 
@@ -132,7 +132,7 @@ You can also install -git version of scx:
 
 ```bash
 sudo zypper refresh
-sudo zypper install scx-git
+sudo zypper install scx-git scx-tools-git
 ```
 
 ### 🍺 Experimental Beerland Scheduler (openSUSE)
