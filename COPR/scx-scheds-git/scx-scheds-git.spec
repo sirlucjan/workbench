@@ -1,13 +1,13 @@
 %global _default_patch_fuzz 2
 %global commitdate 20251030
-%global commit d645aad7d70b828a58e569be1aae9bb2f395aa49
+%global commit e5b2e480efb2d6c6b27d1e31bbddb39cf6c2fb2e
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 %define _disable_source_fetch 0
 
 Name:           scx-scheds-git
 Version:        1.0.17.%{commitdate}.git.%{shortcommit}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
 License:        GPL=2.0
@@ -36,14 +36,12 @@ Requires:  libseccomp
 Requires:  protobuf
 Requires:  zlib
 Requires:  jq
-Obsoletes: scxctl = 0.3.4
 Conflicts: scx-scheds
 Conflicts: scx_layered
 Conflicts: scx_rustland
 Conflicts: scx_rusty
 Conflicts: rust-scx_utils-devel
 Provides: scx-scheds = %{version}
-Provides: scxctl = %{version}
 Provides: scx_layered
 Provides: scx_rustland
 Provides: scx_rusty
@@ -78,33 +76,7 @@ find target/release \
     -maxdepth 1 -type f -executable ! -name '*.so' \
     -exec install -Dm755 -t %{buildroot}%{_bindir} {} +
 
-# Install systemd service file
-install -Dm644 services/systemd/scx_loader.service \
-   -t %{buildroot}%{_unitdir}/
-
-# Install DBus service file
-install -Dm644 services/systemd/org.scx.Loader.service \
-   -t %{buildroot}%{_datadir}/dbus-1/system-services/
-
-# Install DBus configuration
-install -Dm644 tools/scx_loader/org.scx.Loader.conf \
-   -t %{buildroot}%{_datadir}/dbus-1/system.d/
-
-# Install scx_loader configuration
-install -Dm644 services/scx_loader.toml \
-    %{buildroot}%{_datadir}/scx_loader/config.toml
-
 %files
 
 # Binaries
 %{_bindir}/*
-
-# Systemd service
-%{_unitdir}/scx_loader.service
-
-# DBus service and configuration
-%{_datadir}/dbus-1/system-services/org.scx.Loader.service
-%{_datadir}/dbus-1/system.d/org.scx.Loader.conf
-
-# Configuration files
-%{_datadir}/scx_loader/config.toml
