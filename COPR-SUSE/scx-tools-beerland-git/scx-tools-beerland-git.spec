@@ -4,12 +4,12 @@
 %define llvm_min_ver 17
 %global _default_patch_fuzz 2
 %global commitdate 20251030
-%global commit 44c3046b012800337be1c0c280b0c6d93219bb01
+%global commit 60ac253e2f938e4743703f4460db4e6923461a97
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           scx-tools-beerland-git
 Version:        1.0.17.%{commitdate}.git.%{shortcommit}
-Release:        3
+Release:        4
 Summary:        Sched_ext Tools
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx-loader
