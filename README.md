@@ -87,7 +87,7 @@ sudo dnf copr enable sirlucjan/scx-scheds-beerland-git
 Install:
 
 ```bash
-sudo dnf install scx-scheds-beerland-git
+sudo dnf install scx-scheds-beerland-git scx-tools-beerland-git
 ```
 
 **For Fedora Silverblue / Kinoite:**
@@ -141,7 +141,7 @@ Install Beerland:
 
 ```bash
 sudo zypper refresh
-sudo zypper install scx-beerland-git
+sudo zypper install scx-beerland-git scx-tools-beerland-git
 ```
 
 ⚠️ **Note:** This scheduler is **experimental** and not yet merged upstream.
