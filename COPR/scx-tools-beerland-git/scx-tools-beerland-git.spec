@@ -1,13 +1,13 @@
 %global _default_patch_fuzz 2
 %global commitdate 20251031
-%global commit 471be430042ef3e1d2a2b7837b3e347c05f00d52
+%global commit bb576ae65aeaa00ba1dafec4d22e9b7070d40cb0
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 %define _disable_source_fetch 0
 
 Name:           scx-tools-beerland-git
 Version:        1.0.17.%{commitdate}.git.%{shortcommit}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Sched_ext Tools
 
 License:        GPL=2.0
