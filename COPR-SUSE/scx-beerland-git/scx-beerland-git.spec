@@ -4,12 +4,12 @@
 %define llvm_min_ver 17
 %global _default_patch_fuzz 2
 %global commitdate 20251031
-%global commit e108a70dc2dfce68835c217d06051bd8b662fcdb
+%global commit 3222dd7f143b15b545b7bee3008aef50485bda5a
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           scx-beerland-git
 Version:        1.0.17.%{commitdate}.git.%{shortcommit}
-Release:        4
+Release:        5
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
