@@ -112,17 +112,6 @@ sudo zypper refresh
 sudo zypper install scx-git scx-tools-git
 ```
 
-### 🍺 Experimental Beerland Scheduler (openSUSE)
-
-Install Beerland:
-
-```bash
-sudo zypper refresh
-sudo zypper install scx-beerland-git scx-tools-beerland-git
-```
-
-⚠️ **Note:** This scheduler is **experimental** and not yet merged upstream.
-
 📖 Usage guide available in the [CachyOS wiki](https://wiki.cachyos.org/configuration/sched-ext/).
 
 ---
