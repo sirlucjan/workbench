@@ -76,29 +76,6 @@ Here you can find test builds compiled in **Rust (cargo)** for **Fedora 42**.
    sudo systemctl reboot
    ```
 
-### 🍺 Experimental Beerland Scheduler (Fedora)
-
-Enable repository:
-
-```bash
-sudo dnf copr enable sirlucjan/scx-scheds-beerland-git
-```
-
-Install:
-
-```bash
-sudo dnf install scx-scheds-beerland-git scx-tools-beerland-git
-```
-
-**For Fedora Silverblue / Kinoite:**
-
-```bash
-sudo rpm-ostree install scx-scheds-beerland-git
-sudo systemctl reboot
-```
-
-⚠️ **Note:** This scheduler is **experimental** and not yet merged upstream.
-
 📖 Usage guide available in the [CachyOS wiki](https://wiki.cachyos.org/configuration/sched-ext/).
 
 ---
