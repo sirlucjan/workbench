@@ -3,8 +3,8 @@
 %define libbpf_min_ver 1.4
 %define llvm_min_ver 17
 %global _default_patch_fuzz 2
-%global commitdate 20251102
-%global commit 75366b4cfdd16953e014cb928ecaef1394badcff
+%global commitdate 20251104
+%global commit 91c2986ef30e04614540deb35953762d0e459bc4
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           scx-tools-git
