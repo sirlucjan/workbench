@@ -7,7 +7,7 @@
 
 Name:           scx-tools-git
 Version:        1.0.17.%{commitdate}.git.%{shortcommit}
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Sched_ext Tools
 
 License:        GPL=2.0
@@ -57,7 +57,7 @@ find target/release \
 
 # Install runtime assets via xtask
 # (systemd units, D-Bus services, configs, sample files)
-cargo run --release --package xtask --bin xtask -- install --destdir %{buildroot}
+./target/release/xtask install --destdir %{buildroot}
 
 %files
 
