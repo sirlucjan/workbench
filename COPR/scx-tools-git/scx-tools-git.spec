@@ -1,13 +1,13 @@
 %global _default_patch_fuzz 2
 %global commitdate 20251106
-%global commit 03d0cc88c5f34ebf26e978860a3e79c6eb0f88e9
+%global commit 474e3b78ff2e880b2c8715717f3aeeb92d0ce6af
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 %define _disable_source_fetch 0
 
 Name:           scx-tools-git
 Version:        1.0.17.%{commitdate}.git.%{shortcommit}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Sched_ext Tools
 
 License:        GPL=2.0
@@ -38,30 +38,26 @@ scx_loader: A DBUS Interface for Managing sched_ext Schedulers
 %build
 export CARGO_HOME=%{_builddir}/.cargo
 cargo fetch --locked
-cargo build --release --frozen --all-features
+cargo build \
+     --release \
+     --frozen \
+     --all-features \
+     --workspace \
+     --exclude xtask
+
+# build xtask script
+cargo build --release --frozen --package xtask --bin xtask
 
 %install
 
 # Install all built executables (skip .so and .d files)
 find target/release \
-    -maxdepth 1 -type f -executable ! -name '*.so' \
+    -maxdepth 1 -type f -executable ! -name '*.so' ! -name '*.d' ! -name 'xtask' \
     -exec install -Dm755 -t %{buildroot}%{_bindir} {} +
 
-# Install systemd service file
-install -Dm644 services/scx_loader.service \
-   -t %{buildroot}%{_unitdir}/
-
-# Install DBus service file
-install -Dm644 services/org.scx.Loader.service \
-   -t %{buildroot}%{_datadir}/dbus-1/system-services/
-
-# Install DBus configuration
-install -Dm644 configs/org.scx.Loader.conf \
-   -t %{buildroot}%{_datadir}/dbus-1/system.d/
-
-# Install scx_loader configuration
-install -Dm644 configs/scx_loader.toml \
-    %{buildroot}%{_datadir}/scx_loader/config.toml
+# Install runtime assets via xtask
+# (systemd units, D-Bus services, configs, sample files)
+cargo run --release --package xtask --bin xtask -- install --destdir %{buildroot}
 
 %files
 
