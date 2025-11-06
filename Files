@@ -6,6 +6,8 @@
 │   │   └── scx-scheds.spec
 │   ├── scx-scheds-git
 │   │   └── scx-scheds-git.spec
+│   ├── scx-tools-dev-git
+│   │   └── scx-tools-dev-git.spec
 │   └── scx-tools-git
 │       └── scx-tools-git.spec
 ├── COPR-SUSE
@@ -57,4 +59,4 @@
 │               └── PKGBUILD
 └── README.md
 
-29 directories, 29 files
+30 directories, 30 files
