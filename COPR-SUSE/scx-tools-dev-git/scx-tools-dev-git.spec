@@ -9,7 +9,7 @@
 
 Name:           scx-tools-dev-git
 Version:        1.0.17.%{commitdate}.git.%{shortcommit}
-Release:        3
+Release:        4
 Summary:        Sched_ext Tools
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx-loader
@@ -44,16 +44,19 @@ cargo build \
      --workspace \
      --exclude xtask
 
+# build xtask script
+cargo build --release --frozen --package xtask --bin xtask
+
 %install
 
 # Install all built executables (skip .so and .d files)
 find target/release \
-    -maxdepth 1 -type f -executable ! -name '*.so' \
+    -maxdepth 1 -type f -executable ! -name '*.so' ! -name '*.d' ! -name 'xtask' \
     -exec install -Dm755 -t %{buildroot}%{_bindir} {} +
 
 # Install runtime assets via xtask
 # (systemd units, D-Bus services, configs, sample files)
-cargo xtask install --destdir %{buildroot}
+cargo run --release --package xtask --bin xtask -- install --destdir %{buildroot}
 
 %files
 
