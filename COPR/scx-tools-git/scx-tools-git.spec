@@ -7,7 +7,7 @@
 
 Name:           scx-tools-git
 Version:        1.0.17.%{commitdate}.git.%{shortcommit}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Sched_ext Tools
 
 License:        GPL=2.0
@@ -62,6 +62,9 @@ find target/release \
 # DBus service and configuration
 %{_datadir}/dbus-1/system-services/org.scx.Loader.service
 %{_datadir}/dbus-1/system.d/org.scx.Loader.conf
+
+# Polkit authorization policy for scx-loader
+%{_datadir}/polkit-1/actions/org.scx.Loader.policy
 
 # Configuration files
 %{_datadir}/scx_loader/config.toml
