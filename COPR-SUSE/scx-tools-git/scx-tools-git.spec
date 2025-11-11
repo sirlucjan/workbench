@@ -3,13 +3,13 @@
 %define libbpf_min_ver 1.4
 %define llvm_min_ver 17
 %global _default_patch_fuzz 2
-%global commitdate 20251107
-%global commit 40c119802d3ffce0d187661dd012ef0ed6a6f80f
+%global commitdate 20251108
+%global commit 40a3634d46384051eb9ed7e08bbfe41bdaedba6d
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           scx-tools-git
 Version:        1.0.17.%{commitdate}.git.%{shortcommit}
-Release:        2
+Release:        1
 Summary:        Sched_ext Tools
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx-loader
