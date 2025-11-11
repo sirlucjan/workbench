@@ -53,13 +53,13 @@ Here you can find test builds compiled in **Rust (cargo)** for **Fedora 42**.
 2. Install `scx-scheds`:
 
    ```bash
-   sudo dnf install scx-scheds
+   sudo dnf install scx-scheds scx-tools
    ```
 
    **For Fedora Silverblue / Kinoite:**
 
    ```bash
-   sudo rpm-ostree install scx-scheds
+   sudo rpm-ostree install scx-scheds scx-tools
    sudo systemctl reboot
    ```
 
