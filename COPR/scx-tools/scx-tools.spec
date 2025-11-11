@@ -28,7 +28,7 @@ Provides: scxctl = %{version}
 scx_loader: A DBUS Interface for Managing sched_ext Schedulers
 
 %prep
-%autosetup -n scx-%{version}
+%autosetup -n scx-loader-%{version}
 
 %build
 export CARGO_HOME=%{_builddir}/.cargo
