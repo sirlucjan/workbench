@@ -102,7 +102,7 @@ Then install the packages:
 
 ```bash
 sudo zypper refresh
-sudo zypper install scx scx-manager
+sudo zypper install scx scx-manager scx-tools
 ```
 
 You can also install -git version of scx:
