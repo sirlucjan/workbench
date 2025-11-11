@@ -3,7 +3,7 @@
 %define libbpf_min_ver 1.4
 %define llvm_min_ver 17
 Name:           scx
-Version:        1.0.17
+Version:        1.0.18
 Release:        1
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
@@ -54,33 +54,8 @@ find target/release \
     -maxdepth 1 -type f -executable ! -name '*.so' \
     -exec install -Dm755 -t %{buildroot}%{_bindir} {} +
 
-# Install systemd service file
-install -Dm644 services/systemd/scx_loader.service \
-   -t %{buildroot}%{_unitdir}/
-
-# Install DBus service file
-install -Dm644 services/systemd/org.scx.Loader.service \
-   -t %{buildroot}%{_datadir}/dbus-1/system-services/
-
-# Install DBus configuration
-install -Dm644 tools/scx_loader/org.scx.Loader.conf \
-   -t %{buildroot}%{_datadir}/dbus-1/system.d/
-
-# Install scx_loader configuration
-install -Dm644 services/scx_loader.toml \
-    %{buildroot}%{_datadir}/scx_loader/config.toml
-
 %files
 
 # Binaries
 %{_bindir}/*
 
-# Systemd service
-%{_unitdir}/scx_loader.service
-
-# DBus service and configuration
-%{_datadir}/dbus-1/system-services/org.scx.Loader.service
-%{_datadir}/dbus-1/system.d/org.scx.Loader.conf
-
-# Configuration files
-%{_datadir}/scx_loader/config.toml
