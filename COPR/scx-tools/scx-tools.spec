@@ -2,7 +2,7 @@
 
 Name:           scx-tools
 Version:        1.0.18
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Sched_ext Tools
 
 License:        GPL=2.0

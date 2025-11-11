@@ -5,7 +5,7 @@
 
 Name:           scx-tools
 Version:        1.0.18
-Release:        1
+Release:        2
 Summary:        Sched_ext Tools
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx-loader
