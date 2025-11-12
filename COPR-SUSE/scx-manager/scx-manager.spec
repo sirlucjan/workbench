@@ -2,7 +2,7 @@
 %global _build_id_links none
 
 Name: scx-manager
-Version: 1.15.6
+Version: 1.15.7
 Release: 1
 Summary: Simple GUI for managing sched-ext schedulers via scx_loader
 
@@ -26,6 +26,7 @@ BuildRequires:  qt6-widgets-devel
 BuildRequires:  qt6-linguist-devel
 BuildRequires:  cmake
 Requires:       scx
+Requires:       scx-tools
 
 %description
 Simple GUI for managing sched-ext schedulers via scx_loader.
