@@ -1,7 +1,9 @@
 .
 ├── COPR
-│   └── kernel-cachyos-bore
-│       └── kernel-cachyos-lto.spec
+│   ├── kernel-cachyos-bore
+│   │   └── kernel-cachyos-lto.spec
+│   └── scx-scheds
+│       └── scx-scheds.spec
 ├── COPR-SUSE
 │   ├── scx
 │   │   └── scx.spec
@@ -53,4 +55,4 @@
 │               └── PKGBUILD
 └── README.md
 
-27 directories, 27 files
+28 directories, 28 files
