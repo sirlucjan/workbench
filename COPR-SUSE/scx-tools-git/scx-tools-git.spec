@@ -6,10 +6,13 @@
 %global commitdate 20251119
 %global commit 0bacdf766269592d82c7e5f847e541af56f4ed26
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
+# Available profiles: “release”, “release-tiny”, “release-fast“
+# See: https://github.com/sched-ext/scx/blob/main/Cargo.toml
+%global mode release
 
 Name:           scx-tools-git
 Version:        1.0.18.%{commitdate}.git.%{shortcommit}
-Release:        2
+Release:        3
 Summary:        Sched_ext Tools
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx-loader
@@ -37,18 +40,18 @@ scx_loader: A DBUS Interface for Managing sched_ext Schedulers
 %build
 export CARGO_HOME=%{_builddir}/.cargo
 cargo fetch --locked
-cargo build --release --frozen --all-features --workspace
+cargo build --profile=%{mode} --frozen --all-features --workspace
 
 %install
 
 # Install all built executables (skip .so and .d files)
-find target/release \
+find target/%{mode} \
     -maxdepth 1 -type f -executable ! -name '*.so' ! -name 'xtask' \
     -exec install -Dm755 -t %{buildroot}%{_bindir} {} +
 
 # Install runtime assets via xtask
 # (systemd units, D-Bus services, configs, sample files)
-./target/release/xtask install --destdir %{buildroot}
+./target/%{mode}/xtask install --destdir %{buildroot}
 
 %files
 
