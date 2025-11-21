@@ -1,8 +1,11 @@
 %define _disable_source_fetch 0
+# Available profiles: “release”, “release-tiny”, “release-fast“
+# See: https://github.com/sched-ext/scx/blob/main/Cargo.toml
+%global mode release
 
 Name:           scx-scheds
 Version:        1.0.18
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
 License:        GPL=2.0
@@ -53,7 +56,7 @@ sched_ext is a Linux kernel feature which enables implementing kernel thread sch
 export CARGO_HOME=%{_builddir}/.cargo
 cargo fetch --locked
 cargo build \
-     --release \
+     --profile=%{mode} \
      --frozen \
      --all-features \
      --workspace \
@@ -68,7 +71,7 @@ cargo build \
 %install
 
 # Install all built executables (skip .so and .d files)
-find target/release \
+find target/%{mode} \
     -maxdepth 1 -type f -executable ! -name '*.so' \
     -exec install -Dm755 -t %{buildroot}%{_bindir} {} +
 
