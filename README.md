@@ -32,10 +32,10 @@ The main difference: when upgrading the kernel version, there is **no need to sw
 
 ---
 
-## 📦 COPR (Fedora 42 / Silverblue / Kinoite)
+## 📦 COPR (Fedora 43 / Silverblue / Kinoite)
 
 The **scx-scheds** project will soon [switch](https://github.com/sched-ext/scx/discussions/2731) from **Meson** to **Cargo**.
-Here you can find test builds compiled in **Rust (cargo)** for **Fedora 42**.
+Here you can find test builds compiled in **Rust (cargo)** for **Fedora 43**.
 
 1. Enable the [COPR](https://copr.fedorainfracloud.org/coprs/sirlucjan/scx-scheds-cargo/) repository:
 
