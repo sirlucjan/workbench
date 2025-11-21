@@ -32,6 +32,54 @@ The main difference: when upgrading the kernel version, there is **no need to sw
 
 ---
 
+## 📦 COPR (Fedora 42 / Silverblue / Kinoite)
+
+The **scx-scheds** project will soon [switch](https://github.com/sched-ext/scx/discussions/2731) from **Meson** to **Cargo**.
+Here you can find test builds compiled in **Rust (cargo)** for **Fedora 42**.
+
+1. Enable the [COPR](https://copr.fedorainfracloud.org/coprs/sirlucjan/scx-scheds-cargo/) repository:
+
+   ```bash
+   sudo dnf copr enable sirlucjan/scx-scheds-cargo
+   ```
+
+   **For Fedora Silverblue / Kinoite:**
+
+   ```bash
+   cd /etc/yum.repos.d/
+   sudo wget https://copr.fedorainfracloud.org/coprs/sirlucjan/scx-scheds-cargo/repo/fedora-$(rpm -E %fedora)/sirlucjan-scx-scheds-cargo-$(rpm -E %fedora).repo
+   ```
+
+2. Install `scx-scheds`:
+
+   ```bash
+   sudo dnf install scx-scheds scx-tools
+   ```
+
+   **For Fedora Silverblue / Kinoite:**
+
+   ```bash
+   sudo rpm-ostree install scx-scheds scx-tools
+   sudo systemctl reboot
+   ```
+
+3. Install the `scx-scheds-git` version:
+
+   ```bash
+   sudo dnf install scx-scheds-git scx-tools-git
+   ```
+
+   **For Fedora Silverblue / Kinoite:**
+
+   ```bash
+   sudo rpm-ostree install scx-scheds-git scx-tools-git
+   sudo systemctl reboot
+   ```
+
+📖 Usage guide available in the [CachyOS wiki](https://wiki.cachyos.org/configuration/sched-ext/).
+
+---
+
 ## 📦 COPR (openSUSE Tumbleweed)
 
 Packages are also available for **openSUSE** via COPR:
