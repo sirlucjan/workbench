@@ -12,7 +12,7 @@
 
 Name:           scx-git
 Version:        1.0.18.%{commitdate}.git.%{shortcommit}
-Release:        1
+Release:        2
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
@@ -50,8 +50,6 @@ cargo build \
      --all-features \
      --workspace \
      --exclude scx_rlfifo \
-     --exclude scx_mitosis \
-     --exclude scx_wd40 \
      --exclude xtask \
      --exclude scxcash \
      --exclude vmlinux_docify \
