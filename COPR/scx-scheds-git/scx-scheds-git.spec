@@ -10,7 +10,7 @@
 
 Name:           scx-scheds-git
 Version:        1.0.18.%{commitdate}.git.%{shortcommit}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
 License:        GPL=2.0
@@ -66,8 +66,6 @@ cargo build \
      --all-features \
      --workspace \
      --exclude scx_rlfifo \
-     --exclude scx_mitosis \
-     --exclude scx_wd40 \
      --exclude xtask \
      --exclude scxcash \
      --exclude vmlinux_docify \
