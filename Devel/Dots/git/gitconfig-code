@@ -181,7 +181,8 @@
 	protected = *production
 
 [sequence]
-	editor = interactive-rebase-tool
+	editor = code --wait --reuse-window
+	# editor = "flatpak run com.visualstudio.code  --wait --reuse-window"
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
