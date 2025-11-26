@@ -181,7 +181,8 @@
 	protected = *production
 
 [sequence]
-	editor = interactive-rebase-tool
+	editor = kate -b
+	# editor = "flatpak run org.kde.kate -b"
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
