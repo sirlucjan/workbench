@@ -144,3 +144,76 @@ makepkg -srci
 ```
 
 ---
+
+### Cargo build profiles (Fedora & openSUSE)
+
+Both the Fedora and openSUSE builds support selecting one of three Cargo build profiles, defined upstream in:
+
+- **scx-scheds**  
+  https://github.com/sched-ext/scx/blob/main/Cargo.toml
+
+- **scx-tools (scxctl & scx-loader)**  
+  https://github.com/sched-ext/scx-loader/blob/main/Cargo.toml
+
+Available profiles:
+
+- **release** – default optimized profile  
+- **release-tiny** – minimized binary size, thin-LTO, stripped symbols  
+- **release-fast** – fastest build times, no LTO, incremental enabled
+
+Select one of the appropriate options here
+
+```bash
+%global mode release
+```
+The default option is `release`
+
+---
+
+### Profile definitions
+
+```toml
+[profile.release]
+lto = "thin"
+
+[profile.release-tiny]
+inherits = "release"
+lto = "thin"
+strip = true
+incremental = true
+
+[profile.release-fast]
+inherits = "release"
+lto = false
+incremental = true
+```
+
+---
+
+### Explanation of each option
+
+- **lto = "thin"**  
+  Enables LLVM ThinLTO — lightweight LTO with good performance‑to‑size ratio.
+
+- **lto = false**  
+  Disables LTO for the fastest possible builds.
+
+- **strip = true**  
+  Strips debug symbols to reduce binary size.
+
+- **incremental = true**  
+  Enables incremental compilation for faster rebuilds.
+
+- **inherits = "release"**  
+  Inherits all settings from the main release profile.
+
+---
+
+### Summary
+
+| Profile          | LTO        | Stripping | Incremental | Use case |
+|------------------|-----------|-----------|-------------|----------|
+| **release**       | thin      | no        | no          | Standard optimized build |
+| **release-tiny**  | thin      | yes       | yes         | Smallest binary size |
+| **release-fast**  | disabled  | no        | yes         | Fastest build times |
+
