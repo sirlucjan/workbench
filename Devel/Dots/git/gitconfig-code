@@ -113,8 +113,8 @@
 	prompt = false
 
 [difftool "code"]
-	cmd = "code --wait --diff \"$LOCAL\" \"$REMOTE\""
-	# cmd = "flatpak run com.visualstudio.code --wait --diff \"$LOCAL\" \"$REMOTE\""
+	cmd = "code --wait --reuse-window --diff \"$LOCAL\" \"$REMOTE\""
+	# cmd = "flatpak run com.visualstudio.code --wait --reuse-window --diff \"$LOCAL\" \"$REMOTE\""
 
 [push]
 	autoSetupRemote = true
@@ -141,8 +141,8 @@
 	prompt = false
 
 [mergetool "code"]
-	cmd = "code --wait \"$MERGED\""
-	# cmd = "flatpak run com.visualstudio.code --wait \"$MERGED\""
+	cmd = "code --wait --reuse-window \"$MERGED\""
+	# cmd = "flatpak run com.visualstudio.code --wait --reuse-window \"$MERGED\""
 
 [color]
 	ui = auto
