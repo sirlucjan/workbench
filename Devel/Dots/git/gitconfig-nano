@@ -106,10 +106,14 @@
 	algorithm = histogram
 	colorMoved = plain
 	renames = true
-	tool = nvimdiff
+	tool = nano
 
 [difftool]
 	prompt = false
+	gui = false
+
+[difftool "nano"]
+	cmd = "nano \"$LOCAL\""
 
 [push]
 	autoSetupRemote = true
@@ -130,6 +134,14 @@
 
 [merge]
 	conflictstyle = diff3
+	tool = nano
+
+[mergetool]
+	prompt = false
+	gui = false
+
+[mergetool "nano"]
+	cmd = "nano \"$MERGED\""
 
 [color]
 	ui = auto
