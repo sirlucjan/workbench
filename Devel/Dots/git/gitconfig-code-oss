@@ -107,10 +107,14 @@
 	algorithm = histogram
 	colorMoved = plain
 	renames = true
-	tool = nvimdiff
+	tool = code-oss
 
 [difftool]
 	prompt = false
+
+[difftool "code-oss"]
+	cmd = "code-oss --wait --diff \"$LOCAL\" \"$REMOTE\""
+	# cmd = "flatpak run com.visualstudio.code-oss --wait --diff \"$LOCAL\" \"$REMOTE\""
 
 [push]
 	autoSetupRemote = true
@@ -131,6 +135,14 @@
 
 [merge]
 	conflictstyle = diff3
+	tool = code-oss
+
+[mergetool]
+	prompt = false
+
+[mergetool "code-oss"]
+	cmd = "code-oss --wait \"$MERGED\""
+	# cmd = "flatpak run com.visualstudio.code-oss --wait \"$MERGED\""
 
 [color]
 	ui = auto
