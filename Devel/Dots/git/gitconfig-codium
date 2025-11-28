@@ -113,8 +113,8 @@
 	prompt = false
 
 [difftool "codium"]
-	cmd = "codium --wait --diff \"$LOCAL\" \"$REMOTE\""
-	# cmd = "flatpak run com.vscodium.codium --wait --diff \"$LOCAL\" \"$REMOTE\""
+	cmd = "codium --wait --reuse-window --diff \"$LOCAL\" \"$REMOTE\""
+	# cmd = "flatpak run com.vscodium.codium --wait --reuse-window --diff \"$LOCAL\" \"$REMOTE\""
 
 [push]
 	autoSetupRemote = true
@@ -141,8 +141,8 @@
 	prompt = false
 
 [mergetool "codium"]
-	cmd = "codium --wait \"$MERGED\""
-	# cmd = "flatpak run com.vscodium.codium --wait \"$MERGED\""
+	cmd = "codium --wait --reuse-window \"$MERGED\""
+	# cmd = "flatpak run com.vscodium.codium --wait --reuse-window \"$MERGED\""
 
 [color]
 	ui = auto
