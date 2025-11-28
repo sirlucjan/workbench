@@ -107,10 +107,14 @@
 	algorithm = histogram
 	colorMoved = plain
 	renames = true
-	tool = nvimdiff
+	tool = code
 
 [difftool]
 	prompt = false
+
+[difftool "code"]
+	cmd = "code --wait --diff \"$LOCAL\" \"$REMOTE\""
+	# cmd = "flatpak run com.visualstudio.code --wait --diff \"$LOCAL\" \"$REMOTE\""
 
 [push]
 	autoSetupRemote = true
@@ -131,6 +135,14 @@
 
 [merge]
 	conflictstyle = diff3
+	tool = code
+
+[mergetool]
+	prompt = false
+
+[mergetool "code"]
+	cmd = "code --wait \"$MERGED\""
+	# cmd = "flatpak run com.visualstudio.code --wait \"$MERGED\""
 
 [color]
 	ui = auto
