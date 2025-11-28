@@ -35,7 +35,6 @@
 │   │   │   ├── gitconfig-code
 │   │   │   ├── gitconfig-code-oss
 │   │   │   ├── gitconfig-codium
-│   │   │   ├── gitconfig-nano
 │   │   │   ├── gitconfig-vim
 │   │   │   └── gitignore
 │   │   └── scripts
@@ -60,4 +59,4 @@
 │               └── PKGBUILD
 └── README.md
 
-31 directories, 30 files
+31 directories, 29 files
