@@ -23,7 +23,14 @@
 │       └── scx-tools-git.spec
 ├── Devel
 │   ├── Config
-│   │   └── 6.17
+│   │   ├── 6.17
+│   │   │   ├── git
+│   │   │   │   └── uml-git
+│   │   │   │       └── config
+│   │   │   └── src
+│   │   │       └── uml
+│   │   │           └── config
+│   │   └── 6.18
 │   │       ├── git
 │   │       │   └── uml-git
 │   │       │       └── config
@@ -58,4 +65,4 @@
 │               └── PKGBUILD
 └── README.md
 
-31 directories, 28 files
+36 directories, 30 files
