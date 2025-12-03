@@ -7,8 +7,8 @@
 %global mode release
 
 Name:           scx-tools
-Version:        1.0.18
-Release:        3
+Version:        1.0.19
+Release:        1
 Summary:        Sched_ext Tools
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx-loader
@@ -59,6 +59,7 @@ find target/%{mode} \
 # DBus service and configuration
 %{_datadir}/dbus-1/system-services/org.scx.Loader.service
 %{_datadir}/dbus-1/system.d/org.scx.Loader.conf
+%{_datadir}/dbus-1/interfaces/org.scx.Loader.xml
 
 # Polkit authorization policy for scx-loader
 %{_datadir}/polkit-1/actions/org.scx.Loader.policy
