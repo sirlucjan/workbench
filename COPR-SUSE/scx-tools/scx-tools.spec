@@ -8,7 +8,7 @@
 
 Name:           scx-tools
 Version:        1.0.19
-Release:        3
+Release:        4
 Summary:        Sched_ext Tools
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx-loader
@@ -34,12 +34,10 @@ scx_loader: A DBUS Interface for Managing sched_ext Schedulers
 
 %build
 export CARGO_HOME=%{_builddir}/.cargo
-export CARGO_TARGET_DIR=%{_builddir}/target
 cargo fetch --locked
 cargo build --profile=%{mode} --frozen --all-features --workspace
 
 %install
-export CARGO_TARGET_DIR=%{_builddir}/target
 
 # Install all built executables (skip .so and .d files)
 find target/%{mode} \
