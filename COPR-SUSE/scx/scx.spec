@@ -8,7 +8,7 @@
 
 Name:           scx
 Version:        1.0.19
-Release:        1
+Release:        2
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
@@ -38,6 +38,7 @@ sched_ext is a Linux kernel feature which enables implementing kernel thread sch
 
 %build
 export CARGO_HOME=%{_builddir}/.cargo
+export CARGO_TARGET_DIR=%{_builddir}/target
 cargo fetch --locked
 cargo build \
      --profile=%{mode} \
