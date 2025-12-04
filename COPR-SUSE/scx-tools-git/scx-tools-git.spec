@@ -12,7 +12,7 @@
 
 Name:           scx-tools-git
 Version:        1.0.19.%{commitdate}.git.%{shortcommit}
-Release:        2
+Release:        3
 Summary:        Sched_ext Tools
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx-loader
@@ -44,6 +44,7 @@ cargo fetch --locked
 cargo build --profile=%{mode} --frozen --all-features --workspace
 
 %install
+export CARGO_TARGET_DIR=%{_builddir}/target
 
 # Install all built executables (skip .so and .d files)
 find target/%{mode} \
