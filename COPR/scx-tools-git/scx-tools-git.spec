@@ -10,7 +10,7 @@
 
 Name:           scx-tools-git
 Version:        1.0.19.%{commitdate}.git.%{shortcommit}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Sched_ext Tools
 
 License:        GPL=2.0
@@ -41,6 +41,7 @@ scx_loader: A DBUS Interface for Managing sched_ext Schedulers
 
 %build
 export CARGO_HOME=%{_builddir}/.cargo
+export CARGO_TARGET_DIR=%{_builddir}/target
 cargo fetch --locked
 cargo build --profile=%{mode} --frozen --all-features --workspace
 
