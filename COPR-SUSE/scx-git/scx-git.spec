@@ -3,8 +3,8 @@
 %define libbpf_min_ver 1.4
 %define llvm_min_ver 17
 %global _default_patch_fuzz 2
-%global commitdate 20251204
-%global commit 5561ee31fcb292bda5236bc4285a771e42ad2cb9
+%global commitdate 20251205
+%global commit 008f85a3c516e05e79f3b94d1441196b399f155b
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # Available profiles: “release”, “release-tiny”, “release-fast“
 # See: https://github.com/sched-ext/scx/blob/main/Cargo.toml
@@ -12,7 +12,7 @@
 
 Name:           scx-git
 Version:        1.0.19.%{commitdate}.git.%{shortcommit}
-Release:        4
+Release:        1
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
