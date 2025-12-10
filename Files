@@ -8,6 +8,8 @@
 │   │   └── scx-scheds-git.spec
 │   ├── scx-tools
 │   │   └── scx-tools.spec
+│   ├── scx-tools-dev-git
+│   │   └── scx-tools-dev-git.spec
 │   └── scx-tools-git
 │       └── scx-tools-git.spec
 ├── COPR-SUSE
@@ -19,6 +21,8 @@
 │   │   └── scx-manager.spec
 │   ├── scx-tools
 │   │   └── scx-tools.spec
+│   ├── scx-tools-dev-git
+│   │   └── scx-tools-dev-git.spec
 │   └── scx-tools-git
 │       └── scx-tools-git.spec
 ├── Devel
@@ -59,7 +63,15 @@
 │       │   ├── 70-uml.hook
 │       │   ├── config
 │       │   └── PKGBUILD
-│       └── linux-usermode-git
+│       ├── linux-usermode-git
+│       │   ├── 70-uml.hook
+│       │   ├── config
+│       │   └── PKGBUILD
+│       ├── linux-usermode-rc
+│       │   ├── 70-uml.hook
+│       │   ├── config
+│       │   └── PKGBUILD
+│       └── linux-usermode-rc-git
 │           ├── 70-uml.hook
 │           ├── config
 │           └── PKGBUILD
@@ -75,4 +87,4 @@
 │               └── PKGBUILD
 └── README.md
 
-40 directories, 36 files
+44 directories, 44 files
