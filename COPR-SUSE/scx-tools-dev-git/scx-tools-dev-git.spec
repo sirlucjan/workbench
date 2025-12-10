@@ -12,7 +12,7 @@
 
 Name:           scx-tools-dev-git
 Version:        1.0.19.%{commitdate}.git.%{shortcommit}
-Release:        2
+Release:        3
 Summary:        Sched_ext Tools
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx-loader
@@ -30,6 +30,7 @@ BuildRequires:  pkgconfig(libbpf) >= %{libbpf_min_ver}
 BuildRequires:  pkgconfig(systemd)
 Requires:  scx
 Provides: scx-tools = %{version}
+Conflicts: scx-tools
 
 %description
 scx_loader: A DBUS Interface for Managing sched_ext Schedulers
