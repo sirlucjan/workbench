@@ -2,6 +2,8 @@
 ├── COPR
 │   ├── kernel-cachyos-bore
 │   │   └── kernel-cachyos-lto.spec
+│   ├── scx-manager
+│   │   └── scx-manager.spec
 │   ├── scx-scheds
 │   │   └── scx-scheds.spec
 │   ├── scx-scheds-git
@@ -87,4 +89,4 @@
 │               └── PKGBUILD
 └── README.md
 
-44 directories, 44 files
+45 directories, 45 files
