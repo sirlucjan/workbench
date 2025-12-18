@@ -61,10 +61,6 @@
 ├── Files
 ├── linux-6.18
 │   └── uml
-│       ├── linux-usermode-git
-│       │   ├── 70-uml.hook
-│       │   ├── config
-│       │   └── PKGBUILD
 │       ├── linux-usermode-rc
 │       │   ├── 70-uml.hook
 │       │   ├── config
@@ -85,4 +81,4 @@
 │               └── PKGBUILD
 └── README.md
 
-44 directories, 42 files
+43 directories, 39 files
