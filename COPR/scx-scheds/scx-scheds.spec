@@ -5,7 +5,7 @@
 
 Name:           scx-scheds
 Version:        1.0.19
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
 License:        GPL=2.0
@@ -36,6 +36,7 @@ Requires:  zlib
 Requires:  jq
 Requires:  scx-tools
 Conflicts: scx-scheds-git
+Conflicts: scx-scheds-dev-git
 Conflicts: scx_layered
 Conflicts: scx_rustland
 Conflicts: scx_rusty
