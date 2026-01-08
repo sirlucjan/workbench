@@ -12,7 +12,7 @@
 
 Name:           scx-git
 Version:        1.0.19.%{commitdate}.git.%{shortcommit}
-Release:        1
+Release:        2
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
@@ -32,6 +32,7 @@ BuildRequires:  pkgconfig(libseccomp)
 BuildRequires:  pkgconfig(protobuf)
 BuildRequires:  pkgconfig(systemd)
 Conflicts: scx
+Conflicts: scx-dev-git
 Provides: scx = %{version}
 Requires:  scx-tools
 
