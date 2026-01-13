@@ -4,7 +4,7 @@
 %define llvm_min_ver 17
 %global _default_patch_fuzz 2
 %global commitdate 20260113
-%global commit 067e525ce8592a79f8efaf1b4480b802edfe2969
+%global commit 2cced64079cc2d1fbd570746b6bd47e93b99d09e
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # Available profiles: “release”, “release-tiny”, “release-fast“
 # See: https://github.com/sched-ext/scx/blob/main/Cargo.toml
@@ -12,7 +12,7 @@
 
 Name:           scx-tools-git
 Version:        1.0.19.%{commitdate}.git.%{shortcommit}
-Release:        1
+Release:        2
 Summary:        Sched_ext Tools
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx-loader
