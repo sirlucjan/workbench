@@ -1,6 +1,6 @@
 %global _default_patch_fuzz 2
-%global commitdate 20260114
-%global commit 1b1b22c36ca8f5652c7e754ace3e7aa239bcfc5f
+%global commitdate 20260115
+%global commit 02f5d2e616a540d3a64e86c9a76a2a7e7a02d98e
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 %define _disable_source_fetch 0
@@ -10,7 +10,7 @@
 
 Name:           scx-scheds-dev-git
 Version:        1.0.19.%{commitdate}.git.%{shortcommit}
-Release:        6%{?dist}
+Release:        1%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
 License:        GPL=2.0
