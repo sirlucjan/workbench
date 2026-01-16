@@ -8,7 +8,7 @@
 
 Name:           scx
 Version:        1.0.19
-Release:        6
+Release:        7
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
@@ -58,6 +58,9 @@ cargo build \
 find target/%{mode} \
     -maxdepth 1 -type f -executable ! -name '*.so' \
     -exec install -Dm755 -t %{buildroot}%{_bindir} {} +
+
+# Remove any empty directories left in the buildroot
+find %{buildroot}%{_prefix} -type d -empty -delete || :
 
 %files
 
