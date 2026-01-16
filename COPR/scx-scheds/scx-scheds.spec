@@ -5,7 +5,7 @@
 
 Name:           scx-scheds
 Version:        1.0.19
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
 License:        GPL=2.0
@@ -73,6 +73,9 @@ cargo build \
 find target/%{mode} \
     -maxdepth 1 -type f -executable ! -name '*.so' \
     -exec install -Dm755 -t %{buildroot}%{_bindir} {} +
+
+# Remove any empty directories left in the buildroot
+find %{buildroot}%{_prefix} -type d -empty -delete || :
 
 %files
 
