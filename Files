@@ -6,14 +6,10 @@
 │   │   └── scx-manager.spec
 │   ├── scx-scheds
 │   │   └── scx-scheds.spec
-│   ├── scx-scheds-dev-git
-│   │   └── scx-scheds-dev-git.spec
 │   ├── scx-scheds-git
 │   │   └── scx-scheds-git.spec
 │   ├── scx-tools
 │   │   └── scx-tools.spec
-│   ├── scx-tools-dev-git
-│   │   └── scx-tools-dev-git.spec
 │   └── scx-tools-git
 │       └── scx-tools-git.spec
 ├── COPR-SUSE
@@ -65,7 +61,11 @@
 ├── Files
 ├── linux-6.19
 │   └── uml
-│       └── linux-usermode
+│       ├── linux-usermode
+│       │   ├── 70-uml.hook
+│       │   ├── config
+│       │   └── PKGBUILD
+│       └── linux-usermode-git
 │           ├── 70-uml.hook
 │           ├── config
 │           └── PKGBUILD
@@ -81,4 +81,4 @@
 │               └── PKGBUILD
 └── README.md
 
-44 directories, 38 files
+43 directories, 39 files
