@@ -454,6 +454,8 @@
 	bump = !sh -c 'git commit -am \"Version bump v$1\" && git psuoc && git releases $1' -
 	releases = !sh -c 'git tag v$1 && git pst' -
 	unreleases = !sh -c 'git tag -d v$1 && git pso :v$1' -
+	release-cachyos = !sh -c 'git tag $1 && git pst' -
+	unrelease-cachyos = !sh -c 'git tag -d $1 && git pso :$1' -
 	merged = !sh -c 'git om && git plom && git trim'
 	mergeda = !sh -c 'git oma && git ploma && git trim'
 	aliases = !git config -l | grep alias | cut -c 7-
