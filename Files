@@ -69,6 +69,10 @@
 │       │   ├── 70-uml.hook
 │       │   ├── config
 │       │   └── PKGBUILD
+│       ├── linux-usermode-rc
+│       │   ├── 70-uml.hook
+│       │   ├── config
+│       │   └── PKGBUILD
 │       └── linux-usermode-rc-git
 │           ├── 70-uml.hook
 │           ├── config
@@ -85,4 +89,4 @@
 │               └── PKGBUILD
 └── README.md
 
-44 directories, 42 files
+45 directories, 45 files
