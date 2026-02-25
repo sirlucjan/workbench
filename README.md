@@ -79,6 +79,8 @@ Here you can find test builds compiled in **Rust (cargo)** for **Fedora 43**.
 4. `scx-tools-dev-git` provides several additional schedules (`scx_wd4o`, `scx_mitosis`, `scx_chaos`) included in `scx_loader`.
 The installation is similar to `scx-tools-git`.
 
+5. scx-scheds-dev-git/scx-tools-dev-git contain [PANDEMONIUM scheduler](https://github.com/wllclngn/PANDEMONIUM)
+
 📖 Usage guide available in the [CachyOS wiki](https://wiki.cachyos.org/configuration/sched-ext/).
 
 ---
@@ -93,6 +95,7 @@ These packages differ from openSUSE builds:
 * fully compiled with **Cargo** (instead of Meson used in openSUSE specs),
 * include **[scx-manager](https://github.com/CachyOS/scx-manager)** — a tool for managing schedulers in GUI.
 * provides full support for scx_loader and scxctl
+* scx-dev-git/scx-tools-dev-git contain [PANDEMONIUM scheduler](https://github.com/wllclngn/PANDEMONIUM)
 
 To add the repository manually (example for openSUSE Tumbleweed):
 
