@@ -76,7 +76,7 @@ Here you can find test builds compiled in **Rust (cargo)** for **Fedora 43**.
    sudo systemctl reboot
    ```
    
-4. `scx-tools-dev-git` provides several additional schedules (`scx_wd4o`, `scx_mitosis`, `scx_chaos`) included in `scx_loader`.
+4. `scx-tools-dev-git` provides several additional schedules (`scx_mitosis`, `scx_chaos`) included in `scx_loader`.
 The installation is similar to `scx-tools-git`.
 
 5. scx-scheds-dev-git/scx-tools-dev-git contain [PANDEMONIUM scheduler](https://github.com/wllclngn/PANDEMONIUM)
@@ -118,7 +118,7 @@ sudo zypper refresh
 sudo zypper install scx-git scx-tools-git
 ```
 
-`scx-tools-dev-git` provides several additional schedules (`scx_wd4o`, `scx_mitosis`, `scx_chaos`) included in `scx_loader`.
+`scx-tools-dev-git` provides several additional schedules (`scx_mitosis`, `scx_chaos`) included in `scx_loader`.
 The installation is similar to `scx-tools-git`.
 
 📖 Usage guide available in the [CachyOS wiki](https://wiki.cachyos.org/configuration/sched-ext/).
