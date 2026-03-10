@@ -28,21 +28,18 @@
 │   └── scx-tools-git
 │       └── scx-tools-git.spec
 ├── Devel
-│   ├── Dots
-│   │   ├── git
-│   │   │   ├── gitconfig-code
-│   │   │   ├── gitconfig-code-oss
-│   │   │   ├── gitconfig-codium
-│   │   │   └── gitignore
-│   │   └── scripts
-│   │       ├── app.sh
-│   │       ├── git-patching.sh
-│   │       ├── patcher.sh
-│   │       ├── patching.sh
-│   │       └── repo-schema.sh
-│   └── Kernel
-│       └── uml
-│           └── 70-uml.hook
+│   └── Dots
+│       ├── git
+│       │   ├── gitconfig-code
+│       │   ├── gitconfig-code-oss
+│       │   ├── gitconfig-codium
+│       │   └── gitignore
+│       └── scripts
+│           ├── app.sh
+│           ├── git-patching.sh
+│           ├── patcher.sh
+│           ├── patching.sh
+│           └── repo-schema.sh
 ├── Files
 ├── PKGBUILDs
 │   ├── aur-kernels
@@ -56,4 +53,4 @@
 │               └── PKGBUILD
 └── README.md
 
-28 directories, 29 files
+26 directories, 28 files
