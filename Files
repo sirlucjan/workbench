@@ -42,15 +42,9 @@
 │           └── repo-schema.sh
 ├── Files
 ├── PKGBUILDs
-│   ├── aur-kernels
-│   │   └── linux-lqx
-│   │       └── PKGBUILD
-│   └── linux-rolling-stable
-│       └── uml
-│           └── linux-usermode-git
-│               ├── 70-uml.hook
-│               ├── config
-│               └── PKGBUILD
+│   └── aur-kernels
+│       └── linux-lqx
+│           └── PKGBUILD
 └── README.md
 
-26 directories, 28 files
+23 directories, 25 files
