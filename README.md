@@ -22,16 +22,6 @@ Available versions for **nano**, **vim**, **VS Code**, and **Codium** (also in F
 
 ---
 
-### 🔹 linux-rolling-stable
-
-These sources are not fundamentally different from **archlinux-lucjan** [1] and **POLAUR** [2].
-The main difference: when upgrading the kernel version, there is **no need to switch branches manually** — the build process will handle it automatically.
-
-* [1] **archlinux-lucjan** [GitHub](https://github.com/archlinux-lucjan) · [GitLab](https://gitlab.com/archlinux-lucjan) · [Codeberg](https://codeberg.org/archlinux-lucjan)
-* [2] **POLAUR** [GitHub](https://github.com/polaur) · [GitLab](https://gitlab.com/polaur)
-
----
-
 ## 📦 COPR (Fedora 43 / Silverblue / Kinoite)
 
 The **scx-scheds** project will soon [switch](https://github.com/sched-ext/scx/discussions/2731) from **Meson** to **Cargo**.
