@@ -3,8 +3,8 @@
 %define libbpf_min_ver 1.4
 %define llvm_min_ver 17
 %global _default_patch_fuzz 2
-%global commitdate 20260314
-%global commit f98662c1185157964e9f86a3acc62e614523462d
+%global commitdate 20260316
+%global commit 202ce748779963c1a1341416c5412fc31d71c95f
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # Available profiles: “release”, “release-tiny”, “release-fast“
 # See: https://github.com/sched-ext/scx/blob/main/Cargo.toml
