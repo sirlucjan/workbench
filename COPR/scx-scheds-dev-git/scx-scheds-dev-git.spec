@@ -10,7 +10,7 @@
 %global mode release
 
 Name:           scx-scheds-dev-git
-Version:        1.1.0.%{revision}.%{commitdate}.git.%{shortcommit}
+Version:        1.1.0.%{commitdate}.%{revision}.git.%{shortcommit}
 Release:        1%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
