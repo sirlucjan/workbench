@@ -12,7 +12,7 @@
 %global mode release
 
 Name:           scx-git
-Version:        1.1.0.%{revision}.%{commitdate}.git.%{shortcommit}
+Version:        1.1.0.%{commitdate}.%{revision}.git.%{shortcommit}
 Release:        1
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
