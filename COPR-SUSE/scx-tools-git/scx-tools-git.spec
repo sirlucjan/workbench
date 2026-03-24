@@ -5,13 +5,14 @@
 %global _default_patch_fuzz 2
 %global commitdate 20260323
 %global commit 1fed46ed87245ffcf8f6cdaf4645882511d72830
+%global revision 2
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # Available profiles: “release”, “release-tiny”, “release-fast“
 # See: https://github.com/sched-ext/scx/blob/main/Cargo.toml
 %global mode release
 
 Name:           scx-tools-git
-Version:        1.1.0.%{commitdate}.git.%{shortcommit}
+Version:        1.1.0.%{revision}.%{commitdate}.git.%{shortcommit}
 Release:        1
 Summary:        Sched_ext Tools
 License:        GPL-2.0-only
