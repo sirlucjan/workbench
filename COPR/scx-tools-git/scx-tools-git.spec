@@ -10,7 +10,7 @@
 %global mode release
 
 Name:           scx-tools-git
-Version:        1.1.0.%{revision}.%{commitdate}.git.%{shortcommit}
+Version:        1.1.0.%{commitdate}.%{revision}.git.%{shortcommit}
 Release:        1%{?dist}
 Summary:        Sched_ext Tools
 
