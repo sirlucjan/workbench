@@ -22,7 +22,7 @@ Available versions for **nano**, **vim**, **VS Code**, and **Codium** (also in F
 
 ---
 
-## 📦 COPR (Fedora 43/rawhide - also Silverblue and Kinoite)
+## 📦 COPR (Fedora 43/44/rawhide - also Silverblue and Kinoite)
 
 The **scx-scheds** project will soon [switch](https://github.com/sched-ext/scx/discussions/2731) from **Meson** to **Cargo**.
 Here you can find test builds compiled in **Rust (cargo)** for **Fedora 43**.
