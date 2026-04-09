@@ -4,8 +4,8 @@
 %define llvm_min_ver 17
 %global _default_patch_fuzz 2
 %global commitdate 20260409
-%global commit 14dda766673174624fa2f0c1af37c0d76afbb743
-%global revision 1
+%global commit c0acb76fa9533d46ac18662ed3708bccd19f99ce
+%global revision 2
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # Available profiles: “release”, “release-tiny”, “release-fast“
 # See: https://github.com/sched-ext/scx/blob/main/Cargo.toml
@@ -52,7 +52,6 @@ cargo build \
      --all-features \
      --workspace \
      --exclude scx_rlfifo \
-     --exclude scx_wd40 \
      --exclude xtask \
      --exclude scxcash \
      --exclude vmlinux_docify \
