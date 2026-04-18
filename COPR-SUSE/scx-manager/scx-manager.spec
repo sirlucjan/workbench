@@ -3,7 +3,7 @@
 
 Name: scx-manager
 Version: 1.15.10
-Release: 1
+Release: 2
 Summary: Simple GUI for managing sched-ext schedulers via scx_loader
 
 License:        GPL-3.0
