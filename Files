@@ -33,6 +33,7 @@
 │       │   ├── gitconfig-code
 │       │   ├── gitconfig-code-oss
 │       │   ├── gitconfig-codium
+│       │   ├── gitconfig-codium-insiders
 │       │   └── gitignore
 │       └── scripts
 │           ├── app.sh
@@ -47,4 +48,4 @@
 │           └── PKGBUILD
 └── README.md
 
-23 directories, 25 files
+23 directories, 26 files
