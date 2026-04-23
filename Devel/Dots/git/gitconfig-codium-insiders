@@ -6,7 +6,6 @@
 
 [core]
 	editor = codium-insiders --wait --reuse-window
-	# editor = "flatpak run com.vscodium.codium-insiders --wait --reuse-window"
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = ~/.gitignore
 	pager = delta
@@ -114,7 +113,6 @@
 
 [difftool "codium-insiders"]
 	cmd = "codium-insiders --wait --reuse-window --diff \"$LOCAL\" \"$REMOTE\""
-	# cmd = "flatpak run com.vscodium.codium-insiders --wait --reuse-window --diff \"$LOCAL\" \"$REMOTE\""
 
 [push]
 	autoSetupRemote = true
@@ -142,7 +140,6 @@
 
 [mergetool "codium-insiders"]
 	cmd = "codium-insiders --wait --reuse-window \"$MERGED\""
-	# cmd = "flatpak run com.vscodium.codium-insiders --wait --reuse-window \"$MERGED\""
 
 [color]
 	ui = auto
@@ -194,7 +191,6 @@
 
 [sequence]
 	editor = codium-insiders --wait --reuse-window
-	# editor = "flatpak run com.vscodium.codium-insiders --wait --reuse-window"
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
