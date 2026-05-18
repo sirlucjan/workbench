@@ -3,8 +3,8 @@
 %define libbpf_min_ver 1.4
 %define llvm_min_ver 17
 %global _default_patch_fuzz 2
-%global commitdate 20260512
-%global commit 61d429d70f8081636efb736e78f2af13d0d84c09
+%global commitdate 20260518
+%global commit ab16ea6b969ebd9a9e904a3f39168a989184e4c6
 %global revision 1
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # Available profiles: “release”, “release-tiny”, “release-fast“
@@ -12,7 +12,7 @@
 %global mode release
 
 Name:           scx-tools-dev-git
-Version:        1.1.0.%{commitdate}.%{revision}.git.%{shortcommit}
+Version:        1.1.1.%{commitdate}.%{revision}.git.%{shortcommit}
 Release:        1
 Summary:        Sched_ext Tools
 License:        GPL-2.0-only
