@@ -345,7 +345,6 @@
 	plo = pull origin
 	pbo = pull --rebase origin
 	plom = !git pull origin $(git bt)
-	ploma = pull origin main
 	ploc = !git pull origin $(git bc)
 	pbom = !git pull --rebase origin $(git bt)
 	pboc = !git pull --rebase origin $(git bc)
