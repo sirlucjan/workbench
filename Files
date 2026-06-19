@@ -1,6 +1,6 @@
 .
 ├── COPR
-│   ├── kernel-cachyos-bore
+│   ├── kernel-cachyos-bore-lto
 │   │   └── kernel-cachyos-lto.spec
 │   ├── scx-manager
 │   │   └── scx-manager.spec
