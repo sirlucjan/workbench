@@ -7,7 +7,7 @@ A collection of useful tools, configurations, and Linux-related packages.
 ## 📂 DOTS
 
 **gitconfig** inspired by [pksunkara](https://gist.github.com/pksunkara/988716).
-Available versions for **nano**, **vim**, **VS Code**, and **Codium** (also in Flatpak builds).
+Available versions for **Codium** and **Codium Insiders**
 
 ---
 
@@ -25,7 +25,7 @@ Available versions for **nano**, **vim**, **VS Code**, and **Codium** (also in F
 ## 📦 COPR (Fedora 43/44/rawhide - also Silverblue and Kinoite)
 
 The **scx-scheds** project will soon [switch](https://github.com/sched-ext/scx/discussions/2731) from **Meson** to **Cargo**.
-Here you can find test builds compiled in **Rust (cargo)** for **Fedora 43**.
+Here you can find test builds compiled in **Rust (cargo)** for **Fedora**.
 
 1. Enable the [COPR](https://copr.fedorainfracloud.org/coprs/sirlucjan/scx-scheds-cargo/) repository:
 
