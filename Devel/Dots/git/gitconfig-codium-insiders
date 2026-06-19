@@ -351,8 +351,7 @@
 	pboc = !git pull --rebase origin $(git bc)
 	#############
 	plu = pull upstream
-	plum = pull upstream master
-	pluma = pull upstream main
+	plum = !git pull upstream $(git bt)
 	pluc = !git pull upstream $(git bc)
 	pbum = !git pull --rebase upstream $(git bt)
 	pbuc = !git pull --rebase upstream $(git bc)
