@@ -5,7 +5,7 @@
 %global _default_patch_fuzz 2
 %global commitdate 20260623
 %global commit 3f35bc783081ffad67e837eb65b32fc91ad06ddf
-%global revision 3
+%global revision 4
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # Available profiles: “release”, “release-tiny”, “release-fast“
 # See: https://github.com/sched-ext/scx/blob/main/Cargo.toml
@@ -43,7 +43,7 @@ scx_loader: A DBUS Interface for Managing sched_ext Schedulers
 %build
 export CARGO_HOME=%{_builddir}/.cargo
 cargo fetch --locked
-cargo build --profile=%{mode} --frozen --all-features --workspace
+cargo build --profile=%{mode} --frozen --workspace
 
 %install
 
