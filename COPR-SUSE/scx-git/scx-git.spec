@@ -3,8 +3,8 @@
 %define libbpf_min_ver 1.4
 %define llvm_min_ver 17
 %global _default_patch_fuzz 2
-%global commitdate 20260623
-%global commit 7632c96179674a2440752de96e8d44d2b242c5d2
+%global commitdate 20260624
+%global commit 19ed8749bb7acca29bd361479d71a07815442273
 %global revision 1
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # Available profiles: “release”, “release-tiny”, “release-fast“
@@ -20,6 +20,7 @@ URL:            https://github.com/sched-ext/scx
 Source0:        %{URL}/archive/%{commit}/scx-%{commit}.tar.gz
 
 BuildRequires:  bpftool >= 7.5.0
+BuildRequires:  cmake
 BuildRequires:  clang >= %{llvm_min_ver}
 BuildRequires:  jq
 BuildRequires:  libbpf-devel >= %{libbpf_min_ver}
