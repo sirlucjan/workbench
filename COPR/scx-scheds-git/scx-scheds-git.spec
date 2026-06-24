@@ -11,7 +11,7 @@
 
 Name:           scx-scheds-git
 Version:        1.1.1.%{commitdate}.%{revision}.git.%{shortcommit}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
 License:        GPL=2.0
@@ -22,7 +22,6 @@ BuildRequires:  gcc
 BuildRequires:  git
 BuildRequires:  python
 BuildRequires:  cargo
-BuildRequires:  cmake
 BuildRequires:  rust
 BuildRequires:  clang >= 17
 BuildRequires:  llvm >= 17
@@ -66,7 +65,6 @@ cargo fetch --locked
 cargo build \
      --profile=%{mode} \
      --frozen \
-     --all-features \
      --workspace \
      --exclude scx_rlfifo \
      --exclude xtask \
