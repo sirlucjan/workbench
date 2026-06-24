@@ -3,9 +3,9 @@
 %define libbpf_min_ver 1.4
 %define llvm_min_ver 17
 %global _default_patch_fuzz 2
-%global commitdate 20260623
-%global commit 06a1c75dea0c9f94f32bbe69e8ba146547ea5a69
-%global revision 3
+%global commitdate 20260624
+%global commit c5a6104c13a7727d2c8cd6886431daf682403631
+%global revision 1
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # Available profiles: “release”, “release-tiny”, “release-fast“
 # See: https://github.com/sched-ext/scx/blob/main/Cargo.toml
@@ -20,6 +20,7 @@ URL:            https://github.com/sched-ext/scx
 Source0:        %{URL}/archive/%{commit}/scx-%{commit}.tar.gz
 
 BuildRequires:  bpftool >= 7.5.0
+BuildRequires:  cmake
 BuildRequires:  clang >= %{llvm_min_ver}
 BuildRequires:  jq
 BuildRequires:  libbpf-devel >= %{libbpf_min_ver}
