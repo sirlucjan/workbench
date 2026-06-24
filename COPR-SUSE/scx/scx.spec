@@ -8,7 +8,7 @@
 
 Name:           scx
 Version:        1.1.1
-Release:        2
+Release:        3
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
@@ -44,7 +44,6 @@ cargo fetch --locked
 cargo build \
      --profile=%{mode} \
      --frozen \
-     --all-features \
      --workspace \
      --exclude scx_rlfifo \
      --exclude xtask \
