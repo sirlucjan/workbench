@@ -284,6 +284,8 @@
 	#############
 	fp = format-patch
 	fps = format-patch --stdout
+	fpx = !git format-patch $(git bt)..HEAD
+	fpxo = !git format-patch origin/$(git bt)..HEAD
 	#############
 	fk = fsck
 	#############
