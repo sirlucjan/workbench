@@ -7,8 +7,8 @@
 %global mode release
 
 Name:           scx
-Version:        1.1.1
-Release:        3
+Version:        1.1.2
+Release:        1
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
@@ -47,7 +47,7 @@ cargo build \
      --workspace \
      --exclude scx_rlfifo \
      --exclude xtask \
-     --exclude scxcash \
+     --exclude scx_characterize \
      --exclude vmlinux_docify \
      --exclude scx_arena_selftests
 
