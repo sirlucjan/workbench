@@ -4,8 +4,8 @@
 %global mode release
 
 Name:           scx-scheds
-Version:        1.1.1
-Release:        3%{?dist}
+Version:        1.1.2
+Release:        1%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
 License:        GPL=2.0
@@ -62,7 +62,7 @@ cargo build \
      --workspace \
      --exclude scx_rlfifo \
      --exclude xtask \
-     --exclude scxcash \
+     --exclude scx_characterize \
      --exclude vmlinux_docify \
      --exclude scx_arena_selftests
 
