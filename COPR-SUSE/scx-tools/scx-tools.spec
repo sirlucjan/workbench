@@ -7,8 +7,8 @@
 %global mode release
 
 Name:           scx-tools
-Version:        1.1.1
-Release:        2
+Version:        1.1.2
+Release:        1
 Summary:        Sched_ext Tools
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx-loader
