@@ -3,16 +3,16 @@
 %define libbpf_min_ver 1.4
 %define llvm_min_ver 17
 %global _default_patch_fuzz 2
-%global commitdate 20260702
-%global commit e1a6aa69a3477272a32aa7a92c2ccbad0dac17b2
-%global revision 2
+%global commitdate 20260706
+%global commit a8fa889a350232749d336d0a5499da8bbe7eacc4
+%global revision 1
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # Available profiles: “release”, “release-tiny”, “release-fast“
 # See: https://github.com/sched-ext/scx/blob/main/Cargo.toml
 %global mode release
 
 Name:           scx-tools-dev-git
-Version:        1.1.1.%{commitdate}.%{revision}.git.%{shortcommit}
+Version:        1.1.2.%{commitdate}.%{revision}.git.%{shortcommit}
 Release:        1
 Summary:        Sched_ext Tools
 License:        GPL-2.0-only
