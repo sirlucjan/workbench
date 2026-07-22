@@ -1,6 +1,6 @@
 %global _default_patch_fuzz 2
-%global commitdate 20260721
-%global commit 6e0da0659f4678f5969906b71f3fa7073066a205
+%global commitdate 20260722
+%global commit b22cf2fb56c69150758b521544269679f397c024
 %global revision 1
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
