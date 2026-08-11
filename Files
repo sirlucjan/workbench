@@ -45,9 +45,14 @@
 │           └── repo-schema.sh
 ├── Files
 ├── PKGBUILDs
-│   └── aur-kernels
+│   ├── aur-kernels
+│   │   └── linux-lqx
+│   │       ├── linux-lqx.install
+│   │       └── PKGBUILD
+│   └── aur-kernels-mod
 │       └── linux-lqx
+│           ├── linux-lqx.install
 │           └── PKGBUILD
 └── README.md
 
-25 directories, 26 files
+27 directories, 29 files
