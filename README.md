@@ -13,7 +13,7 @@ Available versions for **Codium** and **Codium Insiders**
 
 ## 🧩 Kernels & Modules
 
-### 🔹 linux-lqx
+### 🔹 linux-lqx (PDS and BMQ versions)
 
 * Kernel variant based on the **Liquorix patchset** authored by [Steven Barrett](https://github.com/damentz/liquorix-package/tree/7.1/master).
 * Packaging status:
