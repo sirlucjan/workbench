@@ -3,8 +3,8 @@
 %define libbpf_min_ver 1.4
 %define llvm_min_ver 17
 %global _default_patch_fuzz 2
-%global commitdate 20260812
-%global commit 223b25db9fe8f4d6c0f34ff392b68359556d357e
+%global commitdate 20260813
+%global commit 4f8352ee4b9a988477734dc0f4147c78db4ad4fa
 %global revision 1
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # Available profiles: “release”, “release-tiny”, “release-fast“
