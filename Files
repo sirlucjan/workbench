@@ -1,5 +1,7 @@
 .
 ├── COPR
+│   ├── cargo-lbin
+│   │   └── cargo-lbin.spec
 │   ├── kernel-cachyos-bore-lto
 │   │   └── kernel-cachyos-lto.spec
 │   ├── scx-manager
@@ -17,6 +19,8 @@
 │   └── scx-tools-git
 │       └── scx-tools-git.spec
 ├── COPR-SUSE
+│   ├── cargo-lbin
+│   │   └── cargo-lbin.spec
 │   ├── scx
 │   │   └── scx.spec
 │   ├── scx-dev-git
@@ -55,4 +59,4 @@
 │           └── PKGBUILD
 └── README.md
 
-27 directories, 29 files
+29 directories, 31 files
