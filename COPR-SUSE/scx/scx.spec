@@ -8,7 +8,7 @@
 
 Name:           scx
 Version:        1.1.3
-Release:        3
+Release:        4
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
@@ -32,6 +32,7 @@ BuildRequires:  pkgconfig(libbpf) >= %{libbpf_min_ver}
 BuildRequires:  pkgconfig(libseccomp)
 BuildRequires:  pkgconfig(protobuf)
 BuildRequires:  pkgconfig(systemd)
+BuildRequires: pkgconfig(openssl)
 BuildRequires: openssl-devel
 Requires:  scx-tools
 Conflicts: scx-git
