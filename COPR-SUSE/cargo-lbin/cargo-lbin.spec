@@ -2,7 +2,7 @@
 
 Name:           cargo-lbin
 Version:        0.5.2
-Release:        1
+Release:        2
 Summary:        Thin cargo-install wrapper targeting /usr/local/bin, crates.io only
 
 License:        MIT AND Apache-2.0
