@@ -22,7 +22,7 @@ Available versions for **Codium** and **Codium Insiders**
 
 ---
 
-## 📦 COPR (Fedora 43/44/rawhide - also Silverblue and Kinoite)
+## 📦 COPR (Fedora 44/45/rawhide - also Silverblue and Kinoite)
 
 The **scx-scheds** project will soon [switch](https://github.com/sched-ext/scx/discussions/2731) from **Meson** to **Cargo**.
 Here you can find test builds compiled in **Rust (cargo)** for **Fedora**.
