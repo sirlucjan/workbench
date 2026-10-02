@@ -4,6 +4,8 @@
 │   │   └── cargo-lbin.spec
 │   ├── kernel-cachyos-bore-lto
 │   │   └── kernel-cachyos-lto.spec
+│   ├── kernel-devario
+│   │   └── kernel-devario.spec
 │   ├── scx-manager
 │   │   └── scx-manager.spec
 │   ├── scx-scheds
@@ -59,4 +61,4 @@
 │           └── PKGBUILD
 └── README.md
 
-29 directories, 31 files
+30 directories, 32 files
