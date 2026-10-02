@@ -1,6 +1,6 @@
 %global _default_patch_fuzz 2
-%global commitdate 20261001
-%global commit 1263ca3a6ef5ecf0aefe517120c3832dc7112e2c
+%global commitdate 20261002
+%global commit 25879d8b15ed2d5ee1893bf68e3c1ec90279ac11
 %global revision 1
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
@@ -71,7 +71,8 @@ cargo build \
      --exclude xtask \
      --exclude scx_characterize \
      --exclude vmlinux_docify \
-     --exclude scx_arena_selftests
+     --exclude scx_arena_selftests \
+     --exclude scx_arena_libarena_selftests
 
 %install
 
