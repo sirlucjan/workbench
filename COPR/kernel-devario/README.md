@@ -114,9 +114,14 @@ Keeping the Fedora kernel installed provides a convenient fallback if a Devario 
 
 The kernel supports sched-ext userspace schedulers.
 
-Install the sched-ext schedulers and loader tools with:
+Seafoam/Devario-compatible sched-ext packages for Fedora are available from the dedicated COPR repository:
+
+https://copr.fedorainfracloud.org/coprs/sirlucjan/scx-scheds-cargo/
+
+Enable the repository and install the schedulers and loader tools with:
 
 ```bash
+sudo dnf copr enable sirlucjan/scx-scheds-cargo
 sudo dnf install scx-scheds scx-tools
 ```
 
@@ -133,7 +138,8 @@ https://github.com/sched-ext/scx
 - Linux 6.18 LTS base branch: https://github.com/Seafoam-Labs/linux/tree/6.18/base
 - Devario Linux releases: https://github.com/Seafoam-Labs/linux/releases
 - Devario packaging: https://github.com/Seafoam-Labs/devario-custom-packagbuilds
-- Fedora COPR: https://copr.fedorainfracloud.org/coprs/sirlucjan/kernel-devario/
+- Fedora kernel COPR: https://copr.fedorainfracloud.org/coprs/sirlucjan/kernel-devario/
+- Fedora sched-ext COPR: https://copr.fedorainfracloud.org/coprs/sirlucjan/scx-scheds-cargo/
 - Seafoam Labs: https://github.com/Seafoam-Labs
 
 ## License
