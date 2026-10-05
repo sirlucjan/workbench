@@ -11,13 +11,23 @@
 # Linux Kernel Versions
 %define _basekver 7.2
 %define _stablekver 9
-%define _pkgrel 2
+
+# Release suffix of the git tag in Seafoam-Labs/linux: devario-7.2.9-2 -> 2.
+# Bump it only when a new tag is published for the same kernel version.
+%define _tagrel 2
+
+# RPM build number, independent of the tag. Bump it for every build that
+# should reach users: a new tag, or a plain COPR rebuild of the same tag
+# (new pahole, gcc, ...). Reset to 1 when _stablekver or _basekver changes.
+# Produces e.g. 7.2.9-devario1.fc43.
+%define _pkgrel 1
+
 %define _rpmver %{version}-%{release}
 %define _kver %{_rpmver}.%{_arch}
 
 %define _tarkver %{version}
 
-%define _tag devario-%{_tarkver}-%{_pkgrel}
+%define _tag devario-%{_tarkver}-%{_tagrel}
 
 # Build a minimal a kernel via modprobed.db
 # file to reduce build times
@@ -44,7 +54,7 @@
 Name:           kernel-devario
 Summary:        The Devario Linux kernel by Seafoam Labs, based on the stable kernel tree.
 Version:        %{_basekver}.%{_stablekver}
-Release:        devario1%{_pkgrel}%{?dist}
+Release:        devario%{_pkgrel}%{?dist}
 License:        GPL-2.0-only
 URL:            https://github.com/Seafoam-Labs/linux
 
