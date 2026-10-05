@@ -20,7 +20,7 @@
 # should reach users: a new tag, or a plain COPR rebuild of the same tag
 # (new pahole, gcc, ...). Reset to 1 when _stablekver or _basekver changes.
 # Produces e.g. 6.18.55-devariolts1.fc43.
-%define _pkgrel 2
+%define _pkgrel 1
 
 %define _rpmver %{version}-%{release}
 %define _kver %{_rpmver}.%{_arch}
