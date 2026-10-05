@@ -2,9 +2,8 @@
 ├── COPR
 │   ├── cargo-lbin
 │   │   └── cargo-lbin.spec
-│   ├── kernel-cachyos-bore-lto
-│   │   └── kernel-cachyos-lto.spec
 │   ├── kernel-devario
+│   │   ├── kernel-devario-lts.spec
 │   │   ├── kernel-devario.spec
 │   │   └── README.md
 │   ├── scx-manager
@@ -62,4 +61,4 @@
 │           └── PKGBUILD
 └── README.md
 
-30 directories, 33 files
+29 directories, 33 files
