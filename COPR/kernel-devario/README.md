@@ -2,11 +2,12 @@
 
 Devario Linux kernel packages for Fedora, built from the [Seafoam Labs Linux tree](https://github.com/Seafoam-Labs/linux).
 
-The kernel tracks the Linux 7.2 stable series and carries a curated Devario patch set focused on predictable behavior, hardware support, regression fixes, and sched-ext compatibility rather than a large experimental performance patch stack.
+Devario provides both a current kernel based on the Linux 7.2 stable series and an LTS kernel based on Linux 6.18. Both carry a curated Devario patch set focused on predictable behavior, hardware support, regression fixes, and sched-ext compatibility rather than a large experimental performance patch stack.
 
 ## Features
 
-- Based on the Linux 7.2 stable series.
+- Current kernel based on the Linux 7.2 stable series.
+- LTS kernel based on the Linux 6.18 long-term series.
 - Curated Devario kernel patch set.
 - Official builds target **x86-64-v3**.
 - sched-ext support.
@@ -44,10 +45,16 @@ Enable the COPR repository hosting the Devario kernel:
 sudo dnf copr enable sirlucjan/kernel-devario
 ```
 
-Then install the kernel and matching development package:
+Then install either the current kernel:
 
 ```bash
 sudo dnf install kernel-devario kernel-devario-devel-matched
+```
+
+or the Linux 6.18 LTS kernel:
+
+```bash
+sudo dnf install kernel-devario-lts kernel-devario-lts-devel-matched
 ```
 
 Keeping Fedora's stock kernel installed as a fallback is recommended.
@@ -73,6 +80,20 @@ sudo rpm-ostree override remove \
   kernel-modules-core \
   kernel-modules-extra \
   --install kernel-devario
+
+sudo systemctl reboot
+```
+
+For the Linux 6.18 LTS kernel, use:
+
+```bash
+sudo rpm-ostree override remove \
+  kernel \
+  kernel-core \
+  kernel-modules \
+  kernel-modules-core \
+  kernel-modules-extra \
+  --install kernel-devario-lts
 
 sudo systemctl reboot
 ```
@@ -108,6 +129,8 @@ https://github.com/sched-ext/scx
 ## Sources
 
 - Devario Linux kernel tree: https://github.com/Seafoam-Labs/linux
+- Linux 7.2 base branch: https://github.com/Seafoam-Labs/linux/tree/7.2/base
+- Linux 6.18 LTS base branch: https://github.com/Seafoam-Labs/linux/tree/6.18/base
 - Devario Linux releases: https://github.com/Seafoam-Labs/linux/releases
 - Devario packaging: https://github.com/Seafoam-Labs/devario-custom-packagbuilds
 - Fedora COPR: https://copr.fedorainfracloud.org/coprs/sirlucjan/kernel-devario/
