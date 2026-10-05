@@ -5,7 +5,8 @@
 │   ├── kernel-cachyos-bore-lto
 │   │   └── kernel-cachyos-lto.spec
 │   ├── kernel-devario
-│   │   └── kernel-devario.spec
+│   │   ├── kernel-devario.spec
+│   │   └── README.md
 │   ├── scx-manager
 │   │   └── scx-manager.spec
 │   ├── scx-scheds
@@ -61,4 +62,4 @@
 │           └── PKGBUILD
 └── README.md
 
-30 directories, 32 files
+30 directories, 33 files
