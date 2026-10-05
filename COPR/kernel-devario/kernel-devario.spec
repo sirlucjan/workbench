@@ -255,6 +255,7 @@ Requires(pre):  coreutils
 Requires(pre):  dracut >= 027
 Requires(pre):  systemd >= 203-2
 Requires(pre):  ((linux-firmware >= 20150904-56.git6ebf5d57) if linux-firmware)
+Requires(posttrans): kmod
 Requires(preun):systemd >= 200
 Recommends:     linux-firmware
 
@@ -310,6 +311,8 @@ Provides:       kernel-modules-core-uname-r = %{_kver}
 Provides:       kernel-modules-extra-uname-r = %{_kver}
 Provides:       installonlypkg(kernel-module)
 Requires:       kernel-uname-r = %{_kver}
+Requires(posttrans): kmod
+Requires(posttrans): dracut
 
 %description modules
     This package provides kernel modules for the %{name}-core kernel package.
@@ -321,10 +324,10 @@ Requires:       kernel-uname-r = %{_kver}
     fi
 
 %posttrans modules
-    rm -f %{_localstatedir}/lib/rpm-state/%{name}/need_to_run_dracut_%{_kver}
     /sbin/depmod -a %{_kver}
     if [ ! -e /run/ostree-booted ]; then
         if [ -f %{_localstatedir}/lib/rpm-state/%{name}/need_to_run_dracut_%{_kver} ]; then
+            rm -f %{_localstatedir}/lib/rpm-state/%{name}/need_to_run_dracut_%{_kver}
             echo "Running: dracut -f --kver %{_kver}"
             dracut -f --kver "%{_kver}" || exit $?
         fi
