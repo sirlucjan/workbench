@@ -44,7 +44,7 @@
 Name:           kernel-devario
 Summary:        The Devario Linux kernel by Seafoam Labs, based on the stable kernel tree.
 Version:        %{_basekver}.%{_stablekver}
-Release:        %{_pkgrel}%{?dist}
+Release:        devario1%{_pkgrel}%{?dist}
 License:        GPL-2.0-only
 URL:            https://github.com/Seafoam-Labs/linux
 
