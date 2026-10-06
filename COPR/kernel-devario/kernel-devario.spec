@@ -14,13 +14,13 @@
 
 # Release suffix of the git tag in Seafoam-Labs/linux: devario-7.2.9-2 -> 2.
 # Bump it only when a new tag is published for the same kernel version.
-%define _tagrel 2
+%define _tagrel 3
 
 # RPM build number, independent of the tag. Bump it for every build that
 # should reach users: a new tag, or a plain COPR rebuild of the same tag
 # (new pahole, gcc, ...). Reset to 1 when _stablekver or _basekver changes.
 # Produces e.g. 7.2.9-devario1.fc43.
-%define _pkgrel 2
+%define _pkgrel 3
 
 %define _rpmver %{version}-%{release}
 %define _kver %{_rpmver}.%{_arch}
