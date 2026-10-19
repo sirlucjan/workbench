@@ -4,8 +4,8 @@
 %define llvm_min_ver 17
 %global _default_patch_fuzz 2
 %global commitdate 20261019
-%global commit 9c8084b3ed1b8ea1d2187ed34108906691dc27d8
-%global revision 1
+%global commit ef59f2910bfad7c6e3ff95003e8860faba1e6ac8
+%global revision 2
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # Available profiles: “release”, “release-tiny”, “release-fast“
 # See: https://github.com/sched-ext/scx/blob/main/Cargo.toml
@@ -66,7 +66,15 @@ find target/%{mode} \
     -maxdepth 1 -type f -executable ! -name '*.so' \
     -exec install -Dm755 -t %{buildroot}%{_bindir} {} +
 
+# Install the upstream systemd service and default configuration
+install -Dm644 services/scx.service %{buildroot}%{_unitdir}/scx.service
+install -Dm644 services/scx %{buildroot}%{_sysconfdir}/default/scx
+
 %files
 
 # Binaries
 %{_bindir}/*
+
+# systemd service and configuration
+%{_unitdir}/scx.service
+%config(noreplace) %{_sysconfdir}/default/scx
