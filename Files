@@ -29,8 +29,6 @@
 │   │   └── scx-manager.spec
 │   ├── scx-tools
 │   │   └── scx-tools.spec
-│   ├── scx-tools-dev-git
-│   │   └── scx-tools-dev-git.spec
 │   └── scx-tools-git
 │       └── scx-tools-git.spec
 ├── Devel
@@ -57,4 +55,4 @@
 │           └── PKGBUILD
 └── README.md
 
-27 directories, 31 files
+26 directories, 30 files
