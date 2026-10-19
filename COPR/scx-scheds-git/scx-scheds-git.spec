@@ -1,7 +1,7 @@
 %global _default_patch_fuzz 2
 %global commitdate 20261019
-%global commit 064f6e2c44826b4cd7188f1083db34c812104a4a
-%global revision 1
+%global commit e9cd670d94628cc52c7dfb0bebe3e5bd6d97ff9e
+%global revision 2
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 %define _disable_source_fetch 0
@@ -81,7 +81,15 @@ find target/%{mode} \
     -maxdepth 1 -type f -executable ! -name '*.so' \
     -exec install -Dm755 -t %{buildroot}%{_bindir} {} +
 
+# Install the upstream systemd service and default configuration
+install -Dm644 services/scx.service %{buildroot}%{_unitdir}/scx.service
+install -Dm644 services/scx %{buildroot}%{_sysconfdir}/default/scx
+
 %files
 
 # Binaries
 %{_bindir}/*
+
+# systemd service and configuration
+%{_unitdir}/scx.service
+%config(noreplace) %{_sysconfdir}/default/scx
