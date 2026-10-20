@@ -6,8 +6,6 @@
 │   │   ├── kernel-devario-lts.spec
 │   │   ├── kernel-devario.spec
 │   │   └── README.md
-│   ├── scx-manager
-│   │   └── scx-manager.spec
 │   ├── scx-scheds
 │   │   └── scx-scheds.spec
 │   ├── scx-scheds-dev-git
@@ -25,8 +23,6 @@
 │   │   └── scx-dev-git.spec
 │   ├── scx-git
 │   │   └── scx-git.spec
-│   ├── scx-manager
-│   │   └── scx-manager.spec
 │   └── scx-tools
 │       └── scx-tools.spec
 ├── Devel
@@ -53,4 +49,4 @@
 │           └── PKGBUILD
 └── README.md
 
-25 directories, 29 files
+23 directories, 27 files
