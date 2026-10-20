@@ -1,7 +1,7 @@
 %global _default_patch_fuzz 2
 %global commitdate 20261019
 %global commit ef59f2910bfad7c6e3ff95003e8860faba1e6ac8
-%global revision 2
+%global revision 3
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 %define _disable_source_fetch 0
@@ -41,7 +41,6 @@ Requires:  libseccomp
 Requires:  protobuf
 Requires:  zlib
 Requires:  jq
-Requires:  scx-tools
 Conflicts: scx-scheds
 Conflicts: scx-scheds-git
 Conflicts: scx_layered
