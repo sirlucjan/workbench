@@ -112,18 +112,6 @@ sudo zypper install scx-git scx-tools-git
 git clone https://github.com/sirlucjan/workbench.git
 ```
 
-or:
-
-```bash
-git clone https://gitlab.com/sirlucjan/workbench.git
-```
-
-or:
-
-```bash
-git clone https://codeberg.org/sirlucjan/workbench.git
-```
-
 ---
 
 ## ⚙️ Installation
