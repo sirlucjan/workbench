@@ -9,12 +9,12 @@
 %undefine _include_frame_pointers
 
 # Linux Kernel Versions
-%define _basekver 7.2
-%define _stablekver 13
+%define _basekver 7.3
+%define _stablekver 0
 
 # Release suffix of the git tag in Seafoam-Labs/linux: devario-7.2.9-2 -> 2.
 # Bump it only when a new tag is published for the same kernel version.
-%define _tagrel 1
+%define _tagrel 7
 
 # RPM build number, independent of the tag. Bump it for every build that
 # should reach users: a new tag, or a plain COPR rebuild of the same tag
