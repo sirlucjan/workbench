@@ -3,9 +3,11 @@
 │   ├── cargo-lbin
 │   │   └── cargo-lbin.spec
 │   ├── kernel-devario
-│   │   ├── kernel-devario-lts.spec
-│   │   ├── kernel-devario.spec
-│   │   └── README.md
+│   │   ├── lts
+│   │   │   └── kernel-devario-lts.spec
+│   │   ├── README.md
+│   │   └── stable
+│   │       └── kernel-devario.spec
 │   ├── scx-scheds
 │   │   └── scx-scheds.spec
 │   ├── scx-scheds-dev-git
@@ -49,4 +51,4 @@
 │           └── PKGBUILD
 └── README.md
 
-23 directories, 27 files
+25 directories, 27 files
