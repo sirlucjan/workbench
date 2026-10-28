@@ -3,9 +3,9 @@
 %define libbpf_min_ver 1.4
 %define llvm_min_ver 17
 %global _default_patch_fuzz 2
-%global commitdate 20261027
-%global commit abcc603de96a0809e74b4b266eea8e16419be567
-%global revision 3
+%global commitdate 20261029
+%global commit 5b0795a4d63b3c1ff2d4e8b401c5544c1a4652a1
+%global revision 1
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # Available profiles: “release”, “release-tiny”, “release-fast“
 # See: https://github.com/sched-ext/scx/blob/main/Cargo.toml
@@ -35,6 +35,7 @@ BuildRequires:  pkgconfig(systemd)
 BuildRequires: pkg-config
 BuildRequires: pkgconfig(openssl)
 BuildRequires: openssl-devel
+Recommends: polkit
 Conflicts: scx
 Conflicts: scx-dev-git
 Provides: scx = %{version}
@@ -53,7 +54,6 @@ cargo build \
      --frozen \
      --workspace \
      --exclude scx_rlfifo \
-     --exclude xtask \
      --exclude scx_characterize \
      --exclude vmlinux_docify \
      --exclude scx_arena_selftests \
@@ -63,12 +63,17 @@ cargo build \
 
 # Install all built executables (skip .so and .d files)
 find target/%{mode} \
-    -maxdepth 1 -type f -executable ! -name '*.so' \
+    -maxdepth 1 -type f -executable ! -name '*.so' ! -name 'xtask' \
     -exec install -Dm755 -t %{buildroot}%{_bindir} {} +
 
-# Install the upstream systemd service and default configuration
-install -Dm644 services/scx.service %{buildroot}%{_unitdir}/scx.service
-install -Dm644 services/scx %{buildroot}%{_sysconfdir}/default/scx
+# Runtime data via xtask: scx.service, /etc/default/scx,
+# /usr/share/scx/catalog.json, the scxcli polkit policy.
+# --source-dir keeps cargo out of %%install.
+./target/%{mode}/xtask install \
+    --source-dir . \
+    --destdir %{buildroot} \
+    --unitdir %{_unitdir} \
+    --polkitdir %{_datadir}/polkit-1/actions
 
 %files
 
@@ -78,3 +83,8 @@ install -Dm644 services/scx %{buildroot}%{_sysconfdir}/default/scx
 # systemd service and configuration
 %{_unitdir}/scx.service
 %config(noreplace) %{_sysconfdir}/default/scx
+
+# Scheduler catalog and the scxcli polkit policy
+%dir %{_datadir}/scx
+%{_datadir}/scx/catalog.json
+%{_datadir}/polkit-1/actions/org.sched_ext.scxcli.policy
