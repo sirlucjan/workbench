@@ -33,6 +33,8 @@
 │       │   ├── gitconfig-codium
 │       │   ├── gitconfig-codium-insiders
 │       │   └── gitignore
+│       ├── jj
+│       │   └── config-codium.toml
 │       └── scripts
 │           ├── app.sh
 │           ├── git-patching.sh
@@ -51,4 +53,4 @@
 │           └── PKGBUILD
 └── README.md
 
-25 directories, 27 files
+26 directories, 28 files

@@ -1,0 +1,250 @@
+# ~/.config/jj/config.toml — jj 0.46, VSCodium
+
+[user]
+name = "Piotr Gorski"
+email = "lucjan.lucjanov@gmail.com"
+
+[signing]
+backend = "gpg"
+key = "399521CE9D6D65B35EEF0F8C79AFA05ABDB26C5A"
+behavior = "own"
+# Sign only on push instead: behavior = "keep" + git.sign-on-push = true
+
+[ui]
+editor = ["codium", "--wait", "--reuse-window"]
+pager = "delta"
+diff-formatter = ":git"
+diff-editor = "vscodium"
+merge-editor = "vscodium"
+show-cryptographic-signatures = true
+tag-list-sort-keys = ["name"]
+
+[git]
+fetch = "origin"
+push = "origin"
+
+[remotes.origin]
+auto-track-bookmarks = "*"
+
+# Since 0.44 tags are fetched and git's tagOpt is ignored; per repo (jj config edit --repo):
+# [remotes.upstream]
+# fetch-tags = "~*"
+
+# [revset-aliases]
+# 'immutable_heads()' = 'builtin_immutable_heads() | remote_bookmarks("release")'
+
+# ==========================================================
+#                     ALIASES
+# ==========================================================
+[aliases]
+# --- basic ---
+df = ["diff"]
+ca = ["squash"]
+fx = ["squash", "-i"]
+br = ["bookmark", "list"]
+co = ["edit"]
+sw = ["new"]
+rb = ["rebase"]
+mg = ["new"]
+lg = ["log", "-r", "all()", "-T", "builtin_log_compact"]
+last = ["log", "-r", "@", "-n", "1"]
+vd = ["diff", "--tool", "vscodium"]
+
+# --- bookmarks ---
+mk = ["bookmark", "create"]
+rmbr = ["bookmark", "delete"]
+mvbr = ["bookmark", "rename"]
+up-main = ["rebase", "-o", "main"]
+sync = ["git", "push", "--all"]   # also pushes all tags (0.44+)
+
+# --- operations ---
+ops = ["op", "log", "-T", "builtin_op_log_compact"]
+oops = ["undo"]
+rdo = ["redo"]
+opshow = ["op", "show"]
+
+# --- log views ---
+dag = ["log", "-r", "all()", "-T", "builtin_log_compact"]
+graph = ["log", "-r", "all()", "-T", "builtin_log_compact_full_description"]
+smartlog = ["log", "-r", "trunk() | mine()", "-T", "builtin_log_compact"]
+tree = ["log", "-r", "trunk()", "-T", "builtin_log_compact"]
+oneline = ["log", "-r", "all()", "-T", "builtin_log_oneline"]
+full = ["log", "-r", "all()", "-T", "builtin_log_detailed"]
+gitlike-log = [
+  "log",
+  "-r",
+  'ancestors(remote_bookmarks("main"))',
+  "-T",
+  "builtin_log_compact"
+]
+gitlike-log-long = [
+  "log",
+  "-r",
+  'ancestors(remote_bookmarks("main"))',
+  "-T",
+  "builtin_log_detailed"
+]
+gitlike-graph = [
+  "log",
+  "-r",
+  'ancestors(remote_bookmarks("main"))',
+  "-T",
+  """
+  concat(
+    commit_id.short(),
+    ' (',
+    change_id.short(),
+    ') ',
+    description.first_line()
+  )
+  """
+]
+gitlike-ultra = [
+  "log",
+  "-r",
+  'ancestors(remote_bookmarks("main"))',
+  "-T",
+  """
+  concat(
+    label('yellow', change_id.short()), ' ',
+    label('bright_blue', commit_id.short()), '  ',
+    label('green', author.name()), ' <', author.email(), '>  ',
+    label('bright_black', committer.timestamp().format('%Y-%m-%d %H:%M')),
+    "\\n    ",
+    label('white', description.first_line()),
+    "\\n"
+  )
+  """
+]
+dual-short = [
+  "log",
+  "-r",
+  "all()",
+  "-T",
+  """
+  concat(
+    label('bold', change_id.short()), ' ',
+    label('blue', commit_id.short()), ' ',
+    label('yellow', description.first_line())
+  )
+  """
+]
+dual-long = [
+  "log",
+  "-r",
+  "all()",
+  "-T",
+  """
+  concat(
+    label('bold', change_id.short()), ' ',
+    label('blue', commit_id.short()), ' ',
+    label('green', concat(author.name(), ' <', author.email(), '>')), ' ',
+    label('bright_black', committer.timestamp().format("%Y-%m-%d %H:%M")), ' ',
+    label('yellow', description.first_line())
+  )
+  """
+]
+timeline = [
+  "log",
+  "-r=all()",
+  "-T",
+  "concat(commit_id.short(), ' | ', if(bookmarks, bookmarks.join(','), if(tags, tags.join(','), '-')), ' | ', description.first_line(), ' | ', author.email(), ' | ', committer.timestamp().ago())"
+]
+timeline-compact = [
+  "log",
+  "-r=all()",
+  "-T",
+  "concat(commit_id.short(), ' | ', if(bookmarks, bookmarks.join(','), if(tags, tags.join(','), '-')), ' | ', description.first_line())"
+]
+graph-me = [
+  "log",
+  "-r=all() & author('lucjan.lucjanov@gmail.com')",
+  "-T",
+  "concat(commit_id.short(), ' | ', if(bookmarks, bookmarks.join(','), if(tags, tags.join(','), '-')), ' | ', description.first_line(), ' | ', committer.timestamp().ago())"
+]
+
+# --- git ---
+push = ["git", "push"]
+pull = ["git", "fetch"]
+fetch = ["git", "fetch"]
+clone = ["git", "clone"]
+remote = ["git", "remote", "list"]
+
+# --- state ---
+head = ["log", "-r", "heads(trunk())", "-n", "5"]
+parents = ["log", "-r", "parents(@)"]
+files = ["file", "list"]
+sh = ["log", "-r", "@"]
+rev = ["log", "-r", "@", "-T", "builtin_log_detailed"]
+
+# --- cleanup / wip ---
+wip = ["commit", "-m", "WIP"]
+reset = ["rebase", "--skip-emptied", "-o", "trunk()"]
+
+# --- tags ---
+tg = ["tag", "set"]
+tags = ["tag", "list"]
+deltag = ["tag", "delete"]
+
+# --- info ---
+whoami = ["config", "get", "user.name"]
+mail = ["config", "get", "user.email"]
+ver = ["version"]
+hlp = ["help"]
+path = ["workspace", "root"]
+showcfg = ["config", "list", "--include-defaults"]
+
+# --- workspaces ---
+ws = ["workspace", "list"]
+newws = ["workspace", "add"]
+rmws = ["workspace", "forget"]
+
+# --- productivity ---
+ac = ["commit"]
+save = ["commit", "-m", "savepoint"]
+reword = ["describe"]
+base = ["rebase", "-o", "trunk()"]
+stage = ["diff", "--stat"]
+unstage = ["restore"]
+showme = ["log", "-r", "@", "-T", "builtin_log_compact_full_description"]
+
+# --- debug ---
+cfg = ["config", "list"]
+whereami = ["log", "-r", "@", "-T", "builtin_log_oneline"]
+
+# --- sandbox ---
+exp = ["new", "-m", "Experimental version"]
+check = ["new", "--no-edit"]
+recover = ["edit", "-r", "@-"]
+purge = ["rebase", "-s", "roots(trunk()..@)", "-o", "trunk()"]
+immut = ["log", "-r", "immutable_heads()"]
+
+# ==========================================================
+#                     TEMPLATES
+# ==========================================================
+[template-aliases]
+my_compact = """
+label(if(current_working_copy, 'cyan'),
+  concat(
+    if(current_working_copy, '@', ' '),
+    commit_id.short(),
+    ' ',
+    label('bold', description.first_line()),
+    ' ',
+    label('yellow', bookmarks.join(',')),
+    ' ',
+    label('green', author.email().local()),
+  )
+)
+"""
+my_detailed = """
+concat(
+  commit_id.short(), ' ',
+  label('bold', description.first_line()), "\\n",
+  'by ', label('green', author.name()), ' on ', committer.timestamp(), "\\n",
+  'bookmarks: ', label('yellow', bookmarks.join(',')), "\\n"
+)
+"""
+
+[templates]
+# log = "my_compact"
