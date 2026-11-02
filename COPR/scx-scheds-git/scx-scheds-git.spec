@@ -1,7 +1,7 @@
 %global _default_patch_fuzz 2
 %global commitdate 20261102
 %global commit b19726e95a8ec01af5f0661fb1821e750125f058
-%global revision 2
+%global revision 4
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 %define _disable_source_fetch 0
@@ -65,6 +65,11 @@ sched_ext is a Linux kernel feature which enables implementing kernel thread sch
 
 %build
 export CARGO_HOME=%{_builddir}/.cargo
+# Rust BPF schedulers: bpfel-unknown-none has no linker in its target spec,
+# so rustc may fall back to its default linker. Force bpf-linker;
+# scx_rustsched_build's inner cargo inherits these.
+export CARGO_TARGET_BPFEL_UNKNOWN_NONE_LINKER=bpf-linker
+export CARGO_TARGET_BPFEB_UNKNOWN_NONE_LINKER=bpf-linker
 cargo fetch --locked
 cargo build \
      --profile=%{mode} \
