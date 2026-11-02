@@ -1,7 +1,7 @@
 %global _default_patch_fuzz 2
 %global commitdate 20261102
 %global commit b19726e95a8ec01af5f0661fb1821e750125f058
-%global revision 1
+%global revision 2
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 %define _disable_source_fetch 0
@@ -23,6 +23,7 @@ BuildRequires:  git
 BuildRequires:  python
 BuildRequires:  cargo
 BuildRequires:  rust
+BuildRequires:  rust-src
 BuildRequires:  clang >= 17
 BuildRequires:  llvm >= 17
 BuildRequires:  lld >= 17
@@ -33,6 +34,8 @@ BuildRequires:  jq
 BuildRequires:  jq-devel
 BuildRequires:  systemd
 BuildRequires:  bpftool
+# Not in Fedora; built in this COPR project (needed for Rust BPF schedulers)
+BuildRequires:  bpf-linker
 BuildRequires:  protobuf-compiler
 BuildRequires:  libseccomp-devel
 BuildRequires: openssl-devel
