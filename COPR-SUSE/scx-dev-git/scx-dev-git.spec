@@ -5,7 +5,7 @@
 %global _default_patch_fuzz 2
 %global commitdate 20261102
 %global commit 4c54b38b01d8dc6b3126f591da83f7723b5620fc
-%global revision 3
+%global revision 4
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # Available profiles: “release”, “release-tiny”, “release-fast“
 # See: https://github.com/sched-ext/scx/blob/main/Cargo.toml
@@ -19,6 +19,8 @@ License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
 Source0:        %{URL}/archive/%{commit}/scx-%{commit}.tar.gz
 
+# Not in openSUSE; built in this COPR project (needed for Rust BPF schedulers)
+BuildRequires:  bpf-linker
 BuildRequires:  bpftool >= 7.5.0
 BuildRequires:  clang >= %{llvm_min_ver}
 BuildRequires:  jq
@@ -27,6 +29,7 @@ BuildRequires:  lld
 BuildRequires:  llvm >= %{llvm_min_ver}
 BuildRequires:  pkgconfig
 BuildRequires:  rust+cargo >= 1.82
+BuildRequires:  rust-src
 BuildRequires:  zstd
 BuildRequires:  pkgconfig(libbpf) >= %{libbpf_min_ver}
 BuildRequires:  pkgconfig(libseccomp)
