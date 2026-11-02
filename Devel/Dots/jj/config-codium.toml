@@ -14,7 +14,7 @@ behavior = "own"
 editor = ["codium", "--wait", "--reuse-window"]
 pager = "delta"
 diff-formatter = ":git"
-diff-editor = "vscodium"
+diff-editor = ":builtin"   # presets vscode/vscodium have edit-args = [] -> cannot edit diffs
 merge-editor = "vscodium"
 show-cryptographic-signatures = true
 tag-list-sort-keys = ["name"]
