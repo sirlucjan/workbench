@@ -43,26 +43,26 @@ Here you can find test builds compiled in **Rust (cargo)** for **Fedora**.
 2. Install `scx-scheds`:
 
    ```bash
-   sudo dnf install scx-scheds scx-manager scx-tools
+   sudo dnf install scx-scheds
    ```
 
    **For Fedora Silverblue / Kinoite:**
 
    ```bash
-   sudo rpm-ostree install scx-scheds scx-manager scx-tools
+   sudo rpm-ostree install scx-scheds
    sudo systemctl reboot
    ```
 
 3. Install the `scx-scheds-git` version:
 
    ```bash
-   sudo dnf install scx-scheds-git scx-tools-git
+   sudo dnf install scx-scheds-git
    ```
 
    **For Fedora Silverblue / Kinoite:**
 
    ```bash
-   sudo rpm-ostree install scx-scheds-git scx-tools-git
+   sudo rpm-ostree install scx-scheds-git
    sudo systemctl reboot
    ```
    
@@ -77,9 +77,7 @@ Packages are also available for **openSUSE** via COPR:
 
 These packages differ from openSUSE builds:
 
-* fully compiled with **Cargo** (instead of Meson used in openSUSE specs),
-* include **[scx-manager](https://github.com/CachyOS/scx-manager)** — a tool for managing schedulers in GUI.
-* provides full support for scx_loader and scxctl
+* fully compiled with **Cargo** (instead of Meson used in openSUSE specs)
 
 To add the repository manually (example for openSUSE Tumbleweed):
 
@@ -92,14 +90,14 @@ Then install the packages:
 
 ```bash
 sudo zypper refresh
-sudo zypper install scx scx-manager scx-tools
+sudo zypper install scx
 ```
 
 You can also install -git version of scx:
 
 ```bash
 sudo zypper refresh
-sudo zypper install scx-git scx-tools-git
+sudo zypper install scx-git
 ```
 
 📖 Usage guide available in the [CachyOS wiki](https://wiki.cachyos.org/configuration/sched-ext/).
@@ -129,9 +127,6 @@ Both the Fedora and openSUSE builds support selecting one of three Cargo build p
 
 - **scx-scheds**  
   https://github.com/sched-ext/scx/blob/main/Cargo.toml
-
-- **scx-tools (scxctl & scx-loader)**  
-  https://github.com/sched-ext/scx-loader/blob/main/Cargo.toml
 
 Available profiles:
 
