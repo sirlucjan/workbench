@@ -10,7 +10,7 @@
 
 Name:           scx
 Version:        1.1.4
-Release:        3
+Release:        4
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
@@ -35,8 +35,14 @@ BuildRequires:  pkgconfig(systemd)
 BuildRequires: pkgconfig(openssl)
 BuildRequires: openssl-devel
 Recommends: polkit
+# Exactly one scx variant can be installed.
 Conflicts: scx-git
 Conflicts: scx-dev-git
+# scx-tools cannot work alongside this package; installing or upgrading to
+# it removes whichever scx-tools variant is installed.
+Obsoletes: scx-tools
+Obsoletes: scx-tools-git
+Obsoletes: scx-tools-dev-git
 
 %description
 sched_ext is a Linux kernel feature which enables implementing kernel thread schedulers in BPF and dynamically loading them. This package contains various scheduler implementations and support utilities.
