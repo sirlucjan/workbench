@@ -1,7 +1,7 @@
 %global _default_patch_fuzz 2
 %global commitdate 20261104
 %global commit b0efa3f614c0187df4cb3202d7b514d401f77d2a
-%global revision 1
+%global revision 2
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 %define _disable_source_fetch 0
@@ -76,21 +76,6 @@ cargo fetch --locked
 rustc -vV
 bpf-linker --version
 
-# Rust BPF schedulers (those built through scx_rustsched_build) need the
-# BPF backend of LLVM >= 23: LLVM 22 (Fedora 44) rejects the memset() LLVM
-# emits for zeroed structs. Leave them out there instead of failing.
-# rustc and bpf-linker both use the system LLVM; llvm-config is not in the
-# buildroot (llvm-devel), so take the version from rustc.
-LLVM_MAJOR=$(rustc -vV | sed -n 's/^LLVM version: \([0-9]*\).*/\1/p')
-RUST_BPF_EXCLUDE=""
-if [ "${LLVM_MAJOR:-0}" -lt 23 ]; then
-    for toml in $(grep -rl --include=Cargo.toml 'scx_rustsched_build' scheds); do
-        pkg=$(sed -n 's/^name *= *"\(.*\)"/\1/p' "$toml" | head -n1)
-        [ -n "$pkg" ] && RUST_BPF_EXCLUDE="$RUST_BPF_EXCLUDE --exclude $pkg"
-    done
-    echo "LLVM ${LLVM_MAJOR} < 23, skipping Rust BPF schedulers:$RUST_BPF_EXCLUDE"
-fi
-
 cargo build \
      --profile=%{mode} \
      --frozen \
@@ -99,8 +84,7 @@ cargo build \
      --exclude scx_characterize \
      --exclude vmlinux_docify \
      --exclude scx_arena_selftests \
-     --exclude scx_arena_libarena_selftests \
-     $RUST_BPF_EXCLUDE
+     --exclude scx_arena_libarena_selftests
 
 %install
 
