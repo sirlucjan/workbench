@@ -1,7 +1,7 @@
 %global _default_patch_fuzz 2
 %global commitdate 20261104
 %global commit b0efa3f614c0187df4cb3202d7b514d401f77d2a
-%global revision 2
+%global revision 3
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 %define _disable_source_fetch 0
@@ -45,17 +45,22 @@ Requires:  protobuf
 Requires:  zlib
 Requires:  jq
 Recommends: polkit
+# Exactly one scx-scheds variant can be installed.
 Conflicts: scx-scheds
-Conflicts: scx-scheds-git
-Conflicts: scx_layered
-Conflicts: scx_rustland
-Conflicts: scx_rusty
-Conflicts: rust-scx_utils-devel
-Provides: scx-scheds = %{version}
-Provides: scx_layered
-Provides: scx_rustland
-Provides: scx_rusty
-Provides: rust-scx_utils-devel
+Conflicts: scx-scheds-dev-git
+Provides: scx-scheds = %{version}-%{release}
+# The schedulers these once separate packages shipped are in this one.
+Provides: scx_layered = %{version}-%{release}
+Obsoletes: scx_layered < %{version}-%{release}
+Provides: scx_rustland = %{version}-%{release}
+Obsoletes: scx_rustland < %{version}-%{release}
+Provides: scx_rusty = %{version}-%{release}
+Obsoletes: scx_rusty < %{version}-%{release}
+# scx-tools cannot work alongside this package; installing or upgrading to
+# it removes whichever scx-tools variant is installed.
+Obsoletes: scx-tools
+Obsoletes: scx-tools-git
+Obsoletes: scx-tools-dev-git
 
 %description
 sched_ext is a Linux kernel feature which enables implementing kernel thread schedulers in BPF and dynamically loading them. This repository contains various scheduler implementations and support utilities.
