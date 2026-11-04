@@ -1,7 +1,7 @@
 %global _default_patch_fuzz 2
 %global commitdate 20261104
 %global commit b0efa3f614c0187df4cb3202d7b514d401f77d2a
-%global revision 3
+%global revision 4
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 %define _disable_source_fetch 0
@@ -21,12 +21,13 @@ Source0:        %{URL}/archive/%{commit}/scx-%{commit}.tar.gz
 BuildRequires:  gcc
 BuildRequires:  git
 BuildRequires:  python
-BuildRequires:  cargo
-BuildRequires:  rust
+# The workspace's rust-version (MSRV).
+BuildRequires:  cargo >= 1.91
+BuildRequires:  rust >= 1.91
 BuildRequires:  rust-src
-BuildRequires:  clang >= 17
-BuildRequires:  llvm >= 17
-BuildRequires:  lld >= 17
+BuildRequires:  clang >= 21
+BuildRequires:  llvm >= 21
+BuildRequires:  lld >= 21
 BuildRequires:  elfutils-libelf
 BuildRequires:  elfutils-libelf-devel
 BuildRequires:  zlib
@@ -56,11 +57,14 @@ Provides: scx_rustland = %{version}-%{release}
 Obsoletes: scx_rustland < %{version}-%{release}
 Provides: scx_rusty = %{version}-%{release}
 Obsoletes: scx_rusty < %{version}-%{release}
-# scx-tools cannot work alongside this package; installing or upgrading to
-# it removes whichever scx-tools variant is installed.
-Obsoletes: scx-tools
-Obsoletes: scx-tools-git
-Obsoletes: scx-tools-dev-git
+# scx-tools cannot work alongside this package: never install them together.
+Conflicts: scx-tools
+Conflicts: scx-tools-git
+Conflicts: scx-tools-dev-git
+# Upgrade path: the matching scx-tools variant, up to scx-loader 1.1.3, is
+# replaced by this package. The other two only conflict, so that an upgrade
+# never picks a variant for them.
+Obsoletes: scx-tools-git < 1.1.4
 
 %description
 sched_ext is a Linux kernel feature which enables implementing kernel thread schedulers in BPF and dynamically loading them. This repository contains various scheduler implementations and support utilities.
