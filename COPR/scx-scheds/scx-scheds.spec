@@ -7,7 +7,7 @@
 
 Name:           scx-scheds
 Version:        1.1.4
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
 License:        GPL=2.0
@@ -41,16 +41,21 @@ Requires:  protobuf
 Requires:  zlib
 Requires:  jq
 Recommends: polkit
+# Exactly one scx-scheds variant can be installed.
 Conflicts: scx-scheds-git
 Conflicts: scx-scheds-dev-git
-Conflicts: scx_layered
-Conflicts: scx_rustland
-Conflicts: scx_rusty
-Conflicts: rust-scx_utils-devel
-Provides: scx_layered
-Provides: scx_rustland
-Provides: scx_rusty
-Provides: rust-scx_utils-devel
+# The schedulers these once separate packages shipped are in this one.
+Provides: scx_layered = %{version}-%{release}
+Obsoletes: scx_layered < %{version}-%{release}
+Provides: scx_rustland = %{version}-%{release}
+Obsoletes: scx_rustland < %{version}-%{release}
+Provides: scx_rusty = %{version}-%{release}
+Obsoletes: scx_rusty < %{version}-%{release}
+# scx-tools cannot work alongside this package; installing or upgrading to
+# it removes whichever scx-tools variant is installed.
+Obsoletes: scx-tools
+Obsoletes: scx-tools-git
+Obsoletes: scx-tools-dev-git
 
 %description
 sched_ext is a Linux kernel feature which enables implementing kernel thread schedulers in BPF and dynamically loading them. This repository contains various scheduler implementations and support utilities.
