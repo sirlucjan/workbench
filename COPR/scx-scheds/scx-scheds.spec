@@ -1,13 +1,13 @@
 %define _disable_source_fetch 0
 # Packaged as upstream 1.1.4; the sources are the Seafoam Labs tag below.
-%global tagver 1.1.5-devario4
+%global tagver 1.1.5-devario5
 # Available profiles: “release”, “release-tiny”, “release-fast“
 # See: https://github.com/sched-ext/scx/blob/main/Cargo.toml
 %global mode release
 
 Name:           scx-scheds
 Version:        1.1.4
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
 License:        GPL=2.0
