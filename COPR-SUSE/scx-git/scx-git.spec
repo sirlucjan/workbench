@@ -1,11 +1,11 @@
 %define _disable_source_fetch 0
 %define _lto_cflags %{nil}
 %define libbpf_min_ver 1.4
-%define llvm_min_ver 17
+%define llvm_min_ver 21
 %global _default_patch_fuzz 2
 %global commitdate 20261104
 %global commit b0efa3f614c0187df4cb3202d7b514d401f77d2a
-%global revision 2
+%global revision 3
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # Available profiles: “release”, “release-tiny”, “release-fast“
 # See: https://github.com/sched-ext/scx/blob/main/Cargo.toml
@@ -28,7 +28,8 @@ BuildRequires:  libbpf-devel >= %{libbpf_min_ver}
 BuildRequires:  lld
 BuildRequires:  llvm >= %{llvm_min_ver}
 BuildRequires:  pkgconfig
-BuildRequires:  rust+cargo >= 1.82
+# The workspace's rust-version (MSRV).
+BuildRequires:  rust+cargo >= 1.91
 BuildRequires:  rust-src
 BuildRequires:  zstd
 BuildRequires:  pkgconfig(libbpf) >= %{libbpf_min_ver}
@@ -43,11 +44,14 @@ Recommends: polkit
 Conflicts: scx
 Conflicts: scx-dev-git
 Provides: scx = %{version}-%{release}
-# scx-tools cannot work alongside this package; installing or upgrading to
-# it removes whichever scx-tools variant is installed.
-Obsoletes: scx-tools
-Obsoletes: scx-tools-git
-Obsoletes: scx-tools-dev-git
+# scx-tools cannot work alongside this package: never install them together.
+Conflicts: scx-tools
+Conflicts: scx-tools-git
+Conflicts: scx-tools-dev-git
+# Upgrade path: the matching scx-tools variant, up to scx-loader 1.1.3, is
+# replaced by this package. The other two only conflict, so that an upgrade
+# never picks a variant for them.
+Obsoletes: scx-tools-git < 1.1.4
 
 %description
 sched_ext is a Linux kernel feature which enables implementing kernel thread schedulers in BPF and dynamically loading them. This package contains various scheduler implementations and support utilities.
