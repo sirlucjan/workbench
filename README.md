@@ -22,10 +22,18 @@ Available versions for **Codium** and **Codium Insiders**
 
 ---
 
-## 📦 COPR (Fedora 44/45/rawhide - also Silverblue and Kinoite)
+## 📦 COPR (Fedora 44/45/Rawhide - also Silverblue and Kinoite)
 
-The **scx-scheds** project will soon [switch](https://github.com/sched-ext/scx/discussions/2731) from **Meson** to **Cargo**.
-Here you can find test builds compiled in **Rust (cargo)** for **Fedora**.
+The **scx-scheds** packages in this Fedora COPR are built with **Cargo** from
+[Seafoam Labs internal releases](https://github.com/Seafoam-Labs/scx/tags).
+These releases (`v1.1.5-devarioN` tags) are snapshots taken directly from the
+upstream [`sched-ext/scx` `main` branch](https://github.com/sched-ext/scx),
+without additional downstream commits or patches. They provide fixed integration
+points for Devario's desktop environment, rather than a separate development fork
+or a guarantee of stability.
+
+**Note:** `scx_loader` is no longer provided by this COPR. For scheduler
+management, use `scx.service`, `scxcli`, or `scxtui` instead.
 
 1. Enable the [COPR](https://copr.fedorainfracloud.org/coprs/sirlucjan/scx-scheds-cargo/) repository:
 
@@ -72,12 +80,19 @@ Here you can find test builds compiled in **Rust (cargo)** for **Fedora**.
 
 ## 📦 COPR (openSUSE Tumbleweed)
 
-Packages are also available for **openSUSE** via COPR:
+The **scx** packages in this openSUSE COPR are built with **Cargo** from
+[Seafoam Labs internal releases](https://github.com/Seafoam-Labs/scx/tags).
+These releases (`v1.1.5-devarioN` tags) are snapshots taken directly from the
+upstream [`sched-ext/scx` `main` branch](https://github.com/sched-ext/scx),
+without additional downstream commits or patches. They provide fixed integration
+points for Devario's desktop environment, rather than a separate development fork
+or a guarantee of stability.
+
+**Note:** `scx_loader` is no longer provided by this COPR. For scheduler
+management, use `scx.service`, `scxcli`, or `scxtui` instead.
+
+Packages are available via COPR:
 👉 [sirlucjan/scx-scheds-suse](https://copr.fedorainfracloud.org/coprs/sirlucjan/scx-scheds-suse/packages/)
-
-These packages differ from openSUSE builds:
-
-* fully compiled with **Cargo** (instead of Meson used in openSUSE specs)
 
 To add the repository manually (example for openSUSE Tumbleweed):
 
