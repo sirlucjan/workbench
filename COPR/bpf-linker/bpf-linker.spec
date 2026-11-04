@@ -1,6 +1,6 @@
 %define _disable_source_fetch 0
 %define _version 0.12.0
-%define _rpmrel 4
+%define _rpmrel 5
 
 %global _description %{expand:
 bpf-linker is a BPF static linker. It links multiple BPF object
@@ -51,14 +51,25 @@ chmod +x rustup-init
     --default-toolchain stable \
     --no-modify-path
 
-# Use Fedora's LLVM 23.
+# Build against the chroot's LLVM, with the matching llvm-NN feature.
+# The feature must match the LLVM linked in: bpf-linker built with llvm-21
+# or llvm-22 ignores the memset()/memcpy() errors those versions' BPF
+# backend reports for libcalls the runtime supplies, and one built with
+# llvm-23 does not, so llvm-23 on LLVM 22 (Fedora 44) breaks Rust BPF
+# schedulers with "A call to built-in function 'memset' is not supported".
 export LLVM_CONFIG=llvm-config
+LLVM_MAJOR=$(llvm-config --version | cut -d. -f1)
+case "${LLVM_MAJOR}" in
+    21|22|23) ;;
+    *) echo "bpf-linker %{version} supports LLVM 21-23, found ${LLVM_MAJOR}" >&2; exit 1 ;;
+esac
+echo "Building bpf-linker with --features llvm-${LLVM_MAJOR}"
 
 cargo build \
     --release \
     --locked \
     --no-default-features \
-    --features llvm-23
+    --features llvm-${LLVM_MAJOR}
 
 %install
 install -Dpm0755 target/release/bpf-linker \
@@ -73,5 +84,8 @@ chrpath -d %{buildroot}%{_bindir}/bpf-linker
 %{_bindir}/bpf-linker
 
 %changelog
+* Wed Nov 04 2026 Piotr Gorski <lucjan.lucjanov@gmail.com> - 0.12.0-5
+- Pick the llvm-NN feature from the chroot's LLVM instead of llvm-23
+
 * Mon Nov 02 2026 OdzioM - 0.12.0-1
 - Initial package
