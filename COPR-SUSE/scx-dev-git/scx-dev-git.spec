@@ -5,7 +5,7 @@
 %global _default_patch_fuzz 2
 %global commitdate 20261104
 %global commit afdb3ac3c8179892010f80a96282343c1f9c3eeb
-%global revision 1
+%global revision 2
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # Available profiles: “release”, “release-tiny”, “release-fast“
 # See: https://github.com/sched-ext/scx/blob/main/Cargo.toml
@@ -38,9 +38,15 @@ BuildRequires:  pkgconfig(systemd)
 BuildRequires: pkgconfig(openssl)
 BuildRequires: openssl-devel
 Recommends: polkit
+# Exactly one scx variant can be installed.
 Conflicts: scx
 Conflicts: scx-git
-Provides: scx = %{version}
+Provides: scx = %{version}-%{release}
+# scx-tools cannot work alongside this package; installing or upgrading to
+# it removes whichever scx-tools variant is installed.
+Obsoletes: scx-tools
+Obsoletes: scx-tools-git
+Obsoletes: scx-tools-dev-git
 
 %description
 sched_ext is a Linux kernel feature which enables implementing kernel thread schedulers in BPF and dynamically loading them. This package contains various scheduler implementations and support utilities.
