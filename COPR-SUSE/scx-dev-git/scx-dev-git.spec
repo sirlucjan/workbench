@@ -4,8 +4,8 @@
 %define llvm_min_ver 21
 %global _default_patch_fuzz 2
 %global commitdate 20261105
-%global commit d93f9642462e4d3846c3849c2c47b9238a3d283e
-%global revision 1
+%global commit 6a7f7f2b2124e61d377e623d49e4fdcaf56d8fcf
+%global revision 2
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # Available profiles: “release”, “release-tiny”, “release-fast“
 # See: https://github.com/sched-ext/scx/blob/main/Cargo.toml
