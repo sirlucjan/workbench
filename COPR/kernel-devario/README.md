@@ -1,147 +1,164 @@
 # Devario Linux Kernel for Fedora
 
-Devario Linux kernel packages for Fedora, built from the [Seafoam Labs Linux tree](https://github.com/Seafoam-Labs/linux).
+Fedora packages of the **Devario Linux kernel**, maintained by
+[Seafoam Labs](https://github.com/Seafoam-Labs/linux). These packages provide
+an alternative regular kernel and an LTS kernel for Fedora systems.
 
-Devario provides both a current kernel based on the Linux 7.2 stable series and an LTS kernel based on Linux 6.18. Both carry a curated Devario patch set focused on predictable behavior, hardware support, regression fixes, and sched-ext compatibility rather than a large experimental performance patch stack.
+- **Regular:** Linux **7.3** series in the current Devario packaging tree.
+- **LTS:** Linux **6.18** long-term series.
 
-## Features
+The kernel is maintained as a separate source tree with a curated selection
+of fixes and optimizations, including patches originating from CachyOS.
+Its priority is predictable behavior, hardware support, regression fixes,
+and `sched_ext` compatibility rather than a broad experimental performance
+patch stack. Actual RPM versions and Fedora release availability depend on
+the latest successful COPR builds.
 
-- Current kernel based on the Linux 7.2 stable series.
-- LTS kernel based on the Linux 6.18 long-term series.
-- Curated Devario kernel patch set.
+## Features and policy
+
+- An EEVDF-based Linux kernel with `sched_ext` support.
 - Official builds target **x86-64-v3**.
-- sched-ext support.
-- Selected hardware and regression fixes.
-- ACS Override support.
-- Additional timer-frequency options.
-- Intel P-State controls.
-- VHBA support.
-- ADIOS I/O scheduler updates.
-- TSC synchronization work.
-- x86-64 ISA-level support.
-- ZSTD-compressed kernel modules.
+- Selected hardware enablement, compatibility and regression fixes.
+- Curated kernel patches, including selected work from CachyOS.
+- Alternative timer-frequency and build-time configuration options, where
+  supported by the corresponding Devario source branch.
+- ZSTD-compressed modules in the Devario kernel packaging.
 
-For the exact patch set included in a release, see the [Devario Linux releases](https://github.com/Seafoam-Labs/linux/releases).
+Features are **branch-specific**. Not every out-of-tree patch is carried by
+both the regular and LTS kernels, and no benchmark gain alone guarantees that
+an upstream release-candidate patch is safe to backport. Riskier changes
+should be tested separately before inclusion in stable builds.
+
+See the [Devario Linux releases](https://github.com/Seafoam-Labs/linux/releases)
+for the source corresponding to a particular build.
 
 ## CPU requirements
 
-Official Fedora builds target **x86-64-v3**.
-
-Before installing, verify that your CPU supports the v3 baseline:
+The published Devario Fedora builds described here target **x86-64-v3**.
+Check that your processor supports it before installing:
 
 ```bash
-/lib64/ld-linux-x86-64.so.2 --help | grep "(supported, searched)"
+/lib64/ld-linux-x86-64.so.2 --help | grep 'x86-64-v3'
 ```
 
-A kernel built for x86-64-v3 may use instructions unavailable on older CPUs and therefore requires compatible hardware.
+Look for a `supported` indication. The requirement applies to the kernel
+binary itself; older x86-64 CPUs may not boot these builds.
 
 ## Installation
 
-### Fedora Workstation
+### Fedora Workstation and other DNF-based editions
 
-Enable the COPR repository hosting the Devario kernel:
+Enable the repository:
 
 ```bash
 sudo dnf copr enable sirlucjan/kernel-devario
 ```
 
-Then install either the current kernel:
+Install the regular kernel and matching development package:
 
 ```bash
 sudo dnf install kernel-devario kernel-devario-devel-matched
 ```
 
-or the Linux 6.18 LTS kernel:
+Or install the 6.18 LTS track:
 
 ```bash
 sudo dnf install kernel-devario-lts kernel-devario-lts-devel-matched
 ```
 
-Keeping Fedora's stock kernel installed as a fallback is recommended.
+The commands above use the package names from this COPR's documented
+installation scheme; verify availability for your Fedora release. **Keep at
+least one stock Fedora kernel** as a fallback, and test a new kernel before
+removing a previously working boot option.
 
-If SELinux prevents kernel modules from being loaded, enable the required policy:
+### Fedora Silverblue / Kinoite (rpm-ostree)
+
+Download the repository definition for your Fedora release:
 
 ```bash
-sudo setsebool -P domain_kernel_load_modules on
+sudo curl -fL -o /etc/yum.repos.d/sirlucjan-kernel-devario.repo \
+  "https://copr.fedorainfracloud.org/coprs/sirlucjan/kernel-devario/repo/fedora-$(rpm -E %fedora)/sirlucjan-kernel-devario-fedora-$(rpm -E %fedora).repo"
 ```
 
-### Fedora Silverblue / Kinoite
-
-Enable the repository first, then replace the Fedora kernel packages with the Devario kernel:
+For the regular kernel, create a new deployment with an override:
 
 ```bash
-cd /etc/yum.repos.d/
-sudo wget "https://copr.fedorainfracloud.org/coprs/sirlucjan/kernel-devario/repo/fedora-$(rpm -E %fedora)/sirlucjan-kernel-devario-fedora-$(rpm -E %fedora).repo"
-
 sudo rpm-ostree override remove \
-  kernel \
-  kernel-core \
-  kernel-modules \
-  kernel-modules-core \
-  kernel-modules-extra \
+  kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra \
   --install kernel-devario
-
 sudo systemctl reboot
 ```
 
-For the Linux 6.18 LTS kernel, use:
+For the LTS track, use `--install kernel-devario-lts` instead. These are
+alternative commands, not steps to perform one after the other. Keep a
+working previous deployment and consult `rpm-ostree status` before changing
+or rolling back the kernel.
+
+## Choosing the default kernel
+
+On classic Fedora editions where `grubby` manages the boot entries, inspect
+the available entries first:
 
 ```bash
-sudo rpm-ostree override remove \
-  kernel \
-  kernel-core \
-  kernel-modules \
-  kernel-modules-core \
-  kernel-modules-extra \
-  --install kernel-devario-lts
-
-sudo systemctl reboot
+sudo grubby --info=ALL
 ```
 
-## Setting Devario as the default kernel
-
-Fedora normally boots the most recently updated kernel. If both the Fedora and Devario kernels are installed, a Fedora kernel update may become the default again.
-
-You can explicitly select the latest Devario kernel with `grubby`:
+Select the **specific** Devario kernel image you want, rather than blindly
+assuming the newest kernel is on the desired regular or LTS track:
 
 ```bash
-sudo grubby --set-default="$(ls /boot/vmlinuz-*devario* | sort -V | tail -1)"
+sudo grubby --set-default /boot/vmlinuz-<selected-devario-kernel-version>
 ```
 
-Keeping the Fedora kernel installed provides a convenient fallback if a Devario update causes problems.
+This `grubby` example is not intended for rpm-ostree systems.
 
 ## sched-ext
 
-The kernel supports sched-ext userspace schedulers.
-
-Seafoam/Devario-compatible sched-ext packages for Fedora are available from the dedicated COPR repository:
+These kernels support the `sched_ext` framework for userspace CPU
+schedulers. The separately maintained Fedora COPR for sched-ext is:
 
 https://copr.fedorainfracloud.org/coprs/sirlucjan/scx-scheds-cargo/
 
-Enable the repository and install the schedulers and loader tools with:
-
 ```bash
 sudo dnf copr enable sirlucjan/scx-scheds-cargo
-sudo dnf install scx-scheds scx-tools
+sudo dnf install scx-scheds
 ```
 
-`scxctl` can then be used to start, stop, and switch schedulers and profiles.
+The newer sched-ext integration uses **`scx.service`** and, in builds that
+include it, **`scxtui`**. It does not require the old `scx_loader`/`scxctl`
+workflow. Check the installed package contents and its version before
+using these commands:
 
-Upstream sched-ext:
+```bash
+scxtui --cli list
+scxtui --cli get
+systemctl status scx.service
+```
 
-https://github.com/sched-ext/scx
+A discovered scheduler is not necessarily compatible with every kernel;
+failed launches should be checked with `journalctl -u scx.service`.
+
+Upstream: https://github.com/sched-ext/scx
 
 ## Sources
 
-- Devario Linux kernel tree: https://github.com/Seafoam-Labs/linux
-- Linux 7.2 base branch: https://github.com/Seafoam-Labs/linux/tree/7.2/base
-- Linux 6.18 LTS base branch: https://github.com/Seafoam-Labs/linux/tree/6.18/base
-- Devario Linux releases: https://github.com/Seafoam-Labs/linux/releases
-- Devario packaging: https://github.com/Seafoam-Labs/devario-custom-packagbuilds
+- Kernel source: https://github.com/Seafoam-Labs/linux
+- Regular source branch: https://github.com/Seafoam-Labs/linux/tree/7.3/base
+- LTS source branch: https://github.com/Seafoam-Labs/linux/tree/6.18/base
+- Kernel source releases: https://github.com/Seafoam-Labs/linux/releases
+- Arch/Devario packaging: https://github.com/Seafoam-Labs/devario-custom-packagbuilds
 - Fedora kernel COPR: https://copr.fedorainfracloud.org/coprs/sirlucjan/kernel-devario/
 - Fedora sched-ext COPR: https://copr.fedorainfracloud.org/coprs/sirlucjan/scx-scheds-cargo/
-- Seafoam Labs: https://github.com/Seafoam-Labs
+
+## Credits and provenance
+
+The Devario kernel incorporates selected patches and optimizations from the
+[CachyOS kernel](https://github.com/CachyOS/linux-cachyos). We acknowledge
+**Peter Jung (ptr1337), Eric Naim, Vasiliy Stelmachenok**, and other CachyOS
+contributors, as well as the upstream Linux kernel developers. Devario
+maintains its own kernel tree, source releases and distribution packages.
 
 ## License
 
-The Linux kernel is licensed under `GPL-2.0-only`.
+The Linux kernel is licensed under `GPL-2.0-only`, subject to the licenses
+of the individual components included in its source tree.
