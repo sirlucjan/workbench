@@ -1,4 +1,4 @@
-# ~/.config/jj/config.toml — jj 0.46, VSCodium
+# ~/.config/jj/config.toml — jj 0.47, VSCodium
 
 [user]
 name = "Piotr Gorski"
@@ -8,7 +8,8 @@ email = "lucjan.lucjanov@gmail.com"
 backend = "gpg"
 key = "399521CE9D6D65B35EEF0F8C79AFA05ABDB26C5A"
 behavior = "own"
-# Sign only on push instead: behavior = "keep" + git.sign-on-push = true
+# Sign only on push instead: behavior = "keep" +
+# [revsets] git-sign-on-push = "~signed() & mine()"   (git.sign-on-push is deprecated in 0.47.1)
 
 [ui]
 editor = ["codium", "--wait", "--reuse-window"]
