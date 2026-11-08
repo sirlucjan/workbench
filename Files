@@ -14,10 +14,8 @@
 │   │   └── scx-scheds.spec
 │   ├── scx-scheds-dev-git
 │   │   └── scx-scheds-dev-git.spec
-│   ├── scx-scheds-git
-│   │   └── scx-scheds-git.spec
-│   └── scx-tools
-│       └── scx-tools.spec
+│   └── scx-scheds-git
+│       └── scx-scheds-git.spec
 ├── COPR-SUSE
 │   ├── bpf-linker
 │   │   └── bpf-linker.spec
@@ -27,25 +25,17 @@
 │   │   └── scx.spec
 │   ├── scx-dev-git
 │   │   └── scx-dev-git.spec
-│   ├── scx-git
-│   │   └── scx-git.spec
-│   └── scx-tools
-│       └── scx-tools.spec
+│   └── scx-git
+│       └── scx-git.spec
 ├── Devel
 │   └── Dots
 │       ├── git
 │       │   ├── gitconfig-codium
 │       │   ├── gitconfig-codium-insiders
 │       │   └── gitignore
-│       ├── jj
-│       │   ├── config-codium-insiders.toml
-│       │   └── config-codium.toml
-│       └── scripts
-│           ├── app.sh
-│           ├── git-patching.sh
-│           ├── patcher.sh
-│           ├── patching.sh
-│           └── repo-schema.sh
+│       └── jj
+│           ├── config-codium-insiders.toml
+│           └── config-codium.toml
 ├── Files
 ├── PKGBUILDs
 │   ├── aur-kernels
@@ -58,4 +48,4 @@
 │           └── PKGBUILD
 └── README.md
 
-28 directories, 31 files
+25 directories, 24 files
