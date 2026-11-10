@@ -10,7 +10,7 @@
 
 # Linux Kernel Versions
 %define _basekver 7.3
-%define _stablekver 3
+%define _stablekver 4
 
 # Release suffix of the git tag in Seafoam-Labs/linux: devario-7.2.9-2 -> 2.
 # Bump it only when a new tag is published for the same kernel version.
