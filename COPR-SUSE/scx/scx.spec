@@ -3,14 +3,14 @@
 %define libbpf_min_ver 1.4
 %define llvm_min_ver 21
 # Packaged as upstream 1.1.4; the sources are the Seafoam Labs tag below.
-%global tagver 1.1.5-devario5
+%global tagver 1.1.5-devario6
 # Available profiles: “release”, “release-tiny”, “release-fast“
 # See: https://github.com/sched-ext/scx/blob/main/Cargo.toml
 %global mode release
 
 Name:           scx
 Version:        1.1.4
-Release:        5
+Release:        6
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
