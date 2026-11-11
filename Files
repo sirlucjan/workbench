@@ -33,9 +33,11 @@
 │       │   ├── gitconfig-codium
 │       │   ├── gitconfig-codium-insiders
 │       │   └── gitignore
-│       └── jj
-│           ├── config-codium-insiders.toml
-│           └── config-codium.toml
+│       ├── jj
+│       │   ├── config-codium-insiders.toml
+│       │   └── config-codium.toml
+│       └── scxtop
+│           └── scxtop.toml
 ├── Files
 ├── PKGBUILDs
 │   ├── aur-kernels
@@ -48,4 +50,4 @@
 │           └── PKGBUILD
 └── README.md
 
-25 directories, 24 files
+26 directories, 25 files
