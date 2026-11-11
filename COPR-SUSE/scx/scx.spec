@@ -10,7 +10,7 @@
 
 Name:           scx
 Version:        1.1.4
-Release:        6
+Release:        7
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
