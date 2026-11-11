@@ -1,0 +1,56 @@
+# ~/.config/scxtop/scxtop.toml
+# Verified against sched-ext/scx main (tools/scxtop/src/config.rs).
+# Defaults shown in parentheses for reference.
+
+theme = "Nord"               # options: Default, MidnightGreen, IAmBlue, SolarizedDark,
+                             # Greyscale, Nord, Dracula, Monokai, Gruvbox, TokyoNight,
+                             # CatppuccinMocha, OneDark, AyuDark, USA
+                             # (at runtime: `t` cycles through themes)
+
+tick_rate_ms = 250           # (250) data sampling rate
+frame_rate_ms = 100          # (250) smoother rendering; bump to 250-500 during benchmark
+                             # runs to reduce the observer overhead of the TUI
+
+debug = false                # (false)
+exclude_bpf = false          # (false) true = no BPF events at all, "minimal observer" mode
+worker_threads = 4           # (4)
+
+# --- Perfetto tracing (pandemonium-style triage, e.g. #3675/#3677) ---
+trace_file_prefix = "scxtop_trace"   # (scxtop_trace) output files use this prefix
+trace_warmup_ms = 1000               # (750) warmup before collection starts
+trace_duration_ms = 5000             # (1250) 5 s trace window — enough to catch a
+                                     # pageflip timeout / stall while keeping the file digestible
+
+# Stats socket of the running scheduler (panel stays blind if this doesn't match).
+# stats_socket_path = "/var/run/scx/root/stats"   # (this is the built-in default, lib.rs)
+
+# Default profiling event (format <source>:<event>, source: kprobe|perf|cpu)
+# Valid cpu:* metrics (cpu_util.rs): cpu_total_util_percent, cpu_user_util_percent,
+#   cpu_system_util_percent, cpu_frequency_mhz
+# Other sources: "perf:<subsystem>:<event>" e.g. perf:hw:cycles, or "kprobe:<function>"
+# For scheduler triage, cpu_system_util_percent surfaces kernel overhead directly:
+# default_profiling_event = "cpu:cpu_system_util_percent"
+default_profiling_event = "cpu:cpu_total_util_percent"   # (same as default)
+
+# NOTE: this field is required — the struct has no #[serde(default)] on perf_events,
+# so omitting this line makes the whole TOML fail to deserialize.
+# Entry format: "<alias>:<config_hex>:<perf_type_u32>"
+# - Core PMU (Zen 4): type = 4 (PERF_TYPE_RAW), config = umask<<8 | event
+#   (take event/umask codes from the AMD PPR or `perf list --details`)
+# - Uncore PMUs (amd_l3, amd_df): type is dynamic — read it from
+#   /sys/bus/event_source/devices/amd_l3/type and use that number as the third field
+# Example shape (codes illustrative, verify against your PPR):
+#   perf_events = ["l3_miss:0xff9a:11"]
+perf_events = []
+
+# --- Keymap: overrides layered ON TOP of the default map (everything else stays) ---
+# Current defaults (from KeyMap::default(), not the README!):
+#   d=Default  s=Scheduler  p=Process  b=BpfPrograms  l=Llc  n=Node  N=Network
+#   M=Memory  B=Bandwidth  w=Power  m=MangoApp  e=PerfEvent  K=KprobeEvent  T=PerfTop
+#   space=Pause  f=Filter  F=ToggleCpuFreq  u=ToggleUncoreFreq  P=ToggleHwPressure
+#   L=ToggleLocalization  a=RequestTrace  x=ClearEvent  j/k=Prev/NextEvent
+#   v=NextViewState  t=ChangeTheme  -/+=Dec/IncTickRate  [/]=Dec/IncBpfSampleRate
+#   S=SaveConfig  h/?=Help  q/Q=Quit
+[keymap]
+r = "RequestTrace"           # "record" mnemonic alongside the default `a`
+c = "ClearEvent"             # handier than `x` with j/k under your fingers
