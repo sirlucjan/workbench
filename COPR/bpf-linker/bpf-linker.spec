@@ -1,6 +1,6 @@
 %define _disable_source_fetch 0
-%define _version 0.12.0
-%define _rpmrel 5
+%define _version 0.13.0
+%define _rpmrel 1
 
 %global _description %{expand:
 bpf-linker is a BPF static linker. It links multiple BPF object
