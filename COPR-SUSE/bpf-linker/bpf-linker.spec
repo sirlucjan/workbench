@@ -1,5 +1,5 @@
-%define _version 0.12.0
-%define _rpmrel 2
+%define _version 0.13.0
+%define _rpmrel 1
 %define llvm_major 23
 
 %global _description %{expand:
