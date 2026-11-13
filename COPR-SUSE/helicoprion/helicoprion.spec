@@ -2,7 +2,7 @@
 
 Name:           helicoprion
 Version:        0.2.0
-Release:        1
+Release:        2
 Summary:        Scheduler-focused CPU benchmark for EEVDF and sched-ext
 
 License:        MIT OR Apache-2.0

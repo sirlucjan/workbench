@@ -2,7 +2,7 @@
 
 Name:           cargo-lbin
 Version:        0.20.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Cargo-powered application manager for crates.io command-line binaries
 
 License:        MIT OR Apache-2.0
