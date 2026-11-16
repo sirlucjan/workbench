@@ -236,7 +236,7 @@ management, use `scx.service`, `scxcli`, or `scxtui` instead.
    sudo systemctl reboot
    ```
    
-Additional sched-ext background: [CachyOS wiki](https://wiki.cachyos.org/configuration/sched-ext/).
+Additional sched-ext background: [Seafoam Labs wiki](https://www.seafoam-labs.org/sched-ext/overview/).
 
 ---
 
@@ -274,7 +274,7 @@ sudo zypper refresh
 sudo zypper install scx-git
 ```
 
-Additional sched-ext background: [CachyOS wiki](https://wiki.cachyos.org/configuration/sched-ext/).
+Additional sched-ext background: [Seafoam Labs wiki](https://www.seafoam-labs.org/sched-ext/overview/).
 
 ---
 
