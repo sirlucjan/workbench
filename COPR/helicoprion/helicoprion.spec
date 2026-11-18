@@ -1,7 +1,7 @@
 %define _disable_source_fetch 0
 
 Name:           helicoprion
-Version:        0.4.0
+Version:        0.5.0
 Release:        1%{?dist}
 Summary:        Scheduler-focused CPU benchmark for EEVDF and sched-ext
 
@@ -31,7 +31,8 @@ install -Dm755 target/release/helicoprion %{buildroot}%{_bindir}/helicoprion
 
 %files
 %license LICENSE-MIT LICENSE-APACHE
-%doc README.md
+# README.md, and METHODOLOGY.md from 0.5.0 on: whatever the release has.
+%doc *.md
 
 # Binaries
 %{_bindir}/helicoprion
