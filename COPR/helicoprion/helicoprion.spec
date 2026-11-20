@@ -1,7 +1,7 @@
 %define _disable_source_fetch 0
 
 Name:           helicoprion
-Version:        0.8.0
+Version:        0.8.1
 Release:        1%{?dist}
 Summary:        Scheduler-focused CPU benchmark for EEVDF and sched-ext
 
