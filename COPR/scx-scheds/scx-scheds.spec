@@ -7,7 +7,7 @@
 
 Name:           scx-scheds
 Version:        1.1.5
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
 License:        GPL=2.0
@@ -84,7 +84,6 @@ cargo build \
      --profile=%{mode} \
      --frozen \
      --workspace \
-     --exclude scx_rlfifo \
      --exclude scx_characterize \
      --exclude vmlinux_docify \
      --exclude scx_arena_selftests \
