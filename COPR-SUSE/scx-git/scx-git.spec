@@ -23,7 +23,6 @@ Source0:        %{URL}/archive/%{commit}/scx-%{commit}.tar.gz
 BuildRequires:  bpf-linker
 BuildRequires:  bpftool >= 7.5.0
 BuildRequires:  clang >= %{llvm_min_ver}
-BuildRequires:  jq
 BuildRequires:  libbpf-devel >= %{libbpf_min_ver}
 BuildRequires:  lld
 BuildRequires:  llvm >= %{llvm_min_ver}
@@ -33,24 +32,15 @@ BuildRequires:  rust+cargo >= 1.91
 BuildRequires:  rust-src
 BuildRequires:  zstd
 BuildRequires:  pkgconfig(libbpf) >= %{libbpf_min_ver}
-BuildRequires:  pkgconfig(libseccomp)
-BuildRequires:  pkgconfig(protobuf)
 BuildRequires:  pkgconfig(systemd)
 BuildRequires: pkg-config
-BuildRequires: pkgconfig(openssl)
-BuildRequires: openssl-devel
 Recommends: polkit
 # Exactly one scx variant can be installed.
 Conflicts: scx
 Conflicts: scx-dev-git
 Provides: scx = %{version}-%{release}
-# scx-tools cannot work alongside this package: never install them together.
-Conflicts: scx-tools
-Conflicts: scx-tools-git
-Conflicts: scx-tools-dev-git
 # Upgrade path: the matching scx-tools variant, up to scx-loader 1.1.3, is
-# replaced by this package. The other two only conflict, so that an upgrade
-# never picks a variant for them.
+# replaced by this package. scx-tools 1.2.0 and later install alongside it.
 Obsoletes: scx-tools-git < 1.1.4
 
 %description
