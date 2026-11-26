@@ -2,7 +2,7 @@
 %define _lto_cflags %{nil}
 %define libbpf_min_ver 1.4
 %define llvm_min_ver 21
-# Packaged as upstream 1.1.4; the sources are the Seafoam Labs tag below.
+# Packaged as upstream 1.1.5; the sources are the Seafoam Labs tag below.
 %global tagver 1.1.5-devario8
 # Available profiles: “release”, “release-tiny”, “release-fast“
 # See: https://github.com/sched-ext/scx/blob/main/Cargo.toml
@@ -10,7 +10,7 @@
 
 Name:           scx
 Version:        1.1.5
-Release:        3
+Release:        4
 Summary:        Sched_ext CPU schedulers
 License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
@@ -20,7 +20,6 @@ Source0:        https://github.com/Seafoam-Labs/scx/archive/refs/tags/v%{tagver}
 BuildRequires:  bpf-linker
 BuildRequires:  bpftool >= 7.5.0
 BuildRequires:  clang >= %{llvm_min_ver}
-BuildRequires:  jq
 BuildRequires:  libbpf-devel >= %{libbpf_min_ver}
 BuildRequires:  lld
 BuildRequires:  llvm >= %{llvm_min_ver}
@@ -30,22 +29,17 @@ BuildRequires:  rust+cargo >= 1.91
 BuildRequires:  rust-src
 BuildRequires:  zstd
 BuildRequires:  pkgconfig(libbpf) >= %{libbpf_min_ver}
-BuildRequires:  pkgconfig(libseccomp)
-BuildRequires:  pkgconfig(protobuf)
 BuildRequires:  pkgconfig(systemd)
+# For scx_forge_agent (reqwest with native-tls); drop with the first tag
+# that no longer has scx_forge.
 BuildRequires: pkgconfig(openssl)
 BuildRequires: openssl-devel
 Recommends: polkit
 # Exactly one scx variant can be installed.
 Conflicts: scx-git
 Conflicts: scx-dev-git
-# scx-tools cannot work alongside this package: never install them together.
-Conflicts: scx-tools
-Conflicts: scx-tools-git
-Conflicts: scx-tools-dev-git
 # Upgrade path: the matching scx-tools variant, up to scx-loader 1.1.3, is
-# replaced by this package. The other two only conflict, so that an upgrade
-# never picks a variant for them.
+# replaced by this package. scx-tools 1.2.0 and later install alongside it.
 Obsoletes: scx-tools < 1.1.4
 
 %description
