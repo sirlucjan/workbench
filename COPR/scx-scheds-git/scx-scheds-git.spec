@@ -14,7 +14,7 @@ Version:        1.1.5.%{commitdate}.%{revision}.git.%{shortcommit}
 Release:        1%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
-License:        GPL=2.0
+License:        GPL-2.0-only
 URL:            https://github.com/sched-ext/scx
 Source0:        %{URL}/archive/%{commit}/scx-%{commit}.tar.gz
 
@@ -31,20 +31,12 @@ BuildRequires:  lld >= 21
 BuildRequires:  elfutils-libelf
 BuildRequires:  elfutils-libelf-devel
 BuildRequires:  zlib
-BuildRequires:  jq
-BuildRequires:  jq-devel
 BuildRequires:  systemd
 BuildRequires:  bpftool
 # Not in Fedora; built in this COPR project (needed for Rust BPF schedulers)
 BuildRequires:  bpf-linker
-BuildRequires:  protobuf-compiler
-BuildRequires:  libseccomp-devel
-BuildRequires: openssl-devel
 Requires:  elfutils-libelf
-Requires:  libseccomp
-Requires:  protobuf
 Requires:  zlib
-Requires:  jq
 Recommends: polkit
 # Exactly one scx-scheds variant can be installed.
 Conflicts: scx-scheds
@@ -57,13 +49,8 @@ Provides: scx_rustland = %{version}-%{release}
 Obsoletes: scx_rustland < %{version}-%{release}
 Provides: scx_rusty = %{version}-%{release}
 Obsoletes: scx_rusty < %{version}-%{release}
-# scx-tools cannot work alongside this package: never install them together.
-Conflicts: scx-tools
-Conflicts: scx-tools-git
-Conflicts: scx-tools-dev-git
 # Upgrade path: the matching scx-tools variant, up to scx-loader 1.1.3, is
-# replaced by this package. The other two only conflict, so that an upgrade
-# never picks a variant for them.
+# replaced by this package. scx-tools 1.2.0 and later install alongside it.
 Obsoletes: scx-tools-git < 1.1.4
 
 %description
